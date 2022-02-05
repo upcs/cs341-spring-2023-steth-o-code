@@ -1,17 +1,34 @@
-import React from 'react';
-import { View } from 'react-native';
+import React, {useState}  from 'react';
+import { View, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
 //formik
 import { Formik } from 'formik';
 
-import { StyledContainer, InnerContainer, PageLogo, PageTitle, StyledForm, LabelIcon, Colors, StyledInputLabel, StyleTextInput } from "./../components/styles";
+import { StyledContainer, 
+    InnerContainer, 
+    PageLogo, 
+    PageTitle, 
+    StyledForm, 
+    LabelIcon, 
+    Colors, 
+    StyleTextInput, 
+    EyeIcon,
+    StyledButton,
+    ButtonText,
+    Line,
+    ExtraView,
+    ExtraText,
+    TextLink,
+    TextLinkContent
+} from "./../components/styles";
 
-import {Octicons} from '@expo/vector-icons';
+import {Octicons, Ionicons, Fontisto } from '@expo/vector-icons';
 
-const {company, textInputBackground} = Colors;
+const {company, placeholder, textInputBackground} = Colors;
 
 const Login = () => {
+    const [hidePassword, setHidePassword] = useState(true);
     return (
         <StyledContainer>
             <StatusBar style="dark" />
@@ -29,7 +46,7 @@ const Login = () => {
                             label="Username"
                             icon="person"
                             placeholder="username"
-                            placeholderTextColor={company}
+                            placeholderTextColor={placeholder}
                             onChangeText={handleChange('name')}
                             onBlur={handleBlur('name')}
                             value={values.name}
@@ -38,11 +55,30 @@ const Login = () => {
                             label="Password"
                             icon="lock"
                             placeholder="********"
-                            placeholderTextColor={company}
+                            placeholderTextColor={placeholder}
                             onChangeText={handleChange('password')}
                             onBlur={handleBlur('password')}
                             value={values.password}
+                            secureTextEntry={hidePassword}
+                            isPassword={true}
+                            hidePassword={hidePassword}
+                            setHidePassword={setHidePassword}
                         />
+                        <Text>{"\n"}</Text>
+                        <StyledButton onPress={handleSubmit}>
+                            <ButtonText>Login</ButtonText>
+                        </StyledButton>
+                        <Line />
+                        <StyledButton wordpress={true} onPress={handleSubmit}>
+                            <Fontisto name="wordpress" color={textInputBackground} size={30} />
+                            <ButtonText wordpress={true}>Sign in with Wordpress</ButtonText>
+                        </StyledButton>
+                        <ExtraView>
+                            <ExtraText>Don't have an account? </ExtraText>
+                            <TextLink>
+                                <TextLinkContent>Signup</TextLinkContent>
+                            </TextLink>
+                        </ExtraView>
                     </StyledForm>)}
                 </Formik>
             </InnerContainer>
@@ -50,13 +86,18 @@ const Login = () => {
     );
 }
 
-const TextInput = ({label, icon, ...props}) => {
+const TextInput = ({icon, isPassword, hidePassword, setHidePassword, ...props}) => {
     return (
         <View>
             <LabelIcon>
                 <Octicons name={icon} size={30} color={company}/>
             </LabelIcon>
             <StyleTextInput {...props} />
+            {isPassword && (
+                <EyeIcon onPress={() => setHidePassword(!hidePassword)}>
+                    <Ionicons name={hidePassword ? 'md-eye-off' : 'md-eye'} size={30} color={placeholder} />
+                </EyeIcon>
+            )}
         </View>
     )
 }
