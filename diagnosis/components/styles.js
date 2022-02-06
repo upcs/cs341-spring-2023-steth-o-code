@@ -29,7 +29,7 @@ export const InnerContainer = styled.View`
 
 export const PageLogo = styled.Image`
     width: 300px;
-    height: 200px;
+    height: 110px;
 `;
 
 export const PageTitle = styled.Text`
@@ -105,7 +105,6 @@ export const ExtraView = styled.View`
     align-items: center;
     flex-direction: row;
     padding: 10px;
-    margin-top: 19px;
 `;
 
 export const ExtraText = styled.Text`
