@@ -6,8 +6,7 @@ import { StatusBar } from 'expo-status-bar';
 import { Formik } from 'formik';
 
 import { StyledContainer, 
-    InnerContainer, 
-    PageLogo, 
+    InnerContainer,
     PageTitle, 
     StyledForm, 
     LabelIcon, 
@@ -20,12 +19,13 @@ import { StyledContainer,
     ExtraView,
     ExtraText,
     TextLink,
-    TextLinkContent
+    TextLinkContent,
+    StyleInputLabel
 } from "./../components/styles";
 
-import {Octicons, Ionicons, Fontisto } from '@expo/vector-icons';
+import {Octicons, Ionicons } from '@expo/vector-icons';
 
-const {company, placeholder, textInputBackground} = Colors;
+const {company, placeholder} = Colors;
 
 const Signup = () => {
     const [hidePassword, setHidePassword] = useState(true);
@@ -33,9 +33,7 @@ const Signup = () => {
         <StyledContainer>
             <StatusBar style="dark" />
             <InnerContainer>
-                <PageLogo resizeMode="contain" source={require('./../assets/cropped-logo_new-1.png')} />
-                <Text>{"\n"}</Text>
-                <PageTitle>Sign Up</PageTitle>
+                <PageTitle>Sign Up to PDX PDX</PageTitle>
                 <Formik
                     initialValues={{fullName: '', email: '', username: '', password: '', confirmPassword: ''}}
                     onSubmit={(values) => {
@@ -70,6 +68,7 @@ const Signup = () => {
                             onChangeText={handleChange('email')}
                             onBlur={handleBlur('email')}
                             value={values.email}
+                            keyboardType="email-address"
                         />
                         <TextInput 
                             label="Password *"
@@ -97,6 +96,7 @@ const Signup = () => {
                             hidePassword={hidePassword}
                             setHidePassword={setHidePassword}
                         />
+                        <Text>{"\n"}</Text>
                         <StyledButton onPress={handleSubmit}>
                             <ButtonText>Sign Up</ButtonText>
                         </StyledButton>
@@ -114,12 +114,13 @@ const Signup = () => {
     );
 }
 
-const TextInput = ({icon, isPassword, hidePassword, setHidePassword, ...props}) => {
+const TextInput = ({label, icon, isPassword, hidePassword, setHidePassword, ...props}) => {
     return (
         <View>
             <LabelIcon>
                 <Octicons name={icon} size={30} color={company}/>
             </LabelIcon>
+            <StyleInputLabel>{label}</StyleInputLabel>
             <StyleTextInput {...props} />
             {isPassword && (
                 <EyeIcon onPress={() => setHidePassword(!hidePassword)}>

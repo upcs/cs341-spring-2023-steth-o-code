@@ -20,7 +20,8 @@ import { StyledContainer,
     ExtraView,
     ExtraText,
     TextLink,
-    TextLinkContent
+    TextLinkContent,
+    StyleInputLabel
 } from "./../components/styles";
 
 import {Octicons, Ionicons, Fontisto } from '@expo/vector-icons';
@@ -70,7 +71,7 @@ const Login = () => {
                         </StyledButton>
                         <Line />
                         <StyledButton wordpress={true} onPress={handleSubmit}>
-                            <Fontisto name="wordpress" color={textInputBackground} size={30} />
+                            <Fontisto name="wordpress" color={textInputBackground} size={25} />
                             <ButtonText wordpress={true}>Sign in with Wordpress</ButtonText>
                         </StyledButton>
                         <ExtraView>
@@ -86,12 +87,13 @@ const Login = () => {
     );
 }
 
-const TextInput = ({icon, isPassword, hidePassword, setHidePassword, ...props}) => {
+const TextInput = ({label, icon, isPassword, hidePassword, setHidePassword, ...props}) => {
     return (
         <View>
             <LabelIcon>
                 <Octicons name={icon} size={30} color={company}/>
             </LabelIcon>
+            <StyleInputLabel>{label}</StyleInputLabel>
             <StyleTextInput {...props} />
             {isPassword && (
                 <EyeIcon onPress={() => setHidePassword(!hidePassword)}>
