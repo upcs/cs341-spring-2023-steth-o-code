@@ -49,22 +49,26 @@ export const StyleTextInput = styled.TextInput`
     padding-left: 55px;
     padding-right: 55px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 15px;
     height: 60px;
     margin-vertical: 3px;
     margin-bottom: 10px;
     color: ${placeholder};
 `;
 
+export const StyleInputLabel = styled.Text`
+    font-size: 13px;
+`;
+
 export const LabelIcon = styled.View`
     left: 15px;
-    top: 18px;
+    top: 35px;
     position: absolute;
     z-index: 1;
 `;
 export const EyeIcon = styled.TouchableOpacity`
     right: 15px;
-    top: 18px;
+    top: 35px;
     position: absolute;
     z-index: 1;
 `;
@@ -76,7 +80,7 @@ export const StyledButton = styled.TouchableOpacity`
     align-items: center;
     border-radius: 5px;
     margin-vertical: 5px;
-    height: 60px;
+    height: 56px;
 
     ${(props) => props.wordpress == true && `
         background-color: #437CFF;
@@ -104,8 +108,7 @@ export const ExtraView = styled.View`
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    padding: 10px;
-    margin-top: 19px;
+    padding: 8px;
 `;
 
 export const ExtraText = styled.Text`
