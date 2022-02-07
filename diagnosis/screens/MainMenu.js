@@ -1,8 +1,10 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
 import { StyledContainer } from '../components/styles';
-import DropDownPicker from 'react-native-dropdown-picker';
+import DropdownMenu from 'react-native-dropdown-picker';
 import Slideshow from 'react-native-image-slider-show';
+
+var time = new Date().getHours();
 
 const MainMenu = () => (
         <View style={styles.mainContainer}> 
@@ -10,16 +12,11 @@ const MainMenu = () => (
                 <Image style={styles.PDXLogo} source={require('diagnosis/assets/simplePDXLogo.png')}></Image>
                 <Image style={styles.accountIcon} source={require('diagnosis/assets/accountIcon.png')}></Image>
             </View>
-
-            <View style={styles.slideShow}>
-            <Slideshow 
-                dataSource={[
-                    { url: 'https://i0.wp.com/physicaldiagnosispdx.com/wp-content/uploads/D5AD228F-A6D4-4F00-A69F-3D62F63909F3.jpeg?w=1280&ssl=1'},
-                    { url:'https://i0.wp.com/physicaldiagnosispdx.com/wp-content/uploads/cropped-logo_new-1.png?w=1112&ssl=1' },
-                    { url:'http://placeimg.com/640/480/any' }
-                ]}/>
-            </View>
-            <Image style={styles.stethoscopeImage} source={require('diagnosis/assets/stethoscope.jpeg')}></Image>
+            
+            <Image style={styles.stethoscopeImage} source={require('diagnosis/assets/stethoscope.jpeg')} blurRadius={1.5}></Image>
+            <Text style={styles.welcomeText}>Good Morning, {"\n"}
+                Guest
+            </Text>
         </View>
 );
 
@@ -61,14 +58,32 @@ const styles = StyleSheet.create({
 
     stethoscopeImage: {
         resizeMode: "contain",
-        width: 600
+        position: "absolute",
+        width: '100%',
+        height: undefined,
+        aspectRatio: 1,
+        top: 38
     },
 
     slideShow: {
-        resizeMode: "center",
-        position: "relative",
-        width: 375,
-        top: -106,
+        // resizeMode: "center",
+        // position: "relative",
+        // width: 375,
+        // top: -106,
+    },
+
+    welcomeText: {
+        position: "absolute",
+        color: "#E63610",
+        fontSize: 60,
+        top: 120,
+        fontWeight: 'bold',
+        textAlign: "center",
+        fontFamily: "Gill Sans",
+        textShadowColor:'#585858',
+        textShadowOffset:{width: 5, height: 5},
+        textShadowRadius:10,
+        
     }
 });
     
