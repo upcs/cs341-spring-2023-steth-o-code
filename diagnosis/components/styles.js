@@ -9,10 +9,11 @@ export const Colors = {
     textInputBackground: "#ffffff",
     company: "#ff2400",
     placeholder: "#ff000067",
-    button: "#808080"
+    button: "#808080",
+    linkColor: "#0000FF"
 };
 
-const {background, textInputBackground, company, placeholder, button} = Colors;
+const {background, textInputBackground, company, placeholder, button, linkColor} = Colors;
 
 export const StyledContainer = styled.View`
     flex: 1;
@@ -75,7 +76,7 @@ export const EyeIcon = styled.TouchableOpacity`
 
 export const StyledButton = styled.TouchableOpacity`
     padding: 15px;
-    background-color: ${button}
+    background-color: ${button};
     justify-content: center;
     align-items: center;
     border-radius: 5px;
@@ -124,6 +125,6 @@ export const TextLink = styled.TouchableOpacity`
 `;
 
 export const TextLinkContent = styled.Text`
-    color: ${company};
+    color: ${linkColor};
     font-size: 15px;
 `;
