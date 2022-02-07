@@ -20,7 +20,8 @@ import { StyledContainer,
     ExtraView,
     ExtraText,
     TextLink,
-    TextLinkContent
+    TextLinkContent,
+    StyleInputLabel
 } from "./../components/styles";
 
 import {Octicons, Ionicons, Fontisto } from '@expo/vector-icons';
@@ -36,7 +37,7 @@ const Login = () => {
                 <PageLogo resizeMode="contain" source={require('./../assets/cropped-logo_new-1.png')} />
                 <PageTitle>Account Login</PageTitle>
                 <Formik
-                    initialValues={{email: '', password: ''}}
+                    initialValues={{username: '', password: ''}}
                     onSubmit={(values) => {
                         console.log(values);
                     }}
@@ -47,9 +48,9 @@ const Login = () => {
                             icon="person"
                             placeholder="username"
                             placeholderTextColor={placeholder}
-                            onChangeText={handleChange('name')}
-                            onBlur={handleBlur('name')}
-                            value={values.name}
+                            onChangeText={handleChange('username')}
+                            onBlur={handleBlur('username')}
+                            value={values.username}
                         />
                         <TextInput 
                             label="Password"
@@ -70,7 +71,7 @@ const Login = () => {
                         </StyledButton>
                         <Line />
                         <StyledButton wordpress={true} onPress={handleSubmit}>
-                            <Fontisto name="wordpress" color={textInputBackground} size={30} />
+                            <Fontisto name="wordpress" color={textInputBackground} size={25} />
                             <ButtonText wordpress={true}>Sign in with Wordpress</ButtonText>
                         </StyledButton>
                         <ExtraView>
@@ -86,12 +87,13 @@ const Login = () => {
     );
 }
 
-const TextInput = ({icon, isPassword, hidePassword, setHidePassword, ...props}) => {
+const TextInput = ({label, icon, isPassword, hidePassword, setHidePassword, ...props}) => {
     return (
         <View>
             <LabelIcon>
                 <Octicons name={icon} size={30} color={company}/>
             </LabelIcon>
+            <StyleInputLabel>{label}</StyleInputLabel>
             <StyleTextInput {...props} />
             {isPassword && (
                 <EyeIcon onPress={() => setHidePassword(!hidePassword)}>
