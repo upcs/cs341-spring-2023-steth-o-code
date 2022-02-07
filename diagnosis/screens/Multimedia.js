@@ -103,7 +103,7 @@ const Multimedia = () => {
                 {/*Video type selection*/}
                 <RadioGroup
                     horizontal
-                    options={radiogroup_options}
+                    options={ radiogroup_options }
                 />
                 {/*Video itself, should change depending on selected radio button*/}
                 <Vimeo
