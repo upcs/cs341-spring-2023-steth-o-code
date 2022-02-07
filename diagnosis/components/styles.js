@@ -17,7 +17,7 @@ const {background, textInputBackground, company, placeholder, button} = Colors;
 export const StyledContainer = styled.View`
     flex: 1;
     padding: 25px;
-    padding-top: ${StatusBarHeight + 10}px;
+    padding-top: ${StatusBarHeight + 50}px;
     background-color: ${background};
 `;
 
