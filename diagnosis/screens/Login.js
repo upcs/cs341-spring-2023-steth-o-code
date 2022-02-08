@@ -22,7 +22,7 @@ import { StyledContainer,
     TextLink,
     TextLinkContent,
     StyleInputLabel
-} from "./../components/styles";
+} from "../components/SignUpLoginStyles";
 
 import {Octicons, Ionicons, Fontisto } from '@expo/vector-icons';
 

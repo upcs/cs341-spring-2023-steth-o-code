@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Colors} from './../components/styles';
+import {Colors} from '../components/SignUpLoginStyles';
 const {background} = Colors;
 //react navigation
 import { NavigationContainer } from '@react-navigation/native'
