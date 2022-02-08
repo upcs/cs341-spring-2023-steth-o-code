@@ -1,24 +1,21 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, SafeAreaView, ScrollView, StatusBar } from 'react-native';
 
-const topicList = [
-    { name: 'Cardiology' },
-    { name: 'Endocrinology'},
-    { name: 'Nails'},
-    { name: 'Neurology'},
-    { name: 'Rheumatology'},
-    { name: 'Pulmonology'},
-    { name: 'Gastroenterology'},
-    { name: 'Miscellaneous'},
-];
-
-const menu = () => {
+const topics = () => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrollView}>
         <Text style={styles.text}>
           Topics
         </Text>
+        <button>Cardiology</button>
+        <button>Endocrinology</button>
+        <button>Nail</button>
+        <button>Neurology</button>
+        <button>Rheumatology</button>
+        <button>Pulmonology</button>
+        <button>Gastroenterology</button>
+        <button>Miscellaneous</button>
       </ScrollView>
     </SafeAreaView>
   );
@@ -26,7 +23,9 @@ const menu = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     paddingTop: StatusBar.currentHeight,
   },
   scrollView: {
@@ -34,8 +33,12 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
   },
   text: {
-    fontSize: 20,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize: 30,
+    marginBottom: 10,
   },
 });
 
-export default menu;
+export default topics;
