@@ -30,7 +30,7 @@ const MainMenu = () => (
             
             <Image style={styles.stethoscopeImage} source={require('diagnosis/assets/stethoscope.jpeg')} blurRadius={1}></Image>
             <Text style={styles.welcomeText}>Good Morning, {"\n"}
-                Guest
+                User
             </Text>
 
             <View style={styles.quickLinksView}>
