@@ -1,7 +1,8 @@
 import React, {useState}  from 'react';
 import { View, Text, Switch, Stylesheet } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import {RadioGroup, Radio} from '@adobe/react-spectrum'
+import styled from 'styled-components';
+//import {RadioGroup, Radio} from '@adobe/react-spectrum'
 
 
 //formik
@@ -14,19 +15,15 @@ import { StyledContainer,
     StyledForm, 
     LabelIcon, 
     Colors, 
-    StyleTextInput, 
-    EyeIcon,
-    StyledButton,
-    ButtonText,
-    Line,
-    ExtraView,
-    ExtraText,
-    TextLink,
-    TextLinkContent
+    RadioGroup,
+    Text,
+    PageTitle,
+    PageLogo,
+    View,
+    Vimeo
 } from "./../components/styles";
 
 import {Octicons, Ionicons, Fontisto } from '@expo/vector-icons';
-
 const {company, placeholder, textInputBackground} = Colors;
 
 const Multimedia = () => {
@@ -81,7 +78,7 @@ const Multimedia = () => {
                     onFinish={ () => console.log('Vimeo is finished') }
                 />
                 {/*Video type selection*/}
-                <RadioGroup
+                {/*<RadioGroup
                     label="Video Options"
                     defaultValue="0"
                     value={selected}
@@ -89,7 +86,7 @@ const Multimedia = () => {
                     <Radio value="0">Normal</Radio>
                     <Radio value="1">Annotated</Radio>
                     <Radio value="2">Narrated</Radio>
-                </RadioGroup>
+                </RadioGroup>*/}
             </InnerContainer>
         </StyledContainer>
     );
