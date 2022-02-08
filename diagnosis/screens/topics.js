@@ -10,7 +10,7 @@ const topics = () => {
         </Text>
         <button>Cardiology</button>
         <button>Endocrinology</button>
-        <button>Nail</button>
+        <button>Nails</button>
         <button>Neurology</button>
         <button>Rheumatology</button>
         <button>Pulmonology</button>
