@@ -1,6 +1,7 @@
 import React, {useState}  from 'react';
 import { View, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+import * as Yup from 'yup'
 
 //formik
 import { Formik } from 'formik';
@@ -30,6 +31,14 @@ const {company, placeholder} = Colors;
 //keyboard avoiding wrapper
 import KeyboardAvoidWrap from '../components/KeyboardAvoidWrap';
 
+const ValidationInputSchema = Yup.object().shape({
+    username: Yup.string().min(2, 'Too short').max(50, 'Too Long').required('Required'),
+    email: Yup.string().email('Invalid email').required('Email is required'),
+    password: Yup.string().min(8, 'Password must be bigger than 8 characters')
+                .required('Password is required'),
+    confirmPassword: Yup.string().oneOf([Yup.ref('password')], 'Passwords must match').required('Confirming Password is required'),
+});
+
 const Signup = ({navigation}) => {
     const [hidePassword, setHidePassword] = useState(true);
     return (
@@ -40,10 +49,11 @@ const Signup = ({navigation}) => {
                     <PageTitle>Sign Up to PDX PDX</PageTitle>
                     <Formik
                         initialValues={{fullName: '', email: '', username: '', password: '', confirmPassword: ''}}
+                        validationSchema={ValidationInputSchema}
                         onSubmit={(values) => {
                             console.log(values);
                         }}
-                    >{({handleChange, handleBlur, handleSubmit, values}) => (
+                    >{({handleChange, handleBlur, handleSubmit, values, touched, errors}) => (
                         <StyledForm>
                             <TextInput 
                                 label="Full Name"
@@ -64,6 +74,7 @@ const Signup = ({navigation}) => {
                                 onBlur={handleBlur('username')}
                                 value={values.username}
                             />
+                            {touched.username && errors.username ? (<Text>{errors.username}</Text>) : null}
                             <TextInput 
                                 label="Email Address *"
                                 icon="mail"
@@ -74,6 +85,7 @@ const Signup = ({navigation}) => {
                                 value={values.email}
                                 keyboardType="email-address"
                             />
+                            {touched.email && errors.email ? (<Text>{errors.email}</Text>) : null}
                             <TextInput 
                                 label="Password *"
                                 icon="lock"
@@ -87,6 +99,7 @@ const Signup = ({navigation}) => {
                                 hidePassword={hidePassword}
                                 setHidePassword={setHidePassword}
                             />
+                            {touched.password && errors.password ? (<Text>{errors.password}</Text>) : null}
                             <TextInput 
                                 label="Confirm Password *"
                                 icon="lock"
@@ -100,7 +113,7 @@ const Signup = ({navigation}) => {
                                 hidePassword={hidePassword}
                                 setHidePassword={setHidePassword}
                             />
-                            <Text>{"\n"}</Text>
+                            {touched.confirmPassword && errors.confirmPassword ? (<Text>{errors.confirmPassword}</Text>) : null}
                             <StyledButton onPress={handleSubmit}>
                                 <ButtonText>Sign Up</ButtonText>
                             </StyledButton>
