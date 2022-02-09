@@ -1,33 +1,26 @@
 import React, {useState}  from 'react';
 import { View, Text, Switch, Stylesheet } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import styled from 'styled-components';
-//import {RadioGroup, Radio} from '@adobe/react-spectrum'
-
-
-//formik
-import { Formik } from 'formik';
 
 import { StyledContainer, 
-    InnerContainer, 
-    PageLogo, 
-    PageTitle, 
-    StyledForm, 
-    LabelIcon, 
+    InnerContainer,
     Colors, 
     RadioGroup,
-    Text,
+    Radio,
     PageTitle,
     PageLogo,
-    View,
     Vimeo
 } from "./../components/styles";
 
 import {Octicons, Ionicons, Fontisto } from '@expo/vector-icons';
 const {company, placeholder, textInputBackground} = Colors;
+//const styes = StyleSheet.create();
 
 const Multimedia = () => {
     let [selected, setSelected] = React.useState('');
+    const [isEnabled, setIsEnabled] = useState(false);
+    const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+
     let num_patients = 1;
     let prognosis = "PLACEHOLDER"
     let description = "PLACEHOLDER"
@@ -50,12 +43,12 @@ const Multimedia = () => {
                 <PageLogo resizeMode="contain" source={require('./../assets/cropped-logo_new-1.png')} />
                 <PageTitle>{prognosis}</PageTitle>
                 {/*Basic description*/}
-                <Text style={styles.baseText}>{description}</Text>
+                <Text style={{alignItems: 'flex-start'}}>{description}</Text>
                 {/*Available offline switch*/}
-                <View style={styles.container}>
-                    <Text>{enabled ? "Make page available offline" : "Available offline"}</Text>
+                <View>
+                    <Text>{isEnabled ? "Make page available offline" : "Available offline"}</Text>
                     <Switch
-                        trackColor={{false: "#767577", true: "#81b0ff"}}
+                        trackColor={{ false: "#767577", true: "#81b0ff" }}
                         thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
                         ios_backgroundColor="#3e3e3e"
                         onValueChange={toggleSwitch}
@@ -65,20 +58,20 @@ const Multimedia = () => {
                 {/*End of universal section*/}
 
                 {/*Patient 1 section*/}
-                <Text style={styles.header}>Patient 1</Text>
+                <Text style={{alignItems: 'flex-start'}}>Patient 1</Text>
                 {/*Block text for patient 1*/}
-                <Text style={styles.baseText}>{block1}</Text>
+                <Text style={{alignItems: 'flex-start'}}>{block1}</Text>
                 {/*Video itself, should change depending on selected radio button*/}
                 <Vimeo
                     ref='video'
-                    videoId={ids1[options]}
+                    videoId={ids1[selected]}
                     onReady={ () => console.log('Vimeo is ready') }
                     onPlay={ () => console.log('Vimeo is playing') }
                     onPlayProgress={ data => console.log('Vimeo progress data:', data) }
                     onFinish={ () => console.log('Vimeo is finished') }
                 />
                 {/*Video type selection*/}
-                {/*<RadioGroup
+                <RadioGroup
                     label="Video Options"
                     defaultValue="0"
                     value={selected}
@@ -86,7 +79,7 @@ const Multimedia = () => {
                     <Radio value="0">Normal</Radio>
                     <Radio value="1">Annotated</Radio>
                     <Radio value="2">Narrated</Radio>
-                </RadioGroup>*/}
+                </RadioGroup>
             </InnerContainer>
         </StyledContainer>
     );
