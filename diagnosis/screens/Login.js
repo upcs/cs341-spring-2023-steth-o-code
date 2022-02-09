@@ -1,6 +1,7 @@
 import React, {useState}  from 'react';
 import { View, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+import * as Yup from 'yup'
 
 //formik
 import { Formik } from 'formik';
@@ -32,6 +33,11 @@ const {company, placeholder, textInputBackground} = Colors;
 //keyboard avoiding wrapper
 import KeyboardAvoidWrap from '../components/KeyboardAvoidWrap';
 
+const LoginSchema = Yup.object().shape({
+    username: Yup.string().min(2, 'Too short').max(50, 'Too Long').required('Username is required'),
+    password: Yup.string().min(8, 'Password must be bigger than 8 characters').required('Password is required'),
+});
+
 const Login = ({navigation}) => {
     const [hidePassword, setHidePassword] = useState(true);
     return (
@@ -43,10 +49,12 @@ const Login = ({navigation}) => {
                     <PageTitle>Account Login</PageTitle>
                     <Formik
                         initialValues={{username: '', password: ''}}
+                        validationSchema={LoginSchema}
                         onSubmit={(values) => {
                             console.log(values);
                         }}
-                    >{({handleChange, handleBlur, handleSubmit, values}) => (
+                        data-testid="login-form"
+                    >{({handleChange, handleBlur, handleSubmit, values, touched, errors}) => (
                         <StyledForm>
                             <TextInput 
                                 label="Username"
@@ -57,6 +65,7 @@ const Login = ({navigation}) => {
                                 onBlur={handleBlur('username')}
                                 value={values.username}
                             />
+                            {touched.username && errors.username ? (<Text style={{color: '#B00000'}}>{errors.username}</Text>) : null}
                             <TextInput 
                                 label="Password"
                                 icon="lock"
@@ -70,6 +79,7 @@ const Login = ({navigation}) => {
                                 hidePassword={hidePassword}
                                 setHidePassword={setHidePassword}
                             />
+                            {touched.password && errors.password ? (<Text style={{color: '#B00000'}}>{errors.password}</Text>) : null}
                             <Text>{"\n"}</Text>
                             <StyledButton onPress={handleSubmit}>
                                 <ButtonText>Login</ButtonText>

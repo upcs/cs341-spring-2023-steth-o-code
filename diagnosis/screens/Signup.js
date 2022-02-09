@@ -32,7 +32,7 @@ const {company, placeholder} = Colors;
 import KeyboardAvoidWrap from '../components/KeyboardAvoidWrap';
 
 const ValidationInputSchema = Yup.object().shape({
-    username: Yup.string().min(2, 'Too short').max(50, 'Too Long').required('Required'),
+    username: Yup.string().min(2, 'Too short').max(50, 'Too Long').required('Username is required'),
     email: Yup.string().email('Invalid email').required('Email is required'),
     password: Yup.string().min(8, 'Password must be bigger than 8 characters')
                 .required('Password is required'),
@@ -65,7 +65,7 @@ const Signup = ({navigation}) => {
                                 value={values.fullName}
                             />
                             <TextInput 
-                                label="Username *"
+                                label="Username"
                                 mode="outlined"
                                 icon="person"
                                 placeholder="username"
@@ -74,9 +74,9 @@ const Signup = ({navigation}) => {
                                 onBlur={handleBlur('username')}
                                 value={values.username}
                             />
-                            {touched.username && errors.username ? (<Text>{errors.username}</Text>) : null}
+                            {touched.username && errors.username ? (<Text style={{color: '#B00000'}}>{errors.username}</Text>) : null}
                             <TextInput 
-                                label="Email Address *"
+                                label="Email Address"
                                 icon="mail"
                                 placeholder="your-name@example.com"
                                 placeholderTextColor={placeholder}
@@ -85,9 +85,9 @@ const Signup = ({navigation}) => {
                                 value={values.email}
                                 keyboardType="email-address"
                             />
-                            {touched.email && errors.email ? (<Text>{errors.email}</Text>) : null}
+                            {touched.email && errors.email ? (<Text style={{color: '#B00000'}}>{errors.email}</Text>) : null}
                             <TextInput 
-                                label="Password *"
+                                label="Password"
                                 icon="lock"
                                 placeholder="********"
                                 placeholderTextColor={placeholder}
@@ -99,9 +99,9 @@ const Signup = ({navigation}) => {
                                 hidePassword={hidePassword}
                                 setHidePassword={setHidePassword}
                             />
-                            {touched.password && errors.password ? (<Text>{errors.password}</Text>) : null}
+                            {touched.password && errors.password ? (<Text style={{color: '#B00000'}}>{errors.password}</Text>) : null}
                             <TextInput 
-                                label="Confirm Password *"
+                                label="Confirm Password"
                                 icon="lock"
                                 placeholder="********"
                                 placeholderTextColor={placeholder}
@@ -113,7 +113,7 @@ const Signup = ({navigation}) => {
                                 hidePassword={hidePassword}
                                 setHidePassword={setHidePassword}
                             />
-                            {touched.confirmPassword && errors.confirmPassword ? (<Text>{errors.confirmPassword}</Text>) : null}
+                            {touched.confirmPassword && errors.confirmPassword ? (<Text style={{color: '#B00000'}}>{errors.confirmPassword}</Text>) : null}
                             <StyledButton onPress={handleSubmit}>
                                 <ButtonText>Sign Up</ButtonText>
                             </StyledButton>

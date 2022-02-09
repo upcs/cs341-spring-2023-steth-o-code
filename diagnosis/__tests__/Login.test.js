@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-
+import {act, RenderResult, fireEvent, wait, screen, render} from '@testing-library/react';
 import Login from '../screens/Login';
 
 describe('<Login />', () => {
@@ -12,4 +12,10 @@ describe('<Login />', () => {
         const tree = renderer.create(<Login />).toJSON();
         await expect(tree).toMatchSnapshot();
     });
+    // it('submits', () => {
+    //     const onSubmit = jest.fn();
+    //     render(<Login />);
+    //     fireEvent.submit(screen.getAllByTestId("login-form"));
+    //     expect(onSubmit).toHaveBeenCalled();
+    // });
 });
