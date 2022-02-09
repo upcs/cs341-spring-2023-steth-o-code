@@ -4,7 +4,8 @@ import React from 'react';
 import Login from './screens/Login';
 import MainMenu from './screens/MainMenu';
 import Signup from './screens/Signup';
+import StackNavigator from './navigators/StackNavigator';
 
 export default function App() {
-  return <MainMenu />;
+  return <StackNavigator />;
 }
