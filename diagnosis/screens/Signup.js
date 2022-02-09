@@ -73,6 +73,7 @@ const Signup = ({navigation}) => {
                                 onChangeText={handleChange('username')}
                                 onBlur={handleBlur('username')}
                                 value={values.username}
+                                testID='username-new'
                             />
                             {touched.username && errors.username ? (<Text style={{color: '#B00000'}}>{errors.username}</Text>) : null}
                             <TextInput 
@@ -84,6 +85,7 @@ const Signup = ({navigation}) => {
                                 onBlur={handleBlur('email')}
                                 value={values.email}
                                 keyboardType="email-address"
+                                testID='email-new'
                             />
                             {touched.email && errors.email ? (<Text style={{color: '#B00000'}}>{errors.email}</Text>) : null}
                             <TextInput 
@@ -98,6 +100,7 @@ const Signup = ({navigation}) => {
                                 isPassword={true}
                                 hidePassword={hidePassword}
                                 setHidePassword={setHidePassword}
+                                testID='password-new'
                             />
                             {touched.password && errors.password ? (<Text style={{color: '#B00000'}}>{errors.password}</Text>) : null}
                             <TextInput 
@@ -112,9 +115,10 @@ const Signup = ({navigation}) => {
                                 isPassword={true}
                                 hidePassword={hidePassword}
                                 setHidePassword={setHidePassword}
+                                testID='matching-password-new'
                             />
-                            {touched.confirmPassword && errors.confirmPassword ? (<Text style={{color: '#B00000'}}>{errors.confirmPassword}</Text>) : null}
-                            <StyledButton onPress={handleSubmit}>
+                            {touched.confirmPassword && errors.confirmPassword ? (<Text testID='match-password-error' style={{color: '#B00000'}}>{errors.confirmPassword}</Text>) : null}
+                            <StyledButton testID='signup-button' onPress={handleSubmit}>
                                 <ButtonText>Sign Up</ButtonText>
                             </StyledButton>
                             <Line />
