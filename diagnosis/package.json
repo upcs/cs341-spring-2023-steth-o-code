@@ -15,10 +15,14 @@
     "preset": "jest-expo",
     "transformIgnorePatterns": [
       "node_modules/(?!(jest-)?@react-native|react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|@sentry/.*)"
+    ],
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-native/extend-expect"
     ]
   },
   "dependencies": {
     "@react-navigation/native-stack": "^6.4.1",
+    "@testing-library/jest-native": "^4.0.4",
     "expo": "~44.0.0",
     "expo-constants": "~13.0.1",
     "expo-status-bar": "~1.2.0",
@@ -27,7 +31,7 @@
     "jest-expo": "^44.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-native": "0.64.3",
+    "react-native": "^0.67.2",
     "react-native-paper": "^4.11.2",
     "react-native-radio-buttons-group": "^2.2.10",
     "react-native-safe-area-context": "3.3.2",
@@ -41,6 +45,7 @@
     "@babel/core": "^7.12.9",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
+    "@testing-library/react-native": "^9.0.0",
     "@testing-library/user-event": "^13.5.0"
   },
   "private": true

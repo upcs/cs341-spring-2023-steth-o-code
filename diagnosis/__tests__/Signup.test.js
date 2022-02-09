@@ -7,8 +7,5 @@ describe('<Signup />', () => {
         const tree = renderer.create(<Signup />).toJSON();
         await expect(tree.children.length).toBe(1);
     });
-    test('renders correctly', async () => {
-        const tree = renderer.create(<Signup />).toJSON();
-        await expect(tree).toMatchSnapshot();
-    });
+
 });

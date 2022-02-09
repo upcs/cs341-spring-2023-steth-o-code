@@ -53,7 +53,6 @@ const Login = ({navigation}) => {
                         onSubmit={(values) => {
                             console.log(values);
                         }}
-                        data-testid="login-form"
                     >{({handleChange, handleBlur, handleSubmit, values, touched, errors}) => (
                         <StyledForm>
                             <TextInput 
@@ -64,8 +63,9 @@ const Login = ({navigation}) => {
                                 onChangeText={handleChange('username')}
                                 onBlur={handleBlur('username')}
                                 value={values.username}
+                                testID='username-input'
                             />
-                            {touched.username && errors.username ? (<Text style={{color: '#B00000'}}>{errors.username}</Text>) : null}
+                            {touched.username && errors.username ? (<Text style={{color: '#B00000'}} testID="username-error">{errors.username}</Text>) : null}
                             <TextInput 
                                 label="Password"
                                 icon="lock"
@@ -78,14 +78,15 @@ const Login = ({navigation}) => {
                                 isPassword={true}
                                 hidePassword={hidePassword}
                                 setHidePassword={setHidePassword}
+                                testID='password-input'
                             />
-                            {touched.password && errors.password ? (<Text style={{color: '#B00000'}}>{errors.password}</Text>) : null}
+                            {touched.password && errors.password ? (<Text style={{color: '#B00000'}} testID='password-error'>{errors.password}</Text>) : null}
                             <Text>{"\n"}</Text>
-                            <StyledButton onPress={handleSubmit}>
+                            <StyledButton testID='loginbutton' onPress={handleSubmit}>
                                 <ButtonText>Login</ButtonText>
                             </StyledButton>
                             <Line />
-                            <StyledButton wordpress={true} onPress={handleSubmit}>
+                            <StyledButton testID='wordpress-button' wordpress={true} onPress={handleSubmit}>
                                 <Fontisto name="wordpress" color={textInputBackground} size={25} />
                                 <ButtonText wordpress={true}>Sign in with Wordpress</ButtonText>
                             </StyledButton>
