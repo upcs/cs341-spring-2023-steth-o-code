@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { ExtraText } from '../components/styles';
 
 var time = new Date().getHours();
 
@@ -19,6 +20,10 @@ var button4Cliked = () => {
     alert("Button 4 clicked");
 }
 
+var button5Cliked = () => {
+    alert("Button 5 clicked");
+}
+
 const MainMenu = () => (
 
     
@@ -33,11 +38,13 @@ const MainMenu = () => (
                 User
             </Text>
 
-            <View style={styles.quickLinksView}>
-                <Text style={styles.exploreText}>Explore:</Text>
+            <View style={styles.middleLineLeft}></View>
+            <ExtraText style={styles.PDXCenterText}>PDX</ExtraText>
+            <View style={styles.middleLineRight}></View>
 
+            <View style={styles.quickLinksView}>
                 <TouchableOpacity style={styles.quickLinkButtons} onPress={button1Cliked}> 
-                    <Text style={styles.buttonText}>Knowledge Test</Text>
+                    <Text style={styles.buttonText}>Knowledge Test</Text>    
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.quickLinkButtons} onPress={button2Cliked}> 
@@ -49,6 +56,10 @@ const MainMenu = () => (
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.quickLinkButtons} onPress={button4Cliked}> 
+                    <Text style={styles.buttonText}>Our Team</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.quickLinkButtons} onPress={button5Cliked}> 
                     <Text style={styles.buttonText}>About Us</Text>
                 </TouchableOpacity>
             </View>
@@ -61,7 +72,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#000000",
+        backgroundColor: "#BFAA8C",
     },
 
     headerContainer: {
@@ -88,7 +99,7 @@ const styles = StyleSheet.create({
         width: 50,
         height: 50,
         right: 15,
-        top: 35
+        top: 40
     },
 
     stethoscopeImage: {
@@ -111,29 +122,21 @@ const styles = StyleSheet.create({
         textShadowColor:'#585858',
         textShadowOffset:{width: 5, height: 5},
         textShadowRadius:10,
-        
     },
     
     quickLinksView: {
-        top: 65,
-        backgroundColor: "#f0f0f0",
+        top: 70,
+        backgroundColor: "white",
         justifyContent: 'center',
         position: "relative",
         marginTop: 280,
         height: 370,
-        width: 350,
-        borderRadius: 15,
+        marginBottom: 0,
+        width: '96%',
+        borderRadius: 60,
         borderColor: 'red',
         alignContent: 'center'
 
-    },
-
-    exploreText: {
-        fontSize: 45,
-        marginBottom: 30,
-        fontFamily: "Gill Sans",
-        position: "relative",
-        marginLeft: 110
     },
 
     magGlassImg: {
@@ -143,21 +146,52 @@ const styles = StyleSheet.create({
     },
 
     quickLinkButtons: {
-        marginTop: 9,
+        marginTop: 15,
         alignItems: 'center',
         marginLeft: 50,
         width: '75%',
         paddingVertical: 10,
         backgroundColor: 'red',
         borderRadius: 30,
-        borderColor: 'black'
+    },
+    
+    middleLineLeft: {
+        width: 100,
+        borderBottomColor: 'grey',
+        borderBottomWidth: 6,
+        borderRadius: 12,
+        position: 'absolute',
+        left: 20,
+        top: 390
+    },
 
+    PDXCenterText: {
+        position: 'absolute',
+        fontSize: 50,
+        color: 'white',
+        textShadowColor:'#585858',
+        textShadowOffset:{width: 1, height: 9},
+        textShadowRadius:10,
+        paddingBottom: 30,
+        left: 145,
+        fontWeight: 'bold'
+    },
+
+    middleLineRight: {
+        width: 100,
+        borderBottomColor: 'grey',
+        borderBottomWidth: 6,
+        borderRadius: 12,
+        position: 'absolute',
+        right: 20,
+        top: 390
     },
 
     buttonText: {
         fontSize: 25,
         fontFamily: "Gill Sans",
-        fontWeight: "bold"
+        fontWeight: "bold",
+        color: "black"
     }
 });
     

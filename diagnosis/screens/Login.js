@@ -84,7 +84,15 @@ const Login = ({navigation}) => {
                                 <TextLink onPress={() => navigation.navigate("Signup")}>
                                     <TextLinkContent>Signup</TextLinkContent>
                                 </TextLink>
+
                             </ExtraView>
+
+                             
+                            <TextLink onPress={() => navigation.navigate("MainMenu")}>
+                                <ExtraText>For Demo Purposes:</ExtraText>
+                                <TextLinkContent>Go to Main Menu</TextLinkContent>
+                            </TextLink>
+
                         </StyledForm>)}
                     </Formik>
                 </InnerContainer>
