@@ -4,10 +4,6 @@ import { ExtraText } from '../components/styles';
 
 var time = new Date().getHours();
 
-var button1Cliked = () => {
-    alert("Button 1 clicked");
-}
-
 var button2Cliked = () => {
     alert("Button 2 clicked");
 }
@@ -24,7 +20,7 @@ var button5Cliked = () => {
     alert("Button 5 clicked");
 }
 
-const MainMenu = () => (
+const MainMenu = ({navigation}) => (
 
     
         <View style={styles.mainContainer}> 
@@ -43,23 +39,23 @@ const MainMenu = () => (
             <View style={styles.middleLineRight}></View>
 
             <View style={styles.quickLinksView}>
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={button1Cliked}> 
+                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("KnowledgeTest")}> 
                     <Text style={styles.buttonText}>Knowledge Test</Text>    
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={button2Cliked}> 
+                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("TOTD")}> 
                     <Text style={styles.buttonText}>Topic of the Day</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={button3Cliked}> 
+                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("Community")}> 
                     <Text style={styles.buttonText}>Community</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={button4Cliked}> 
+                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("TeamInfo")}> 
                     <Text style={styles.buttonText}>Our Team</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={button5Cliked}> 
+                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("AboutUs")}> 
                     <Text style={styles.buttonText}>About Us</Text>
                 </TouchableOpacity>
             </View>
