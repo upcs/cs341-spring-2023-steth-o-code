@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {View, Text, Image, TextInput, TouchableOpacity,Dimensions} from 'react-native';
+import {View, Text, Image, TextInput, TouchableOpacity, Dimensions} from 'react-native';
 import Constants from 'expo-constants';
 
 const StatusBarHeight = Constants.statusBarHeight;
@@ -18,7 +18,7 @@ const {background, textInputBackground, company, placeholder, button, linkColor}
 export const StyledContainer = styled(View)`
     flex: 1;
     padding: 25px;
-    padding-top: ${StatusBarHeight + 15}px;
+    padding-top: ${StatusBarHeight + 30}px;
     background-color: ${background};
     height: ${Dimensions.get('window').height}px;
     width: ${Dimensions.get('window').width}px;
