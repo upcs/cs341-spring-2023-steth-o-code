@@ -93,6 +93,10 @@ const Login = ({navigation}) => {
                                 <TextLinkContent>Go to Main Menu</TextLinkContent>
                             </TextLink>
 
+                            <TextLink onPress={() => navigation.navigate("MultiMedia")}>
+                                <TextLinkContent>Go to MultiMedia</TextLinkContent>
+                            </TextLink>
+
                         </StyledForm>)}
                     </Formik>
                 </InnerContainer>

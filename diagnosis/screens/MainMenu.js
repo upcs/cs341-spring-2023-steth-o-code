@@ -1,24 +1,8 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, Image, TouchableOpacity, Dimensions} from 'react-native';
 import { ExtraText } from '../components/styles';
 
 var time = new Date().getHours();
-
-var button2Cliked = () => {
-    alert("Button 2 clicked");
-}
-
-var button3Cliked = () => {
-    alert("Button 3 clicked");
-}
-
-var button4Cliked = () => {
-    alert("Button 4 clicked");
-}
-
-var button5Cliked = () => {
-    alert("Button 5 clicked");
-}
 
 const MainMenu = ({navigation}) => (
 
@@ -69,6 +53,8 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "#BFAA8C",
+        height: Dimensions.get('window').height,
+        width: Dimensions.get('window').width
     },
 
     headerContainer: {
