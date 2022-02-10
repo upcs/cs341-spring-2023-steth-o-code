@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "react-native-select-dropdown": "^1.7.0"
+    "@react-navigation/drawer": "^6.3.0"
   }
 }
