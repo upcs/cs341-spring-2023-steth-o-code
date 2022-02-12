@@ -41,6 +41,7 @@ const ValidationInputSchema = Yup.object().shape({
 
 const Signup = ({navigation}) => {
     const [hidePassword, setHidePassword] = useState(true);
+    const [disable, setDisable] = useState(false);
     return (
         <KeyboardAvoidWrap>
             <StyledContainer>
@@ -50,10 +51,8 @@ const Signup = ({navigation}) => {
                     <Formik
                         initialValues={{fullName: '', email: '', username: '', password: '', confirmPassword: ''}}
                         validationSchema={ValidationInputSchema}
-                        onSubmit={(values) => {
-                            console.log(values);
-                        }}
-                    >{({handleChange, handleBlur, handleSubmit, values, touched, errors}) => (
+                        onSubmit={() =>  {navigation.navigate('MainMenu');}}
+                    >{({handleChange, handleBlur, handleSubmit, values, touched, errors, isValid, isSubmitting}) => (
                         <StyledForm>
                             <TextInput 
                                 label="Full Name"
@@ -75,7 +74,7 @@ const Signup = ({navigation}) => {
                                 value={values.username}
                                 testID='username-new'
                             />
-                            {touched.username && errors.username ? (<Text style={{color: '#B00000'}}>{errors.username}</Text>) : null}
+                            {touched.username && errors.username ? (<Text style={{color: '#B00000'}} testID='new-username-error'>{errors.username}</Text>) : null}
                             <TextInput 
                                 label="Email Address"
                                 icon="mail"
@@ -87,7 +86,7 @@ const Signup = ({navigation}) => {
                                 keyboardType="email-address"
                                 testID='email-new'
                             />
-                            {touched.email && errors.email ? (<Text style={{color: '#B00000'}}>{errors.email}</Text>) : null}
+                            {touched.email && errors.email ? (<Text style={{color: '#B00000'}} testID='new-email-error'>{errors.email}</Text>) : null}
                             <TextInput 
                                 label="Password"
                                 icon="lock"
@@ -102,7 +101,7 @@ const Signup = ({navigation}) => {
                                 setHidePassword={setHidePassword}
                                 testID='password-new'
                             />
-                            {touched.password && errors.password ? (<Text style={{color: '#B00000'}}>{errors.password}</Text>) : null}
+                            {touched.password && errors.password ? (<Text style={{color: '#B00000'}} testID='new-password-error'>{errors.password}</Text>) : null}
                             <TextInput 
                                 label="Confirm Password"
                                 icon="lock"
@@ -118,7 +117,7 @@ const Signup = ({navigation}) => {
                                 testID='matching-password-new'
                             />
                             {touched.confirmPassword && errors.confirmPassword ? (<Text testID='match-password-error' style={{color: '#B00000'}}>{errors.confirmPassword}</Text>) : null}
-                            <StyledButton testID='signup-button' onPress={handleSubmit}>
+                            <StyledButton testID='signup-button' disabled={!isValid || isSubmitting} onPress={handleSubmit} loading={isSubmitting}>
                                 <ButtonText>Sign Up</ButtonText>
                             </StyledButton>
                             <Line />

@@ -50,10 +50,8 @@ const Login = ({navigation}) => {
                     <Formik
                         initialValues={{username: '', password: ''}}
                         validationSchema={LoginSchema}
-                        onSubmit={(values) => {
-                            console.log(values);
-                        }}
-                    >{({handleChange, handleBlur, handleSubmit, values, touched, errors}) => (
+                        onSubmit={() => navigation.navigate('MainMenu')}
+                    >{({handleChange, handleBlur, handleSubmit, values, touched, errors, isValid, isSubmitting}) => (
                         <StyledForm>
                             <TextInput 
                                 label="Username"
@@ -82,7 +80,7 @@ const Login = ({navigation}) => {
                             />
                             {touched.password && errors.password ? (<Text style={{color: '#B00000'}} testID='password-error'>{errors.password}</Text>) : null}
                             <Text>{"\n"}</Text>
-                            <StyledButton testID='loginbutton' onPress={handleSubmit}>
+                            <StyledButton testID='loginbutton' disabled={! isValid || isSubmitting} onPress={handleSubmit} loading={isSubmitting}>
                                 <ButtonText>Login</ButtonText>
                             </StyledButton>
                             <Line />
@@ -99,10 +97,10 @@ const Login = ({navigation}) => {
                             </ExtraView>
 
                              
-                            <TextLink onPress={() => navigation.navigate("MainMenu")}>
+                            {/* <TextLink onPress={() => navigation.navigate("MainMenu")}>
                                 <ExtraText>For Demo Purposes:</ExtraText>
                                 <TextLinkContent>Go to Main Menu</TextLinkContent>
-                            </TextLink>
+                            </TextLink> */}
 
                             <TextLink onPress={() => navigation.navigate("MultiMedia")}>
                                 <TextLinkContent>Go to MultiMedia</TextLinkContent>
