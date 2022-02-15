@@ -40,7 +40,7 @@ describe('<Signup />', () => {
             expect(queryByTestId('new-password-error')).toBeTruthy();
             expect(queryByTestId('new-password-error')).toHaveTextContent('Password is required');
             expect(queryByTestId('match-password-error')).toBeTruthy();
-            expect(queryByTestId('match-password-error')).toHaveTextContent('Username is required');
+            expect(queryByTestId('match-password-error')).toHaveTextContent('Confirming Password is required');
         });
     });
 });

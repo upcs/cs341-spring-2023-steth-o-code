@@ -16,8 +16,7 @@ describe('<Login />', () => {
             fireEvent.changeText(password, 'PDXRules!!');
         });
         await waitFor(() => {
-            expect(queryByTestId('username-error')).toBeNull();
-            expect(queryByTestId('password-error')).toBeNull();
+            expect(queryByTestId('msg-box')).toBeNull();
         });
     });
     test('it has working buttons w/input validation', async () => {
@@ -29,10 +28,8 @@ describe('<Login />', () => {
             fireEvent.press(wordPressButton);
         });
         await waitFor(() => {
-            expect(queryByTestId('username-error')).toBeTruthy();
-            expect(queryByTestId('username-error')).toHaveTextContent('Username is required');
-            expect(queryByTestId('password-error')).toBeTruthy();
-            expect(queryByTestId('password-error')).toHaveTextContent('Password is required');
+            expect(queryByTestId('msgbox')).toBeTruthy();
+            expect(queryByTestId('msgbox')).toHaveTextContent('Please fill out all the fields above.');
         });
     });
 });

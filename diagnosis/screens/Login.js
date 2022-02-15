@@ -91,7 +91,7 @@ const Login = ({navigation}) => {
                                 testID='password-input'
                             />
                             {/* {touched.password && errors.password ? (<Text style={{color: '#B00000'}} testID='password-error'>{errors.password}</Text>) : null} */}
-                            <MessageBox type={messageType}>{message}</MessageBox>
+                            <MessageBox testID='msgbox' type={messageType}>{message}</MessageBox>
                             {!isSubmitting && <StyledButton testID='loginbutton' onPress={handleSubmit}>
                                 <ButtonText>Login</ButtonText>
                             </StyledButton>}
