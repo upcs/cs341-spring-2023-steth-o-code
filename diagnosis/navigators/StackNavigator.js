@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Colors} from './../components/styles';
+import {Colors} from '../components/SignUpLoginStyles';
 const {background} = Colors;
 //react navigation
 import { NavigationContainer } from '@react-navigation/native'
@@ -19,7 +19,7 @@ import MultiMedia from './../screens/Multimedia';
 
 import { ScreenStackHeaderLeftView } from 'react-native-screens';
 
-const Stack = createNativeStackNavigator()
+const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
   return (
