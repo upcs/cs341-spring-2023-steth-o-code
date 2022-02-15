@@ -1,44 +1,89 @@
-import React, { Component } from 'react';
-import { StyleSheet, Text, SafeAreaView, ScrollView, StatusBar } from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, View, SafeAreaView, ScrollView, StyledContainer, TouchableOpacity } from 'react-native';
 
-const topics = () => {
-  return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView style={styles.scrollView}>
-        <Text style={styles.text}>
-          Topics
-        </Text>
-        <button>Cardiology</button>
-        <button>Endocrinology</button>
-        <button>Nails</button>
-        <button>Neurology</button>
-        <button>Rheumatology</button>
-        <button>Pulmonology</button>
-        <button>Gastroenterology</button>
-        <button>Miscellaneous</button>
-      </ScrollView>
+const Topics = ({navigation}) => (
+    <StyledContainer>
+    <SafeAreaView style={styles.StyledContainer}>
+    <ScrollView style={styles.scrollView}>
+    <Text style={styles.Text}>Topics</Text>
+    <View style={styles.buttonView}>
+    <TouchableOpacity style={styles.buttons} onPress={() => navigation.navigate("DefaultTopic")}> 
+    <Text style={styles.buttonsText}>Cardiology</Text>    
+    </TouchableOpacity>
+    <TouchableOpacity style={styles.buttons} onPress={() => navigation.navigate("DefaultTopic")}> 
+    <Text style={styles.buttonsText}>Endocrinology</Text>    
+    </TouchableOpacity>
+    <TouchableOpacity style={styles.buttons} onPress={() => navigation.navigate("DefaultTopic")}> 
+    <Text style={styles.buttonsText}>Nails</Text>    
+    </TouchableOpacity>
+    <TouchableOpacity style={styles.buttons} onPress={() => navigation.navigate("DefaultTopic")}> 
+    <Text style={styles.buttonsText}>Neurology</Text>    
+    </TouchableOpacity>
+    <TouchableOpacity style={styles.buttons} onPress={() => navigation.navigate("DefaultTopic")}> 
+    <Text style={styles.buttonsText}>Rheumatology</Text>    
+    </TouchableOpacity>
+    <TouchableOpacity style={styles.buttons} onPress={() => navigation.navigate("DefaultTopic")}> 
+    <Text style={styles.buttonsText}>Pulmonology</Text>    
+    </TouchableOpacity>
+    <TouchableOpacity style={styles.buttons} onPress={() => navigation.navigate("DefaultTopic")}> 
+    <Text style={styles.buttonsText}>Gastroenterology</Text>    
+    </TouchableOpacity>
+    <TouchableOpacity style={styles.buttons} onPress={() => navigation.navigate("DefaultTopic")}> 
+    <Text style={styles.buttonsText}>Miscellaneous</Text>    
+    </TouchableOpacity>
+    </View>
+    </ScrollView>
     </SafeAreaView>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingTop: StatusBar.currentHeight,
-  },
-  scrollView: {
-    backgroundColor: 'white',
-    marginHorizontal: 20,
-  },
-  text: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    fontSize: 30,
-    marginBottom: 10,
-  },
-});
-
-export default topics;
+    </StyledContainer>
+    );
+  
+  const styles = StyleSheet.create({
+    StyledContainer: {
+      backgroundColor: 'white',
+      flex: 1,
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: "#BFAA8C",
+    },
+    scrollView: {
+      backgroundColor: 'white',
+      marginHorizontal: 20,
+    },
+    Text: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      fontSize: 30,
+      marginBottom: 10,
+    },
+    buttons: {
+      marginTop: 15,
+      alignItems: 'center',
+      marginLeft: 50,
+      width: '75%',
+      paddingVertical: 10,
+      backgroundColor: 'red',
+      borderRadius: 30,
+    },
+    buttonView: {
+      top: 70,
+      backgroundColor: "white",
+      justifyContent: 'center',
+      position: "relative",
+      marginTop: 280,
+      height: 370,
+      marginBottom: 0,
+      width: '96%',
+      borderRadius: 60,
+      borderColor: 'red',
+      alignContent: 'center'
+    },
+    buttonsText: {
+      fontSize: 25,
+      fontFamily: "Gill Sans",
+      fontWeight: "bold",
+      color: "black"
+    }
+  });
+  
+  export default Topics;
