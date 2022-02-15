@@ -2,6 +2,7 @@ import React, {useState}  from 'react';
 import { View, Text, Switch, Stylesheet } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { ButtonGroup } from 'react-native-elements'
+import { WebView } from 'react-native-webview';
 
 import { StyledContainer, 
     InnerContainer,
@@ -55,6 +56,7 @@ const Multimedia = () => {
                         ios_backgroundColor="#3e3e3e"
                         onValueChange={toggleSwitch}
                         value={isEnabled}
+                        data-testid="switch"
                     />
                 </View>
                 {/*End of universal section*/}
@@ -64,7 +66,13 @@ const Multimedia = () => {
                 {/*Block text for patient 1*/}
                 <Text style={{alignItems: 'flex-start'}}>{block1}</Text>
                 {/*Video itself, should change depending on selected radio button*/}
-
+                <WebView
+                    allowsFullscreenVideo
+                    allowsInlineMediaPlayback
+                    mediaPlaybackRequiresUserAction
+                    source={{ uri: 'https://vimeo.com/'+{ids1: selected}}} 
+                    data-testid="video"
+                />
                 {/*Video type selection*/}
                 <ButtonGroup
                     buttons={['Normal', 'Annotated', 'Narrated']}
@@ -73,6 +81,7 @@ const Multimedia = () => {
                     setSelectedIndex(value);
                     }}
                     containerStyle={{ marginBottom: 20 }}
+                    data-testid="button-group"
                 />
             </InnerContainer>
         </StyledContainer>
