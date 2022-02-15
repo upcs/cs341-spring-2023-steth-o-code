@@ -4,7 +4,7 @@ import React from 'react'
 import { render, fireEvent, cleanup, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
-const multi = require('./src/screens/Multimedia');
+const multi = require('./../screens/Multimedia');
 
 test('test Switch', () => {
   render(<multi />);
@@ -24,6 +24,6 @@ test('test Button Group', () => {
 
 test('test Vimeo', () => {
   render(<multi />);
-  expect(screen.getByTestID('video')).not.toBeNull();//video exists
+  expect(screen.getByTestID('video')).toBeDefined();//video exists
   //write more test here
 })

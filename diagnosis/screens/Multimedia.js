@@ -7,11 +7,8 @@ import { WebView } from 'react-native-webview';
 import { StyledContainer, 
     InnerContainer,
     Colors, 
-    RadioGroup,
-    Radio,
     PageTitle,
-    PageLogo,
-    Vimeo
+    PageLogo
 } from "./../components/styles";
 
 import {Octicons, Ionicons, Fontisto } from '@expo/vector-icons';
