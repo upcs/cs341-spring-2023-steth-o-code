@@ -14,8 +14,9 @@ import KnowledgeTest from './../screens/KnowledgeTest';
 import AboutUs from './../screens/AboutUs';
 import Community from './../screens/Community';
 import TeamInfo from './../screens/TeamInfo';
-import TOTD from './../screens/TopicOfTheDay';
+import Topics from './../screens/Topics';
 import MultiMedia from './../screens/Multimedia';
+import DefaultTopic from './../screens/DefaultTopic';
 
 import { ScreenStackHeaderLeftView } from 'react-native-screens';
 
@@ -44,8 +45,9 @@ const StackNavigator = () => {
           <Stack.Screen name="AboutUs" component={AboutUs}/>
           <Stack.Screen name="Community" component={Community}/>
           <Stack.Screen name="TeamInfo" component={TeamInfo}/>
-          <Stack.Screen name="TOTD" component={TOTD}/>
+          <Stack.Screen name="Topics" component={Topics}/>
           <Stack.Screen name="MultiMedia" component={MultiMedia}/>
+          <Stack.Screen name="DefaultTopic" component={DefaultTopic}/>
 
           
         </Stack.Navigator>
