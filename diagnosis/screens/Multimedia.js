@@ -11,7 +11,7 @@ import { StyledContainer,
     PageTitle,
     PageLogo,
     Vimeo
-} from "./../components/styles";
+} from "./../components/SignUpLoginStyles";
 
 import {Octicons, Ionicons, Fontisto } from '@expo/vector-icons';
 const {company, placeholder, textInputBackground} = Colors;

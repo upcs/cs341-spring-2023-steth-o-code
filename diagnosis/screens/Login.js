@@ -1,6 +1,7 @@
 import React, {useState}  from 'react';
 import { View, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+import * as Yup from 'yup'
 
 //formik
 import { Formik } from 'formik';
@@ -22,7 +23,7 @@ import { StyledContainer,
     TextLink,
     TextLinkContent,
     StyleInputLabel
-} from "./../components/styles";
+} from "../components/SignUpLoginStyles";
 
 import {Octicons, Ionicons, Fontisto } from '@expo/vector-icons';
 
@@ -31,6 +32,11 @@ const {company, placeholder, textInputBackground} = Colors;
 
 //keyboard avoiding wrapper
 import KeyboardAvoidWrap from '../components/KeyboardAvoidWrap';
+
+const LoginSchema = Yup.object().shape({
+    username: Yup.string().min(2, 'Too short').max(50, 'Too Long').required('Username is required'),
+    password: Yup.string().min(8, 'Password must be bigger than 8 characters').required('Password is required'),
+});
 
 const Login = ({navigation}) => {
     const [hidePassword, setHidePassword] = useState(true);
@@ -43,10 +49,9 @@ const Login = ({navigation}) => {
                     <PageTitle>Account Login</PageTitle>
                     <Formik
                         initialValues={{username: '', password: ''}}
-                        onSubmit={(values) => {
-                            console.log(values);
-                        }}
-                    >{({handleChange, handleBlur, handleSubmit, values}) => (
+                        validationSchema={LoginSchema}
+                        onSubmit={() => navigation.navigate('MainMenu')}
+                    >{({handleChange, handleBlur, handleSubmit, values, touched, errors, isValid, isSubmitting}) => (
                         <StyledForm>
                             <TextInput 
                                 label="Username"
@@ -56,7 +61,9 @@ const Login = ({navigation}) => {
                                 onChangeText={handleChange('username')}
                                 onBlur={handleBlur('username')}
                                 value={values.username}
+                                testID='username-input'
                             />
+                            {touched.username && errors.username ? (<Text style={{color: '#B00000'}} testID="username-error">{errors.username}</Text>) : null}
                             <TextInput 
                                 label="Password"
                                 icon="lock"
@@ -69,13 +76,15 @@ const Login = ({navigation}) => {
                                 isPassword={true}
                                 hidePassword={hidePassword}
                                 setHidePassword={setHidePassword}
+                                testID='password-input'
                             />
+                            {touched.password && errors.password ? (<Text style={{color: '#B00000'}} testID='password-error'>{errors.password}</Text>) : null}
                             <Text>{"\n"}</Text>
-                            <StyledButton onPress={handleSubmit}>
+                            <StyledButton testID='loginbutton' disabled={! isValid || isSubmitting} onPress={handleSubmit} loading={isSubmitting}>
                                 <ButtonText>Login</ButtonText>
                             </StyledButton>
                             <Line />
-                            <StyledButton wordpress={true} onPress={handleSubmit}>
+                            <StyledButton testID='wordpress-button' wordpress={true} onPress={handleSubmit}>
                                 <Fontisto name="wordpress" color={textInputBackground} size={25} />
                                 <ButtonText wordpress={true}>Sign in with Wordpress</ButtonText>
                             </StyledButton>
@@ -88,10 +97,10 @@ const Login = ({navigation}) => {
                             </ExtraView>
 
                              
-                            <TextLink onPress={() => navigation.navigate("MainMenu")}>
+                            {/* <TextLink onPress={() => navigation.navigate("MainMenu")}>
                                 <ExtraText>For Demo Purposes:</ExtraText>
                                 <TextLinkContent>Go to Main Menu</TextLinkContent>
-                            </TextLink>
+                            </TextLink> */}
 
                             <TextLink onPress={() => navigation.navigate("MultiMedia")}>
                                 <TextLinkContent>Go to MultiMedia</TextLinkContent>

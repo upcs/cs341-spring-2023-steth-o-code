@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity, Dimensions} from 'react-native';
-import { ExtraText } from '../components/styles';
+import { ExtraText } from '../components/SignUpLoginStyles';
 
 var time = new Date().getHours();
 
