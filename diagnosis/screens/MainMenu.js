@@ -8,20 +8,26 @@ const MainMenu = ({navigation}) => (
 
     
         <View style={styles.mainContainer}> 
+        
             <View style={styles.headerContainer}>   
                 <Image style={styles.PDXLogo} source={require('diagnosis/assets/simplePDXLogo.png')}></Image>
                 <Image style={styles.accountIcon} source={require('diagnosis/assets/accountIcon.png')}></Image>
             </View>
+
+            <View style={styles.imageView}>
+                <Image style={styles.stethoscopeImage} source={require('diagnosis/assets/stethoscope.jpeg')} blurRadius={1}></Image>
+                {/* <Text style={styles.welcomeText}>Good Morning, {"\n"}
+                    User
+                </Text> */}
+            </View>
+
+            <View style={styles.centerView}>
+                <View style={styles.middleLineLeft}></View>
+                <ExtraText style={styles.PDXCenterText}>PDX</ExtraText>
+                <View style={styles.middleLineRight}></View>
+            </View>
             
-            <Image style={styles.stethoscopeImage} source={require('diagnosis/assets/stethoscope.jpeg')} blurRadius={1}></Image>
-            <Text style={styles.welcomeText}>Good Morning, {"\n"}
-                User
-            </Text>
-
-            <View style={styles.middleLineLeft}></View>
-            <ExtraText style={styles.PDXCenterText}>PDX</ExtraText>
-            <View style={styles.middleLineRight}></View>
-
+           
             <View style={styles.quickLinksView}>
                 <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("KnowledgeTest")}> 
                     <Text style={styles.buttonText}>Knowledge Test</Text>    
@@ -42,7 +48,12 @@ const MainMenu = ({navigation}) => (
                 <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("AboutUs")}> 
                     <Text style={styles.buttonText}>About Us</Text>
                 </TouchableOpacity>
-            </View>
+                </View>
+            
+            
+               
+
+            
         </View>
 );
 
@@ -63,16 +74,15 @@ const styles = StyleSheet.create({
         top: 0,
         height: 100,
         justifyContent: "center",
-        alignContent: "center",
-        width: '100%',
+        width: Dimensions.get('window').width,
     },
 
     PDXLogo: {
         resizeMode: "contain",
+        position: 'absolute',
         width: 200,
-        top: 15,
-        left: 90,
-        flex: 1,
+        left: 87,
+        top: -60
     },
 
     accountIcon: {
@@ -87,10 +97,15 @@ const styles = StyleSheet.create({
     stethoscopeImage: {
         resizeMode: "contain",
         position: "absolute",
-        width: '100%',
-        height: undefined,
-        aspectRatio: 1,
-        top: 38
+        width: Dimensions.get('window').width,
+        height: 250,
+    },
+
+    imageView: {
+        position: 'absolute',
+        top: 100,
+        height: 250,
+        width: Dimensions.get('window').width,
     },
 
     welcomeText: {
@@ -107,18 +122,14 @@ const styles = StyleSheet.create({
     },
     
     quickLinksView: {
-        top: 70,
         backgroundColor: "white",
-        justifyContent: 'center',
-        position: "relative",
-        marginTop: 280,
-        height: 370,
-        marginBottom: 0,
+        position: "absolute",
+        top: 440,
         width: '96%',
         borderRadius: 60,
         borderColor: 'red',
-        alignContent: 'center'
-
+        padding: 10,
+        alignItems: 'center'
     },
 
     magGlassImg: {
@@ -128,13 +139,20 @@ const styles = StyleSheet.create({
     },
 
     quickLinkButtons: {
-        marginTop: 15,
+        margin: 10,
         alignItems: 'center',
-        marginLeft: 50,
         width: '75%',
         paddingVertical: 10,
         backgroundColor: 'red',
         borderRadius: 30,
+    },
+
+    centerView: {
+        top: 350,
+        position: "absolute",
+        //backgroundColor: 'red',
+        height: 80,
+        width: Dimensions.get('window').width
     },
     
     middleLineLeft: {
@@ -144,7 +162,8 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         position: 'absolute',
         left: 20,
-        top: 390
+        top: 42
+      
     },
 
     PDXCenterText: {
@@ -154,9 +173,9 @@ const styles = StyleSheet.create({
         textShadowColor:'#585858',
         textShadowOffset:{width: 1, height: 9},
         textShadowRadius:10,
-        paddingBottom: 30,
-        left: 145,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        top: 17,
+        left: 140
     },
 
     middleLineRight: {
@@ -166,7 +185,7 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         position: 'absolute',
         right: 20,
-        top: 390
+        top: 42
     },
 
     buttonText: {
