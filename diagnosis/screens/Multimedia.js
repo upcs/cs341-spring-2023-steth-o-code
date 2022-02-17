@@ -47,8 +47,8 @@ const Multimedia = () => {
                 {/*Basic description*/}
                 <Text style={{alignItems: 'flex-start'}}>{description}</Text>
                 {/*Available offline switch*/}
-                <View style={{alignItems: 'flex-start'}}>{/* Switch needs to be centered */}
-                    <Text>{isEnabled ? "Available offline" : "Make page available offline"}</Text>
+                <View style={{flexDirection:'row',justifyContent : 'space-between'}}>{/* Switch needs to be centered */}
+                    <Text>{"Available offline "}</Text>
                     <Switch
                         trackColor={{ false: "#767577", true: "#81b0ff" }}
                         thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
