@@ -113,6 +113,7 @@ const styles = StyleSheet.create({
     imageView: {
         position: 'absolute',
         height: 250,
+        top: 100,
         backgroundColor: 'red',
         width: Dimensions.get('window').width,
     },
