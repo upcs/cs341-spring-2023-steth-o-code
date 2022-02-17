@@ -1,7 +1,8 @@
 import React, {useState}  from 'react';
 import { View, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import * as Yup from 'yup'
+import { StackActions } from '@react-navigation/native';
+import * as Yup from 'yup';
 
 //formik
 import { Formik } from 'formik';
@@ -97,10 +98,10 @@ const Login = ({navigation}) => {
                             </ExtraView>
 
                              
-                            {/* <TextLink onPress={() => navigation.navigate("MainMenu")}>
+                            <TextLink onPress={() => navigation.dispatch(StackActions.replace('MainMenu')) }>
                                 <ExtraText>For Demo Purposes:</ExtraText>
                                 <TextLinkContent>Go to Main Menu</TextLinkContent>
-                            </TextLink> */}
+                            </TextLink>
 
                             <TextLink onPress={() => navigation.navigate("MultiMedia")}>
                                 <TextLinkContent>Go to MultiMedia</TextLinkContent>
