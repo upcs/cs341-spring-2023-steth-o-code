@@ -3,8 +3,9 @@ import React from 'react';
 import {Colors} from '../components/SignUpLoginStyles';
 const {background} = Colors;
 //react navigation
-import { NavigationContainer } from '@react-navigation/native'
+import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import DrawerNavigator from './DrawerNavigator';
 
 //screens import
 import Login from './../screens/Login';
@@ -39,7 +40,7 @@ const StackNavigator = () => {
         >
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Signup" component={Signup} />
-          <Stack.Screen name="MainMenu" component={MainMenu} />
+          <Stack.Screen name="MainMenu" component={DrawerNavigator} />
           <Stack.Screen name="KnowledgeTest" component={KnowledgeTest}/>
           <Stack.Screen name="AboutUs" component={AboutUs}/>
           <Stack.Screen name="Community" component={Community}/>

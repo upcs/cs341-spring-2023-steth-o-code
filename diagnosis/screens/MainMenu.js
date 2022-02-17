@@ -1,6 +1,8 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity, Dimensions} from 'react-native';
 import { ExtraText } from '../components/SignUpLoginStyles';
+import {Ionicons} from '@expo/vector-icons';
+import { IconButton, Colors } from 'react-native-paper';
 
 var time = new Date().getHours();
 
@@ -8,7 +10,10 @@ const MainMenu = ({navigation}) => (
 
     
         <View style={styles.mainContainer}> 
-            <View style={styles.headerContainer}>   
+            <View style={styles.headerContainer}>
+                <View>
+                    <Ionicons style={styles.MainMenu} name='menu' size={35}/>
+                </View>
                 <Image style={styles.PDXLogo} source={require('diagnosis/assets/simplePDXLogo.png')}></Image>
                 <Image style={styles.accountIcon} source={require('diagnosis/assets/accountIcon.png')}></Image>
             </View>
@@ -66,11 +71,15 @@ const styles = StyleSheet.create({
         alignContent: "center",
         width: '100%',
     },
-
+    MainMenu:{
+        top: 10,
+        left: 20
+    },
     PDXLogo: {
+        position:"absolute",
         resizeMode: "contain",
         width: 200,
-        top: 15,
+        top: -60,
         left: 90,
         flex: 1,
     },
