@@ -19,13 +19,13 @@ const CarouselCards = () => {
     return (
         <View>
             <Carousel 
-                layout='tinder'
+                layout='default'
                 layoutCardOffset={9}
                 ref={isCarousel}
                 data={images}
                 renderItem={CarouselCardItem}
                 sliderWidth={SLIDER_WIDTH}
-                itemWidth={ITEM_WIDTH}
+                itemWidth={ITEM_WIDTH+20}
                 onSnapToItem={(index) => setIndex(index)}
                 useScrollView={true}
             />
