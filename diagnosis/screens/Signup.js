@@ -1,6 +1,7 @@
 import React, {useState}  from 'react';
 import { View, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+import * as Yup from 'yup'
 
 //formik
 import { Formik } from 'formik';
@@ -21,7 +22,7 @@ import { StyledContainer,
     TextLink,
     TextLinkContent,
     StyleInputLabel
-} from "./../components/styles";
+} from "../components/SignUpLoginStyles";
 
 import {Octicons, Ionicons } from '@expo/vector-icons';
 
@@ -30,8 +31,17 @@ const {company, placeholder} = Colors;
 //keyboard avoiding wrapper
 import KeyboardAvoidWrap from '../components/KeyboardAvoidWrap';
 
+const ValidationInputSchema = Yup.object().shape({
+    username: Yup.string().min(2, 'Too short').max(50, 'Too Long').required('Username is required'),
+    email: Yup.string().email('Invalid email').required('Email is required'),
+    password: Yup.string().min(8, 'Password must be bigger than 8 characters')
+                .required('Password is required'),
+    confirmPassword: Yup.string().oneOf([Yup.ref('password')], 'Passwords must match').required('Confirming Password is required'),
+});
+
 const Signup = ({navigation}) => {
     const [hidePassword, setHidePassword] = useState(true);
+    const [disable, setDisable] = useState(false);
     return (
         <KeyboardAvoidWrap>
             <StyledContainer>
@@ -40,10 +50,9 @@ const Signup = ({navigation}) => {
                     <PageTitle>Sign Up to PDX PDX</PageTitle>
                     <Formik
                         initialValues={{fullName: '', email: '', username: '', password: '', confirmPassword: ''}}
-                        onSubmit={(values) => {
-                            console.log(values);
-                        }}
-                    >{({handleChange, handleBlur, handleSubmit, values}) => (
+                        validationSchema={ValidationInputSchema}
+                        onSubmit={() =>  {navigation.navigate('MainMenu');}}
+                    >{({handleChange, handleBlur, handleSubmit, values, touched, errors, isValid, isSubmitting}) => (
                         <StyledForm>
                             <TextInput 
                                 label="Full Name"
@@ -55,7 +64,7 @@ const Signup = ({navigation}) => {
                                 value={values.fullName}
                             />
                             <TextInput 
-                                label="Username *"
+                                label="Username"
                                 mode="outlined"
                                 icon="person"
                                 placeholder="username"
@@ -63,9 +72,11 @@ const Signup = ({navigation}) => {
                                 onChangeText={handleChange('username')}
                                 onBlur={handleBlur('username')}
                                 value={values.username}
+                                testID='username-new'
                             />
+                            {touched.username && errors.username ? (<Text style={{color: '#B00000'}} testID='new-username-error'>{errors.username}</Text>) : null}
                             <TextInput 
-                                label="Email Address *"
+                                label="Email Address"
                                 icon="mail"
                                 placeholder="your-name@example.com"
                                 placeholderTextColor={placeholder}
@@ -73,9 +84,11 @@ const Signup = ({navigation}) => {
                                 onBlur={handleBlur('email')}
                                 value={values.email}
                                 keyboardType="email-address"
+                                testID='email-new'
                             />
+                            {touched.email && errors.email ? (<Text style={{color: '#B00000'}} testID='new-email-error'>{errors.email}</Text>) : null}
                             <TextInput 
-                                label="Password *"
+                                label="Password"
                                 icon="lock"
                                 placeholder="********"
                                 placeholderTextColor={placeholder}
@@ -86,9 +99,11 @@ const Signup = ({navigation}) => {
                                 isPassword={true}
                                 hidePassword={hidePassword}
                                 setHidePassword={setHidePassword}
+                                testID='password-new'
                             />
+                            {touched.password && errors.password ? (<Text style={{color: '#B00000'}} testID='new-password-error'>{errors.password}</Text>) : null}
                             <TextInput 
-                                label="Confirm Password *"
+                                label="Confirm Password"
                                 icon="lock"
                                 placeholder="********"
                                 placeholderTextColor={placeholder}
@@ -99,9 +114,10 @@ const Signup = ({navigation}) => {
                                 isPassword={true}
                                 hidePassword={hidePassword}
                                 setHidePassword={setHidePassword}
+                                testID='matching-password-new'
                             />
-                            <Text>{"\n"}</Text>
-                            <StyledButton onPress={handleSubmit}>
+                            {touched.confirmPassword && errors.confirmPassword ? (<Text testID='match-password-error' style={{color: '#B00000'}}>{errors.confirmPassword}</Text>) : null}
+                            <StyledButton testID='signup-button' disabled={!isValid || isSubmitting} onPress={handleSubmit} loading={isSubmitting}>
                                 <ButtonText>Sign Up</ButtonText>
                             </StyledButton>
                             <Line />
