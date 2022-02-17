@@ -8,5 +8,6 @@ import MainMenu from './screens/MainMenu';
 import StackNavigator from './navigators/StackNavigator';
 
 export default function App() {
-  return <StackNavigator />;
+  //return <StackNavigator />;
+  return <MainMenu/>;
 }

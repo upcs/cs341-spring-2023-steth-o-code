@@ -2,23 +2,23 @@ import React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity, Dimensions} from 'react-native';
 import { ExtraText } from '../components/SignUpLoginStyles';
 
+
+
 var time = new Date().getHours();
 
-const MainMenu = ({navigation}) => (
-
-    
+const MainMenu = ({navigation}, props) => (
         <View style={styles.mainContainer}> 
         
             <View style={styles.headerContainer}>   
                 <Image style={styles.PDXLogo} source={require('diagnosis/assets/simplePDXLogo.png')}></Image>
-                <Image style={styles.accountIcon} source={require('diagnosis/assets/accountIcon.png')}></Image>
+                <Image style={styles.accountIcon} source={require('diagnosis/assets/accountIcon.png')}></Image>    
             </View>
 
             <View style={styles.imageView}>
                 <Image style={styles.stethoscopeImage} source={require('diagnosis/assets/stethoscope.jpeg')} blurRadius={1}></Image>
-                {/* <Text style={styles.welcomeText}>Good Morning, {"\n"}
+                <Text style={styles.welcomeText}>Good Morning, {"\n"}
                     User
-                </Text> */}
+                </Text>
             </View>
 
             <View style={styles.centerView}>
@@ -29,24 +29,25 @@ const MainMenu = ({navigation}) => (
             
            
             <View style={styles.quickLinksView}>
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("KnowledgeTest")}> 
+                <TouchableOpacity testID='buttonOne' style={styles.quickLinkButtons} onPress={() => navigation.navigate("KnowledgeTest")}> 
                     <Text style={styles.buttonText}>Knowledge Test</Text>    
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("TOTD")}> 
+                <TouchableOpacity testID='buttonTwo' style={styles.quickLinkButtons} onPress={() => navigation.navigate("TOTD")}> 
                     <Text style={styles.buttonText}>Topic of the Day</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("Community")}> 
+                <TouchableOpacity testID='buttonThree' style={styles.quickLinkButtons} onPress={() => navigation.navigate("Community")}> 
                     <Text style={styles.buttonText}>Community</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("TeamInfo")}> 
+                <TouchableOpacity testID='buttonFour' style={styles.quickLinkButtons} onPress={() => navigation.navigate("TeamInfo")}> 
                     <Text style={styles.buttonText}>Our Team</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("AboutUs")}> 
+                <TouchableOpacity testID='buttonFive' style={styles.quickLinkButtons} onPress={() => navigation.navigate("AboutUs")}> 
                     <Text style={styles.buttonText}>About Us</Text>
+                    
                 </TouchableOpacity>
                 </View>
             
@@ -112,13 +113,14 @@ const styles = StyleSheet.create({
         position: "absolute",
         color: "#E63610",
         fontSize: 60,
-        top: 120,
+        top: 20,
         fontWeight: 'bold',
         textAlign: "center",
         fontFamily: "Gill Sans",
         textShadowColor:'#585858',
         textShadowOffset:{width: 5, height: 5},
         textShadowRadius:10,
+        left: 55
     },
     
     quickLinksView: {
