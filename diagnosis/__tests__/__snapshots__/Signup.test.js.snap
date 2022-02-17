@@ -1,0 +1,254 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Signup /> renders correctly 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView>
+    <View>
+      <View
+        accessible={true}
+        className="sc-bdvvtL zxezy"
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+      >
+        <View
+          className="sc-gsDKAQ rZFaE"
+        >
+          <Text
+            className="sc-hKwDye fAcRlN"
+          >
+            Sign Up to PDX PDX
+          </Text>
+          <View
+            className="sc-eCImPb kMRaWM"
+          >
+            <View>
+              <View
+                className="sc-iCfMLu eAWtPN"
+              >
+                <Text />
+              </View>
+              <Text
+                className="sc-gKclnd dsijCe"
+              >
+                Full Name
+              </Text>
+              <TextInput
+                allowFontScaling={true}
+                className="sc-jRQBWg fNWPqr"
+                onBlur={[Function]}
+                onChangeText={[Function]}
+                placeholder="John Doe"
+                placeholderTextColor="#ff000067"
+                rejectResponderTermination={true}
+                underlineColorAndroid="transparent"
+                value=""
+              />
+            </View>
+            <View>
+              <View
+                className="sc-iCfMLu eAWtPN"
+              >
+                <Text />
+              </View>
+              <Text
+                className="sc-gKclnd dsijCe"
+              >
+                Username
+              </Text>
+              <TextInput
+                allowFontScaling={true}
+                className="sc-jRQBWg fNWPqr"
+                mode="outlined"
+                onBlur={[Function]}
+                onChangeText={[Function]}
+                placeholder="username"
+                placeholderTextColor="#ff000067"
+                rejectResponderTermination={true}
+                underlineColorAndroid="transparent"
+                value=""
+              />
+            </View>
+            <View>
+              <View
+                className="sc-iCfMLu eAWtPN"
+              >
+                <Text />
+              </View>
+              <Text
+                className="sc-gKclnd dsijCe"
+              >
+                Email Address
+              </Text>
+              <TextInput
+                allowFontScaling={true}
+                className="sc-jRQBWg fNWPqr"
+                keyboardType="email-address"
+                onBlur={[Function]}
+                onChangeText={[Function]}
+                placeholder="your-name@example.com"
+                placeholderTextColor="#ff000067"
+                rejectResponderTermination={true}
+                underlineColorAndroid="transparent"
+                value=""
+              />
+            </View>
+            <View>
+              <View
+                className="sc-iCfMLu eAWtPN"
+              >
+                <Text />
+              </View>
+              <Text
+                className="sc-gKclnd dsijCe"
+              >
+                Password
+              </Text>
+              <TextInput
+                allowFontScaling={true}
+                className="sc-jRQBWg fNWPqr"
+                onBlur={[Function]}
+                onChangeText={[Function]}
+                placeholder="********"
+                placeholderTextColor="#ff000067"
+                rejectResponderTermination={true}
+                secureTextEntry={true}
+                underlineColorAndroid="transparent"
+                value=""
+              />
+              <View
+                accessible={true}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <Text />
+              </View>
+            </View>
+            <View>
+              <View
+                className="sc-iCfMLu eAWtPN"
+              >
+                <Text />
+              </View>
+              <Text
+                className="sc-gKclnd dsijCe"
+              >
+                Confirm Password
+              </Text>
+              <TextInput
+                allowFontScaling={true}
+                className="sc-jRQBWg fNWPqr"
+                onBlur={[Function]}
+                onChangeText={[Function]}
+                placeholder="********"
+                placeholderTextColor="#ff000067"
+                rejectResponderTermination={true}
+                secureTextEntry={true}
+                underlineColorAndroid="transparent"
+                value=""
+              />
+              <View
+                accessible={true}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <Text />
+              </View>
+            </View>
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                className="sc-jrQzAO dafyie"
+              >
+                Sign Up
+              </Text>
+            </View>
+            <View
+              className="sc-kDTinF glXNyz"
+            />
+            <View
+              className="sc-iqseJM DBbKg"
+            >
+              <Text
+                className="sc-crHmcD bLjgwf"
+              >
+                Already have an account? 
+              </Text>
+              <View
+                accessible={true}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <Text
+                  className="sc-bqiRlB kAwtfN"
+                >
+                  Login
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
