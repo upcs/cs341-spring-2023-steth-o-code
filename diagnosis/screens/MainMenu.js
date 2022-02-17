@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#ffffff",
         position: "absolute",
         top: 0,
-        height: 100,
+        height: Dimensions.get('window').height/8,
         justifyContent: "center",
         width: Dimensions.get('window').width,
     },
@@ -97,9 +97,10 @@ const styles = StyleSheet.create({
 
     stethoscopeImage: {
         resizeMode: "contain",
-        position: "absolute",
+        position: "relative",
         width: Dimensions.get('window').width,
-        height: 250,
+        height: Dimensions.get('window').height,
+        top: -279
     },
 
     imageView: {
