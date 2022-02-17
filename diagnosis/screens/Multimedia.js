@@ -23,6 +23,7 @@ const Multimedia = () => {
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     let num_patients = 1;
+    let buttonData = ['Normal', 'Annotated', 'Narrated'];
     let prognosis = "PLACEHOLDER"
     let description = "PLACEHOLDER"
     let block1 = "PLACEHOLDER";
@@ -68,12 +69,12 @@ const Multimedia = () => {
                     allowsFullscreenVideo
                     allowsInlineMediaPlayback
                     mediaPlaybackRequiresUserAction
-                    source={{ uri: 'https://player.vimeo.com/'+ids1[selectedIndex]}} 
+                    source={{ uri: 'https://player.vimeo.com/video/'+ids1[buttonData.indexOf(selectedIndex)]}} 
                     data-testid="video"
                 />
                 {/*Video type selection*/}
                 <ButtonGroup
-                    buttons={['Normal', 'Annotated', 'Narrated']}
+                    buttons={buttonData}
                     selectedIndex={selectedIndex}
                     onPress={(value) => {
                     setSelectedIndex(value);
