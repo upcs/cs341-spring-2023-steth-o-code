@@ -1,9 +1,9 @@
 import React from 'react';
 import { Text, View, StyleSheet} from 'react-native';
 
-const Topics = () => (
+const Activities = () => (
     <View style={styles.mainContainer}>
-        <Text style={styles.text}> PAGE FOR Topics</Text>
+        <Text style={styles.text}> PAGE FOR Activities</Text>
     </View>
 );
 
@@ -18,4 +18,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default Topics;
+export default Activities;

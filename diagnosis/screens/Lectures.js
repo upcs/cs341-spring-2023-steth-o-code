@@ -1,9 +1,9 @@
 import React from 'react';
-import { Text, View, StyleSheet} from 'react-native';
+import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
-const Topics = () => (
+const Lectures = () => (
     <View style={styles.mainContainer}>
-        <Text style={styles.text}> PAGE FOR Topics</Text>
+        <Text style={styles.text}> PAGE FOR Lectures</Text>
     </View>
 );
 
@@ -18,4 +18,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default Topics;
+export default Lectures;
