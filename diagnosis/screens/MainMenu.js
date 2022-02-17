@@ -1,14 +1,17 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image, TouchableOpacity, Dimensions} from 'react-native';
+import { Text, View, StyleSheet, Image, TouchableOpacity, Dimensions, useWindowDimensions} from 'react-native';
 import { ExtraText } from '../components/SignUpLoginStyles';
 
 
 
 var time = new Date().getHours();
 
+
 const MainMenu = ({navigation}, props) => (
+
+    
         <View style={styles.mainContainer}> 
-        
+
             <View style={styles.headerContainer}>   
                 <Image style={styles.PDXLogo} source={require('diagnosis/assets/simplePDXLogo.png')}></Image>
                 <Image style={styles.accountIcon} source={require('diagnosis/assets/accountIcon.png')}></Image>    
@@ -50,11 +53,7 @@ const MainMenu = ({navigation}, props) => (
                     
                 </TouchableOpacity>
                 </View>
-            
-            
-               
-
-            
+        
         </View>
 );
 
@@ -96,17 +95,17 @@ const styles = StyleSheet.create({
     },
 
     stethoscopeImage: {
-        resizeMode: "contain",
-        position: "absolute",
+        resizeMode: "stretch",
+        position: "relative",
+        flex: 1,
         width: Dimensions.get('window').width,
         height: Dimensions.get('window').height,
-        top: -279
     },
 
     imageView: {
         position: 'absolute',
-        top: 100,
         height: 250,
+        backgroundColor: 'red',
         width: Dimensions.get('window').width,
     },
 
