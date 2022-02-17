@@ -67,7 +67,7 @@ const Multimedia = () => {
                     allowsFullscreenVideo
                     allowsInlineMediaPlayback
                     mediaPlaybackRequiresUserAction
-                    source={{ uri: 'https://vimeo.com/'+{ids1: selected}}} 
+                    source={{ uri: 'https://player.vimeo.com/'+ids1[selectedIndex]}} 
                     data-testid="video"
                 />
                 {/*Video type selection*/}
