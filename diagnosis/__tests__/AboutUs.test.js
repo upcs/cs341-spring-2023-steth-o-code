@@ -17,6 +17,6 @@ describe('<AboutUs />', () => {
     test("carousel should work", () => {
         const { getByTestId } = render(<AboutUs />);
         const carousel = getByTestId('carousel');
-        fireEvent.scroll(carousel, { target: { contentOffset: { scrollY: ITEM_WIDTH }}})
+        fireEvent.scroll(carousel, { nativeEvent: { contentOffset: { scrollX: ITEM_WIDTH }, contentSize: { width: ITEM_WIDTH, height: 300 }}})
     });
 });
