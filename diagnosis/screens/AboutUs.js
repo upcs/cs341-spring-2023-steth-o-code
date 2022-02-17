@@ -14,7 +14,7 @@ const AboutUs = () => {
                     <Text style={{flex: 1, flexWrap: 'wrap'}}>However, there are numerous dynamic physical findings that can only be visualized by learners via audio or video recordings. Such findings cannot be delivered to learners via medical textbooks or print journals. Computer-based media, including the internet, has introduced a means to provide learners with visualization of dynamic physical findings. Currently, learners can find examples of most physical findings scattered around the internet. For example, they may seek and find an audio recording of the murmur of mitral stenosis in one place, and a video recording of Kussmaul's sign in another. To our knowledge, there is no centralized repository for physical findings, where learners can visit one website to find examples of virtually any physical finding of interest.{"\n"}</Text>
                 </View>
             </ScrollView>
-            <SafeAreaView style={styles.mainScroller}>
+            <SafeAreaView style={styles.mainScroller} testID='carousel'>
                 <CarouselCards />
             </SafeAreaView>
         </View>
