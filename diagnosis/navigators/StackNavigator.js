@@ -14,7 +14,7 @@ import KnowledgeTest from './../screens/KnowledgeTest';
 import AboutUs from './../screens/AboutUs';
 import Community from './../screens/Community';
 import TeamInfo from './../screens/TeamInfo';
-import Topics from './../screens/Topics';
+import Topics from '../screens/Topics';
 import MultiMedia from './../screens/Multimedia';
 import DefaultTopic from './../screens/DefaultTopic';
 
