@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
 
     stethoscopeImage: {
         resizeMode: "contain",
-        position: "relative",
+        position: "absolute",
         width: Dimensions.get('window').width,
         height: Dimensions.get('window').height,
         top: -279
