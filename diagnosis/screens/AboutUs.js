@@ -1,10 +1,11 @@
 import React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity, ScrollView, Dimensions, SafeAreaView } from 'react-native';
 import CarouselCards from '../components/CarouselCards';
+import Constants from 'expo-constants';
 
 const AboutUs = () => {
     return (
-        <View style={styles.mainScroller}>
+        <ScrollView style={{ maxHeight: Dimensions.get('window').height }} contentContainerStyle={styles.mainScroller} showsVerticalScrollIndicator={true}>
             <Text style={styles.title}>About PDX PDX</Text>
             <ScrollView style={{ maxHeight: 300 }} showsVerticalScrollIndicator={true} testID='text-scroll'>
                 <View style={styles.textContainer}>
@@ -12,12 +13,20 @@ const AboutUs = () => {
                     <Text style={{flex: 1, flexWrap: 'wrap'}}>Medical textbooks and print journals provide written descriptions of physical examination findings and the methods used to elicit them; in some cases, clinical images are used to provide visualization to learners, a critical component of the learning process.{"\n"}</Text>
                     <Text style={{flex: 1, flexWrap: 'wrap'}}>Images of static physical findings, such as arachnodactyly of Marfan's syndrome, can be delivered to learners via medical textbooks and print journals, and are instrumental in the process of learning physical diagnosis.{"\n"}</Text>
                     <Text style={{flex: 1, flexWrap: 'wrap'}}>However, there are numerous dynamic physical findings that can only be visualized by learners via audio or video recordings. Such findings cannot be delivered to learners via medical textbooks or print journals. Computer-based media, including the internet, has introduced a means to provide learners with visualization of dynamic physical findings. Currently, learners can find examples of most physical findings scattered around the internet. For example, they may seek and find an audio recording of the murmur of mitral stenosis in one place, and a video recording of Kussmaul's sign in another. To our knowledge, there is no centralized repository for physical findings, where learners can visit one website to find examples of virtually any physical finding of interest.{"\n"}</Text>
+                    
+                    <View>
+                        <Text>“Medicine is learned by the bedside and not in the classroom. Let not your conceptions of disease come from the words heard in the lecture room or read from the book. See and then reason and compare and control. But see first.”{"\n"}</Text>
+                        <Text>What is the most important part of a stethoscope ?
+
+        The part between the earpieces.</Text>
+                    </View>
                 </View>
             </ScrollView>
-            <SafeAreaView style={styles.mainScroller} testID='carousel'>
+            <View style={styles.mainScroller} testID='carousel'>
                 <CarouselCards />
-            </SafeAreaView>
-        </View>
+            </View>
+            
+        </ScrollView>
     );
 };
 
@@ -27,7 +36,8 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         padding: 25,
-        backgroundColor: "#BFAA8C"
+        paddingTop: Constants.statusBarHeight,
+        backgroundColor: "#BFAA8C",
     },
     title: {
         fontSize: 40,

@@ -17,7 +17,7 @@ const CarouselCardItem = ({ item, index }) => {
 
 const styles = StyleSheet.create({
     container: {
-        width: ITEM_WIDTH,
+        width: ITEM_WIDTH+20,
         paddingBottom: 40,
         shadowColor: "#000",
         shadowOffset: {
@@ -30,9 +30,9 @@ const styles = StyleSheet.create({
     },
     image: {
         width: ITEM_WIDTH+20,
-        height: 300,
+        height: 350,
         resizeMode: 'stretch',
     }
 })
 
-export default CarouselCardItem
+export default CarouselCardItem;
