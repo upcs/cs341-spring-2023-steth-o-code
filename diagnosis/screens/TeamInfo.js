@@ -1,6 +1,7 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image, ScrollView } from 'react-native';
-import Constants from 'expo-constants'
+import { Text, View, StyleSheet, Image, ScrollView, Linking } from 'react-native';
+import { SocialIcon } from 'react-native-elements';
+import Constants from 'expo-constants';
 
 const TeamInfo = () => (
         <ScrollView style={{flex: 1}} contentContainerStyle={styles.mainContainer} showsVerticalScrollIndicator={false}>
@@ -11,6 +12,32 @@ const TeamInfo = () => (
                     source={require('./../assets/Andre-314x314.png')}
                 />
                 <Text style={styles.person}>André M. Mansoor, M.D.{"\n"}</Text>
+                <View style={{flexDirection: 'row'}}>
+                    <View style={{flexDirection: 'column'}}>
+                        <SocialIcon 
+                            type="facebook"
+                            onPress={() => Linking.openURL('https://www.facebook.com/AndreMansoorMD')}
+                        />
+                    </View>
+                    <View style={{flexDirection: 'column'}}>
+                        <SocialIcon 
+                            type="instagram"
+                            onPress={() => Linking.openURL('https://www.instagram.com/frameworks.for.im/')}
+                        />
+                    </View>
+                    <View style={{flexDirection: 'column'}}>
+                        <SocialIcon 
+                            type="youtube"
+                            onPress={() => Linking.openURL('https://www.youtube.com/channel/UCx83LAQ-Fh7wOUCIqUSSCYA')}
+                        />
+                    </View>
+                    <View style={{flexDirection: 'column'}}>
+                        <SocialIcon 
+                            type="twitter"
+                            onPress={() => Linking.openURL('https://twitter.com/AndreMansoor')}
+                        />
+                    </View>
+                </View>
             </View>
             <View>
                 <Image
@@ -18,6 +45,11 @@ const TeamInfo = () => (
                     source={require('./../assets/Sullivan.jpeg')}
                 />
                 <Text style={styles.person}>Peter Sullivan, M.D.{"\n"}</Text>
+                <SocialIcon
+                    style={{alignSelf: 'center'}} 
+                    type="twitter"
+                    onPress={()=>{Linking.openURL('https://twitter.com/PeteSullivanPDx')}}
+                />
             </View>
             <View>
                 <Image
