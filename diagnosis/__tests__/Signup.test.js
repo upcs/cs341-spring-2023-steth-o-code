@@ -17,7 +17,8 @@ describe('<Signup />', () => {
             fireEvent.changeText(username, 'HelloWorld');
             fireEvent.changeText(email, 'testproject@pdx.com')
             fireEvent.changeText(password, 'PDXRules!!');
-            fireEvent.changeText(matchingPassword, 'PDXRules!!')
+            fireEvent.changeText(matchingPassword, 'PDXRules!!');
+            fireEvent.press(queryByTestId('signup-button'));
         });
         await waitFor(() => {
             expect(queryByTestId('new-username-error')).toBeNull();
@@ -40,7 +41,7 @@ describe('<Signup />', () => {
             expect(queryByTestId('new-password-error')).toBeTruthy();
             expect(queryByTestId('new-password-error')).toHaveTextContent('Password is required');
             expect(queryByTestId('match-password-error')).toBeTruthy();
-            expect(queryByTestId('match-password-error')).toHaveTextContent('Username is required');
+            expect(queryByTestId('match-password-error')).toHaveTextContent('Confirming Password is required');
         });
     });
 });

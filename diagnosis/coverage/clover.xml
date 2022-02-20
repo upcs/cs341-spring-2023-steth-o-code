@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1644431332237" clover="3.2.0">
+  <project timestamp="1644431332238" name="All files">
+    <metrics statements="50" coveredstatements="44" conditionals="36" coveredconditionals="23" methods="17" coveredmethods="11" elements="103" coveredelements="78" complexity="0" loc="50" ncloc="50" packages="4" files="6" classes="6"/>
+    <package name="diagnosis">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="App.js" path="C:\Users\aashi\OneDrive\Documents\Junior\Spring\CS341\cs341-spring-2022-diagnosis\diagnosis\App.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="diagnosis.components">
+      <metrics statements="23" coveredstatements="23" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+      <file name="KeyboardAvoidWrap.js" path="C:\Users\aashi\OneDrive\Documents\Junior\Spring\CS341\cs341-spring-2022-diagnosis\diagnosis\components\KeyboardAvoidWrap.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+      </file>
+      <file name="SignUpLoginStyles.js" path="C:\Users\aashi\OneDrive\Documents\Junior\Spring\CS341\cs341-spring-2022-diagnosis\diagnosis\components\SignUpLoginStyles.js">
+        <metrics statements="21" coveredstatements="21" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
+        <line num="45" count="3" type="stmt"/>
+        <line num="49" count="3" type="stmt"/>
+        <line num="62" count="3" type="stmt"/>
+        <line num="66" count="3" type="stmt"/>
+        <line num="72" count="3" type="stmt"/>
+        <line num="79" count="3" type="stmt"/>
+        <line num="88" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="94" count="3" type="stmt"/>
+        <line num="98" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="103" count="3" type="stmt"/>
+        <line num="110" count="3" type="stmt"/>
+        <line num="117" count="3" type="stmt"/>
+        <line num="124" count="3" type="stmt"/>
+        <line num="129" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="diagnosis.navigators">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="StackNavigator.js" path="C:\Users\aashi\OneDrive\Documents\Junior\Spring\CS341\cs341-spring-2022-diagnosis\diagnosis\navigators\StackNavigator.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="diagnosis.screens">
+      <metrics statements="22" coveredstatements="16" conditionals="32" coveredconditionals="19" methods="12" coveredmethods="6"/>
+      <file name="Login.js" path="C:\Users\aashi\OneDrive\Documents\Junior\Spring\CS341\cs341-spring-2022-diagnosis\diagnosis\screens\Login.js">
+        <metrics statements="11" coveredstatements="8" conditionals="12" coveredconditionals="8" methods="6" coveredmethods="3"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+        <line num="42" count="4" type="stmt"/>
+        <line num="43" count="4" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="58" count="5" type="stmt"/>
+        <line num="94" count="0" type="stmt"/>
+        <line num="106" count="2" type="stmt"/>
+        <line num="107" count="10" type="stmt"/>
+        <line num="115" count="0" type="stmt"/>
+      </file>
+      <file name="Signup.js" path="C:\Users\aashi\OneDrive\Documents\Junior\Spring\CS341\cs341-spring-2022-diagnosis\diagnosis\screens\Signup.js">
+        <metrics statements="11" coveredstatements="8" conditionals="20" coveredconditionals="11" methods="6" coveredmethods="3"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="57" count="2" type="stmt"/>
+        <line num="123" count="0" type="stmt"/>
+        <line num="135" count="2" type="stmt"/>
+        <line num="136" count="10" type="stmt"/>
+        <line num="144" count="0" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

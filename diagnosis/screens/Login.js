@@ -1,7 +1,8 @@
 import React, {useState}  from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, ActivityIndicator } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import * as Yup from 'yup'
+import { StackActions } from '@react-navigation/native';
+import * as Yup from 'yup';
 
 //formik
 import { Formik } from 'formik';
@@ -17,6 +18,7 @@ import { StyledContainer,
     EyeIcon,
     StyledButton,
     ButtonText,
+    MessageBox,
     Line,
     ExtraView,
     ExtraText,
@@ -32,14 +34,18 @@ const {company, placeholder, textInputBackground} = Colors;
 
 //keyboard avoiding wrapper
 import KeyboardAvoidWrap from '../components/KeyboardAvoidWrap';
-
-const LoginSchema = Yup.object().shape({
-    username: Yup.string().min(2, 'Too short').max(50, 'Too Long').required('Username is required'),
-    password: Yup.string().min(8, 'Password must be bigger than 8 characters').required('Password is required'),
-});
+import axios from 'axios';
 
 const Login = ({navigation}) => {
     const [hidePassword, setHidePassword] = useState(true);
+    const [message, setMessage] = useState('');
+    const [messageType, setMessageType] = useState('');
+
+    const handleMessage = (message, type = 'FAILED') => {
+        setMessage(message);
+        setMessageType(type);
+    }
+
     return (
         <KeyboardAvoidWrap>
             <StyledContainer>
@@ -49,9 +55,16 @@ const Login = ({navigation}) => {
                     <PageTitle>Account Login</PageTitle>
                     <Formik
                         initialValues={{username: '', password: ''}}
-                        validationSchema={LoginSchema}
-                        onSubmit={() => navigation.navigate('MainMenu')}
-                    >{({handleChange, handleBlur, handleSubmit, values, touched, errors, isValid, isSubmitting}) => (
+                        onSubmit={(values, {setSubmitting}) => {
+                            if (values.username == '' || values.password == '') {
+                                handleMessage('Please fill out all the fields above.');
+                                setSubmitting(false);
+                            } else {
+                                console.log(values);
+                                setTimeout(() => {navigation.navigate('MainMenu')}, 500);
+                            }
+                        }}
+                    >{({handleChange, handleBlur, handleSubmit, values, touched, errors, isSubmitting}) => (
                         <StyledForm>
                             <TextInput 
                                 label="Username"
@@ -63,7 +76,7 @@ const Login = ({navigation}) => {
                                 value={values.username}
                                 testID='username-input'
                             />
-                            {touched.username && errors.username ? (<Text style={{color: '#B00000'}} testID="username-error">{errors.username}</Text>) : null}
+                            {/* {touched.username && errors.username ? (<Text style={{color: '#B00000'}} testID="username-error">{errors.username}</Text>) : null} */}
                             <TextInput 
                                 label="Password"
                                 icon="lock"
@@ -78,11 +91,16 @@ const Login = ({navigation}) => {
                                 setHidePassword={setHidePassword}
                                 testID='password-input'
                             />
-                            {touched.password && errors.password ? (<Text style={{color: '#B00000'}} testID='password-error'>{errors.password}</Text>) : null}
-                            <Text>{"\n"}</Text>
-                            <StyledButton testID='loginbutton' disabled={! isValid || isSubmitting} onPress={handleSubmit} loading={isSubmitting}>
+                            {/* {touched.password && errors.password ? (<Text style={{color: '#B00000'}} testID='password-error'>{errors.password}</Text>) : null} */}
+                            <MessageBox testID='msgbox' type={messageType}>{message}</MessageBox>
+                            {!isSubmitting && <StyledButton testID='loginbutton' onPress={handleSubmit}>
                                 <ButtonText>Login</ButtonText>
-                            </StyledButton>
+                            </StyledButton>}
+
+                            {isSubmitting && <StyledButton testID='activitybutton' disabled={true}>
+                                <ActivityIndicator size="large" color="#FFFFFF"/>
+                            </StyledButton>}
+
                             <Line />
                             <StyledButton testID='wordpress-button' wordpress={true} onPress={handleSubmit}>
                                 <Fontisto name="wordpress" color={textInputBackground} size={25} />
@@ -97,10 +115,10 @@ const Login = ({navigation}) => {
                             </ExtraView>
 
                              
-                            {/* <TextLink onPress={() => navigation.navigate("MainMenu")}>
+                            <TextLink onPress={() => navigation.dispatch(StackActions.replace('MainMenu')) }>
                                 <ExtraText>For Demo Purposes:</ExtraText>
                                 <TextLinkContent>Go to Main Menu</TextLinkContent>
-                            </TextLink> */}
+                            </TextLink>
 
                             <TextLink onPress={() => navigation.navigate("MultiMedia")}>
                                 <TextLinkContent>Go to MultiMedia</TextLinkContent>

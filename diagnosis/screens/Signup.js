@@ -1,5 +1,5 @@
 import React, {useState}  from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, ActivityIndicator } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import * as Yup from 'yup'
 
@@ -41,7 +41,7 @@ const ValidationInputSchema = Yup.object().shape({
 
 const Signup = ({navigation}) => {
     const [hidePassword, setHidePassword] = useState(true);
-    const [disable, setDisable] = useState(false);
+    
     return (
         <KeyboardAvoidWrap>
             <StyledContainer>
@@ -51,7 +51,7 @@ const Signup = ({navigation}) => {
                     <Formik
                         initialValues={{fullName: '', email: '', username: '', password: '', confirmPassword: ''}}
                         validationSchema={ValidationInputSchema}
-                        onSubmit={() =>  {navigation.navigate('MainMenu');}}
+                        onSubmit={() => {setTimeout(() => {navigation.navigate('MainMenu')}, 500)}}
                     >{({handleChange, handleBlur, handleSubmit, values, touched, errors, isValid, isSubmitting}) => (
                         <StyledForm>
                             <TextInput 
@@ -117,9 +117,13 @@ const Signup = ({navigation}) => {
                                 testID='matching-password-new'
                             />
                             {touched.confirmPassword && errors.confirmPassword ? (<Text testID='match-password-error' style={{color: '#B00000'}}>{errors.confirmPassword}</Text>) : null}
-                            <StyledButton testID='signup-button' disabled={!isValid || isSubmitting} onPress={handleSubmit} loading={isSubmitting}>
+                            {!isSubmitting && <StyledButton testID='signup-button' onPress={handleSubmit}>
                                 <ButtonText>Sign Up</ButtonText>
-                            </StyledButton>
+                            </StyledButton>}
+
+                            {isSubmitting && <StyledButton testID='activitybutton' disabled={true}>
+                                <ActivityIndicator size="large" color="#FFFFFF"/>
+                            </StyledButton>}
                             <Line />
                             <ExtraView>
                                 <ExtraText>Already have an account? </ExtraText>
