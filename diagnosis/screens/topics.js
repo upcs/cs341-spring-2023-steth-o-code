@@ -1,8 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, ScrollView, StyledContainer, TouchableOpacity } from 'react-native';
 
 const Topics = ({navigation}) => (
-    
     <ScrollView contentContainerStyle={styles.StyledContainer}>
     <Text style={styles.Text}>Topics</Text>
     <View style={styles.buttonView}>
@@ -67,9 +66,9 @@ const Topics = ({navigation}) => (
       backgroundColor: "white",
       justifyContent: 'center',
       position: "relative",
-      marginTop: 20,
-      height: 600,
-      marginBottom: 50,
+      marginTop: 280,
+      height: 370,
+      marginBottom: 0,
       width: '96%',
       borderRadius: 60,
       borderColor: 'red',
