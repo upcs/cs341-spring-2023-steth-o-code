@@ -51,7 +51,6 @@ const Topics = ({navigation}) => (
       justifyContent: 'center',
       alignItems: 'center',
       fontSize: 30,
-      marginTop: 20,
       marginBottom: 10,
     },
     buttons: {
