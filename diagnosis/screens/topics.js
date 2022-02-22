@@ -1,10 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView, ScrollView, StyledContainer, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, TouchableOpacity } from 'react-native';
 
 const Topics = ({navigation}) => (
-    <StyledContainer>
-    <SafeAreaView style={styles.StyledContainer}>
-    <ScrollView style={styles.scrollView}>
+    
+    <ScrollView contentContainerStyle={styles.StyledContainer}>
     <Text style={styles.Text}>Topics</Text>
     <View style={styles.buttonView}>
     <TouchableOpacity style={styles.buttons} onPress={() => navigation.navigate("DefaultTopic")}> 
@@ -33,8 +32,6 @@ const Topics = ({navigation}) => (
     </TouchableOpacity>
     </View>
     </ScrollView>
-    </SafeAreaView>
-    </StyledContainer>
     );
   
   const styles = StyleSheet.create({
@@ -54,6 +51,7 @@ const Topics = ({navigation}) => (
       justifyContent: 'center',
       alignItems: 'center',
       fontSize: 30,
+      marginTop: 20,
       marginBottom: 10,
     },
     buttons: {
@@ -70,9 +68,9 @@ const Topics = ({navigation}) => (
       backgroundColor: "white",
       justifyContent: 'center',
       position: "relative",
-      marginTop: 280,
-      height: 370,
-      marginBottom: 0,
+      marginTop: 20,
+      height: 600,
+      marginBottom: 50,
       width: '96%',
       borderRadius: 60,
       borderColor: 'red',
