@@ -7,17 +7,20 @@ describe('<Login />', () => {
     test("renders correctly", async () => {
         renderer.create(<Login />);
     }); 
-    test('validates on valid inputs', async () => {
-        const {queryByTestId} = render(<Login />);
+    test('goes to the screen on valid inputs', async () => {
+        const navigate = jest.fn();
+        const {queryByTestId, getByTestId} = render(<Login navigation={{ navigate }}/>);
         const username = queryByTestId('username-input');
         const password = queryByTestId('password-input');
         act(() =>{
             fireEvent.changeText(username, 'HelloWorld');
             fireEvent.changeText(password, 'PDXRules!!');
+            fireEvent.press(getByTestId('loginbutton'));
         });
         await waitFor(() => {
-            expect(queryByTestId('username-error')).toBeNull();
-            expect(queryByTestId('password-error')).toBeNull();
+            expect(queryByTestId('msg-box')).toBeNull();
+            expect(navigate).toHaveBeenCalledWith('MainMenu');
+            expect(queryByTestId('activitybutton')).toBeTruthy();
         });
     });
     test('it has working buttons w/input validation', async () => {
@@ -29,10 +32,9 @@ describe('<Login />', () => {
             fireEvent.press(wordPressButton);
         });
         await waitFor(() => {
-            expect(queryByTestId('username-error')).toBeTruthy();
-            expect(queryByTestId('username-error')).toHaveTextContent('Username is required');
-            expect(queryByTestId('password-error')).toBeTruthy();
-            expect(queryByTestId('password-error')).toHaveTextContent('Password is required');
+            expect(queryByTestId('msgbox')).toBeTruthy();
+            expect(queryByTestId('msgbox')).toHaveTextContent('Please fill out all the fields above.');
+            expect(queryByTestId('activitybutton')).toBeNull();
         });
     });
 });

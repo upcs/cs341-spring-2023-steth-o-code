@@ -10,10 +10,11 @@ export const Colors = {
     company: "#ff2400",
     placeholder: "#ff000067",
     button: "#808080",
-    linkColor: "#0000FF"
+    linkColor: "#0000FF",
+    failure: "#FF0000"
 };
 
-const {background, textInputBackground, company, placeholder, button, linkColor} = Colors;
+const {background, textInputBackground, company, placeholder, button, linkColor, failure} = Colors;
 
 export const StyledContainer = styled(View)`
     flex: 1;
@@ -98,6 +99,12 @@ export const ButtonText = styled(Text)`
     ${(props) => props.wordpress == true && `
         padding-left: 25px;
     `}
+`;
+
+export const MessageBox = styled(Text)`
+    text-align: center;
+    font-size: 13px;
+    color: ${failure};
 `;
 
 export const Line = styled(View)`
