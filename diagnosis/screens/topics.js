@@ -14,7 +14,7 @@ const Topics = ({navigation}) => (
   </View>
   
   
-  <ScrollView contentContainerStyle={styles.StyledContainer}>
+  <ScrollView contentContainerStyle={styles.scrollView}>
   
   <View style={styles.buttonView}>
   <TouchableOpacity style={styles.buttons} onPress={() => navigation.navigate("DefaultTopic")}> 
@@ -48,6 +48,7 @@ const Topics = ({navigation}) => (
   
   const styles = StyleSheet.create({
     mainContainer: {
+      position: "absolute",
       flex: 1,
       justifyContent: "center",
       alignItems: "center",
@@ -65,7 +66,9 @@ const Topics = ({navigation}) => (
       width: '100%',
   },
   MainMenu:{
-      top: 10,
+    flex: 1,
+    position:"absolute",
+      top: 25,
       left: 20
   },
   PDXLogo: {
@@ -91,19 +94,20 @@ const Topics = ({navigation}) => (
       justifyContent: "center",
       alignItems: "center",
       backgroundColor: "white",
-      marginTop: 300,
       width: Dimensions.get('window').width - 50
     },
     scrollView: {
       backgroundColor: 'white',
       marginHorizontal: 20,
-      marginTop: 2
+      alignContent: "center",
+      marginTop: 200,
+      height: Dimensions.get('window').height - 250,
+      width: Dimensions.get('window').width - 50
     },
     Text: {
-        position: "absolute",
         color: "#E63610",
         fontSize: 60,
-        top: 120,
+        top: 80,
         fontWeight: 'bold',
         textAlign: "center",
         fontFamily: "Gill Sans",
