@@ -22,6 +22,7 @@ const Multimedia = () => {
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
     const [selectedIndex, setSelectedIndex] = useState(0);
 
+    //replace all of these with data from WordPress
     let num_patients = 1;
     let buttonData = ['Normal', 'Annotated', 'Narrated'];
     let prognosis = "PLACEHOLDER"
@@ -55,7 +56,7 @@ const Multimedia = () => {
                         ios_backgroundColor="#3e3e3e"
                         onValueChange={toggleSwitch}
                         value={isEnabled}
-                        data-testid="switch"
+                        testID="switch"
                     />
                 </View>
                 {/*End of universal section*/}
@@ -70,7 +71,7 @@ const Multimedia = () => {
                     allowsInlineMediaPlayback
                     mediaPlaybackRequiresUserAction
                     source={{ uri: 'https://player.vimeo.com/video/'+ids1[buttonData.indexOf(selectedIndex)]}} 
-                    data-testid="video"
+                    testID="video"
                 />
                 {/*Video type selection*/}
                 <ButtonGroup
@@ -80,7 +81,7 @@ const Multimedia = () => {
                     setSelectedIndex(value);
                     }}
                     containerStyle={{ marginBottom: 20 }}
-                    data-testid="button-group"
+                    testID="button-group"
                 />
             </InnerContainer>
         </StyledContainer>
