@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Signup /> has 1 child 1`] = `
+exports[`<Login /> renders correctly 1`] = `
 <View
   onLayout={[Function]}
   style={
@@ -26,10 +26,15 @@ exports[`<Signup /> has 1 child 1`] = `
         <View
           className="sc-gsDKAQ rZFaE"
         >
+          <Image
+            className="sc-dkPtRN fQWDve"
+            resizeMode="contain"
+            source={1}
+          />
           <Text
             className="sc-hKwDye fAcRlN"
           >
-            Sign Up to PDX PDX
+            Account Login
           </Text>
           <View
             className="sc-eCImPb kMRaWM"
@@ -43,58 +48,15 @@ exports[`<Signup /> has 1 child 1`] = `
               <Text
                 className="sc-gKclnd dsijCe"
               >
-                Full Name
-              </Text>
-              <TextInput
-                className="sc-jRQBWg fNWPqr"
-                onBlur={[Function]}
-                onChangeText={[Function]}
-                placeholder="John Doe"
-                placeholderTextColor="#ff000067"
-                value=""
-              />
-            </View>
-            <View>
-              <View
-                className="sc-iCfMLu eAWtPN"
-              >
-                <Text />
-              </View>
-              <Text
-                className="sc-gKclnd dsijCe"
-              >
                 Username
               </Text>
               <TextInput
                 className="sc-jRQBWg fNWPqr"
-                mode="outlined"
                 onBlur={[Function]}
                 onChangeText={[Function]}
                 placeholder="username"
                 placeholderTextColor="#ff000067"
-                testID="username-new"
-                value=""
-              />
-            </View>
-            <View>
-              <View
-                className="sc-iCfMLu eAWtPN"
-              >
-                <Text />
-              </View>
-              <Text
-                className="sc-gKclnd dsijCe"
-              >
-                Email Address
-              </Text>
-              <TextInput
-                className="sc-jRQBWg fNWPqr"
-                keyboardType="email-address"
-                onBlur={[Function]}
-                onChangeText={[Function]}
-                placeholder="your-name@example.com"
-                placeholderTextColor="#ff000067"
-                testID="email-new"
+                testID="username-input"
                 value=""
               />
             </View>
@@ -116,7 +78,7 @@ exports[`<Signup /> has 1 child 1`] = `
                 placeholder="********"
                 placeholderTextColor="#ff000067"
                 secureTextEntry={true}
-                testID="password-new"
+                testID="password-input"
                 value=""
               />
               <View
@@ -139,47 +101,13 @@ exports[`<Signup /> has 1 child 1`] = `
                 <Text />
               </View>
             </View>
-            <View>
-              <View
-                className="sc-iCfMLu eAWtPN"
-              >
-                <Text />
-              </View>
-              <Text
-                className="sc-gKclnd dsijCe"
-              >
-                Confirm Password
-              </Text>
-              <TextInput
-                className="sc-jRQBWg fNWPqr"
-                onBlur={[Function]}
-                onChangeText={[Function]}
-                placeholder="********"
-                placeholderTextColor="#ff000067"
-                secureTextEntry={true}
-                testID="matching-password-new"
-                value=""
-              />
-              <View
-                accessible={true}
-                collapsable={false}
-                focusable={true}
-                onClick={[Function]}
-                onResponderGrant={[Function]}
-                onResponderMove={[Function]}
-                onResponderRelease={[Function]}
-                onResponderTerminate={[Function]}
-                onResponderTerminationRequest={[Function]}
-                onStartShouldSetResponder={[Function]}
-                style={
-                  Object {
-                    "opacity": 1,
-                  }
-                }
-              >
-                <Text />
-              </View>
-            </View>
+            <Text
+              className="sc-kDTinF cbWaEe"
+              testID="msgbox"
+              type=""
+            >
+              
+            </Text>
             <View
               accessible={true}
               collapsable={false}
@@ -196,24 +124,50 @@ exports[`<Signup /> has 1 child 1`] = `
                   "opacity": 1,
                 }
               }
-              testID="signup-button"
+              testID="loginbutton"
             >
               <Text
                 className="sc-jrQzAO dafyie"
               >
-                Sign Up
+                Login
               </Text>
             </View>
             <View
               className="sc-iqseJM eaIHBU"
             />
             <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+              testID="wordpress-button"
+            >
+              <Text />
+              <Text
+                className="sc-jrQzAO gGIeVH"
+                wordpress={true}
+              >
+                Sign in with Wordpress
+              </Text>
+            </View>
+            <View
               className="sc-crHmcD lcNXni"
             >
               <Text
                 className="sc-egiyK eqlRhB"
               >
-                Already have an account? 
+                Don't have an account? 
               </Text>
               <View
                 accessible={true}
@@ -235,9 +189,60 @@ exports[`<Signup /> has 1 child 1`] = `
                 <Text
                   className="sc-ksdxgE fErdV"
                 >
-                  Login
+                  Signup
                 </Text>
               </View>
+            </View>
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                className="sc-egiyK eqlRhB"
+              >
+                For Demo Purposes:
+              </Text>
+              <Text
+                className="sc-ksdxgE fErdV"
+              >
+                Go to Main Menu
+              </Text>
+            </View>
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                className="sc-ksdxgE fErdV"
+              >
+                Go to MultiMedia
+              </Text>
             </View>
           </View>
         </View>
