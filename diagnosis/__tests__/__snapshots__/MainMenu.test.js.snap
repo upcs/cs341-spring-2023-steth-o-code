@@ -1,0 +1,366 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MainMenu /> renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#BFAA8C",
+      "flex": 1,
+      "height": 1334,
+      "justifyContent": "center",
+      "width": 750,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#ffffff",
+        "height": 166.75,
+        "justifyContent": "center",
+        "position": "absolute",
+        "top": 0,
+        "width": 750,
+      }
+    }
+  >
+    <View>
+      <Text />
+    </View>
+    <Image
+      source={1}
+      style={
+        Object {
+          "left": 87,
+          "position": "absolute",
+          "resizeMode": "contain",
+          "top": -60,
+          "width": 200,
+        }
+      }
+    />
+    <Image
+      source={1}
+      style={
+        Object {
+          "height": 50,
+          "position": "absolute",
+          "resizeMode": "contain",
+          "right": 15,
+          "top": 40,
+          "width": 50,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "red",
+        "height": 250,
+        "position": "absolute",
+        "top": 100,
+        "width": 750,
+      }
+    }
+  >
+    <Image
+      blurRadius={1}
+      source={1}
+      style={
+        Object {
+          "flex": 1,
+          "height": 1334,
+          "position": "relative",
+          "resizeMode": "stretch",
+          "width": 750,
+        }
+      }
+    />
+    <Text
+      style={
+        Object {
+          "color": "#E63610",
+          "fontFamily": "Gill Sans",
+          "fontSize": 60,
+          "fontWeight": "bold",
+          "left": 55,
+          "position": "absolute",
+          "textAlign": "center",
+          "textShadowColor": "#585858",
+          "textShadowOffset": Object {
+            "height": 5,
+            "width": 5,
+          },
+          "textShadowRadius": 10,
+          "top": 20,
+        }
+      }
+    >
+      Good Morning, 
+      
+
+      User
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "height": 80,
+        "position": "absolute",
+        "top": 350,
+        "width": 750,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderBottomColor": "grey",
+          "borderBottomWidth": 6,
+          "borderRadius": 12,
+          "left": 20,
+          "position": "absolute",
+          "top": 42,
+          "width": 100,
+        }
+      }
+    />
+    <Text
+      className="sc-egiyK eqlRhB"
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 50,
+          "fontWeight": "bold",
+          "left": 140,
+          "position": "absolute",
+          "textShadowColor": "#585858",
+          "textShadowOffset": Object {
+            "height": 9,
+            "width": 1,
+          },
+          "textShadowRadius": 10,
+          "top": 17,
+        }
+      }
+    >
+      PDX
+    </Text>
+    <View
+      style={
+        Object {
+          "borderBottomColor": "grey",
+          "borderBottomWidth": 6,
+          "borderRadius": 12,
+          "position": "absolute",
+          "right": 20,
+          "top": 42,
+          "width": 100,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderColor": "red",
+        "borderRadius": 60,
+        "padding": 10,
+        "position": "absolute",
+        "top": 440,
+        "width": "96%",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "red",
+          "borderRadius": 30,
+          "margin": 10,
+          "opacity": 1,
+          "paddingVertical": 10,
+          "width": "75%",
+        }
+      }
+      testID="buttonOne"
+    >
+      <Text
+        style={
+          Object {
+            "color": "black",
+            "fontFamily": "Gill Sans",
+            "fontSize": 25,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Knowledge Test
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "red",
+          "borderRadius": 30,
+          "margin": 10,
+          "opacity": 1,
+          "paddingVertical": 10,
+          "width": "75%",
+        }
+      }
+      testID="buttonTwo"
+    >
+      <Text
+        style={
+          Object {
+            "color": "black",
+            "fontFamily": "Gill Sans",
+            "fontSize": 25,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Topic of the Day
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "red",
+          "borderRadius": 30,
+          "margin": 10,
+          "opacity": 1,
+          "paddingVertical": 10,
+          "width": "75%",
+        }
+      }
+      testID="buttonThree"
+    >
+      <Text
+        style={
+          Object {
+            "color": "black",
+            "fontFamily": "Gill Sans",
+            "fontSize": 25,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Community
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "red",
+          "borderRadius": 30,
+          "margin": 10,
+          "opacity": 1,
+          "paddingVertical": 10,
+          "width": "75%",
+        }
+      }
+      testID="buttonFour"
+    >
+      <Text
+        style={
+          Object {
+            "color": "black",
+            "fontFamily": "Gill Sans",
+            "fontSize": 25,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Our Team
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "red",
+          "borderRadius": 30,
+          "margin": 10,
+          "opacity": 1,
+          "paddingVertical": 10,
+          "width": "75%",
+        }
+      }
+      testID="buttonFive"
+    >
+      <Text
+        style={
+          Object {
+            "color": "black",
+            "fontFamily": "Gill Sans",
+            "fontSize": 25,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        About Us
+      </Text>
+    </View>
+  </View>
+</View>
+`;

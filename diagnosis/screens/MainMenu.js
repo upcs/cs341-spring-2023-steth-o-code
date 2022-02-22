@@ -4,12 +4,7 @@ import { ExtraText } from '../components/SignUpLoginStyles';
 import {Ionicons} from '@expo/vector-icons';
 import { IconButton, Colors } from 'react-native-paper';
 
-
-
-var time = new Date().getHours();
-
-
-const MainMenu = ({navigation}, props) => (
+const MainMenu = ({navigation}) => (
 
     
         <View style={styles.mainContainer}> 
