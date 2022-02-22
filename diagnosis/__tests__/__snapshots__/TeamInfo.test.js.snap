@@ -306,6 +306,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
                 "width": 52,
               }
             }
+            testID="twitter"
           >
             <View
               style={

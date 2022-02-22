@@ -35,6 +35,7 @@ const TeamInfo = () => (
                         <SocialIcon 
                             type="twitter"
                             onPress={() => Linking.openURL('https://twitter.com/AndreMansoor')}
+                            testID='twitter'
                         />
                     </View>
                 </View>
