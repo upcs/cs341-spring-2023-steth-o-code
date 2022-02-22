@@ -16,7 +16,7 @@ describe('<MainMenu />', () => {
         const buttonOne = queryByTestId('buttonOne');
         expect(buttonOne).toBeTruthy();
         fireEvent.press(buttonOne);
-        expect(navigate).toBeCalledWith('KnowledgeTest');        
+        expect(navigate).toHaveBeenCalledWith('KnowledgeTest');        
     });
 
     test('test button 2', function() { // test button two links correctly
@@ -25,7 +25,7 @@ describe('<MainMenu />', () => {
         const buttonTwo = queryByTestId('buttonTwo');
         expect(buttonTwo).toBeTruthy();
         fireEvent.press(buttonTwo);
-        expect(navigate).toBeCalledWith('TOTD');        
+        expect(navigate).toHaveBeenCalledWith('TOTD');        
     });
 
     test('test button 3', function() { // test button three links correctly
@@ -34,7 +34,7 @@ describe('<MainMenu />', () => {
         const buttonThree = queryByTestId('buttonThree');
         expect(buttonThree).toBeTruthy();
         fireEvent.press(buttonThree);
-        expect(navigate).toBeCalledWith('Community');        
+        expect(navigate).toHaveBeenCalledWith('Community');        
     });
 
     test('test button 4', function() { // test button four links correctly
@@ -43,7 +43,7 @@ describe('<MainMenu />', () => {
         const buttonFour = queryByTestId('buttonFour');
         expect(buttonFour).toBeTruthy();
         fireEvent.press(buttonFour);
-        expect(navigate).toBeCalledWith('TeamInfo');        
+        expect(navigate).toHaveBeenCalledWith('TeamInfo');        
     });
 
     test('test button 5', function() { // test button five links correctly
@@ -52,7 +52,7 @@ describe('<MainMenu />', () => {
         const buttonFive = queryByTestId('buttonFive');
         expect(buttonFive).toBeTruthy();
         fireEvent.press(buttonFive);
-        expect(navigate).toBeCalledWith('AboutUs');        
+        expect(navigate).toHaveBeenCalledWith('AboutUs');        
     });
 
 
