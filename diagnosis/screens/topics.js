@@ -39,7 +39,7 @@ const Topics = ({navigation}) => (
       flex: 1,
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: "#BFAA8C",
+      backgroundColor: "white",
     },
     scrollView: {
       backgroundColor: 'white',
@@ -50,6 +50,7 @@ const Topics = ({navigation}) => (
       justifyContent: 'center',
       alignItems: 'center',
       fontSize: 30,
+      marginTop: 10,
       marginBottom: 10,
     },
     buttons: {
@@ -66,7 +67,7 @@ const Topics = ({navigation}) => (
       backgroundColor: "white",
       justifyContent: 'center',
       position: "relative",
-      marginTop: 280,
+      marginTop: 20,
       height: 370,
       marginBottom: 0,
       width: '96%',
