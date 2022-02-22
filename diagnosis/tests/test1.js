@@ -1,11 +1,11 @@
 /**
- * Test for Main Menu
+ * Test for Topics
  */
 
  import React from 'react';
  import {ActivityIndicator, FlatList, Text, TextInput} from 'react-native';
  import renderer from 'react-test-renderer';
- import MainMenu from '../screens/MainMenu';
+ import Topics from '../screens/Topics';
  
  jest.setTimeout(15000);
  
