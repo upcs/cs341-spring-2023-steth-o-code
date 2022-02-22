@@ -5,7 +5,8 @@ import Login from '../screens/Login';
 
 describe('<Login />', () => {
     test("renders correctly", async () => {
-        renderer.create(<Login />);
+        const tree = renderer.create(<Login />).toJSON();
+        expect(tree).toMatchSnapshot();
     }); 
     test('goes to the screen on valid inputs', async () => {
         const navigate = jest.fn();

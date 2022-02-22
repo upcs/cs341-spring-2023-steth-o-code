@@ -5,7 +5,8 @@ import TeamInfo from '../screens/TeamInfo';
 
 describe('<TeamInfo />', function() {
     test('renders correctly', function() {
-        renderer.create(<TeamInfo />);
+        const tree = renderer.create(<TeamInfo />).toJSON();
+        expect(tree).toMatchSnapshot();
     });
     test('social icon works', function() {
         const press = jest.fn();

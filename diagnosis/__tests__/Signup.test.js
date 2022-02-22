@@ -4,8 +4,9 @@ import {act, fireEvent, render, waitFor} from '@testing-library/react-native';
 import Signup from '../screens/Signup';
 
 describe('<Signup />', () => {
-    test("has 1 child", async () => {
-        renderer.create(<Signup />);
+    test("has 1 child", () => {
+        const tree = renderer.create(<Signup />).toJSON();
+        expect(tree).toMatchSnapshot();
     });
     test('validates on valid inputs', async () => {
         const {queryByTestId} = render(<Signup />);

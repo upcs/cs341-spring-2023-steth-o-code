@@ -8,7 +8,8 @@ jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 
 describe('<AboutUs />', () => {
     test("it should render correctly", async () => {
-        renderer.create(<AboutUs />);
+        const tree = renderer.create(<AboutUs />).toJSON();
+        expect(tree).toMatchSnapshot();
     });
     test("user can scroll through text", async () => {
         const { getByTestId } = render(<AboutUs />);
