@@ -1,15 +1,16 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet} from 'react-native';
+import { WebView } from 'react-native-webview';
 
 const Lectures = () => (
-    <View style={styles.mainContainer}>
-        <Text style={styles.text}> PAGE FOR Lectures</Text>
-    </View>
+        <WebView 
+        javaScriptEnabled={true} source={{uri: 'https://player.vimeo.com/video/482925513?loop=1'}} 
+        />
 );
 
 const styles = StyleSheet.create({
     mainContainer: {
-        backgroundColor: 'white',
+        backgroundColor: '#BFAA8C',
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
