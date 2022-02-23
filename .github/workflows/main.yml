@@ -16,10 +16,11 @@ jobs:
   # This workflow contains a single job called "test"
   test:
     name: Run Tests
-    
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: diagnosis
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -27,20 +28,11 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v2
         with: 
-          node-version: "16.x"
-
-      - name: change into diagnosis directory
-        run: cd diagnosis
+          node-version: 16.x
         
       # First install npm
       - name: install npm
         run: npm install
-        
-      # - name: install jest
-      #   run: npm install --save-dev jest@26.6.3
-        
-      # - name: install jest command line global options
-      #   run: npm install jest --global
         
       # Then run jest command to run all the tests
       - name: run jest
