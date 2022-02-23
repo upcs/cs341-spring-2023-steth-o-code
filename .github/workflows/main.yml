@@ -25,6 +25,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      - name: change into diagnosis directory
+        run: cd diagnosis
+        
       # First install npm
       - name: install npm
         run: npm install
@@ -34,9 +37,6 @@ jobs:
         
       - name: install jest command line global options
         run: npm install jest --global
-      
-      - name: change into diagnosis directory
-        run: cd diagnosis
         
       # Then run jest command to run all the tests
       - name: run jest
