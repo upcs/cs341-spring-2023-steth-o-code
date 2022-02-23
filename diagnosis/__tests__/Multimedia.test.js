@@ -13,21 +13,19 @@ beforeAll(() => {
 })
 
 describe('<Multimedia />', () => {
-  test("has 1 child", async () => {
+  test("test Render", async () => {
       renderer.create(<Multimedia />);
   });
 
   test('test Switch', async () => {
-    const {queryByTestId} = render(<Multimedia />);
-    
+    const {getByTestId} = render(<Multimedia />);
     expect(isEnabled).toBe(false);//default
 
     act(() =>{
-      fireEvent.press(queryByTestId('switch'));
+      fireEvent.press(getByTestId('switch'));
     });
-
     await waitFor(() => {
-      expect(isEnabled).toBe(true);//switch if clicked
+      expect(isEnabled).toBe(true);//true if clicked
     });
   });
   /*
