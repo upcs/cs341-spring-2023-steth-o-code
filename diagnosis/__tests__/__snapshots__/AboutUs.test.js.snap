@@ -1,0 +1,759 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AboutUs /> it should render correctly 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#BFAA8C",
+      "flex": 1,
+      "padding": 25,
+      "paddingTop": 20,
+    }
+  }
+  nestedScrollEnabled={true}
+  onStartShouldSetResponder={true}
+  showsVerticalScrollIndicator={true}
+  style={
+    Object {
+      "maxHeight": 1334,
+    }
+  }
+>
+  <View>
+    <Text
+      style={
+        Object {
+          "color": "red",
+          "fontSize": 40,
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      About PDX PDX
+    </Text>
+    <RCTScrollView
+      nestedScrollEnabled={true}
+      showsVerticalScrollIndicator={true}
+      style={
+        Object {
+          "maxHeight": 300,
+        }
+      }
+      testID="text-scroll"
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "white",
+              "flexDirection": "column",
+              "justifyContent": "flex-start",
+              "marginLeft": 3,
+              "marginRight": 3,
+              "padding": 10,
+              "position": "relative",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "flex": 1,
+                "flexWrap": "wrap",
+              }
+            }
+          >
+            Physical diagnosis can be defined as the use of physical examination to aid in the identification and characterization of medical conditions. It is a critical area of clinical medicine that requires conceptual understanding, visualization, mentorship, practice, and experience. Practice and experience are not effective without conceptual understanding, visualization, and mentorship.
+            
+
+          </Text>
+          <Text
+            style={
+              Object {
+                "flex": 1,
+                "flexWrap": "wrap",
+              }
+            }
+          >
+            Medical textbooks and print journals provide written descriptions of physical examination findings and the methods used to elicit them; in some cases, clinical images are used to provide visualization to learners, a critical component of the learning process.
+            
+
+          </Text>
+          <Text
+            style={
+              Object {
+                "flex": 1,
+                "flexWrap": "wrap",
+              }
+            }
+          >
+            Images of static physical findings, such as arachnodactyly of Marfan's syndrome, can be delivered to learners via medical textbooks and print journals, and are instrumental in the process of learning physical diagnosis.
+            
+
+          </Text>
+          <Text
+            style={
+              Object {
+                "flex": 1,
+                "flexWrap": "wrap",
+              }
+            }
+          >
+            However, there are numerous dynamic physical findings that can only be visualized by learners via audio or video recordings. Such findings cannot be delivered to learners via medical textbooks or print journals. Computer-based media, including the internet, has introduced a means to provide learners with visualization of dynamic physical findings. Currently, learners can find examples of most physical findings scattered around the internet. For example, they may seek and find an audio recording of the murmur of mitral stenosis in one place, and a video recording of Kussmaul's sign in another. To our knowledge, there is no centralized repository for physical findings, where learners can visit one website to find examples of virtually any physical finding of interest.
+            
+
+          </Text>
+          <View>
+            <Text>
+              “Medicine is learned by the bedside and not in the classroom. Let not your conceptions of disease come from the words heard in the lecture room or read from the book. See and then reason and compare and control. But see first.”
+              
+
+            </Text>
+            <Text>
+              What is the most important part of a stethoscope ?   The part between the earpieces.
+            </Text>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+          "padding": 25,
+        }
+      }
+      testID="carousel"
+    >
+      <View>
+        <RCTScrollView
+          activeAnimationOptions={null}
+          activeAnimationType="timing"
+          activeSlideAlignment="center"
+          activeSlideOffset={20}
+          apparitionDelay={0}
+          automaticallyAdjustContentInsets={false}
+          autoplay={false}
+          autoplayDelay={1000}
+          autoplayInterval={3000}
+          callbackOffsetMargin={5}
+          collapsable={false}
+          containerCustomStyle={Object {}}
+          contentContainerCustomStyle={Object {}}
+          contentContainerStyle={
+            Array [
+              Object {
+                "paddingLeft": 72,
+                "paddingRight": 72,
+              },
+              Object {},
+            ]
+          }
+          data={
+            Array [
+              "https://physicaldiagnosispdx.com/wp-content/uploads/D8gXFe3U8AI3yRJ-1024x768.jpeg",
+              "https://physicaldiagnosispdx.com/wp-content/uploads/6A068373-9EEA-4888-92BE-29FDA7C2C91D-wpp1593059985634-e1593064341479.jpeg",
+              "https://physicaldiagnosispdx.com/wp-content/uploads/A35B88B8-84A8-4062-B5DD-0C343C0F7C2A-1024x768.jpeg",
+              "https://physicaldiagnosispdx.com/wp-content/uploads/087C7AA4-13F4-4D02-8344-D07652C0EB9D.jpeg",
+              "https://physicaldiagnosispdx.com/wp-content/uploads/601B7433-8E1D-4F17-9A0C-AB32010DD446-1024x768.jpeg",
+              "https://physicaldiagnosispdx.com/wp-content/uploads/0DFCB3BC-A36A-4611-9B84-98D424F1B922-scaled-e1593062496337-1024x658.jpeg",
+            ]
+          }
+          decelerationRate="fast"
+          directionalLockEnabled={true}
+          enableMomentum={false}
+          enableSnap={true}
+          firstItem={0}
+          forwardedRef={[Function]}
+          hasParallaxImages={false}
+          horizontal={true}
+          inactiveSlideOpacity={0.7}
+          inactiveSlideScale={0.9}
+          inactiveSlideShift={0}
+          inverted={false}
+          itemWidth={676}
+          layout="default"
+          layoutCardOffset={9}
+          lockScrollTimeoutDuration={1000}
+          lockScrollWhileSnapping={false}
+          loop={false}
+          loopClonesPerSide={3}
+          onLayout={[Function]}
+          onResponderRelease={[Function]}
+          onScroll={[Function]}
+          onScrollBeginDrag={[Function]}
+          onScrollEndDrag={[Function]}
+          onSnapToItem={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          overScrollMode="never"
+          pinchGestureEnabled={false}
+          removeClippedSubviews={false}
+          renderItem={[Function]}
+          scrollEnabled={true}
+          scrollEventThrottle={1}
+          scrollsToTop={false}
+          shouldOptimizeUpdates={true}
+          showsHorizontalScrollIndicator={false}
+          showsVerticalScrollIndicator={false}
+          slideStyle={Object {}}
+          sliderWidth={820}
+          style={
+            Object {
+              "flexDirection": "row",
+              "opacity": 0,
+              "width": 820,
+            }
+          }
+          swipeThreshold={20}
+          useScrollView={true}
+          vertical={false}
+        >
+          <View>
+            <View
+              collapsable={false}
+              pointerEvents="box-none"
+              style={
+                Object {
+                  "opacity": 1,
+                  "transform": Array [
+                    Object {
+                      "scale": 1,
+                    },
+                  ],
+                  "width": 676,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "elevation": 7,
+                    "paddingBottom": 30,
+                    "shadowColor": "#000",
+                    "shadowOffset": Object {
+                      "height": 3,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.29,
+                    "shadowRadius": 4.65,
+                    "width": 676,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "uri": "https://physicaldiagnosispdx.com/wp-content/uploads/D8gXFe3U8AI3yRJ-1024x768.jpeg",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 350,
+                      "resizeMode": "stretch",
+                      "width": 676,
+                    }
+                  }
+                />
+              </View>
+            </View>
+            <View
+              collapsable={false}
+              pointerEvents="box-none"
+              style={
+                Object {
+                  "opacity": 0.7,
+                  "transform": Array [
+                    Object {
+                      "scale": 0.9,
+                    },
+                  ],
+                  "width": 676,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "elevation": 7,
+                    "paddingBottom": 30,
+                    "shadowColor": "#000",
+                    "shadowOffset": Object {
+                      "height": 3,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.29,
+                    "shadowRadius": 4.65,
+                    "width": 676,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "uri": "https://physicaldiagnosispdx.com/wp-content/uploads/6A068373-9EEA-4888-92BE-29FDA7C2C91D-wpp1593059985634-e1593064341479.jpeg",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 350,
+                      "resizeMode": "stretch",
+                      "width": 676,
+                    }
+                  }
+                />
+              </View>
+            </View>
+            <View
+              collapsable={false}
+              pointerEvents="box-none"
+              style={
+                Object {
+                  "opacity": 0.7,
+                  "transform": Array [
+                    Object {
+                      "scale": 0.9,
+                    },
+                  ],
+                  "width": 676,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "elevation": 7,
+                    "paddingBottom": 30,
+                    "shadowColor": "#000",
+                    "shadowOffset": Object {
+                      "height": 3,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.29,
+                    "shadowRadius": 4.65,
+                    "width": 676,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "uri": "https://physicaldiagnosispdx.com/wp-content/uploads/A35B88B8-84A8-4062-B5DD-0C343C0F7C2A-1024x768.jpeg",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 350,
+                      "resizeMode": "stretch",
+                      "width": 676,
+                    }
+                  }
+                />
+              </View>
+            </View>
+            <View
+              collapsable={false}
+              pointerEvents="box-none"
+              style={
+                Object {
+                  "opacity": 0.7,
+                  "transform": Array [
+                    Object {
+                      "scale": 0.9,
+                    },
+                  ],
+                  "width": 676,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "elevation": 7,
+                    "paddingBottom": 30,
+                    "shadowColor": "#000",
+                    "shadowOffset": Object {
+                      "height": 3,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.29,
+                    "shadowRadius": 4.65,
+                    "width": 676,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "uri": "https://physicaldiagnosispdx.com/wp-content/uploads/087C7AA4-13F4-4D02-8344-D07652C0EB9D.jpeg",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 350,
+                      "resizeMode": "stretch",
+                      "width": 676,
+                    }
+                  }
+                />
+              </View>
+            </View>
+            <View
+              collapsable={false}
+              pointerEvents="box-none"
+              style={
+                Object {
+                  "opacity": 0.7,
+                  "transform": Array [
+                    Object {
+                      "scale": 0.9,
+                    },
+                  ],
+                  "width": 676,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "elevation": 7,
+                    "paddingBottom": 30,
+                    "shadowColor": "#000",
+                    "shadowOffset": Object {
+                      "height": 3,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.29,
+                    "shadowRadius": 4.65,
+                    "width": 676,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "uri": "https://physicaldiagnosispdx.com/wp-content/uploads/601B7433-8E1D-4F17-9A0C-AB32010DD446-1024x768.jpeg",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 350,
+                      "resizeMode": "stretch",
+                      "width": 676,
+                    }
+                  }
+                />
+              </View>
+            </View>
+            <View
+              collapsable={false}
+              pointerEvents="box-none"
+              style={
+                Object {
+                  "opacity": 0.7,
+                  "transform": Array [
+                    Object {
+                      "scale": 0.9,
+                    },
+                  ],
+                  "width": 676,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "elevation": 7,
+                    "paddingBottom": 30,
+                    "shadowColor": "#000",
+                    "shadowOffset": Object {
+                      "height": 3,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.29,
+                    "shadowRadius": 4.65,
+                    "width": 676,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "uri": "https://physicaldiagnosispdx.com/wp-content/uploads/0DFCB3BC-A36A-4611-9B84-98D424F1B922-scaled-e1593062496337-1024x658.jpeg",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 350,
+                      "resizeMode": "stretch",
+                      "width": 676,
+                    }
+                  }
+                />
+              </View>
+            </View>
+          </View>
+        </RCTScrollView>
+        <View
+          accessible={false}
+          pointerEvents="box-none"
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+                "paddingHorizontal": 20,
+                "paddingVertical": 30,
+              },
+              Object {
+                "flexDirection": "row",
+              },
+              Object {},
+            ]
+          }
+        >
+          <View
+            accessible={false}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+                "marginHorizontal": 8,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              collapsable={false}
+              style={
+                Object {
+                  "backgroundColor": "rgba(0, 0, 0, 0.92)",
+                  "borderRadius": 5,
+                  "height": 10,
+                  "marginHorizontal": 0,
+                  "opacity": 0.4,
+                  "transform": Array [
+                    Object {
+                      "scale": 0.6,
+                    },
+                  ],
+                  "width": 10,
+                }
+              }
+            />
+          </View>
+          <View
+            accessible={false}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+                "marginHorizontal": 8,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              collapsable={false}
+              style={
+                Object {
+                  "backgroundColor": "rgba(0, 0, 0, 0.92)",
+                  "borderRadius": 5,
+                  "height": 10,
+                  "marginHorizontal": 0,
+                  "opacity": 0.4,
+                  "transform": Array [
+                    Object {
+                      "scale": 0.6,
+                    },
+                  ],
+                  "width": 10,
+                }
+              }
+            />
+          </View>
+          <View
+            accessible={false}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+                "marginHorizontal": 8,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              collapsable={false}
+              style={
+                Object {
+                  "backgroundColor": "rgba(0, 0, 0, 0.92)",
+                  "borderRadius": 5,
+                  "height": 10,
+                  "marginHorizontal": 0,
+                  "opacity": 0.4,
+                  "transform": Array [
+                    Object {
+                      "scale": 0.6,
+                    },
+                  ],
+                  "width": 10,
+                }
+              }
+            />
+          </View>
+          <View
+            accessible={false}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+                "marginHorizontal": 8,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              collapsable={false}
+              style={
+                Object {
+                  "backgroundColor": "rgba(0, 0, 0, 0.92)",
+                  "borderRadius": 5,
+                  "height": 10,
+                  "marginHorizontal": 0,
+                  "opacity": 0.4,
+                  "transform": Array [
+                    Object {
+                      "scale": 0.6,
+                    },
+                  ],
+                  "width": 10,
+                }
+              }
+            />
+          </View>
+          <View
+            accessible={false}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+                "marginHorizontal": 8,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              collapsable={false}
+              style={
+                Object {
+                  "backgroundColor": "rgba(0, 0, 0, 0.92)",
+                  "borderRadius": 5,
+                  "height": 10,
+                  "marginHorizontal": 0,
+                  "opacity": 0.4,
+                  "transform": Array [
+                    Object {
+                      "scale": 0.6,
+                    },
+                  ],
+                  "width": 10,
+                }
+              }
+            />
+          </View>
+          <View
+            accessible={false}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+                "marginHorizontal": 8,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              collapsable={false}
+              style={
+                Object {
+                  "backgroundColor": "rgba(0, 0, 0, 0.92)",
+                  "borderRadius": 5,
+                  "height": 10,
+                  "marginHorizontal": 0,
+                  "opacity": 0.4,
+                  "transform": Array [
+                    Object {
+                      "scale": 0.6,
+                    },
+                  ],
+                  "width": 10,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
