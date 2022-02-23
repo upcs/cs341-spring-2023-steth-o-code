@@ -32,8 +32,8 @@ jobs:
       - name: install npm
         run: npm install
         
-      # - name: install jest
-      #   run: npm install --save-dev jest
+      - name: install jest
+        run: npm install --save-dev jest
         
       # - name: install jest command line global options
       #   run: npm install jest --global
