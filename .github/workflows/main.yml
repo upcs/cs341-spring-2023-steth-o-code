@@ -26,10 +26,10 @@ jobs:
       - uses: actions/checkout@v2
 
       # First install npm
-      - name: intall npm
+      - name: install npm
         run: npm install
         
       # Then run jest command to run all the tests
-      - name: run test
-        run: jest 
+      - name: run jest
+        run: jest MainMenu.test.js
 
