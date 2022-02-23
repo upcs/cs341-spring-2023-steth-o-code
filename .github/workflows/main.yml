@@ -15,7 +15,7 @@ on:
 jobs:
   # This workflow contains a single job called "test"
   test:
-    name: Run jest tests
+    name: Run Tests
     
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -37,5 +37,5 @@ jobs:
       
       # Then run jest command to run all the tests
       - name: run jest
-        run: jest MainMenu.test.js
+        run: jest
 
