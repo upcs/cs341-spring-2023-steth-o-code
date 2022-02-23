@@ -35,10 +35,10 @@ jobs:
       - name: install jest
         run: npm install --save-dev jest
         
-      - name: install jest command line global options
-        run: npm install jest --global
+      # - name: install jest command line global options
+      #   run: npm install jest --global
         
       # Then run jest command to run all the tests
       - name: run jest
-        run: jest App.test.js
+        run: jest
 
