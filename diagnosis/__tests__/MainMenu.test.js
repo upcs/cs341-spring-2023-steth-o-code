@@ -25,7 +25,7 @@ describe('<MainMenu />', () => {
         const buttonTwo = queryByTestId('buttonTwo');
         expect(buttonTwo).toBeTruthy();
         fireEvent.press(buttonTwo);
-        expect(navigate).toHaveBeenCalledWith('TOTD');        
+        expect(navigate).toHaveBeenCalledWith('Lectures');        
     });
 
     test('test button 3', function() { // test button three links correctly
