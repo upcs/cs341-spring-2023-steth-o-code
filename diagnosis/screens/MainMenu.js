@@ -35,8 +35,8 @@ const MainMenu = ({navigation}) => (
                     <Text style={styles.buttonText}>Knowledge Test</Text>    
                 </TouchableOpacity>
 
-                <TouchableOpacity testID='buttonTwo' style={styles.quickLinkButtons} onPress={() => navigation.navigate("TOTD")}> 
-                    <Text style={styles.buttonText}>Topic of the Day</Text>
+                <TouchableOpacity testID='buttonTwo' style={styles.quickLinkButtons} onPress={() => navigation.navigate("Lecture")}> 
+                    <Text style={styles.buttonText}>Lectures</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity testID='buttonThree' style={styles.quickLinkButtons} onPress={() => navigation.navigate("Community")}> 

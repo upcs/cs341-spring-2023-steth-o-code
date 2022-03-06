@@ -17,6 +17,7 @@ import Community from './../screens/Community';
 import TeamInfo from './../screens/TeamInfo';
 import TOTD from './../screens/TopicOfTheDay';
 import MultiMedia from './../screens/Multimedia';
+import Lecture from './../screens/Lectures';
 
 import { ScreenStackHeaderLeftView } from 'react-native-screens';
 
@@ -47,6 +48,7 @@ const StackNavigator = () => {
           <Stack.Screen name="TeamInfo" component={TeamInfo}/>
           <Stack.Screen name="TOTD" component={TOTD}/>
           <Stack.Screen name="MultiMedia" component={MultiMedia}/>
+          <Stack.Screen name="Lecture" component={Lecture}/>
 
           
         </Stack.Navigator>
