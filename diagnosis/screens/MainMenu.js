@@ -3,22 +3,23 @@ import { Text, View, StyleSheet, Image, TouchableOpacity, Dimensions} from 'reac
 import { ExtraText } from '../components/SignUpLoginStyles';
 import {Ionicons} from '@expo/vector-icons';
 import { IconButton, Colors } from 'react-native-paper';
+import Constants from 'expo-constants';
+
+const StatusBarHeight = Constants.statusBarHeight;
 
 var time = new Date().getHours();
 
 const MainMenu = ({navigation}) => (
-
-    
         <View style={styles.mainContainer}> 
             <View style={styles.headerContainer}>
                 <View>
                     <Ionicons style={styles.MainMenu} name='menu' size={35}/>
                 </View>
-                <Image style={styles.PDXLogo} source={require('diagnosis/assets/simplePDXLogo.png')}></Image>
-                <Image style={styles.accountIcon} source={require('diagnosis/assets/accountIcon.png')}></Image>
+                <Image style={styles.PDXLogo} source={require('../assets/simplePDXLogo.png')}></Image>
+                <Image style={styles.accountIcon} source={require('../assets/accountIcon.png')}></Image>
             </View>
             
-            <Image style={styles.stethoscopeImage} source={require('diagnosis/assets/stethoscope.jpeg')} blurRadius={1}></Image>
+            <Image style={styles.stethoscopeImage} source={require('../assets/stethoscope.jpeg')} blurRadius={1}></Image>
             <Text style={styles.welcomeText}>Good Morning, {"\n"}
                 User
             </Text>
@@ -66,21 +67,21 @@ const styles = StyleSheet.create({
         backgroundColor: "#ffffff",
         position: "absolute",
         top: 0,
-        height: 100,
+        height: StatusBarHeight+65,
         justifyContent: "center",
         alignContent: "center",
         width: '100%',
     },
     MainMenu:{
-        top: 10,
+        top: StatusBarHeight-20,
         left: 20
     },
     PDXLogo: {
         position:"absolute",
         resizeMode: "contain",
         width: 200,
-        top: -60,
-        left: 90,
+        top: StatusBarHeight-100,
+        left: Dimensions.get('window').width / 4,
         flex: 1,
     },
 
@@ -90,33 +91,33 @@ const styles = StyleSheet.create({
         width: 50,
         height: 50,
         right: 15,
-        top: 40
+        top: StatusBarHeight
     },
 
     stethoscopeImage: {
-        resizeMode: "contain",
+        resizeMode: "stretch",
         position: "absolute",
         width: '100%',
-        height: undefined,
+        height: StatusBarHeight+200,
         aspectRatio: 1,
-        top: 38
+        top: StatusBarHeight+60
     },
 
     welcomeText: {
         position: "absolute",
         color: "#E63610",
-        fontSize: 60,
-        top: 120,
+        fontSize: 55,
+        top: StatusBarHeight+120,
         fontWeight: 'bold',
         textAlign: "center",
-        fontFamily: "Gill Sans",
+        fontFamily: "Roboto",
         textShadowColor:'#585858',
         textShadowOffset:{width: 5, height: 5},
         textShadowRadius:10,
     },
     
     quickLinksView: {
-        top: 70,
+        top: StatusBarHeight,
         backgroundColor: "white",
         justifyContent: 'center',
         position: "relative",
@@ -152,8 +153,8 @@ const styles = StyleSheet.create({
         borderBottomWidth: 6,
         borderRadius: 12,
         position: 'absolute',
-        left: 20,
-        top: 390
+        left: Dimensions.get('window').width/16,
+        top: StatusBarHeight+290
     },
 
     PDXCenterText: {
@@ -164,8 +165,9 @@ const styles = StyleSheet.create({
         textShadowOffset:{width: 1, height: 9},
         textShadowRadius:10,
         paddingBottom: 30,
-        left: 145,
-        fontWeight: 'bold'
+        textAlign: 'center',
+        fontWeight: 'bold',
+        top: StatusBarHeight+250
     },
 
     middleLineRight: {
@@ -174,13 +176,13 @@ const styles = StyleSheet.create({
         borderBottomWidth: 6,
         borderRadius: 12,
         position: 'absolute',
-        right: 20,
-        top: 390
+        right: Dimensions.get('window').width/16,
+        top: StatusBarHeight+290
     },
 
     buttonText: {
         fontSize: 25,
-        fontFamily: "Gill Sans",
+        fontFamily: "Roboto",
         fontWeight: "bold",
         color: "black"
     }
