@@ -20,14 +20,19 @@ const MainMenu = ({navigation}) => (
             </View>
             
             <Image style={styles.stethoscopeImage} source={require('../assets/stethoscope.jpeg')} blurRadius={1}></Image>
-            <Text style={styles.welcomeText}>Good Morning, {"\n"}
-                User
+            <Text 
+                adjustsFontSizeToFit={true}
+                style={styles.welcomeText}
+                onTextLayout={ (e) => { 
+
+                }}
+                >Good Morning, User
             </Text>
 
             <View style={styles.middleLineLeft}></View>
             <ExtraText style={styles.PDXCenterText}>PDX</ExtraText>
             <View style={styles.middleLineRight}></View>
-
+            
             <View style={styles.quickLinksView}>
                 <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("KnowledgeTest")}> 
                     <Text style={styles.buttonText}>Knowledge Test</Text>    
@@ -74,7 +79,7 @@ const styles = StyleSheet.create({
     },
     MainMenu:{
         top: StatusBarHeight-20,
-        left: 20
+        left: Dimensions.get('window').width / 16
     },
     PDXLogo: {
         position:"absolute",
@@ -90,7 +95,7 @@ const styles = StyleSheet.create({
         resizeMode: "contain",
         width: 50,
         height: 50,
-        right: 15,
+        right: Dimensions.get('window').width / 16,
         top: StatusBarHeight
     },
 
@@ -98,7 +103,7 @@ const styles = StyleSheet.create({
         resizeMode: "stretch",
         position: "absolute",
         width: '100%',
-        height: StatusBarHeight+200,
+        height: Dimensions.get('window').height/3,
         aspectRatio: 1,
         top: StatusBarHeight+60
     },
@@ -107,9 +112,9 @@ const styles = StyleSheet.create({
         position: "absolute",
         color: "#E63610",
         fontSize: 55,
-        top: StatusBarHeight+120,
+        top: Dimensions.get('window').height/4-(StatusBarHeight*(3/2)),
         fontWeight: 'bold',
-        textAlign: "center",
+        textAlign: 'center',
         fontFamily: "Roboto",
         textShadowColor:'#585858',
         textShadowOffset:{width: 5, height: 5},
@@ -121,8 +126,8 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         justifyContent: 'center',
         position: "relative",
-        marginTop: 280,
-        height: 370,
+        marginTop: Dimensions.get('window').height*(3/8),
+        height: Dimensions.get('window').height/2,
         marginBottom: 0,
         width: '96%',
         borderRadius: 60,
@@ -154,7 +159,7 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         position: 'absolute',
         left: Dimensions.get('window').width/16,
-        top: StatusBarHeight+290
+        top: Dimensions.get('window').height/(2.3)
     },
 
     PDXCenterText: {
@@ -164,10 +169,9 @@ const styles = StyleSheet.create({
         textShadowColor:'#585858',
         textShadowOffset:{width: 1, height: 9},
         textShadowRadius:10,
-        paddingBottom: 30,
+        paddingBottom: Dimensions.get('window').height/(8),
         textAlign: 'center',
         fontWeight: 'bold',
-        top: StatusBarHeight+250
     },
 
     middleLineRight: {
@@ -177,7 +181,7 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         position: 'absolute',
         right: Dimensions.get('window').width/16,
-        top: StatusBarHeight+290
+        top: Dimensions.get('window').height/(2.3)
     },
 
     buttonText: {
