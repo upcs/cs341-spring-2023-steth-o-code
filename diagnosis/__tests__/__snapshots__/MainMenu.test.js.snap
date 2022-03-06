@@ -247,7 +247,7 @@ exports[`<MainMenu /> renders correctly 1`] = `
           }
         }
       >
-        Topic of the Day
+        Lectures
       </Text>
     </View>
     <View

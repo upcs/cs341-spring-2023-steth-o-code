@@ -35,7 +35,7 @@ const MainMenu = ({navigation}) => (
                     <Text style={styles.buttonText}>Knowledge Test</Text>    
                 </TouchableOpacity>
 
-                <TouchableOpacity testID='buttonTwo' style={styles.quickLinkButtons} onPress={() => navigation.navigate("Lecture")}> 
+                <TouchableOpacity testID='buttonTwo' style={styles.quickLinkButtons} onPress={() => navigation.navigate("Lectures")}> 
                     <Text style={styles.buttonText}>Lectures</Text>
                 </TouchableOpacity>
 
@@ -69,30 +69,36 @@ const styles = StyleSheet.create({
 
     headerContainer: {
         backgroundColor: "#ffffff",
-        position: "absolute",
-        top: 0,
-        height: Dimensions.get('window').height/8,
+        //position: "absolute",
+        //top: 0,
+        flex: 0.4,
+        //height: 90,
         justifyContent: "center",
         width: Dimensions.get('window').width,
     },
+
     MainMenu:{
-        top: 10,
-        left: 20
+        position: 'absolute',
+        //backgroundColor: 'red',
+        left: 15,
     },
+
     PDXLogo: {
         position:"absolute",
         resizeMode: "contain",
-        position: 'absolute',
+        //backgroundColor: 'red',
         width: 200,
+        height: 200,
         left: 87,
-        top: -60
+        top: -40,
     },
 
     accountIcon: {
         position: "absolute",
+        //backgroundColor: 'red',
         resizeMode: "contain",
-        width: 50,
-        height: 50,
+        width: 43,
+        height: 43,
         right: 15,
         top: 40
     },
@@ -100,15 +106,17 @@ const styles = StyleSheet.create({
     stethoscopeImage: {
         resizeMode: "stretch",
         position: "relative",
-        flex: 1,
         width: Dimensions.get('window').width,
-        height: Dimensions.get('window').height,
+        //height: Dimensions.get('window').height,
+        flex: 1
     },
 
     imageView: {
-        position: 'absolute',
-        height: 250,
-        top: 100,
+        flex: 1,
+        //position: 'absolute',
+        //height: 250,
+        //top: 90,
+        //marginTop: 10,
         backgroundColor: 'red',
         width: Dimensions.get('window').width,
     },
@@ -129,13 +137,15 @@ const styles = StyleSheet.create({
     
     quickLinksView: {
         backgroundColor: "white",
-        position: "absolute",
-        top: 440,
+        //position: "absolute",
+        //flex: 1.2,
         width: '96%',
         borderRadius: 60,
         borderColor: 'red',
         padding: 10,
-        alignItems: 'center'
+        top: 0,
+        alignItems: 'center',
+        marginBottom: 40
     },
 
     magGlassImg: {
@@ -154,10 +164,11 @@ const styles = StyleSheet.create({
     },
 
     centerView: {
-        top: 350,
-        position: "absolute",
+        //top: 350,
+        //position: "absolute",
         //backgroundColor: 'red',
-        height: 80,
+        //height: 80,
+        flex: 0.4,
         width: Dimensions.get('window').width
     },
     
