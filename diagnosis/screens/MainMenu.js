@@ -126,8 +126,8 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         justifyContent: 'center',
         position: "relative",
-        marginTop: Dimensions.get('window').height*(3/8),
-        height: Dimensions.get('window').height/2,
+        marginTop: Dimensions.get('window').height*(3/7),
+        height: Dimensions.get('window').height*(7/16),
         marginBottom: 0,
         width: '96%',
         borderRadius: 60,
@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
     },
 
     quickLinkButtons: {
-        marginTop: 15,
+        marginTop: Dimensions.get('window').height/64,
         alignItems: 'center',
         marginLeft: 50,
         width: '75%',
@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         position: 'absolute',
         left: Dimensions.get('window').width/16,
-        top: Dimensions.get('window').height/(2.3)
+        top: Dimensions.get('window').height/2.1
     },
 
     PDXCenterText: {
@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
         textShadowColor:'#585858',
         textShadowOffset:{width: 1, height: 9},
         textShadowRadius:10,
-        paddingBottom: Dimensions.get('window').height/(8),
+        paddingBottom: Dimensions.get('window').height/64,
         textAlign: 'center',
         fontWeight: 'bold',
     },
@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         position: 'absolute',
         right: Dimensions.get('window').width/16,
-        top: Dimensions.get('window').height/(2.3)
+        top: Dimensions.get('window').height/2.1
     },
 
     buttonText: {
