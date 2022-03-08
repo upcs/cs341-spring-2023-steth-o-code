@@ -115,14 +115,14 @@ const styles = StyleSheet.create({
         position: "absolute",
         color: "#E63610",
         fontSize: 55,
-        top: Dimensions.get('window').height/4-(StatusBarHeight*(3/2)),
+        top: Dimensions.get('window').height/4-(StatusBarHeight*(3/4)),
         fontWeight: 'bold',
         textAlign: 'center',
         fontFamily: "Roboto",
         textShadowColor:'#585858',
         textShadowOffset:{width: 5, height: 5},
         textShadowRadius:10,
-        left: 55
+        left:10
     },
     
     quickLinksView: {
@@ -130,8 +130,8 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         justifyContent: 'center',
         position: "relative",
-        marginTop: Dimensions.get('window').height*(3/7),
-        height: Dimensions.get('window').height*(7/16),
+        marginTop: Dimensions.get('window').height*(3/5.5),
+        height: Dimensions.get('window').height*(7/17),
         marginBottom: 0,
         width: '96%',
         borderRadius: 60,
@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         position: 'absolute',
         left: Dimensions.get('window').width/16,
-        top: Dimensions.get('window').height/2.1
+        top: Dimensions.get('window').height/2.05
     },
 
     PDXCenterText: {
@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         position: 'absolute',
         right: Dimensions.get('window').width/16,
-        top: Dimensions.get('window').height/2.1
+        top: Dimensions.get('window').height/2.05
     },
 
     buttonText: {
