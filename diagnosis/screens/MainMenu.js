@@ -3,33 +3,34 @@ import { Text, View, StyleSheet, Image, TouchableOpacity, Dimensions, useWindowD
 import { ExtraText } from '../components/SignUpLoginStyles';
 import {Ionicons} from '@expo/vector-icons';
 import { IconButton, Colors } from 'react-native-paper';
+import Constants from 'expo-constants';
+
+const StatusBarHeight = Constants.statusBarHeight;
 
 const MainMenu = ({navigation}) => (
-
-    
         <View style={styles.mainContainer}> 
             <View style={styles.headerContainer}>
                 <View>
                     <Ionicons style={styles.MainMenu} name='menu' size={35}/>
                 </View>
-                <Image style={styles.PDXLogo} source={require('diagnosis/assets/simplePDXLogo.png')}></Image>
-                <Image style={styles.accountIcon} source={require('diagnosis/assets/accountIcon.png')}></Image>    
-            </View>
-
-            <View style={styles.imageView}>
-                <Image style={styles.stethoscopeImage} source={require('diagnosis/assets/stethoscope.jpeg')} blurRadius={1}></Image>
-                <Text style={styles.welcomeText}>Good Morning, {"\n"}
-                    User
-                </Text>
-            </View>
-
-            <View style={styles.centerView}>
-                <View style={styles.middleLineLeft}></View>
-                <ExtraText style={styles.PDXCenterText}>PDX</ExtraText>
-                <View style={styles.middleLineRight}></View>
+                <Image style={styles.PDXLogo} source={require('../assets/simplePDXLogo.png')}></Image>
+                <Image style={styles.accountIcon} source={require('../assets/accountIcon.png')}></Image>
             </View>
             
-           
+            <Image style={styles.stethoscopeImage} source={require('../assets/stethoscope.jpeg')} blurRadius={1}></Image>
+            <Text 
+                adjustsFontSizeToFit={true}
+                style={styles.welcomeText}
+                onTextLayout={ (e) => { 
+
+                }}
+                >Good Morning, User
+            </Text>
+
+            <View style={styles.middleLineLeft}></View>
+            <ExtraText style={styles.PDXCenterText}>PDX</ExtraText>
+            <View style={styles.middleLineRight}></View>
+            
             <View style={styles.quickLinksView}>
                 <TouchableOpacity testID='buttonOne' style={styles.quickLinkButtons} onPress={() => navigation.navigate("KnowledgeTest")}> 
                     <Text style={styles.buttonText}>Knowledge Test</Text>    
@@ -69,18 +70,16 @@ const styles = StyleSheet.create({
 
     headerContainer: {
         backgroundColor: "#ffffff",
-        //position: "absolute",
-        //top: 0,
-        flex: 0.4,
-        //height: 90,
+        position: "absolute",
+        top: 0,
+        height: StatusBarHeight+65,
         justifyContent: "center",
         width: Dimensions.get('window').width,
     },
 
     MainMenu:{
-        position: 'absolute',
-        //backgroundColor: 'red',
-        left: 15,
+        top: StatusBarHeight-20,
+        left: Dimensions.get('window').width / 16
     },
 
     PDXLogo: {
@@ -88,47 +87,38 @@ const styles = StyleSheet.create({
         resizeMode: "contain",
         //backgroundColor: 'red',
         width: 200,
-        height: 200,
-        left: 87,
-        top: -40,
+        top: StatusBarHeight-100,
+        left: Dimensions.get('window').width / 4,
+        flex: 1,
     },
 
     accountIcon: {
         position: "absolute",
         //backgroundColor: 'red',
         resizeMode: "contain",
-        width: 43,
-        height: 43,
-        right: 15,
-        top: 40
+        width: 50,
+        height: 50,
+        right: Dimensions.get('window').width / 16,
+        top: StatusBarHeight
     },
 
     stethoscopeImage: {
         resizeMode: "stretch",
-        position: "relative",
-        width: Dimensions.get('window').width,
-        //height: Dimensions.get('window').height,
-        flex: 1
-    },
-
-    imageView: {
-        flex: 1,
-        //position: 'absolute',
-        //height: 250,
-        //top: 90,
-        //marginTop: 10,
-        backgroundColor: 'red',
-        width: Dimensions.get('window').width,
+        position: "absolute",
+        width: '100%',
+        height: Dimensions.get('window').height/3,
+        aspectRatio: 1,
+        top: StatusBarHeight+60
     },
 
     welcomeText: {
         position: "absolute",
         color: "#E63610",
-        fontSize: 60,
-        top: 20,
+        fontSize: 55,
+        top: Dimensions.get('window').height/4-(StatusBarHeight*(3/2)),
         fontWeight: 'bold',
-        textAlign: "center",
-        fontFamily: "Gill Sans",
+        textAlign: 'center',
+        fontFamily: "Roboto",
         textShadowColor:'#585858',
         textShadowOffset:{width: 5, height: 5},
         textShadowRadius:10,
@@ -136,9 +126,13 @@ const styles = StyleSheet.create({
     },
     
     quickLinksView: {
+        top: StatusBarHeight,
         backgroundColor: "white",
-        //position: "absolute",
-        //flex: 1.2,
+        justifyContent: 'center',
+        position: "relative",
+        marginTop: Dimensions.get('window').height*(3/7),
+        height: Dimensions.get('window').height*(7/16),
+        marginBottom: 0,
         width: '96%',
         borderRadius: 60,
         borderColor: 'red',
@@ -155,7 +149,7 @@ const styles = StyleSheet.create({
     },
 
     quickLinkButtons: {
-        margin: 10,
+        marginTop: Dimensions.get('window').height/64,
         alignItems: 'center',
         width: '75%',
         paddingVertical: 10,
@@ -178,9 +172,8 @@ const styles = StyleSheet.create({
         borderBottomWidth: 6,
         borderRadius: 12,
         position: 'absolute',
-        left: 20,
-        top: 42
-      
+        left: Dimensions.get('window').width/16,
+        top: Dimensions.get('window').height/2.1
     },
 
     PDXCenterText: {
@@ -190,9 +183,9 @@ const styles = StyleSheet.create({
         textShadowColor:'#585858',
         textShadowOffset:{width: 1, height: 9},
         textShadowRadius:10,
+        paddingBottom: Dimensions.get('window').height/64,
+        textAlign: 'center',
         fontWeight: 'bold',
-        top: 17,
-        left: 140
     },
 
     middleLineRight: {
@@ -201,13 +194,13 @@ const styles = StyleSheet.create({
         borderBottomWidth: 6,
         borderRadius: 12,
         position: 'absolute',
-        right: 20,
-        top: 42
+        right: Dimensions.get('window').width/16,
+        top: Dimensions.get('window').height/2.1
     },
 
     buttonText: {
         fontSize: 25,
-        fontFamily: "Gill Sans",
+        fontFamily: "Roboto",
         fontWeight: "bold",
         color: "black"
     }
