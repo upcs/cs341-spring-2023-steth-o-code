@@ -1,9 +1,15 @@
 import React from 'react';
-import { Text, View, StyleSheet} from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity, ScrollView} from 'react-native';
 
 const Topics = () => (
     <View style={styles.mainContainer}>
-        <Text style={styles.text}> PAGE FOR Topics</Text>
+        <ScrollView>
+            <Text style={styles.test}> PAGE FOR Topics</Text>
+
+            <Text style={styles.test}> PAGE FOR Topics</Text>
+
+
+        </ScrollView>
     </View>
 );
 
@@ -15,7 +21,9 @@ const styles = StyleSheet.create({
         alignItems: "center",
         backgroundColor: "#BFAA8C",
     },
-
+    test:{
+        fontSize:300
+    }
 });
 
 export default Topics;

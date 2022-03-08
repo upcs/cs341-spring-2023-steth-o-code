@@ -3,6 +3,7 @@ import React from 'react';
 import { createDrawerNavigator} from '@react-navigation/drawer';
 import { AntDesign } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
+import { Text, View, StyleSheet, Image, TouchableOpacity, Dimensions} from 'react-native';
 
 import MainMenu from '../screens/MainMenu';
 import KnowledgeTest from '../screens/KnowledgeTest';
@@ -13,12 +14,13 @@ import Activities from '../screens/Activities';
 import Lectures from '../screens/Lectures';
 
 import CustomDrawer from '../components/CustomDrawer';
+import {DrawerActions} from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {color} from 'react-native-reanimated';
 
 const Drawer = createDrawerNavigator();
 
-const DrawerNavigator = () => {
+const DrawerNavigator = ({navigation}) => {
   return (
     <Drawer.Navigator drawerContent={props => <CustomDrawer {...props} />}>
       <Drawer.Screen name="Main Menu" component={MainMenu}
@@ -30,7 +32,23 @@ const DrawerNavigator = () => {
         }} />
       <Drawer.Screen name="Topics" component={Topics}
         options={{
-          headerShown: false,
+          headerShown: true,
+          headerTitle: (props) => <LogoTitle {...props} />,
+          headerLeft:() => (
+            <TouchableOpacity  onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
+              <Ionicons style={styles.menuIcon} name="menu" size={40} color= "white" />
+            </TouchableOpacity>
+          ),
+          headerRight:() => (
+            <TouchableOpacity  onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
+              <Ionicons style={styles.AccIcon} name="person-circle-outline" size={40} color= "white" />
+            </TouchableOpacity>
+          ),
+          headerStyle:{
+            backgroundColor: "#BFAA8C",
+            height: 100,
+          },
+
           drawerIcon: () => (
             <Ionicons name='book-outline' size={22} color={color} />
           )
@@ -73,5 +91,25 @@ const DrawerNavigator = () => {
     </Drawer.Navigator>
   );
 }
+
+function LogoTitle() {
+  return (
+    <Image
+      style={{ width: 200, height: 60 , top: 20 }}
+      source={require('diagnosis/assets/simplePDXLogo.png')}
+    />
+  );
+}
+
+const styles = StyleSheet.create({
+    menuIcon:{
+      top: 25,
+      left:15
+    },
+    AccIcon:{
+      top: 25,
+      right:15
+    }
+});
 
 export default DrawerNavigator;
