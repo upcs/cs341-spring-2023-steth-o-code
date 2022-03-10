@@ -1,19 +1,17 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
-
-
-const getData = async () => {
-    const data = await fetch("https://up.physicaldiagnosispdx.com/up/app-content/database_connect_jgn.php")
-    const json = await data.json();
-    console.log("Clicked");
-    return json.ID;
-};
+import WebView from 'react-native-webview';
 
 const KnowledgeTest = () => (
-    <View style={styles.mainContainer}>
-        <Text style={styles.text} onPress={getData}> KnowledgeTest Page</Text>
-    </View>
+    // <View style={styles.mainContainer}>
+    //     {/* <Text style={styles.text}> KnowledgeTest Page</Text> */}
+    //     <WebView uri={'https://up.physicaldiagnosispdx.com/up/app-content/database_connect_jgn.php'}></WebView>
+    // </View>
+    
+    <WebView 
+    javaScriptEnabled={true} 
+    source={{uri: 'https://up.physicaldiagnosispdx.com/up/app-content/database_connect_jgn.php'}}/>
 );
 
 const styles = StyleSheet.create({
