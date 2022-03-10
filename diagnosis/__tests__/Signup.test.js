@@ -4,8 +4,9 @@ import {act, fireEvent, render, waitFor} from '@testing-library/react-native';
 import Signup from '../screens/Signup';
 
 describe('<Signup />', () => {
-    test("has 1 child", async () => {
-        renderer.create(<Signup />);
+    test("has 1 child", () => {
+        const tree = renderer.create(<Signup />).toJSON();
+        expect(tree).toMatchSnapshot();
     });
     test('validates on valid inputs', async () => {
         const {queryByTestId} = render(<Signup />);
@@ -17,7 +18,8 @@ describe('<Signup />', () => {
             fireEvent.changeText(username, 'HelloWorld');
             fireEvent.changeText(email, 'testproject@pdx.com')
             fireEvent.changeText(password, 'PDXRules!!');
-            fireEvent.changeText(matchingPassword, 'PDXRules!!')
+            fireEvent.changeText(matchingPassword, 'PDXRules!!');
+            fireEvent.press(queryByTestId('signup-button'));
         });
         await waitFor(() => {
             expect(queryByTestId('new-username-error')).toBeNull();
@@ -40,7 +42,7 @@ describe('<Signup />', () => {
             expect(queryByTestId('new-password-error')).toBeTruthy();
             expect(queryByTestId('new-password-error')).toHaveTextContent('Password is required');
             expect(queryByTestId('match-password-error')).toBeTruthy();
-            expect(queryByTestId('match-password-error')).toHaveTextContent('Username is required');
+            expect(queryByTestId('match-password-error')).toHaveTextContent('Confirming Password is required');
         });
     });
 });
