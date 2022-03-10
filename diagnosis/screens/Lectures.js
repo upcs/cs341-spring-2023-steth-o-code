@@ -4,7 +4,7 @@ import { WebView } from 'react-native-webview';
 
 const Lectures = () => (
         <WebView 
-        javaScriptEnabled={true} source={{uri: 'https://player.vimeo.com/video/482925513?loop=1'}} 
+            javaScriptEnabled={true} source={{uri: 'https://player.vimeo.com/video/482925513?loop=1'}} 
         />
 );
 

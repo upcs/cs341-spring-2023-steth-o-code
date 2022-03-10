@@ -1,8 +1,6 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity, Dimensions} from 'react-native';
 import { ExtraText } from '../components/SignUpLoginStyles';
-import {Ionicons} from '@expo/vector-icons';
-import { IconButton, Colors } from 'react-native-paper';
 
 var time = new Date().getHours();
 
@@ -10,14 +8,6 @@ const MainMenu = ({navigation}) => (
 
     
         <View style={styles.mainContainer}> 
-            <View style={styles.headerContainer}>
-                <View>
-                    <Ionicons style={styles.MainMenu} name='menu' size={35}/>
-                </View>
-                <Image style={styles.PDXLogo} source={require('diagnosis/assets/simplePDXLogo.png')}></Image>
-                <Image style={styles.accountIcon} source={require('diagnosis/assets/accountIcon.png')}></Image>
-            </View>
-            
             <Image style={styles.stethoscopeImage} source={require('diagnosis/assets/stethoscope.jpeg')} blurRadius={1}></Image>
             <Text style={styles.welcomeText}>Good Morning, {"\n"}
                 User
@@ -66,7 +56,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#ffffff",
         position: "absolute",
         top: 0,
-        height: 100,
+        height: 0,
         justifyContent: "center",
         alignContent: "center",
         width: '100%',
@@ -99,14 +89,14 @@ const styles = StyleSheet.create({
         width: '100%',
         height: undefined,
         aspectRatio: 1,
-        top: 38
+        top: -60
     },
 
     welcomeText: {
         position: "absolute",
-        color: "#E63610",
+        color: "white",
         fontSize: 60,
-        top: 120,
+        top: 20,
         fontWeight: 'bold',
         textAlign: "center",
         fontFamily: "Gill Sans",
@@ -116,7 +106,7 @@ const styles = StyleSheet.create({
     },
     
     quickLinksView: {
-        top: 70,
+        top: 0,
         backgroundColor: "white",
         justifyContent: 'center',
         position: "relative",
@@ -153,18 +143,17 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         position: 'absolute',
         left: 20,
-        top: 390
+        top: 330
     },
 
     PDXCenterText: {
-        position: 'absolute',
+        alignContent: "center",
+        top: 260,
         fontSize: 50,
         color: 'white',
         textShadowColor:'#585858',
         textShadowOffset:{width: 1, height: 9},
         textShadowRadius:10,
-        paddingBottom: 30,
-        left: 145,
         fontWeight: 'bold'
     },
 
@@ -175,14 +164,14 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         position: 'absolute',
         right: 20,
-        top: 390
+        top: 330
     },
 
     buttonText: {
         fontSize: 25,
         fontFamily: "Gill Sans",
         fontWeight: "bold",
-        color: "black"
+        color: "white"
     }
 });
     
