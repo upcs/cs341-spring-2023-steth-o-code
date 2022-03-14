@@ -1,4 +1,5 @@
 <?php
+
 $servername = "localhost";
 $username = "physicz9_up_admin";
 $password = "^x9)eQ8XGSJ{[1";
@@ -13,22 +14,19 @@ if ($conn->connect_error) {
 }
 //echo "Connected successfully";
 
-
-//include './server-screens/AboutUs.php';
-
 // create and get SQL query
-$sql = "SELECT * FROM `_SXA_posts` WHERE `ID` = 73";
+$sql = "SELECT * FROM `_SXA_posts` WHERE `ID` = 4607";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo "id: " . $row["ID"]. " - Post Title: " . $row["post_title"]. " " . $row["post_content"]. "<br>";
+    echo $row["post_content_filtered"] , "<br>";
   }
 } else {
   echo "0 results";
 }
 
-// close the connection
 $conn->close();
+
 ?>

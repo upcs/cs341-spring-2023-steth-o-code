@@ -4,11 +4,6 @@ import { FlatList } from 'react-native-gesture-handler';
 import WebView from 'react-native-webview';
 
 const KnowledgeTest = () => (
-    // <View style={styles.mainContainer}>
-    //     {/* <Text style={styles.text}> KnowledgeTest Page</Text> */}
-    //     <WebView uri={'https://up.physicaldiagnosispdx.com/up/app-content/database_connect_jgn.php'}></WebView>
-    // </View>
-    
     <WebView 
     javaScriptEnabled={true}
     source={{uri: 'https://up.physicaldiagnosispdx.com/up/app-content/database_connect.php'}}
