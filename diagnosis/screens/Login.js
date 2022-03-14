@@ -54,7 +54,7 @@ const Login = ({navigation}) => {
     //             if (status !== 'ok') {
     //                 handleMessage(message, status);
     //             } else {
-    //                 navigation.navigate('MainMenu', { ...data[0] });
+    //                 navigation.dispatch(StackActions.replace('MainMenu'));
     //             }
     //             setSubmitting(false);
     //             console.log(response.data);
@@ -70,21 +70,7 @@ const Login = ({navigation}) => {
         setMessage(message);
         setMessageType(type);
     }
-
-    const saveToStorage = async (userData) => {
-        if(userData) {
-            await AsyncStorage.setItem('user', JSON.stringify({
-                    isLoggedIn: true,
-                    authToken: userData.auth_token,
-                    id: userData.user_id,
-                    name: userData.user_login
-                })
-            );
-            return true;
-        }
-        return false;
-    }
-
+    
     return (
         <KeyboardAvoidWrap>
             <StyledContainer>
@@ -99,29 +85,24 @@ const Login = ({navigation}) => {
                                 handleMessage('Please fill out all the fields above.');
                                 setSubmitting(false);
                             } else {
-                                console.log(values.username);
-                                // setTimeout(() => {navigation.navigate('MainMenu')}, 500);
-                                // handleLogin(values, setSubmitting);
-                                let formData = new FormData();
-                                formData.append('type', 'login');
-                                formData.append('username', values.username);
-                                formData.append('password', values.password);
-
-                                fetch('https://up.physicaldiagnosispdx.com/up/authentication.php', {
+                                fetch('https://up.physicaldiagnosispdx.com/up/app-content/authentication.php', {
                                     method: 'POST',
-                                    body: formData
+                                    headers: {
+                                        'Accept': 'application/json',
+                                        'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify({
+                                        username: values.username,
+                                        password: values.password
+                                    }),
                                 })
-                                .then((response) => {
-                                    response.text();
-                                })
+                                .then(response => response.text())
                                 .then((responseData) => {
-                                    let loginData = responseData;
-                                    console.log(loginData);
-                                    if(saveToStorage(loginData)) {
+                                    if(responseData === "Authenticated") {
                                         setSubmitting(false);
-                                        navigation.dispatch(StackActions.replace('MainMenu'))
+                                        navigation.dispatch(StackActions.replace('MainMenu'));
                                     } else {
-                                        console.log("Failed to store auth");
+                                        handleMessage(responseData);
                                     }
                                 })
                                 .catch((error) => {
