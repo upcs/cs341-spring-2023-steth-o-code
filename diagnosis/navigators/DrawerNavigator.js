@@ -12,6 +12,8 @@ import Donate from '../screens/Donate';
 import Activities from '../screens/Activities';
 import Lectures from '../screens/Lectures';
 import Login from '../screens/Login';
+import Signup from '../screens/Signup';
+import Multimedia from '../screens/Multimedia';
 
 
 import StackNavigator from './StackNavigator';
@@ -20,18 +22,19 @@ import CustomDrawer from '../components/CustomDrawer';
 import { DrawerActions } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { color } from 'react-native-reanimated';
-import { NavigationContainer} from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 
 
 const Drawer = createDrawerNavigator();
 
-const DrawerNavigator = ({navigation}) => {
+const DrawerNavigator = ({ navigation }) => {
   return (
     <NavigationContainer>
       <Drawer.Navigator drawerContent={props => <CustomDrawer {...props} />}>
         <Drawer.Screen name='Login' component={Login}
           options={{
             headerShown: false,
+            swipeEnabled: false,
             drawerItemStyle: { height: 0 }
           }} />
         <Drawer.Screen name="Main Menu" component={StackNavigator}
@@ -40,12 +43,12 @@ const DrawerNavigator = ({navigation}) => {
             headerTitle: (props) => <LogoTitle {...props} />,
             headerLeft: () => (
               <TouchableOpacity >
-                <Ionicons style={styles.menuIcon} name="menu" size={40} color="white"/>
+                <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
               </TouchableOpacity>
             ),
             headerRight: () => (
               <TouchableOpacity>
-                <Ionicons style={styles.AccIcon} name="person-circle-outline" size={40} color="white"/>
+                <Ionicons style={styles.AccIcon} name="person-circle-outline" size={40} color="white" />
               </TouchableOpacity>
             ),
             headerStyle: {
@@ -189,6 +192,35 @@ const DrawerNavigator = ({navigation}) => {
               <AntDesign name="question" size={24} color="black" />
             )
           }} />
+        <Drawer.Screen name="MultiMedia" component={Multimedia} options={{
+          headerShown: true,
+          headerTitle: (props) => <LogoTitle {...props} />,
+          headerLeft: () => (
+            <TouchableOpacity >
+              <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
+            </TouchableOpacity>
+          ),
+          headerRight: () => (
+            <TouchableOpacity>
+              <Ionicons style={styles.AccIcon} name="person-circle-outline" size={40} color="white" />
+            </TouchableOpacity>
+          ),
+          headerStyle: {
+            backgroundColor: "#BFAA8C",
+            height: 100,
+          },
+          drawerIcon: () => (
+            <Ionicons size={22} color={color} />
+          )
+        }} />
+
+        <Drawer.Screen name="SignUp" component={Signup}
+          options={{
+            headerShown: false,
+            swipeEnabled: false,
+            drawerItemStyle: { height: 0 }
+          }} />
+
       </Drawer.Navigator>
     </NavigationContainer>
   );

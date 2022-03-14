@@ -10,6 +10,7 @@ import Community from '../screens/Community';
 import TeamInfo from './../screens/TeamInfo';
 import TOTD from '../screens/TopicOfTheDay';
 import MultiMedia from '../screens/Multimedia';
+import { Swipeable } from 'react-native-gesture-handler';
 
 const Stack = createNativeStackNavigator();
 
@@ -25,16 +26,16 @@ const StackNavigator = () => {
                 headerTitle: '',
                 headerLeftContainerStyle: {
                     paddingLeft: 20
-                }
+                },
+                gestureEnabled: false
             }}
         >
-          <Stack.Screen name="MainMenu" component={MainMenu} />
+          <Stack.Screen name="MainMenu" component={MainMenu}/>
           <Stack.Screen name="KnowledgeTest" component={KnowledgeTest}/>
           <Stack.Screen name="AboutUs" component={AboutUs}/>
           <Stack.Screen name="Community" component={Community}/>
           <Stack.Screen name="TeamInfo" component={TeamInfo}/>
           <Stack.Screen name="TOTD" component={TOTD}/>
-          <Stack.Screen name="MultiMedia" component={MultiMedia}/>
         </Stack.Navigator>
       
   );
