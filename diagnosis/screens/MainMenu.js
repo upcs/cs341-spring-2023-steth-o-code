@@ -1,12 +1,13 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image, TouchableOpacity, Dimensions} from 'react-native';
+import { Text, View, StyleSheet, Image, TouchableOpacity, Dimensions, useWindowDimensions} from 'react-native';
 import { ExtraText } from '../components/SignUpLoginStyles';
+import {Ionicons} from '@expo/vector-icons';
+import { IconButton, Colors } from 'react-native-paper';
+import Constants from 'expo-constants';
 
-var time = new Date().getHours();
+const StatusBarHeight = Constants.statusBarHeight;
 
 const MainMenu = ({navigation}) => (
-
-    
         <View style={styles.mainContainer}> 
             <Image style={styles.stethoscopeImage} source={require('diagnosis/assets/stethoscope.jpeg')} blurRadius={1}></Image>
             <Text style={styles.welcomeText}>Good Morning, {"\n"}
@@ -16,28 +17,30 @@ const MainMenu = ({navigation}) => (
             <View style={styles.middleLineLeft}></View>
             <ExtraText style={styles.PDXCenterText}>PDX</ExtraText>
             <View style={styles.middleLineRight}></View>
-
+            
             <View style={styles.quickLinksView}>
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("KnowledgeTest")}> 
+                <TouchableOpacity testID='buttonOne' style={styles.quickLinkButtons} onPress={() => navigation.navigate("KnowledgeTest")}> 
                     <Text style={styles.buttonText}>Knowledge Test</Text>    
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("TOTD")}> 
-                    <Text style={styles.buttonText}>Topic of the Day</Text>
+                <TouchableOpacity testID='buttonTwo' style={styles.quickLinkButtons} onPress={() => navigation.navigate("Lectures")}> 
+                    <Text style={styles.buttonText}>Lectures</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("Community")}> 
+                <TouchableOpacity testID='buttonThree' style={styles.quickLinkButtons} onPress={() => navigation.navigate("Community")}> 
                     <Text style={styles.buttonText}>Community</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("TeamInfo")}> 
+                <TouchableOpacity testID='buttonFour' style={styles.quickLinkButtons} onPress={() => navigation.navigate("TeamInfo")}> 
                     <Text style={styles.buttonText}>Our Team</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("AboutUs")}> 
+                <TouchableOpacity testID='buttonFive' style={styles.quickLinkButtons} onPress={() => navigation.navigate("AboutUs")}> 
                     <Text style={styles.buttonText}>About Us</Text>
+                    
                 </TouchableOpacity>
-            </View>
+                </View>
+        
         </View>
 );
 
@@ -58,36 +61,39 @@ const styles = StyleSheet.create({
         top: 0,
         height: 0,
         justifyContent: "center",
-        alignContent: "center",
-        width: '100%',
+        width: Dimensions.get('window').width,
     },
+
     MainMenu:{
-        top: 10,
-        left: 20
+        top: StatusBarHeight-20,
+        left: Dimensions.get('window').width / 16
     },
+
     PDXLogo: {
         position:"absolute",
         resizeMode: "contain",
+        //backgroundColor: 'red',
         width: 200,
-        top: -60,
-        left: 90,
+        top: StatusBarHeight-100,
+        left: Dimensions.get('window').width / 4,
         flex: 1,
     },
 
     accountIcon: {
         position: "absolute",
+        //backgroundColor: 'red',
         resizeMode: "contain",
         width: 50,
         height: 50,
-        right: 15,
-        top: 40
+        right: Dimensions.get('window').width / 16,
+        top: StatusBarHeight
     },
 
     stethoscopeImage: {
-        resizeMode: "contain",
+        resizeMode: "stretch",
         position: "absolute",
         width: '100%',
-        height: undefined,
+        height: Dimensions.get('window').height/3,
         aspectRatio: 1,
         top: -60
     },
@@ -98,11 +104,12 @@ const styles = StyleSheet.create({
         fontSize: 60,
         top: 20,
         fontWeight: 'bold',
-        textAlign: "center",
-        fontFamily: "Gill Sans",
+        textAlign: 'center',
+        fontFamily: "Roboto",
         textShadowColor:'#585858',
         textShadowOffset:{width: 5, height: 5},
         textShadowRadius:10,
+        left:10
     },
     
     quickLinksView: {
@@ -110,14 +117,16 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         justifyContent: 'center',
         position: "relative",
-        marginTop: 280,
-        height: 370,
+        marginTop: Dimensions.get('window').height*(3/5.5),
+        height: Dimensions.get('window').height*(7/17),
         marginBottom: 0,
         width: '96%',
         borderRadius: 60,
         borderColor: 'red',
-        alignContent: 'center'
-
+        padding: 10,
+        top: 0,
+        alignItems: 'center',
+        marginBottom: 40
     },
 
     magGlassImg: {
@@ -127,13 +136,21 @@ const styles = StyleSheet.create({
     },
 
     quickLinkButtons: {
-        marginTop: 15,
+        marginTop: Dimensions.get('window').height/64,
         alignItems: 'center',
-        marginLeft: 50,
         width: '75%',
         paddingVertical: 10,
         backgroundColor: 'red',
         borderRadius: 30,
+    },
+
+    centerView: {
+        //top: 350,
+        //position: "absolute",
+        //backgroundColor: 'red',
+        //height: 80,
+        flex: 0.4,
+        width: Dimensions.get('window').width
     },
     
     middleLineLeft: {
@@ -169,7 +186,7 @@ const styles = StyleSheet.create({
 
     buttonText: {
         fontSize: 25,
-        fontFamily: "Gill Sans",
+        fontFamily: "Roboto",
         fontWeight: "bold",
         color: "white"
     }

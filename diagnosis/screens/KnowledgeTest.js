@@ -1,10 +1,13 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, Image, TouchableOpacity, Linking } from 'react-native';
+import { FlatList } from 'react-native-gesture-handler';
+import WebView from 'react-native-webview';
 
 const KnowledgeTest = () => (
-    <View style={styles.mainContainer}>
-        <Text style={styles.text}> PAGE FOR KNOWLEDGE TEST</Text>
-    </View>
+    <WebView 
+    javaScriptEnabled={true}
+    source={{uri: 'https://up.physicaldiagnosispdx.com/up/app-content/database_connect.php'}}
+    />
 );
 
 const styles = StyleSheet.create({

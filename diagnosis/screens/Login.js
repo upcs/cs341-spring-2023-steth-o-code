@@ -1,6 +1,9 @@
 import React, {useState}  from 'react';
-import { View, ActivityIndicator } from 'react-native';
+import { View, Text, ActivityIndicator} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+import { StackActions } from '@react-navigation/native';
+import * as Yup from 'yup';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 //formik
 import { Formik } from 'formik';
@@ -39,9 +42,48 @@ const Login = ({navigation}) => {
     const [message, setMessage] = useState('');
     const [messageType, setMessageType] = useState('');
 
+    // const handleLogin = (credentials, setSubmitting) => {
+    //     handleMessage(null);
+    //     const url= 'https://up.physicaldiagnosispdx.com/up/authentication.php';
+
+    //     axios
+    //         .post(url, credentials)
+    //         .then((response) => {
+    //             const result = response.data;
+    //             const { message, status, data } = result;
+
+    //             if (status !== 'ok') {
+    //                 handleMessage(message, status);
+    //             } else {
+    //                 navigation.navigate('MainMenu', { ...data[0] });
+    //             }
+    //             setSubmitting(false);
+    //             console.log(response.data);
+    //         })
+    //         .catch((error) => {
+    //             console.log(error.response.data);
+    //             setSubmitting(false);
+    //             handleMessage('An error occurred. Check your network and try again');
+    //         });
+    // }
+
     const handleMessage = (message, type = 'FAILED') => {
         setMessage(message);
         setMessageType(type);
+    }
+
+    const saveToStorage = async (userData) => {
+        if(userData) {
+            await AsyncStorage.setItem('user', JSON.stringify({
+                    isLoggedIn: true,
+                    authToken: userData.auth_token,
+                    id: userData.user_id,
+                    name: userData.user_login
+                })
+            );
+            return true;
+        }
+        return false;
     }
 
     return (
@@ -58,8 +100,34 @@ const Login = ({navigation}) => {
                                 handleMessage('Please fill out all the fields above.');
                                 setSubmitting(false);
                             } else {
-                                console.log(values);
-                                setTimeout(() => {navigation.navigate('MainMenu')}, 500);
+                                console.log(values.username);
+                                // setTimeout(() => {navigation.navigate('MainMenu')}, 500);
+                                // handleLogin(values, setSubmitting);
+                                let formData = new FormData();
+                                formData.append('type', 'login');
+                                formData.append('username', values.username);
+                                formData.append('password', values.password);
+
+                                fetch('https://up.physicaldiagnosispdx.com/up/authentication.php', {
+                                    method: 'POST',
+                                    body: formData
+                                })
+                                .then((response) => {
+                                    response.text();
+                                })
+                                .then((responseData) => {
+                                    let loginData = responseData;
+                                    console.log(loginData);
+                                    if(saveToStorage(loginData)) {
+                                        setSubmitting(false);
+                                        navigation.dispatch(StackActions.replace('MainMenu'))
+                                    } else {
+                                        console.log("Failed to store auth");
+                                    }
+                                })
+                                .catch((error) => {
+                                    console.error(error);
+                                })
                             }
                         }}
                     >{({handleChange, handleBlur, handleSubmit, values, touched, errors, isSubmitting}) => (
@@ -140,5 +208,7 @@ const TextInput = ({label, icon, isPassword, hidePassword, setHidePassword, ...p
         </View>
     )
 }
+
+
 
 export default Login;
