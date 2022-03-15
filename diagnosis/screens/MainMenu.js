@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
         resizeMode: "stretch",
         position: "absolute",
         width: '100%',
-        height: Dimensions.get('window').height/3,
+        height: '40%',
         aspectRatio: 1,
         top: -60
     },
@@ -102,14 +102,12 @@ const styles = StyleSheet.create({
         position: "absolute",
         color: "white",
         fontSize: 60,
-        top: 20,
+        top: "5%",
         fontWeight: 'bold',
         textAlign: 'center',
-        fontFamily: "Roboto",
         textShadowColor:'#585858',
         textShadowOffset:{width: 5, height: 5},
         textShadowRadius:10,
-        left:10
     },
     
     quickLinksView: {
@@ -117,8 +115,8 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         justifyContent: 'center',
         position: "relative",
-        marginTop: Dimensions.get('window').height*(3/5.5),
-        height: Dimensions.get('window').height*(7/17),
+        marginTop: "50%",
+        height:"45%",
         marginBottom: 0,
         width: '96%',
         borderRadius: 60,
@@ -159,13 +157,13 @@ const styles = StyleSheet.create({
         borderBottomWidth: 6,
         borderRadius: 12,
         position: 'absolute',
-        left: 20,
-        top: 330
+        left: "5%",
+        top: "37%"
     },
 
     PDXCenterText: {
         alignContent: "center",
-        top: 260,
+        top: "25%",
         fontSize: 50,
         color: 'white',
         textShadowColor:'#585858',
@@ -180,13 +178,12 @@ const styles = StyleSheet.create({
         borderBottomWidth: 6,
         borderRadius: 12,
         position: 'absolute',
-        right: 20,
-        top: 330
+        right: "5%",
+        top: "37%"
     },
 
     buttonText: {
         fontSize: 25,
-        fontFamily: "Roboto",
         fontWeight: "bold",
         color: "white"
     }
