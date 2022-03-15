@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image, TouchableOpacity, Dimensions} from 'react-native';
+import { Text, View, StyleSheet, Image, TouchableOpacity, Dimensions, useWindowDimensions} from 'react-native';
 import { ExtraText } from '../components/SignUpLoginStyles';
 import {Ionicons} from '@expo/vector-icons';
 import { IconButton, Colors } from 'react-native-paper';
@@ -7,26 +7,11 @@ import Constants from 'expo-constants';
 
 const StatusBarHeight = Constants.statusBarHeight;
 
-var time = new Date().getHours();
-
 const MainMenu = ({navigation}) => (
         <View style={styles.mainContainer}> 
-            <View style={styles.headerContainer}>
-                <View>
-                    <Ionicons style={styles.MainMenu} name='menu' size={35}/>
-                </View>
-                <Image style={styles.PDXLogo} source={require('../assets/simplePDXLogo.png')}></Image>
-                <Image style={styles.accountIcon} source={require('../assets/accountIcon.png')}></Image>
-            </View>
-            
-            <Image style={styles.stethoscopeImage} source={require('../assets/stethoscope.jpeg')} blurRadius={1}></Image>
-            <Text 
-                adjustsFontSizeToFit={true}
-                style={styles.welcomeText}
-                onTextLayout={ (e) => { 
-
-                }}
-                >Good Morning, User
+            <Image style={styles.stethoscopeImage} source={require('diagnosis/assets/stethoscope.jpeg')} blurRadius={1}></Image>
+            <Text style={styles.welcomeText}>Good Morning, {"\n"}
+                User
             </Text>
 
             <View style={styles.middleLineLeft}></View>
@@ -34,26 +19,28 @@ const MainMenu = ({navigation}) => (
             <View style={styles.middleLineRight}></View>
             
             <View style={styles.quickLinksView}>
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("KnowledgeTest")} testID='buttonOne'> 
+                <TouchableOpacity testID='buttonOne' style={styles.quickLinkButtons} onPress={() => navigation.navigate("KnowledgeTest")}> 
                     <Text style={styles.buttonText}>Knowledge Test</Text>    
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("TOTD")} testID='buttonTwo'> 
-                    <Text style={styles.buttonText}>Topic of the Day</Text>
+                <TouchableOpacity testID='buttonTwo' style={styles.quickLinkButtons} onPress={() => navigation.navigate("Lectures")}> 
+                    <Text style={styles.buttonText}>Lectures</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("Community")} testID='buttonThree'> 
+                <TouchableOpacity testID='buttonThree' style={styles.quickLinkButtons} onPress={() => navigation.navigate("Community")}> 
                     <Text style={styles.buttonText}>Community</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("TeamInfo")} testID='buttonFour'> 
+                <TouchableOpacity testID='buttonFour' style={styles.quickLinkButtons} onPress={() => navigation.navigate("TeamInfo")}> 
                     <Text style={styles.buttonText}>Our Team</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("AboutUs")} testID='buttonFive'> 
+                <TouchableOpacity testID='buttonFive' style={styles.quickLinkButtons} onPress={() => navigation.navigate("AboutUs")}> 
                     <Text style={styles.buttonText}>About Us</Text>
+                    
                 </TouchableOpacity>
             </View>
+        
         </View>
 );
 
@@ -72,18 +59,20 @@ const styles = StyleSheet.create({
         backgroundColor: "#ffffff",
         position: "absolute",
         top: 0,
-        height: StatusBarHeight+65,
+        height: 0,
         justifyContent: "center",
-        alignContent: "center",
-        width: '100%',
+        width: Dimensions.get('window').width,
     },
+
     MainMenu:{
         top: StatusBarHeight-20,
         left: Dimensions.get('window').width / 16
     },
+
     PDXLogo: {
         position:"absolute",
         resizeMode: "contain",
+        //backgroundColor: 'red',
         width: 200,
         top: StatusBarHeight-100,
         left: Dimensions.get('window').width / 4,
@@ -92,6 +81,7 @@ const styles = StyleSheet.create({
 
     accountIcon: {
         position: "absolute",
+        //backgroundColor: 'red',
         resizeMode: "contain",
         width: 50,
         height: 50,
@@ -105,35 +95,38 @@ const styles = StyleSheet.create({
         width: '100%',
         height: Dimensions.get('window').height/3,
         aspectRatio: 1,
-        top: StatusBarHeight+60
+        top: -60
     },
 
     welcomeText: {
         position: "absolute",
-        color: "#E63610",
-        fontSize: 55,
-        top: Dimensions.get('window').height/4-(StatusBarHeight*(3/2)),
+        color: "white",
+        fontSize: 60,
+        top: 20,
         fontWeight: 'bold',
         textAlign: 'center',
         fontFamily: "Roboto",
         textShadowColor:'#585858',
         textShadowOffset:{width: 5, height: 5},
         textShadowRadius:10,
+        left:10
     },
     
     quickLinksView: {
-        top: StatusBarHeight,
+        top: 0,
         backgroundColor: "white",
         justifyContent: 'center',
         position: "relative",
-        marginTop: Dimensions.get('window').height*(3/7),
-        height: Dimensions.get('window').height*(7/16),
+        marginTop: Dimensions.get('window').height*(3/5.5),
+        height: Dimensions.get('window').height*(7/17),
         marginBottom: 0,
         width: '96%',
         borderRadius: 60,
         borderColor: 'red',
-        alignContent: 'center'
-
+        padding: 10,
+        top: 0,
+        alignItems: 'center',
+        marginBottom: 40
     },
 
     magGlassImg: {
@@ -145,11 +138,19 @@ const styles = StyleSheet.create({
     quickLinkButtons: {
         marginTop: Dimensions.get('window').height/64,
         alignItems: 'center',
-        marginLeft: 50,
         width: '75%',
         paddingVertical: 10,
         backgroundColor: 'red',
         borderRadius: 30,
+    },
+
+    centerView: {
+        //top: 350,
+        //position: "absolute",
+        //backgroundColor: 'red',
+        //height: 80,
+        flex: 0.4,
+        width: Dimensions.get('window').width
     },
     
     middleLineLeft: {
@@ -158,20 +159,19 @@ const styles = StyleSheet.create({
         borderBottomWidth: 6,
         borderRadius: 12,
         position: 'absolute',
-        left: Dimensions.get('window').width/16,
-        top: Dimensions.get('window').height/2.1
+        left: 20,
+        top: 330
     },
 
     PDXCenterText: {
-        position: 'absolute',
+        alignContent: "center",
+        top: 260,
         fontSize: 50,
         color: 'white',
         textShadowColor:'#585858',
         textShadowOffset:{width: 1, height: 9},
         textShadowRadius:10,
-        paddingBottom: Dimensions.get('window').height/64,
-        textAlign: 'center',
-        fontWeight: 'bold',
+        fontWeight: 'bold'
     },
 
     middleLineRight: {
@@ -180,15 +180,15 @@ const styles = StyleSheet.create({
         borderBottomWidth: 6,
         borderRadius: 12,
         position: 'absolute',
-        right: Dimensions.get('window').width/16,
-        top: Dimensions.get('window').height/2.1
+        right: 20,
+        top: 330
     },
 
     buttonText: {
         fontSize: 25,
         fontFamily: "Roboto",
         fontWeight: "bold",
-        color: "black"
+        color: "white"
     }
 });
     
