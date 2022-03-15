@@ -2091,10 +2091,10 @@
     "@react-aria/utils" "^3.8.2"
     "clsx" "^1.1.1"
 
-"@react-native-async-storage/async-storage@^1.16.1":
-  "integrity" "sha512-aQ7ka+Ii1e/q+7AVFIZPt4kDeSH8b784wMDtz19Kf4A7hf+OgCHBlUQpOXsrv8XxhlBxu0hv4tfrDO15ChnV0Q=="
-  "resolved" "https://registry.npmjs.org/@react-native-async-storage/async-storage/-/async-storage-1.16.1.tgz"
-  "version" "1.16.1"
+"@react-native-async-storage/async-storage@~1.15.0":
+  "integrity" "sha512-NQCFs47aFEch9kya/bqwdpvSdZaVRtzU7YB02L8VrmLSLpKgQH/1VwzFUBPcc1/JI1s3GU4yOLVrEbwxq+Fqcw=="
+  "resolved" "https://registry.npmjs.org/@react-native-async-storage/async-storage/-/async-storage-1.15.17.tgz"
+  "version" "1.15.17"
   dependencies:
     "merge-options" "^3.0.4"
 
@@ -8144,6 +8144,13 @@
   "resolved" "https://registry.npmjs.org/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz"
   "version" "3.0.4"
 
+"react-native-animatable@1.3.3":
+  "integrity" "sha512-2ckIxZQAsvWn25Ho+DK3d1mXIgj7tITkrS4pYDvx96WyOttSvzzFeQnM2od0+FUMzILbdHDsDEqZvnz1DYNQ1w=="
+  "resolved" "https://registry.npmjs.org/react-native-animatable/-/react-native-animatable-1.3.3.tgz"
+  "version" "1.3.3"
+  dependencies:
+    "prop-types" "^15.7.2"
+
 "react-native-codegen@^0.0.8":
   "integrity" "sha512-k/944+0XD+8l7zDaiKfYabyEKmAmyZgS1mj+4LcSRPyHnrjgCHKrh/Y6jM6kucQ6xU1+1uyMmF/dSkikxK8i+Q=="
   "resolved" "https://registry.npmjs.org/react-native-codegen/-/react-native-codegen-0.0.8.tgz"
@@ -8167,10 +8174,10 @@
     "react-native-ratings" "8.0.4"
     "react-native-size-matters" "^0.3.1"
 
-"react-native-gesture-handler@*", "react-native-gesture-handler@^2.2.0", "react-native-gesture-handler@>= 1.0.0":
-  "integrity" "sha512-WF25CNgn164bF9juW8N/jICIFXiEOgsxCuY7DRlnFdiH5ZfvMYtZHRC+zr1fFMap2ty1f2HWDQNVVSo0FDXP4A=="
-  "resolved" "https://registry.npmjs.org/react-native-gesture-handler/-/react-native-gesture-handler-2.2.0.tgz"
-  "version" "2.2.0"
+"react-native-gesture-handler@*", "react-native-gesture-handler@>= 1.0.0", "react-native-gesture-handler@~2.1.0":
+  "integrity" "sha512-y5W2MVB+J6vjIT/mUidDv0BqVRbWXn0cP7R2o6fsSYsHh9M0btT979+bCI7nPuhmRHjkhg5xCm4HNMIH0IQO4w=="
+  "resolved" "https://registry.npmjs.org/react-native-gesture-handler/-/react-native-gesture-handler-2.1.3.tgz"
+  "version" "2.1.3"
   dependencies:
     "@egjs/hammerjs" "^2.0.17"
     "hoist-non-react-statics" "^3.3.0"
@@ -8182,6 +8189,24 @@
   "integrity" "sha512-HOf0jzRnq2/aFUcdCJ9w9JGzN3gdEg0zFE4FyYlp4jtidqU03D5X7ZegGKfT1EWteR0gPBGp9ye5T5FvSWi9Yg=="
   "resolved" "https://registry.npmjs.org/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.3.1.tgz"
   "version" "1.3.1"
+
+"react-native-material-menu@^2.0.0":
+  "integrity" "sha512-SmO9PLE3E469EPbVWZqvdu6JGPPZIm7YjqDcWs2PPoY0k7w2V9tFo3BmmLXNzNZDCVCAi+PPSsL7h/5WkfHcSg=="
+  "resolved" "https://registry.npmjs.org/react-native-material-menu/-/react-native-material-menu-2.0.0.tgz"
+  "version" "2.0.0"
+
+"react-native-modal@^13.0.1":
+  "integrity" "sha512-UB+mjmUtf+miaG/sDhOikRfBOv0gJdBU2ZE1HtFWp6UixW9jCk/bhGdHUgmZljbPpp0RaO/6YiMmQSSK3kkMaw=="
+  "resolved" "https://registry.npmjs.org/react-native-modal/-/react-native-modal-13.0.1.tgz"
+  "version" "13.0.1"
+  dependencies:
+    "prop-types" "^15.6.2"
+    "react-native-animatable" "1.3.3"
+
+"react-native-option-menu@^1.1.3":
+  "integrity" "sha512-veA/F9m57oI554yyAk3k9p2rvE1UbmAEY2hpeNmxAhk/GsiUoQeEe29cYjR1wz4FVzHipC+mQB7zNEfjEm3pfw=="
+  "resolved" "https://registry.npmjs.org/react-native-option-menu/-/react-native-option-menu-1.1.3.tgz"
+  "version" "1.1.3"
 
 "react-native-paper@^4.11.2":
   "integrity" "sha512-r+M5unY9Avez4we/RijVh4iy8gqxK93R4840aZmbakOJLIuxjfNh3B6SuoxBEbR6diuPRbKVeWHKju4mhltxWw=="
@@ -8206,10 +8231,10 @@
   dependencies:
     "lodash" "^4.17.15"
 
-"react-native-reanimated@^2.4.1", "react-native-reanimated@>= 1.0.0":
-  "integrity" "sha512-kvf7ylGlwa5hxMQ+wpPFjQrI2c6eexf53/xRo+dvXBNefGmSYaYR5sFtD0XMMzIPQlkCB9tJ0Pu9+2WCQUY7Cg=="
-  "resolved" "https://registry.npmjs.org/react-native-reanimated/-/react-native-reanimated-2.4.1.tgz"
-  "version" "2.4.1"
+"react-native-reanimated@>= 1.0.0", "react-native-reanimated@~2.3.1":
+  "integrity" "sha512-uQofwsWUoKLY4QDgSdNbRxnqQDaQEPLLBNO9SP64JfQ2fDRJD5rjb4d3S29F0z9FqTnsWEwTL2Sl0spdx9xvHA=="
+  "resolved" "https://registry.npmjs.org/react-native-reanimated/-/react-native-reanimated-2.3.3.tgz"
+  "version" "2.3.3"
   dependencies:
     "@babel/plugin-transform-object-assign" "^7.10.4"
     "@types/invariant" "^2.2.35"
@@ -8282,7 +8307,7 @@
     "normalize-css-color" "^1.0.2"
     "prop-types" "^15.6.0"
 
-"react-native-webview-bridge@^0.20.3", "react-native-webview-bridge@^0.40.1":
+"react-native-webview-bridge@^0.20.3":
   "integrity" "sha512-JJmgt3P64KXganhRWivvzITCN5VUC2HdIDZkASUtY8PfsgJP61SAykYnIliUYl1qNq0Pkda4c6Gf1qF8RgfvVg=="
   "resolved" "https://registry.npmjs.org/react-native-webview-bridge/-/react-native-webview-bridge-0.40.1.tgz"
   "version" "0.40.1"
@@ -8292,15 +8317,15 @@
     "keymirror" "0.1.1"
     "prop-types" "^15.5.10"
 
-"react-native-webview@*", "react-native-webview@^11.17.2":
-  "integrity" "sha512-7Sac02xq11qFACJmSUuCnH0aUFtSWUvSRC09EZ2qwNXq4IvT05xlX6978nlKUXf2ljw/0qZIzqbKzuXnu6Wq8Q=="
-  "resolved" "https://registry.npmjs.org/react-native-webview/-/react-native-webview-11.17.2.tgz"
-  "version" "11.17.2"
+"react-native-webview@*", "react-native-webview@11.15.0":
+  "integrity" "sha512-0Wv+8qu8XuACx1xZwzc2Yfl+rOvxUouLcPxUKdkhaMVNpwoM5/ePpczCQZ3LpiRnSoEtjaUkfyQHbJQ+x4dDJQ=="
+  "resolved" "https://registry.npmjs.org/react-native-webview/-/react-native-webview-11.15.0.tgz"
+  "version" "11.15.0"
   dependencies:
     "escape-string-regexp" "2.0.0"
     "invariant" "2.2.4"
 
-"react-native@*", "react-native@^0.0.0-0 || 0.60 - 0.67 || 1000.0.0", "react-native@^0.67.2", "react-native@>=0.42.0", "react-native@>=0.59":
+"react-native@*", "react-native@^0.0.0-0 || 0.60 - 0.67 || 1000.0.0", "react-native@^0.67.2", "react-native@>=0.42.0", "react-native@>=0.59", "react-native@>=0.65.0":
   "integrity" "sha512-grEtpOLLvtSg8Bivg0ffVRCjTkresqMt7Jdog/geF6VAYhb4RnLaaUCWvyrfyB9buf135FKnqg5BIuve/XQNXA=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.67.2.tgz"
   "version" "0.67.2"

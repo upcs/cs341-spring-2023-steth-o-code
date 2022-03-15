@@ -26,8 +26,8 @@ const styles = StyleSheet.create({
     
     view: {
         resizeMode: 'stretch',
-        flex: 0.18,
-        top: 120
+        flex: 0.5,
+        top: 40
     }
 });
 
