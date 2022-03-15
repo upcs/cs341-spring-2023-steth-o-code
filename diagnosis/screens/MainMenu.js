@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
         position: "absolute",
         color: "white",
         fontSize: 60,
-        top: "5%",
+        top: "3%",
         fontWeight: 'bold',
         textAlign: 'center',
         textShadowColor:'#585858',
