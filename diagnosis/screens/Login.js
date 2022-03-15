@@ -131,6 +131,13 @@ const Login = ({navigation}) => {
                                     <TextLinkContent>Signup</TextLinkContent>
                                 </TextLink>
                             </ExtraView>
+
+                            <ExtraView>
+                                <TextLink onPress={() => navigation.navigate("Main Menu")}>
+                                    <TextLinkContent>WHILE LOGIN IS FIXED</TextLinkContent>
+                                </TextLink>
+                            </ExtraView>
+                            
                         </StyledForm>)}
                     </Formik>
                 </InnerContainer>
