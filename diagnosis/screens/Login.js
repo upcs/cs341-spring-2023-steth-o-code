@@ -4,7 +4,6 @@ import { StatusBar } from 'expo-status-bar';
 import { StackActions } from '@react-navigation/native';
 import * as Yup from 'yup';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { View, ActivityIndicator } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
 //formik

@@ -15,8 +15,6 @@ import Lecture_JVP from './../screens/Lecture_JVP';
 import Lecture_DR from './../screens/Lecture_DR';
 import Lecture_VHD from './../screens/Lecture_VHD';
 import { ScreenStackHeaderLeftView } from 'react-native-screens';
-import TOTD from '../screens/TopicOfTheDay';
-import MultiMedia from '../screens/Multimedia';
 import { Swipeable } from 'react-native-gesture-handler';
 
 const Stack = createNativeStackNavigator();
