@@ -39,7 +39,7 @@ const MainMenu = ({navigation}) => (
                     <Text style={styles.buttonText}>About Us</Text>
                     
                 </TouchableOpacity>
-                </View>
+            </View>
         
         </View>
 );

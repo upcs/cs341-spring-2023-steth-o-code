@@ -1,7 +1,6 @@
 import React from 'react';
 import { Text, View, StyleSheet, Button, Dimensions, TouchableOpacity} from 'react-native';
 
-
 const Lectures = ({navigation}) => (
       
         <View style={styles.mainContainer}>
