@@ -26,7 +26,7 @@ import { StyledContainer,
 } from "../components/SignUpLoginStyles";
 
 import {Octicons, Ionicons, Fontisto } from '@expo/vector-icons';
-
+import axios from 'axios';
 //colors
 const {company, placeholder, textInputBackground} = Colors;
 
@@ -58,7 +58,7 @@ const Login = ({navigation}) => {
                                 setSubmitting(false);
                             } else {
                                 handleMessage(null);
-                                fetch('https://up.physicaldiagnosispdx.com/up/app-content/authentication.php', {
+                                axios.post('https://up.physicaldiagnosispdx.com/up/app-content/authentication.php', {
                                     method: 'POST',
                                     headers: {
                                         'Accept': 'application/json',
@@ -69,17 +69,17 @@ const Login = ({navigation}) => {
                                         password: values.password
                                     }),
                                 })
-                                .then(response => response.text())
-                                .then((responseData) => {
-                                    if(responseData === "Authenticated") {
+                                .then((response) => {
+                                    if(response.data === "Authenticated") {
                                         setSubmitting(false);
                                         navigation.navigate('Main Menu');
                                     } else {
-                                        handleMessage(responseData);
+                                        handleMessage(response.data);
                                     }
                                 })
                                 .catch((error) => {
                                     console.error(error);
+                                    handleMessage('An error occurred. Check your network and try again.');
                                 })
                             }
                         }}
