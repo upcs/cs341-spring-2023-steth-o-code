@@ -2,8 +2,6 @@ import React, {useState}  from 'react';
 import { View, Text, ActivityIndicator} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { StackActions } from '@react-navigation/native';
-import * as Yup from 'yup';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 //formik
 import { Formik } from 'formik';
 
@@ -34,39 +32,13 @@ const {company, placeholder, textInputBackground} = Colors;
 
 //keyboard avoiding wrapper
 import KeyboardAvoidWrap from '../components/KeyboardAvoidWrap';
-import axios from 'axios';
 
 const Login = ({navigation}) => {
     const [hidePassword, setHidePassword] = useState(true);
     const [message, setMessage] = useState('');
     const [messageType, setMessageType] = useState('');
 
-    // const handleLogin = (credentials, setSubmitting) => {
-    //     handleMessage(null);
-    //     const url= 'https://up.physicaldiagnosispdx.com/up/authentication.php';
-
-    //     axios
-    //         .post(url, credentials)
-    //         .then((response) => {
-    //             const result = response.data;
-    //             const { message, status, data } = result;
-
-    //             if (status !== 'ok') {
-    //                 handleMessage(message, status);
-    //             } else {
-    //                 navigation.dispatch(StackActions.replace('MainMenu'));
-    //             }
-    //             setSubmitting(false);
-    //             console.log(response.data);
-    //         })
-    //         .catch((error) => {
-    //             console.log(error.response.data);
-    //             setSubmitting(false);
-    //             handleMessage('An error occurred. Check your network and try again');
-    //         });
-    // }
-
-    const handleMessage = (message, type = 'FAILED') => {
+    const handleMessage = (message, type) => {
         setMessage(message);
         setMessageType(type);
     }

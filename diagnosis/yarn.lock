@@ -2091,6 +2091,13 @@
     "@react-aria/utils" "^3.8.2"
     "clsx" "^1.1.1"
 
+"@react-native-async-storage/async-storage@^1.16.1":
+  "integrity" "sha512-aQ7ka+Ii1e/q+7AVFIZPt4kDeSH8b784wMDtz19Kf4A7hf+OgCHBlUQpOXsrv8XxhlBxu0hv4tfrDO15ChnV0Q=="
+  "resolved" "https://registry.npmjs.org/@react-native-async-storage/async-storage/-/async-storage-1.16.1.tgz"
+  "version" "1.16.1"
+  dependencies:
+    "merge-options" "^3.0.4"
+
 "@react-native-community/cli-debugger-ui@^6.0.0-rc.0":
   "integrity" "sha512-achYcPPoWa9D02C5tn6TBzjeY443wQTyx37urptc75JpZ7gR5YHsDyIEEWa3DDYp1va9zx/iGg+uZ/hWw07GAw=="
   "resolved" "https://registry.npmjs.org/@react-native-community/cli-debugger-ui/-/cli-debugger-ui-6.0.0-rc.0.tgz"
@@ -4665,7 +4672,7 @@
     "js-yaml" "^3.13.1"
     "parse-json" "^4.0.0"
 
-"create-react-class@^15.7.0":
+"create-react-class@^15.6.0", "create-react-class@^15.7.0":
   "integrity" "sha512-QZv4sFWG9S5RUvkTYWbflxeZX+JG7Cz0Tn33rQBJ+WFQTqTfUTjMjiv9tnfXazjsO5r0KhPs+AqCjyrQX6h2ng=="
   "resolved" "https://registry.npmjs.org/create-react-class/-/create-react-class-15.7.0.tgz"
   "version" "15.7.0"
@@ -5811,17 +5818,10 @@
     "@formatjs/icu-messageformat-parser" "2.0.18"
     "tslib" "^2.1.0"
 
-"invariant@^2.2.4", "invariant@2.2.4":
+"invariant@^2.2.2", "invariant@^2.2.4", "invariant@2.2.4":
   "integrity" "sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA=="
   "resolved" "https://registry.npmjs.org/invariant/-/invariant-2.2.4.tgz"
   "version" "2.2.4"
-  dependencies:
-    "loose-envify" "^1.0.0"
-
-"invariant@2.2.0":
-  "integrity" "sha1-yNfoRzZqScwYtiLwWKaJ1IHolfI="
-  "resolved" "https://registry.npmjs.org/invariant/-/invariant-2.2.0.tgz"
-  "version" "2.2.0"
   dependencies:
     "loose-envify" "^1.0.0"
 
@@ -5970,6 +5970,11 @@
   "integrity" "sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng=="
   "resolved" "https://registry.npmjs.org/is-number/-/is-number-7.0.0.tgz"
   "version" "7.0.0"
+
+"is-plain-obj@^2.1.0":
+  "integrity" "sha512-YWnfyRwxL/+SsrWYfOpUtz5b3YD+nyfkHvjbcanzk8zgyO4ASD67uVMRt8k5bM4lLMDnXfriRhOpemw+NfT1eA=="
+  "resolved" "https://registry.npmjs.org/is-plain-obj/-/is-plain-obj-2.1.0.tgz"
+  "version" "2.1.0"
 
 "is-plain-object@^2.0.3", "is-plain-object@^2.0.4":
   "integrity" "sha512-h5PpgXkWitc38BBMYawTYMWJHFZJVnBquFE57xFpjB8pJFiF6gZ+bU+WyI/yqXiFR5mdLsgYNaPe8uao6Uv9Og=="
@@ -6979,6 +6984,13 @@
   "version" "3.2.3"
   dependencies:
     "buffer-alloc" "^1.1.0"
+
+"merge-options@^3.0.4":
+  "integrity" "sha512-2Sug1+knBjkaMsMgf1ctR1Ujx+Ayku4EdJN4Z+C2+JzoeF7A3OZ9KM2GY0CpQS51NR61LTurMJrRKPhSs3ZRTQ=="
+  "resolved" "https://registry.npmjs.org/merge-options/-/merge-options-3.0.4.tgz"
+  "version" "3.0.4"
+  dependencies:
+    "is-plain-obj" "^2.1.0"
 
 "merge-stream@^2.0.0":
   "integrity" "sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w=="
@@ -8005,7 +8017,7 @@
     "kleur" "^3.0.3"
     "sisteransi" "^1.0.5"
 
-"prop-types@^15.6.0", "prop-types@^15.6.1", "prop-types@^15.6.2", "prop-types@^15.7.2":
+"prop-types@^15.5.10", "prop-types@^15.6.0", "prop-types@^15.6.1", "prop-types@^15.6.2", "prop-types@^15.7.2":
   "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   "version" "15.8.1"
@@ -8247,6 +8259,11 @@
     "prop-types" "^15.7.2"
     "yargs" "^16.1.1"
 
+"react-native-vimeo-iframe@^1.0.4":
+  "integrity" "sha512-LZlnmapKja4FGUdZQh6g6ciT4Gd52md4jBm1hmvgAYJCv6TXavAp+Vr05fY6rrD6wRAe5R2b117X5sVBHtP9KA=="
+  "resolved" "https://registry.npmjs.org/react-native-vimeo-iframe/-/react-native-vimeo-iframe-1.0.4.tgz"
+  "version" "1.0.4"
+
 "react-native-vimeo@^0.3.0":
   "integrity" "sha1-s/SwykDp+iBz8lxqMfhTqtD+Br8="
   "resolved" "https://registry.npmjs.org/react-native-vimeo/-/react-native-vimeo-0.3.0.tgz"
@@ -8265,15 +8282,17 @@
     "normalize-css-color" "^1.0.2"
     "prop-types" "^15.6.0"
 
-"react-native-webview-bridge@^0.20.3":
-  "integrity" "sha1-godIhBiHpPOCqIw+GXM5HsXuUXw="
-  "resolved" "https://registry.npmjs.org/react-native-webview-bridge/-/react-native-webview-bridge-0.20.3.tgz"
-  "version" "0.20.3"
+"react-native-webview-bridge@^0.20.3", "react-native-webview-bridge@^0.40.1":
+  "integrity" "sha512-JJmgt3P64KXganhRWivvzITCN5VUC2HdIDZkASUtY8PfsgJP61SAykYnIliUYl1qNq0Pkda4c6Gf1qF8RgfvVg=="
+  "resolved" "https://registry.npmjs.org/react-native-webview-bridge/-/react-native-webview-bridge-0.40.1.tgz"
+  "version" "0.40.1"
   dependencies:
-    "invariant" "2.2.0"
+    "create-react-class" "^15.6.0"
+    "invariant" "^2.2.2"
     "keymirror" "0.1.1"
+    "prop-types" "^15.5.10"
 
-"react-native-webview@^11.17.2":
+"react-native-webview@*", "react-native-webview@^11.17.2":
   "integrity" "sha512-7Sac02xq11qFACJmSUuCnH0aUFtSWUvSRC09EZ2qwNXq4IvT05xlX6978nlKUXf2ljw/0qZIzqbKzuXnu6Wq8Q=="
   "resolved" "https://registry.npmjs.org/react-native-webview/-/react-native-webview-11.17.2.tgz"
   "version" "11.17.2"
@@ -8281,7 +8300,7 @@
     "escape-string-regexp" "2.0.0"
     "invariant" "2.2.4"
 
-"react-native@*", "react-native@^0.67.2", "react-native@>=0.42.0", "react-native@>=0.59":
+"react-native@*", "react-native@^0.0.0-0 || 0.60 - 0.67 || 1000.0.0", "react-native@^0.67.2", "react-native@>=0.42.0", "react-native@>=0.59":
   "integrity" "sha512-grEtpOLLvtSg8Bivg0ffVRCjTkresqMt7Jdog/geF6VAYhb4RnLaaUCWvyrfyB9buf135FKnqg5BIuve/XQNXA=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.67.2.tgz"
   "version" "0.67.2"

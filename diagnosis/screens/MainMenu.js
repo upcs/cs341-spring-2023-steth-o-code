@@ -34,23 +34,23 @@ const MainMenu = ({navigation}) => (
             <View style={styles.middleLineRight}></View>
             
             <View style={styles.quickLinksView}>
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("KnowledgeTest")}> 
+                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("KnowledgeTest")} testID='buttonOne'> 
                     <Text style={styles.buttonText}>Knowledge Test</Text>    
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("TOTD")}> 
+                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("TOTD")} testID='buttonTwo'> 
                     <Text style={styles.buttonText}>Topic of the Day</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("Community")}> 
+                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("Community")} testID='buttonThree'> 
                     <Text style={styles.buttonText}>Community</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("TeamInfo")}> 
+                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("TeamInfo")} testID='buttonFour'> 
                     <Text style={styles.buttonText}>Our Team</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("AboutUs")}> 
+                <TouchableOpacity style={styles.quickLinkButtons} onPress={() => navigation.navigate("AboutUs")} testID='buttonFive'> 
                     <Text style={styles.buttonText}>About Us</Text>
                 </TouchableOpacity>
             </View>
