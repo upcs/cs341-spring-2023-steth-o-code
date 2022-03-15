@@ -16,12 +16,20 @@ exports[`<MainMenu /> renders correctly 1`] = `
   <View
     style={
       Object {
+<<<<<<< HEAD
+        "alignContent": "center",
+=======
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
         "backgroundColor": "#ffffff",
         "height": 85,
         "justifyContent": "center",
         "position": "absolute",
         "top": 0,
+<<<<<<< HEAD
+        "width": "100%",
+=======
         "width": 750,
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
       }
     }
   >
@@ -78,7 +86,10 @@ exports[`<MainMenu /> renders correctly 1`] = `
         "fontFamily": "Roboto",
         "fontSize": 55,
         "fontWeight": "bold",
+<<<<<<< HEAD
+=======
         "left": 10,
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
         "position": "absolute",
         "textAlign": "center",
         "textShadowColor": "#585858",
@@ -87,7 +98,11 @@ exports[`<MainMenu /> renders correctly 1`] = `
           "width": 5,
         },
         "textShadowRadius": 10,
+<<<<<<< HEAD
+        "top": 303.5,
+=======
         "top": 318.5,
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
       }
     }
   >
@@ -101,7 +116,11 @@ exports[`<MainMenu /> renders correctly 1`] = `
         "borderRadius": 12,
         "left": 46.875,
         "position": "absolute",
+<<<<<<< HEAD
+        "top": 635.2380952380952,
+=======
         "top": 650.7317073170732,
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
         "width": 100,
       }
     }
@@ -135,7 +154,11 @@ exports[`<MainMenu /> renders correctly 1`] = `
         "borderRadius": 12,
         "position": "absolute",
         "right": 46.875,
+<<<<<<< HEAD
+        "top": 635.2380952380952,
+=======
         "top": 650.7317073170732,
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
         "width": 100,
       }
     }
@@ -143,6 +166,18 @@ exports[`<MainMenu /> renders correctly 1`] = `
   <View
     style={
       Object {
+<<<<<<< HEAD
+        "alignContent": "center",
+        "backgroundColor": "white",
+        "borderColor": "red",
+        "borderRadius": 60,
+        "height": 583.625,
+        "justifyContent": "center",
+        "marginBottom": 0,
+        "marginTop": 571.7142857142857,
+        "position": "relative",
+        "top": 20,
+=======
         "alignItems": "center",
         "backgroundColor": "white",
         "borderColor": "red",
@@ -154,6 +189,7 @@ exports[`<MainMenu /> renders correctly 1`] = `
         "padding": 10,
         "position": "relative",
         "top": 0,
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
         "width": "96%",
       }
     }
@@ -174,6 +210,10 @@ exports[`<MainMenu /> renders correctly 1`] = `
           "alignItems": "center",
           "backgroundColor": "red",
           "borderRadius": 30,
+<<<<<<< HEAD
+          "marginLeft": 50,
+=======
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
           "marginTop": 20.84375,
           "opacity": 1,
           "paddingVertical": 10,
@@ -211,6 +251,10 @@ exports[`<MainMenu /> renders correctly 1`] = `
           "alignItems": "center",
           "backgroundColor": "red",
           "borderRadius": 30,
+<<<<<<< HEAD
+          "marginLeft": 50,
+=======
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
           "marginTop": 20.84375,
           "opacity": 1,
           "paddingVertical": 10,
@@ -229,7 +273,11 @@ exports[`<MainMenu /> renders correctly 1`] = `
           }
         }
       >
+<<<<<<< HEAD
+        Topic of the Day
+=======
         Lectures
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
       </Text>
     </View>
     <View
@@ -248,6 +296,10 @@ exports[`<MainMenu /> renders correctly 1`] = `
           "alignItems": "center",
           "backgroundColor": "red",
           "borderRadius": 30,
+<<<<<<< HEAD
+          "marginLeft": 50,
+=======
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
           "marginTop": 20.84375,
           "opacity": 1,
           "paddingVertical": 10,
@@ -285,6 +337,10 @@ exports[`<MainMenu /> renders correctly 1`] = `
           "alignItems": "center",
           "backgroundColor": "red",
           "borderRadius": 30,
+<<<<<<< HEAD
+          "marginLeft": 50,
+=======
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
           "marginTop": 20.84375,
           "opacity": 1,
           "paddingVertical": 10,
@@ -322,6 +378,10 @@ exports[`<MainMenu /> renders correctly 1`] = `
           "alignItems": "center",
           "backgroundColor": "red",
           "borderRadius": 30,
+<<<<<<< HEAD
+          "marginLeft": 50,
+=======
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
           "marginTop": 20.84375,
           "opacity": 1,
           "paddingVertical": 10,

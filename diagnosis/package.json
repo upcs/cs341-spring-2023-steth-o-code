@@ -8,7 +8,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "test": "jest"
+    "test": "jest -u"
   },
   "jest": {
     "testEnvironment": "jsdom",
@@ -47,6 +47,7 @@
     "react-native-screens": "~3.10.1",
     "react-native-snap-carousel": "^3.9.1",
     "react-native-vimeo": "^0.3.0",
+    "react-native-vimeo-iframe": "^1.0.4",
     "react-native-web": "0.17.1",
     "react-native-webview": "11.15.0",
     "react-test-renderer": "^17.0.2",
