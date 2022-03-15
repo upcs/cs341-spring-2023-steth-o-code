@@ -18,6 +18,7 @@ import TeamInfo from './../screens/TeamInfo';
 import Topics from '../screens/Topics';
 import MultiMedia from './../screens/Multimedia';
 import Lectures from './../screens/Lectures';
+import Books from './../screens/Lectures';
 
 import { ScreenStackHeaderLeftView } from 'react-native-screens';
 
@@ -49,6 +50,7 @@ const StackNavigator = () => {
           <Stack.Screen name="Topics" component={Topics}/>
           <Stack.Screen name="MultiMedia" component={MultiMedia}/>
           <Stack.Screen name="Lectures" component={Lectures}/>
+          <Stack.Screen name="Books" component={Books}/>
 
           
         </Stack.Navigator>
