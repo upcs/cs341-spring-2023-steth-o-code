@@ -66,9 +66,8 @@ const styles = StyleSheet.create({
 
     buttonText: {
         fontSize: 25,
-        fontFamily: "Roboto",
         fontWeight: "bold",
-        color: "black",
+        color: "white",
     },
 });
 
