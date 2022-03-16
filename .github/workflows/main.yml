@@ -41,7 +41,10 @@ jobs:
       # First install npm
       - name: install npm
         run: npm install
-        
+      
+      - name: install codecov
+        run: npm install -g codecov
+
       # Then run jest command to run all the tests
       - name: run jest
         run: npm test
@@ -49,7 +52,7 @@ jobs:
       # uploads coverage to codecov
       - uses: codecov/codecov-action@v2
         with:
-          token: 6d4df5dd-dfbb-482b-ac48-0f7d73b74a56
+          token: ${{ secrets.UPLOAD_TOKEN }}
           files: ./diagnosis/coverage/clover.xml
           flags: unittests
           name: codecov-umbrella

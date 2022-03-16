@@ -8,9 +8,11 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "test": "jest -u --coverage"
+    "test": "jest -u && codecov"
   },
   "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
     "testEnvironment": "jsdom",
     "preset": "jest-expo",
     "transformIgnorePatterns": [
