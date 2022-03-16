@@ -1,11 +1,11 @@
 import React from 'react';
-import { Text, View, StyleSheet, Button, Dimensions, TouchableOpacity} from 'react-native';
+import { Text, View, StyleSheet, Button, Dimensions, TouchableOpacity, ScrollView} from 'react-native';
 
 const Lectures = ({navigation}) => (
       
         <View style={styles.mainContainer}>
-            
-            <View style={styles.innerContainer}>
+            <Text style={styles.headerTxt}>Avilable Lectures:</Text>
+            <ScrollView style={styles.innerContainer} contentContainerStyle={{justifyContent: 'center', left: '13%'}}>
                 <View style={styles.quickLinksView}>
                     <TouchableOpacity style={styles.JVPButton1} onPress={() => navigation.navigate("Lecture_JVP")}> 
                         <Text style={styles.buttonText}>The Art and Science of the Jugular Venous Pulse</Text>    
@@ -19,7 +19,7 @@ const Lectures = ({navigation}) => (
                         <Text style={styles.buttonText}>Diagnostic Reasoning Lecture</Text>    
                     </TouchableOpacity>
                 </View>
-            </View>
+            </ScrollView>
                 
            
             
@@ -35,48 +35,50 @@ const styles = StyleSheet.create({
     }, 
     innerContainer: {
         backgroundColor: 'white',
-        height: '50%',
-        width: '100%',
-        top: '10%',
-        borderRadius: 120,
+        borderRadius: 80,
+        top: '8%',
+        width: '95%',
         left: 10,
-        right: 10
+        marginBottom: 100
+        
+    },
+    headerTxt :{
+        fontSize: 25,
+        fontWeight: "bold",
+        color: "black",
+        top: '5%',
+        left: '25%',
     },
     JVPButton1: {
-        position: 'absolute',
         alignItems: 'center',
         width: '75%',
         paddingVertical: 10,
         backgroundColor: 'red',
         borderRadius: 30,
-        top: 175,
-        left: 55
+        top: '20%', 
     },
 
     JVPButton2: {
-        position: 'absolute',
         alignItems: 'center',
         width: '75%',
         paddingVertical: 10,
         backgroundColor: 'red',
         borderRadius: 30,
-        top: 300,
-        left: 55
+        top: '25%',
     },
 
     JVPButton3: {
-        position: 'absolute',
         alignItems: 'center',
         width: '75%',
         paddingVertical: 10,
         backgroundColor: 'red',
         borderRadius: 30,
-        top: 425,
-        left: 55
+        top: '30%',
     },
 
     buttonText: {
-        fontSize: 25,
+        padding: 10,
+        fontSize: 22,
         fontWeight: "bold",
         color: "white",
     },

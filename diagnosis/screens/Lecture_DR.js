@@ -8,6 +8,7 @@ const Lecture_DR = () => (
 
     <View style={styles.mainContainer}>
         <WebView 
+            scrollEnabled={false}
             javaScriptEnabled={true} source={{uri: 'https://up.physicaldiagnosispdx.com/up/app-content/server-screens/Lecture_DR.php'}} 
             style={styles.view}
         />
@@ -25,9 +26,11 @@ const styles = StyleSheet.create({
     },
     
     view: {
-        resizeMode: 'stretch',
-        flex: 0.5,
-        top: 40
+        top: '8%',
+        width: '80%',
+        marginBottom: '40%',
+        left: '10%',
+        paddingTop: 200
     }
 });
 
