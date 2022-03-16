@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 //echo "Connected successfully";
 
 // create and get SQL query
-$sql = "SELECT * FROM `_SXA_posts` WHERE `ID` = 1970";
+$sql = "SELECT * FROM `_SXA_posts` WHERE `ID` = 652";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

@@ -2,7 +2,9 @@ import { Button, Text, View, StyleSheet, TouchableOpacity, ScrollView} from 'rea
 import Modal from "react-native-modal";
 import React, { useState } from "react";
 
-export default function Topics(){
+export default function Topics({navigation}){
+
+    /* use state helper functions */
     const [isModalCardio, setCardio] = useState(false);
     const toggleModalCardio = () => {
         setCardio(!isModalCardio);
@@ -48,6 +50,145 @@ export default function Topics(){
         setHO(!isModalHO);
     };
 
+    const [isModalHC, setHC] = useState(false);
+    const toggleModalHC = () => {
+        setHC(!isModalHC);
+    };
+
+    const [isModalPulm, setPulm] = useState(false);
+    const toggleModalPulm = () => {
+        setPulm(!isModalPulm);
+    };
+
+    const [isModalMisc, setMisc] = useState(false);
+    const toggleModalMisc = () => {
+        setMisc(!isModalMisc);
+    };
+
+    /* nagivation helper functions */
+    const navigateCardioT = () => {
+        setCardio(!isModalCardio);
+        navigation.navigate("Cardiology_Tutorial");
+    }   
+
+    const navigateCardioMM = () => {
+        setCardio(!isModalCardio);
+        navigation.navigate("Cardiology_MM");
+    } 
+
+    const navigateEndoT = () => {
+        setEndo(!isModalEndo);
+        navigation.navigate("Endocrinology_Tutorial");
+    }   
+
+    const navigateEndoMM = () => {
+        setEndo(!isModalEndo);
+        navigation.navigate("Endocrinology_MM");
+    } 
+
+    const navigateGastroT = () => {
+        setGastro(!isModalGastro);
+        navigation.navigate("Gastro_Tutorial");
+    }   
+
+    // const navigateEndoMM = () => {
+    //     setEndo(!isModalEndo);
+    //     navigation.navigate("Endocrinology_MM");
+    // } 
+
+    const navigateIDT = () => {
+        setID(!isModalID);
+        navigation.navigate("ID_Tutorial");
+    }   
+
+    // const navigateEndoMM = () => {
+    //     setEndo(!isModalEndo);
+    //     navigation.navigate("Endocrinology_MM");
+    // } 
+
+    const navigateNeuroT = () => {
+        setNeuro(!isModalNeuro);
+        navigation.navigate("Neurology_Tutorial");
+    }   
+
+    // const navigateEndoMM = () => {
+    //     setEndo(!isModalEndo);
+    //     navigation.navigate("Endocrinology_MM");
+    // } 
+
+    const navigateNephroT = () => {
+        setNephro(!isModalNephro);
+        navigation.navigate("Nephrology_Tutorial");
+    }   
+
+    // const navigateEndoMM = () => {
+    //     setEndo(!isModalEndo);
+    //     navigation.navigate("Endocrinology_MM");
+    // } 
+
+    const navigateNailsT = () => {
+        setNails(!isModalNails);
+        navigation.navigate("Nails_Tutorial");
+    }   
+
+    // const navigateEndoMM = () => {
+    //     setEndo(!isModalEndo);
+    //     navigation.navigate("Endocrinology_MM");
+    // } 
+
+    const navigateRheumatologyT = () => {
+        setRheu(!isModalRheu);
+        navigation.navigate("Rheumatology_Tutorial");
+    }   
+
+    // const navigateEndoMM = () => {
+    //     setEndo(!isModalEndo);
+    //     navigation.navigate("Endocrinology_MM");
+    // } 
+
+
+    const navigateHOT = () => {
+        setHO(!isModalHO);
+        navigation.navigate("HO_Tutorial");
+    }   
+
+    // const navigateEndoMM = () => {
+    //     setEndo(!isModalEndo);
+    //     navigation.navigate("Endocrinology_MM");
+    // } 
+
+    const navigateHCT = () => {
+        setHC(!isModalHC);
+        navigation.navigate("HC_Tutorial");
+    }   
+
+    // const navigateEndoMM = () => {
+    //     setEndo(!isModalEndo);
+    //     navigation.navigate("Endocrinology_MM");
+    // } 
+
+    const navigatePulmoT = () => {
+        setPulm(!isModalPulm);
+        navigation.navigate("Pulmonolgy_Tutorial");
+    }   
+
+    // const navigateEndoMM = () => {
+    //     setEndo(!isModalEndo);
+    //     navigation.navigate("Endocrinology_MM");
+    // } 
+
+    const navigateMiscT = () => {
+        setMisc(!isModalMisc);
+        navigation.navigate("Misc_Tutorial");
+    }   
+
+    // const navigateEndoMM = () => {
+    //     setEndo(!isModalEndo);
+    //     navigation.navigate("Endocrinology_MM");
+    // } 
+
+
+
     return (
         <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
                 <Text style={styles.title}>
@@ -63,11 +204,11 @@ export default function Topics(){
                         <View style={styles.popView}>
                             <Text style={styles.popTopicStyle}> Cardiology: </Text>
 
-                            <TouchableOpacity style={styles.popButton}>
+                            <TouchableOpacity style={styles.popButton} onPress={navigateCardioT}>
                                 <Text style={styles.buttonText}>Tutorial</Text>
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={styles.popButton}>
+                            <TouchableOpacity style={styles.popButton} onPress={navigateCardioMM}>
                                 <Text style={styles.buttonText}>Multimedia</Text>
                             </TouchableOpacity>
 
@@ -86,11 +227,11 @@ export default function Topics(){
                         <View style={styles.popView}>
                             <Text style={styles.popTopicStyle}> Endocrinology: </Text>
 
-                            <TouchableOpacity style={styles.popButton}>
+                            <TouchableOpacity style={styles.popButton} onPress={navigateEndoT}>
                                 <Text style={styles.buttonText}>Tutorial</Text>
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={styles.popButton}>
+                            <TouchableOpacity style={styles.popButton} onPress={navigateEndoMM}>
                                 <Text style={styles.buttonText}>Multimedia</Text>
                             </TouchableOpacity>
 
@@ -111,7 +252,7 @@ export default function Topics(){
                         <View style={styles.popView}>
                             <Text style={styles.popTopicStyle}> Gastroenterology: </Text>
 
-                            <TouchableOpacity style={styles.popButton}>
+                            <TouchableOpacity style={styles.popButton} onPress={navigateGastroT}>
                                 <Text style={styles.buttonText}>Tutorial</Text>
                             </TouchableOpacity>
 
@@ -137,7 +278,7 @@ export default function Topics(){
                         <View style={styles.popView}>
                             <Text style={styles.popTopicStyle}> Infectious Disease: </Text>
 
-                            <TouchableOpacity style={styles.popButton}>
+                            <TouchableOpacity style={styles.popButton} onPress={navigateIDT}>
                                 <Text style={styles.buttonText}>Tutorial</Text>
                             </TouchableOpacity>
 
@@ -163,7 +304,7 @@ export default function Topics(){
                         <View style={styles.popView}>
                             <Text style={styles.popTopicStyle}> Neurology: </Text>
 
-                            <TouchableOpacity style={styles.popButton}>
+                            <TouchableOpacity style={styles.popButton} onPress={navigateNeuroT}>
                                 <Text style={styles.buttonText}>Tutorial</Text>
                             </TouchableOpacity>
 
@@ -190,7 +331,7 @@ export default function Topics(){
                         <View style={styles.popView}>
                             <Text style={styles.popTopicStyle}> Nephrology: </Text>
 
-                            <TouchableOpacity style={styles.popButton}>
+                            <TouchableOpacity style={styles.popButton} onPress={navigateNephroT}>
                                 <Text style={styles.buttonText}>Tutorial</Text>
                             </TouchableOpacity>
 
@@ -216,7 +357,7 @@ export default function Topics(){
                         <View style={styles.popView}>
                             <Text style={styles.popTopicStyle}> Nails: </Text>
 
-                            <TouchableOpacity style={styles.popButton}>
+                            <TouchableOpacity style={styles.popButton} onPress={navigateNailsT}>
                                 <Text style={styles.buttonText}>Tutorial</Text>
                             </TouchableOpacity>
 
@@ -241,7 +382,7 @@ export default function Topics(){
                         <View style={styles.popView}>
                             <Text style={styles.popTopicStyle}> Rheumatology: </Text>
 
-                            <TouchableOpacity style={styles.popButton}>
+                            <TouchableOpacity style={styles.popButton} onPress={navigateRheumatologyT}>
                                 <Text style={styles.buttonText}>Tutorial</Text>
                             </TouchableOpacity>
 
@@ -267,7 +408,7 @@ export default function Topics(){
                         <View style={styles.popView}>
                             <Text style={styles.popTopicBig}> Hematolgy-Oncology: </Text>
 
-                            <TouchableOpacity style={styles.popButton}>
+                            <TouchableOpacity style={styles.popButton} onPress={navigateHOT}>
                                 <Text style={styles.buttonText}>Tutorial</Text>
                             </TouchableOpacity>
 
@@ -286,17 +427,79 @@ export default function Topics(){
 
 
     
-                    <TouchableOpacity style={styles.button}>
+                    <TouchableOpacity style={styles.button} onPress={toggleModalHC}>
                         <Text style={styles.buttonText}>Heridatary Conditions</Text>
                     </TouchableOpacity>
+
+                    <Modal isVisible={isModalHC} animationIn={'slideInUp'} style={styles.modal}>
+                        <View style={styles.popView}>
+                            <Text style={styles.popTopicBig}> Heridatary Conditions: </Text>
+
+                            <TouchableOpacity style={styles.popButton} onPress={navigateHCT}>
+                                <Text style={styles.buttonText}>Tutorial</Text>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity style={styles.popButton}>
+                                <Text style={styles.buttonText}>Multimedia</Text>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity styles={styles.popButton} onPress={toggleModalHC}>
+                                <Text style={styles.backStyle}>Go Back</Text>
+                            </TouchableOpacity>
+                            
+                        </View>
+                    </Modal>
     
-                    <TouchableOpacity style={styles.button}>
+
+
+                    <TouchableOpacity style={styles.button} onPress={toggleModalPulm}>
                         <Text style={styles.buttonText}>Pulmonolgy</Text>
                     </TouchableOpacity>
+
+                    <Modal isVisible={isModalPulm} animationIn={'slideInUp'} style={styles.modal}>
+                        <View style={styles.popView}>
+                            <Text style={styles.popTopicStyle}> Pulmonolgy: </Text>
+
+                            <TouchableOpacity style={styles.popButton} onPress={navigatePulmoT}>
+                                <Text style={styles.buttonText}>Tutorial</Text>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity style={styles.popButton}>
+                                <Text style={styles.buttonText}>Multimedia</Text>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity styles={styles.popButton} onPress={toggleModalPulm}>
+                                <Text style={styles.backStyle}>Go Back</Text>
+                            </TouchableOpacity>
+                            
+                        </View>
+                    </Modal>
+
+
     
-                    <TouchableOpacity style={styles.button}>
+                    <TouchableOpacity style={styles.button} onPress={toggleModalMisc}>
                         <Text style={styles.buttonText}>Miscllaneous</Text>
                     </TouchableOpacity>
+
+                    <Modal isVisible={isModalMisc} animationIn={'slideInUp'} style={styles.modal}>
+                        <View style={styles.popView}>
+                            <Text style={styles.popTopicStyle}> Miscllaneous: </Text>
+
+                            <TouchableOpacity style={styles.popButton} onPress={navigateMiscT}>
+                                <Text style={styles.buttonText}>Tutorial</Text>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity style={styles.popButton}>
+                                <Text style={styles.buttonText}>Multimedia</Text>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity styles={styles.popButton} onPress={toggleModalMisc}>
+                                <Text style={styles.backStyle}>Go Back</Text>
+                            </TouchableOpacity>
+                            
+                        </View>
+                    </Modal>
+    
     
                     <Text style={styles.filler}>
                         a;lakjdsfkl;asj
@@ -342,7 +545,7 @@ const styles = StyleSheet.create({
     },
     popView: {
         backgroundColor: 'white',
-        borderRadius: 80,
+        borderRadius: 40,
         height: 300,
         width: 300,
         bottom: 370,
@@ -361,7 +564,8 @@ const styles = StyleSheet.create({
         margin: 10,
         paddingVertical: 15,
         paddingHorizontal: 40,
-        top: 30
+        top: 30,
+        left: 5
     },
     popTopicBig: {
         color: 'black',
