@@ -8,7 +8,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "test": "jest -u"
+    "test": "jest -u --coverage"
   },
   "jest": {
     "testEnvironment": "jsdom",
@@ -22,7 +22,6 @@
   },
   "dependencies": {
     "@adobe/react-spectrum": "^3.15.1",
-    "@react-native-async-storage/async-storage": "~1.15.0",
     "@react-navigation/drawer": "^6.3.1",
     "@react-navigation/native-stack": "^6.4.1",
     "@testing-library/jest-native": "^4.0.4",

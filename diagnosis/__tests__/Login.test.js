@@ -4,13 +4,12 @@ import {act, fireEvent, render, waitFor} from '@testing-library/react-native';
 import Login from '../screens/Login';
 
 describe('<Login />', () => {
-    test("renders correctly", async () => {
+    test("renders correctly", () => {
         const tree = renderer.create(<Login />).toJSON();
         expect(tree).toMatchSnapshot();
     }); 
-    test('goes to the screen on valid inputs', async () => {
-        const navigate = jest.fn();
-        const {queryByTestId, getByTestId} = render(<Login navigation={{ navigate }}/>);
+    test('authenticates on valid inputs', async () => {
+        const {queryByTestId, getByTestId} = render(<Login/>);
         const username = queryByTestId('username-input');
         const password = queryByTestId('password-input');
         act(() =>{
@@ -20,7 +19,6 @@ describe('<Login />', () => {
         });
         await waitFor(() => {
             expect(queryByTestId('msg-box')).toBeNull();
-            expect(navigate).toHaveBeenCalledWith('MainMenu');
             expect(queryByTestId('activitybutton')).toBeTruthy();
         });
     });

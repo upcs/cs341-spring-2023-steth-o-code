@@ -4,6 +4,13 @@ name: CI
 
 # Controls when the workflow will run
 on:
+  push: 
+    branches:
+      - ananda23
+      - patelde23
+      - martinea23
+      - deant23
+      - millern23-4
   # Triggers the workflow on push or pull request events but only for the master branch
   pull_request:
     branches: [ master ]
@@ -36,5 +43,15 @@ jobs:
         
       # Then run jest command to run all the tests
       - name: run jest
-        run: npm test -- -u
+        run: npm test
 
+      # uploads coverage to codecov
+      - uses: codecov/codecov-action@v2
+        with:
+          token: 6d4df5dd-dfbb-482b-ac48-0f7d73b74a56
+          directory: ./coverage/
+          files: ./clover.xml
+          flags: unittests
+          name: codecov-umbrella
+          fail_ci_if_error: true
+          verbose: true
