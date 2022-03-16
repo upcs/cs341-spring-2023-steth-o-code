@@ -2,7 +2,7 @@
 
 ### PDX Company Website: https://physicaldiagnosispdx.com/
 
-[![CI](https://github.com/upcs/cs341-spring-2022-diagnosis/actions/workflows/main.yml/badge.svg?event=workflow_dispatch)](https://github.com/upcs/cs341-spring-2022-diagnosis/actions/workflows/main.yml)
+[![CI](https://github.com/upcs/cs341-spring-2022-diagnosis/actions/workflows/main.yml/badge.svg?branch=master&event=pull_request)](https://github.com/upcs/cs341-spring-2022-diagnosis/actions/workflows/main.yml)
 
 App Authors: 
 - Devam Patel

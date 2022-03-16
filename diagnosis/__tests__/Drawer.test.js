@@ -3,8 +3,6 @@ import React from 'react';
 import { render } from '@testing-library/react-native';
 import DrawerNavigator from '../navigators/DrawerNavigator';
 
-jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
-
 describe('<DrawerNavigator />', () => {
     //need to create still 
     test('dummy', () => {
