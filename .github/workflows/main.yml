@@ -50,9 +50,10 @@ jobs:
         run: npm test
 
       # uploads coverage to codecov
+      - name: Codecov
       - uses: codecov/codecov-action@v2
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+          token: 6d4df5dd-dfbb-482b-ac48-0f7d73b74a56
           flags: unittests
           name: codecov-umbrella
           fail_ci_if_error: true
