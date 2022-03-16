@@ -576,17 +576,21 @@ const styles = StyleSheet.create({
     button: {
         alignItems: 'center',
         backgroundColor: 'red',
-        borderRadius: 100,
-        paddingVertical: 10,
+        borderRadius: 40,
+        paddingVertical: 13,
         marginTop: 20,
-        left: "13%"
+        left: "14%"
 
     },
     title: {
         textAlign: "center",
         fontSize: 60,
         color: "red",
+        fontWeight: 'bold',
         backgroundColor: "white",
+        textShadowColor:'grey',
+        textShadowOffset:{width: 1, height: 9},
+        textShadowRadius: 15,
     },
     filler: {
         color: "#BFAA8C",
