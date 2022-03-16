@@ -45,13 +45,12 @@ jobs:
       # Then run jest command to run all the tests
       - name: run jest
         run: npm test
-        
+
       # uploads coverage to codecov
       - uses: codecov/codecov-action@v2
         with:
           token: 6d4df5dd-dfbb-482b-ac48-0f7d73b74a56
-          directory: ./coverage/
-          files: ./clover.xml
+          files: ./diagnosis/coverage/clover.xml
           flags: unittests
           name: codecov-umbrella
           fail_ci_if_error: true
