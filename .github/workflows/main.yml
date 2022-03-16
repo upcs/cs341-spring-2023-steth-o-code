@@ -52,8 +52,7 @@ jobs:
       # uploads coverage to codecov
       - uses: codecov/codecov-action@v2
         with:
-          token: ${{ secrets.UPLOAD_TOKEN }}
-          files: ./diagnosis/coverage/clover.xml
+          token: ${{ secrets.CODECOV_TOKEN }}
           flags: unittests
           name: codecov-umbrella
           fail_ci_if_error: true
