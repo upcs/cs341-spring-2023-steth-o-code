@@ -19,7 +19,6 @@ describe('<Login />', () => {
         });
         await waitFor(() => {
             expect(queryByTestId('msg-box')).toBeNull();
-            expect(queryByTestId('activitybutton')).toBeTruthy();
         });
     });
     test('it has working buttons w/input validation', async () => {
@@ -33,7 +32,6 @@ describe('<Login />', () => {
         await waitFor(() => {
             expect(queryByTestId('msgbox')).toBeTruthy();
             expect(queryByTestId('msgbox')).toHaveTextContent('Please fill out all the fields above.');
-            expect(queryByTestId('activitybutton')).toBeNull();
         });
     });
 });
