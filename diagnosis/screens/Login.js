@@ -123,33 +123,31 @@ const Login = ({ navigation }) => {
                   </StyledButton>
                 )}
 
-                {isSubmitting && (
-                  <StyledButton testID="activitybutton" disabled={true}>
-                    <ActivityIndicator size="large" color="#FFFFFF" />
-                  </StyledButton>
-                )}
+                            <Line />
+                            <StyledButton testID='wordpress-button' wordpress={true} onPress={handleSubmit}>
+                                <Fontisto name="wordpress" color={textInputBackground} size={25} />
+                                <ButtonText wordpress={true}>Sign in with Wordpress</ButtonText>
+                            </StyledButton>
+                            <ExtraView>
+                                <ExtraText>Don't have an account? </ExtraText>
+                                <TextLink onPress={() => navigation.navigate("SignUp")}>
+                                    <TextLinkContent>Signup</TextLinkContent>
+                                </TextLink>
+                            </ExtraView>
 
-                <Line />
-                <StyledButton testID="wordpress-button" wordpress={true} onPress={handleSubmit}>
-                  <Fontisto name="wordpress" color={textInputBackground} size={25}/>
-                  <ButtonText wordpress={true}>
-                    Sign in with Wordpress
-                  </ButtonText>
-                </StyledButton>
-                <ExtraView>
-                  <ExtraText>Don't have an account? </ExtraText>
-                  <TextLink onPress={() => navigation.navigate("SignUp")}>
-                    <TextLinkContent>Signup</TextLinkContent>
-                  </TextLink>
-                </ExtraView>
-              </StyledForm>
-            )}
-          </Formik>
-        </InnerContainer>
-      </StyledContainer>
-    </KeyboardAvoidWrap>
-  );
-};
+                            <ExtraView>
+                                <TextLink onPress={() => navigation.navigate("Main Menu")}>
+                                    <TextLinkContent>WHILE LOGIN IS FIXED</TextLinkContent>
+                                </TextLink>
+                            </ExtraView>
+                            
+                        </StyledForm>)}
+                    </Formik>
+                </InnerContainer>
+            </StyledContainer>
+        </KeyboardAvoidWrap>
+    );
+}
 
 const TextInput = ({
   label,
