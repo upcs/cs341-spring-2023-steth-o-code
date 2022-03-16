@@ -75,7 +75,7 @@ const DrawerNavigator = () => {
         options={{
           headerShown: false,
           drawerIcon: () => (
-            <FontAwesome5 name="books" size={22} color="black" />
+            <Ionicons name='book-outline' size={22} color={color} />
           )
         }} />
     </Drawer.Navigator>
