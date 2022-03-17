@@ -548,7 +548,7 @@ exports[`<AboutUs /> it should render correctly 1`] = `
                   "opacity": 0.4,
                   "transform": Array [
                     Object {
-                      "scale": 0.6,
+                      "scale": 0.6000530486917385,
                     },
                   ],
                   "width": 10,

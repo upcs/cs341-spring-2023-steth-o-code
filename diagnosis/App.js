@@ -9,10 +9,11 @@ LogBox.ignoreLogs([
   "Overwriting fontFamily style attribute preprocessor"
 ]);
 
-
 //screens import
-import StackNavigator from './navigators/StackNavigator';
+import DrawerNavigator from './navigators/DrawerNavigator';
 
 export default function App() {
-  return <Multimedia />;//default StackNavigator
+  return(
+      <DrawerNavigator/>
+  );
 }

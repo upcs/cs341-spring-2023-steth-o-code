@@ -1,9 +1,7 @@
 import React, {useState}  from 'react';
-import { View, Text, ActivityIndicator } from 'react-native';
+import { View, Text, ActivityIndicator} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { StackActions } from '@react-navigation/native';
-import * as Yup from 'yup';
-
 //formik
 import { Formik } from 'formik';
 
@@ -34,18 +32,17 @@ const {company, placeholder, textInputBackground} = Colors;
 
 //keyboard avoiding wrapper
 import KeyboardAvoidWrap from '../components/KeyboardAvoidWrap';
-import axios from 'axios';
 
 const Login = ({navigation}) => {
     const [hidePassword, setHidePassword] = useState(true);
     const [message, setMessage] = useState('');
     const [messageType, setMessageType] = useState('');
 
-    const handleMessage = (message, type = 'FAILED') => {
+    const handleMessage = (message, type) => {
         setMessage(message);
         setMessageType(type);
     }
-
+    
     return (
         <KeyboardAvoidWrap>
             <StyledContainer>
@@ -60,8 +57,30 @@ const Login = ({navigation}) => {
                                 handleMessage('Please fill out all the fields above.');
                                 setSubmitting(false);
                             } else {
-                                console.log(values);
-                                setTimeout(() => {navigation.navigate('MainMenu')}, 500);
+                                handleMessage(null);
+                                fetch('https://up.physicaldiagnosispdx.com/up/app-content/authentication.php', {
+                                    method: 'POST',
+                                    headers: {
+                                        'Accept': 'application/json',
+                                        'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify({
+                                        username: values.username,
+                                        password: values.password
+                                    }),
+                                })
+                                .then(response => response.text())
+                                .then((responseData) => {
+                                    if(responseData === "Authenticated") {
+                                        setSubmitting(false);
+                                        navigation.navigate('Main Menu');
+                                    } else {
+                                        handleMessage(responseData);
+                                    }
+                                })
+                                .catch((error) => {
+                                    console.error(error);
+                                })
                             }
                         }}
                     >{({handleChange, handleBlur, handleSubmit, values, touched, errors, isSubmitting}) => (
@@ -108,22 +127,17 @@ const Login = ({navigation}) => {
                             </StyledButton>
                             <ExtraView>
                                 <ExtraText>Don't have an account? </ExtraText>
-                                <TextLink onPress={() => navigation.navigate("Signup")}>
+                                <TextLink onPress={() => navigation.navigate("SignUp")}>
                                     <TextLinkContent>Signup</TextLinkContent>
                                 </TextLink>
-
                             </ExtraView>
 
-                             
-                            <TextLink onPress={() => navigation.dispatch(StackActions.replace('MainMenu')) }>
-                                <ExtraText>For Demo Purposes:</ExtraText>
-                                <TextLinkContent>Go to Main Menu</TextLinkContent>
-                            </TextLink>
-
-                            <TextLink onPress={() => navigation.navigate("MultiMedia")}>
-                                <TextLinkContent>Go to MultiMedia</TextLinkContent>
-                            </TextLink>
-
+                            <ExtraView>
+                                <TextLink onPress={() => navigation.navigate("Main Menu")}>
+                                    <TextLinkContent>WHILE LOGIN IS FIXED</TextLinkContent>
+                                </TextLink>
+                            </ExtraView>
+                            
                         </StyledForm>)}
                     </Formik>
                 </InnerContainer>
@@ -148,5 +162,7 @@ const TextInput = ({label, icon, isPassword, hidePassword, setHidePassword, ...p
         </View>
     )
 }
+
+
 
 export default Login;

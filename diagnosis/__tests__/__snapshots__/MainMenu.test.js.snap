@@ -1,0 +1,408 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MainMenu /> renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#BFAA8C",
+      "flex": 1,
+      "height": 1334,
+      "justifyContent": "center",
+      "width": 750,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+<<<<<<< HEAD
+        "alignContent": "center",
+=======
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
+        "backgroundColor": "#ffffff",
+        "height": 85,
+        "justifyContent": "center",
+        "position": "absolute",
+        "top": 0,
+<<<<<<< HEAD
+        "width": "100%",
+=======
+        "width": 750,
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
+      }
+    }
+  >
+    <View>
+      <Text />
+    </View>
+    <Image
+      source={1}
+      style={
+        Object {
+          "flex": 1,
+          "left": 187.5,
+          "position": "absolute",
+          "resizeMode": "contain",
+          "top": -80,
+          "width": 200,
+        }
+      }
+    />
+    <Image
+      source={1}
+      style={
+        Object {
+          "height": 50,
+          "position": "absolute",
+          "resizeMode": "contain",
+          "right": 46.875,
+          "top": 20,
+          "width": 50,
+        }
+      }
+    />
+  </View>
+  <Image
+    blurRadius={1}
+    source={1}
+    style={
+      Object {
+        "aspectRatio": 1,
+        "height": 444.6666666666667,
+        "position": "absolute",
+        "resizeMode": "stretch",
+        "top": 80,
+        "width": "100%",
+      }
+    }
+  />
+  <Text
+    adjustsFontSizeToFit={true}
+    onTextLayout={[Function]}
+    style={
+      Object {
+        "color": "#E63610",
+        "fontFamily": "Roboto",
+        "fontSize": 55,
+        "fontWeight": "bold",
+<<<<<<< HEAD
+=======
+        "left": 10,
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
+        "position": "absolute",
+        "textAlign": "center",
+        "textShadowColor": "#585858",
+        "textShadowOffset": Object {
+          "height": 5,
+          "width": 5,
+        },
+        "textShadowRadius": 10,
+<<<<<<< HEAD
+        "top": 303.5,
+=======
+        "top": 318.5,
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
+      }
+    }
+  >
+    Good Morning, User
+  </Text>
+  <View
+    style={
+      Object {
+        "borderBottomColor": "grey",
+        "borderBottomWidth": 6,
+        "borderRadius": 12,
+        "left": 46.875,
+        "position": "absolute",
+<<<<<<< HEAD
+        "top": 635.2380952380952,
+=======
+        "top": 650.7317073170732,
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
+        "width": 100,
+      }
+    }
+  />
+  <Text
+    className="sc-egiyK eqlRhB"
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 50,
+        "fontWeight": "bold",
+        "paddingBottom": 20.84375,
+        "position": "absolute",
+        "textAlign": "center",
+        "textShadowColor": "#585858",
+        "textShadowOffset": Object {
+          "height": 9,
+          "width": 1,
+        },
+        "textShadowRadius": 10,
+      }
+    }
+  >
+    PDX
+  </Text>
+  <View
+    style={
+      Object {
+        "borderBottomColor": "grey",
+        "borderBottomWidth": 6,
+        "borderRadius": 12,
+        "position": "absolute",
+        "right": 46.875,
+<<<<<<< HEAD
+        "top": 635.2380952380952,
+=======
+        "top": 650.7317073170732,
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
+        "width": 100,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+<<<<<<< HEAD
+        "alignContent": "center",
+        "backgroundColor": "white",
+        "borderColor": "red",
+        "borderRadius": 60,
+        "height": 583.625,
+        "justifyContent": "center",
+        "marginBottom": 0,
+        "marginTop": 571.7142857142857,
+        "position": "relative",
+        "top": 20,
+=======
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderColor": "red",
+        "borderRadius": 60,
+        "height": 549.2941176470588,
+        "justifyContent": "center",
+        "marginBottom": 40,
+        "marginTop": 727.6363636363636,
+        "padding": 10,
+        "position": "relative",
+        "top": 0,
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
+        "width": "96%",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "red",
+          "borderRadius": 30,
+<<<<<<< HEAD
+          "marginLeft": 50,
+=======
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
+          "marginTop": 20.84375,
+          "opacity": 1,
+          "paddingVertical": 10,
+          "width": "75%",
+        }
+      }
+      testID="buttonOne"
+    >
+      <Text
+        style={
+          Object {
+            "color": "black",
+            "fontFamily": "Roboto",
+            "fontSize": 25,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Knowledge Test
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "red",
+          "borderRadius": 30,
+<<<<<<< HEAD
+          "marginLeft": 50,
+=======
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
+          "marginTop": 20.84375,
+          "opacity": 1,
+          "paddingVertical": 10,
+          "width": "75%",
+        }
+      }
+      testID="buttonTwo"
+    >
+      <Text
+        style={
+          Object {
+            "color": "black",
+            "fontFamily": "Roboto",
+            "fontSize": 25,
+            "fontWeight": "bold",
+          }
+        }
+      >
+<<<<<<< HEAD
+        Topic of the Day
+=======
+        Lectures
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "red",
+          "borderRadius": 30,
+<<<<<<< HEAD
+          "marginLeft": 50,
+=======
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
+          "marginTop": 20.84375,
+          "opacity": 1,
+          "paddingVertical": 10,
+          "width": "75%",
+        }
+      }
+      testID="buttonThree"
+    >
+      <Text
+        style={
+          Object {
+            "color": "black",
+            "fontFamily": "Roboto",
+            "fontSize": 25,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Community
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "red",
+          "borderRadius": 30,
+<<<<<<< HEAD
+          "marginLeft": 50,
+=======
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
+          "marginTop": 20.84375,
+          "opacity": 1,
+          "paddingVertical": 10,
+          "width": "75%",
+        }
+      }
+      testID="buttonFour"
+    >
+      <Text
+        style={
+          Object {
+            "color": "black",
+            "fontFamily": "Roboto",
+            "fontSize": 25,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Our Team
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "red",
+          "borderRadius": 30,
+<<<<<<< HEAD
+          "marginLeft": 50,
+=======
+>>>>>>> 8cafd652f907c0d73357e51a2e00e795c13bce69
+          "marginTop": 20.84375,
+          "opacity": 1,
+          "paddingVertical": 10,
+          "width": "75%",
+        }
+      }
+      testID="buttonFive"
+    >
+      <Text
+        style={
+          Object {
+            "color": "black",
+            "fontFamily": "Roboto",
+            "fontSize": 25,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        About Us
+      </Text>
+    </View>
+  </View>
+</View>
+`;

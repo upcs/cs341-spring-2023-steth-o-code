@@ -1,9 +1,9 @@
 import React from 'react';
 import { Text, View, StyleSheet} from 'react-native';
 
-const Donate = () => (
+const Books = () => (
     <View style={styles.mainContainer}>
-        <Text style={styles.text}> PAGE FOR Donations</Text>
+        <Text style={styles.text}> PAGE FOR Books</Text>
     </View>
 );
 
@@ -18,4 +18,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default Donate;
+export default Books;
