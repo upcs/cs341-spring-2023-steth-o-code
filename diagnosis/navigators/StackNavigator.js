@@ -8,7 +8,7 @@ import KnowledgeTest from './../screens/KnowledgeTest';
 import AboutUs from './../screens/AboutUs';
 import Community from '../screens/Community';
 import TeamInfo from './../screens/TeamInfo';
-import TOTD from './../screens/TopicOfTheDay';
+import Topics from '../screens/Topics';
 import MultiMedia from './../screens/Multimedia';
 import Lectures from './../screens/Lectures';
 import Topics from './../screens/Topics';
@@ -29,6 +29,8 @@ import HC_Tutorial from '../screens/topics-screens/HC_Tutorial';
 import HO_Tutorial from '../screens/topics-screens/HO_Tutorial';
 import Pulmonolgy_Tutorial from '../screens/topics-screens/Pulmonolgy';
 import Misc_Tutorial from '../screens/topics-screens/Misc_Tutorial';
+import Books from './../screens/Lectures';
+
 import { ScreenStackHeaderLeftView } from 'react-native-screens';
 import { Swipeable } from 'react-native-gesture-handler';
 
@@ -55,7 +57,7 @@ const StackNavigator = () => {
           <Stack.Screen name="AboutUs" component={AboutUs}/>
           <Stack.Screen name="Community" component={Community}/>
           <Stack.Screen name="TeamInfo" component={TeamInfo}/>
-          <Stack.Screen name="TOTD" component={TOTD}/>
+          <Stack.Screen name="Topics" component={Topics}/>
           <Stack.Screen name="MultiMedia" component={MultiMedia}/>
           <Stack.Screen name="Lectures" component={Lectures}/>
           <Stack.Screen name="Lecture_JVP" component={Lecture_JVP}/>
@@ -76,9 +78,7 @@ const StackNavigator = () => {
           <Stack.Screen name="Topics" component={Topics}/>
           <Stack.Screen name="Misc_Tutorial" component={Misc_Tutorial}/>
           <Stack.Screen name="Pulmonolgy_Tutorial" component={Pulmonolgy_Tutorial}/>
-
-
-  
+          <Stack.Screen name="Books" component={Books}/>
 
           
         </Stack.Navigator>
