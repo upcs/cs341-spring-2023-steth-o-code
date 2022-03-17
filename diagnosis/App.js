@@ -6,7 +6,8 @@ import { LogBox } from 'react-native';
 LogBox.ignoreLogs([
   "[react-native-gesture-handler] Seems like you\'re using an old API with gesture components, check out new Gestures system!",
   "[react-native-gesture-handler] Seems like you're using an old API with gesture components, check out new Gestures system!",
-  "Overwriting fontFamily style attribute preprocessor"
+  "Overwriting fontFamily style attribute preprocessor",
+  "EventEmitter.removeListener"
 ]);
 
 //screens import
