@@ -5,7 +5,7 @@ import MainMenu from '../screens/MainMenu';
 
 describe('<MainMenu />', () => {
 
-    test('renders correctly', async () => { // test screen rendering
+    test('renders correctly', () => { // test screen rendering
         const tree = renderer.create(<MainMenu/>).toJSON();
         expect(tree).toMatchSnapshot();
     });
