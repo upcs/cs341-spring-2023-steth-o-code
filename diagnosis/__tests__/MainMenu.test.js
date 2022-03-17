@@ -34,7 +34,7 @@ describe('<MainMenu />', () => {
         const buttonThree = queryByTestId('buttonThree');
         expect(buttonThree).toBeTruthy();
         fireEvent.press(buttonThree);
-        expect(navigate).toHaveBeenCalledWith('Community');        
+        expect(navigate).toHaveBeenCalledWith('Topics');        
     });
 
     test('test button 4', function() { // test button four links correctly

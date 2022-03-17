@@ -50,7 +50,6 @@ exports[`<AboutUs /> it should render correctly 1`] = `
           undefined,
         ]
       }
-      textInteractionEnabled={true}
       useSharedProcessPool={true}
     />
   </View>
