@@ -4,6 +4,14 @@ name: CI
 
 # Controls when the workflow will run
 on:
+  push: 
+    branches:
+      - ananda23
+      - patelde23
+      - martinea23
+      - deant23
+      - millern23-4
+      - master
   # Triggers the workflow on push or pull request events but only for the master branch
   pull_request:
     branches: [ master ]
@@ -29,12 +37,23 @@ jobs:
         uses: actions/setup-node@v2
         with: 
           node-version: 16.x
-        
+
       # First install npm
       - name: install npm
         run: npm install
+
+      - name: install codecov
+        run: npm install -g codecov
         
       # Then run jest command to run all the tests
       - name: run jest
-        run: npm test -- -u
+        run: npm test
 
+      # uploads coverage to codecov
+      - uses: codecov/codecov-action@v2
+        with:
+          token: 6d4df5dd-dfbb-482b-ac48-0f7d73b74a56
+          flags: unittests
+          name: codecov-umbrella
+          fail_ci_if_error: true
+          verbose: true
