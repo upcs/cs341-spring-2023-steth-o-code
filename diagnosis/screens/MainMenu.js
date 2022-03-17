@@ -27,8 +27,8 @@ const MainMenu = ({navigation}) => (
                     <Text style={styles.buttonText}>Lectures</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity testID='buttonThree' style={styles.quickLinkButtons} onPress={() => navigation.navigate("Community")}> 
-                    <Text style={styles.buttonText}>Community</Text>
+                <TouchableOpacity testID='buttonThree' style={styles.quickLinkButtons} onPress={() => navigation.navigate("Topics")}> 
+                    <Text style={styles.buttonText}>Topics</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity testID='buttonFour' style={styles.quickLinkButtons} onPress={() => navigation.navigate("TeamInfo")}> 
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
         borderRadius: 60,
         borderColor: 'red',
         padding: 10,
-        top: 0,
+        top: '5%',
         alignItems: 'center',
         marginBottom: 40
     },

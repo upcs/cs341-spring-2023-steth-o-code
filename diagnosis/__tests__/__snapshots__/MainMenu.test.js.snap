@@ -19,7 +19,7 @@ exports[`<MainMenu /> renders correctly 1`] = `
     style={
       Object {
         "aspectRatio": 1,
-        "height": 444.6666666666667,
+        "height": "40%",
         "position": "absolute",
         "resizeMode": "stretch",
         "top": -60,
@@ -31,10 +31,8 @@ exports[`<MainMenu /> renders correctly 1`] = `
     style={
       Object {
         "color": "white",
-        "fontFamily": "Roboto",
         "fontSize": 60,
         "fontWeight": "bold",
-        "left": 10,
         "position": "absolute",
         "textAlign": "center",
         "textShadowColor": "#585858",
@@ -43,7 +41,7 @@ exports[`<MainMenu /> renders correctly 1`] = `
           "width": 5,
         },
         "textShadowRadius": 10,
-        "top": 20,
+        "top": "3%",
       }
     }
   >
@@ -58,9 +56,9 @@ exports[`<MainMenu /> renders correctly 1`] = `
         "borderBottomColor": "grey",
         "borderBottomWidth": 6,
         "borderRadius": 12,
-        "left": 20,
+        "left": "5%",
         "position": "absolute",
-        "top": 330,
+        "top": "37%",
         "width": 100,
       }
     }
@@ -79,7 +77,7 @@ exports[`<MainMenu /> renders correctly 1`] = `
           "width": 1,
         },
         "textShadowRadius": 10,
-        "top": 260,
+        "top": "25%",
       }
     }
   >
@@ -92,8 +90,8 @@ exports[`<MainMenu /> renders correctly 1`] = `
         "borderBottomWidth": 6,
         "borderRadius": 12,
         "position": "absolute",
-        "right": 20,
-        "top": 330,
+        "right": "5%",
+        "top": "37%",
         "width": 100,
       }
     }
@@ -105,13 +103,13 @@ exports[`<MainMenu /> renders correctly 1`] = `
         "backgroundColor": "white",
         "borderColor": "red",
         "borderRadius": 60,
-        "height": 549.2941176470588,
+        "height": "45%",
         "justifyContent": "center",
         "marginBottom": 40,
-        "marginTop": 727.6363636363636,
+        "marginTop": "50%",
         "padding": 10,
         "position": "relative",
-        "top": 0,
+        "top": "5%",
         "width": "96%",
       }
     }
@@ -144,7 +142,6 @@ exports[`<MainMenu /> renders correctly 1`] = `
         style={
           Object {
             "color": "white",
-            "fontFamily": "Roboto",
             "fontSize": 25,
             "fontWeight": "bold",
           }
@@ -181,7 +178,6 @@ exports[`<MainMenu /> renders correctly 1`] = `
         style={
           Object {
             "color": "white",
-            "fontFamily": "Roboto",
             "fontSize": 25,
             "fontWeight": "bold",
           }
@@ -218,13 +214,12 @@ exports[`<MainMenu /> renders correctly 1`] = `
         style={
           Object {
             "color": "white",
-            "fontFamily": "Roboto",
             "fontSize": 25,
             "fontWeight": "bold",
           }
         }
       >
-        Community
+        Topics
       </Text>
     </View>
     <View
@@ -255,7 +250,6 @@ exports[`<MainMenu /> renders correctly 1`] = `
         style={
           Object {
             "color": "white",
-            "fontFamily": "Roboto",
             "fontSize": 25,
             "fontWeight": "bold",
           }
@@ -292,7 +286,6 @@ exports[`<MainMenu /> renders correctly 1`] = `
         style={
           Object {
             "color": "white",
-            "fontFamily": "Roboto",
             "fontSize": 25,
             "fontWeight": "bold",
           }

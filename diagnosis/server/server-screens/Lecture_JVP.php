@@ -21,7 +21,8 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo $row["post_content_filtered"] , "<br>";
+    $str = $row["post_content_filtered"];
+    echo preg_replace("/\[[^]]+\]/","",$str);
   }
 } else {
   echo "0 results";

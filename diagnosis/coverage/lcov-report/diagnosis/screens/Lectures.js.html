@@ -137,7 +137,19 @@
 <a name='L72'></a><a href='#L72'>72</a>
 <a name='L73'></a><a href='#L73'>73</a>
 <a name='L74'></a><a href='#L74'>74</a>
-<a name='L75'></a><a href='#L75'>75</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
@@ -145,15 +157,18 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -163,6 +178,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -212,25 +236,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
-import { Text, View, StyleSheet, Button, Dimensions, TouchableOpacity} from 'react-native';
+import { Text, View, StyleSheet, Button, Dimensions, TouchableOpacity, ScrollView} from 'react-native';
 &nbsp;
 const Lectures = <span class="fstat-no" title="function not covered" >({</span>navigation}) =&gt; (
       
 <span class="cstat-no" title="statement not covered" >        &lt;View style={styles.mainContainer}&gt;</span>
-            
-            &lt;View style={styles.quickLinksView}&gt;
-                &lt;TouchableOpacity style={styles.JVPButton1} onPress={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >navigation.navigate("Lecture_JVP")}</span>&gt; 
-                    &lt;Text style={styles.buttonText}&gt;The Art and Science of the Jugular Venous Pulse&lt;/Text&gt;    
-                &lt;/TouchableOpacity&gt;
+            &lt;Text style={styles.headerTxt}&gt;Avilable Lectures:&lt;/Text&gt;
+            &lt;ScrollView style={styles.innerContainer} contentContainerStyle={{justifyContent: 'center', left: '13%'}}&gt;
+                &lt;View style={styles.quickLinksView}&gt;
+                    &lt;TouchableOpacity style={styles.JVPButton1} onPress={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >navigation.navigate("Lecture_JVP")}</span>&gt; 
+                        &lt;Text style={styles.buttonText}&gt;The Art and Science of the Jugular Venous Pulse&lt;/Text&gt;    
+                    &lt;/TouchableOpacity&gt;
 &nbsp;
-                &lt;TouchableOpacity style={styles.JVPButton2} onPress={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >navigation.navigate("Lecture_VHD")}</span>&gt; 
-                    &lt;Text style={styles.buttonText}&gt;Valvular Heart Disease Lecture&lt;/Text&gt;    
-                &lt;/TouchableOpacity&gt;
+                    &lt;TouchableOpacity style={styles.JVPButton2} onPress={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >navigation.navigate("Lecture_VHD")}</span>&gt; 
+                        &lt;Text style={styles.buttonText}&gt;Valvular Heart Disease Lecture&lt;/Text&gt;    
+                    &lt;/TouchableOpacity&gt;
 &nbsp;
-                &lt;TouchableOpacity style={styles.JVPButton3} onPress={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >navigation.navigate("Lecture_DR")}</span>&gt; 
-                    &lt;Text style={styles.buttonText}&gt;Diagnostic Reasoning Lecture&lt;/Text&gt;    
-                &lt;/TouchableOpacity&gt;
-            &lt;/View&gt;
+                    &lt;TouchableOpacity style={styles.JVPButton3} onPress={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >navigation.navigate("Lecture_DR")}</span>&gt; 
+                        &lt;Text style={styles.buttonText}&gt;Diagnostic Reasoning Lecture&lt;/Text&gt;    
+                    &lt;/TouchableOpacity&gt;
+                &lt;/View&gt;
+            &lt;/ScrollView&gt;
+                
            
             
         &lt;/View&gt;
@@ -243,45 +270,54 @@ const styles = StyleSheet.create({
         height: Dimensions.get('window').height,
         width: Dimensions.get('window').width,
     }, 
-&nbsp;
+    innerContainer: {
+        backgroundColor: 'white',
+        borderRadius: 80,
+        top: '8%',
+        width: '95%',
+        left: 10,
+        marginBottom: 100
+        
+    },
+    headerTxt :{
+        fontSize: 25,
+        fontWeight: "bold",
+        color: "black",
+        top: '5%',
+        left: '25%',
+    },
     JVPButton1: {
-        position: 'absolute',
         alignItems: 'center',
         width: '75%',
         paddingVertical: 10,
         backgroundColor: 'red',
         borderRadius: 30,
-        top: 175,
-        left: 55
+        top: '20%', 
     },
 &nbsp;
     JVPButton2: {
-        position: 'absolute',
         alignItems: 'center',
         width: '75%',
         paddingVertical: 10,
         backgroundColor: 'red',
         borderRadius: 30,
-        top: 300,
-        left: 55
+        top: '25%',
     },
 &nbsp;
     JVPButton3: {
-        position: 'absolute',
         alignItems: 'center',
         width: '75%',
         paddingVertical: 10,
         backgroundColor: 'red',
         borderRadius: 30,
-        top: 425,
-        left: 55
+        top: '30%',
     },
 &nbsp;
     buttonText: {
-        fontSize: 25,
-        fontFamily: "Roboto",
+        padding: 10,
+        fontSize: 22,
         fontWeight: "bold",
-        color: "black",
+        color: "white",
     },
 });
 &nbsp;
@@ -292,7 +328,7 @@ export default Lectures;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed Mar 16 2022 15:00:57 GMT-0700 (Pacific Daylight Time)
+                at Wed Mar 16 2022 19:26:07 GMT-0700 (Pacific Daylight Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>
