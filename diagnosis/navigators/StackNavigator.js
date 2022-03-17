@@ -8,7 +8,6 @@ import KnowledgeTest from './../screens/KnowledgeTest';
 import AboutUs from './../screens/AboutUs';
 import Community from '../screens/Community';
 import TeamInfo from './../screens/TeamInfo';
-import Topics from '../screens/Topics';
 import MultiMedia from './../screens/Multimedia';
 import Lectures from './../screens/Lectures';
 import Topics from './../screens/Topics';
@@ -57,7 +56,6 @@ const StackNavigator = () => {
           <Stack.Screen name="AboutUs" component={AboutUs}/>
           <Stack.Screen name="Community" component={Community}/>
           <Stack.Screen name="TeamInfo" component={TeamInfo}/>
-          <Stack.Screen name="Topics" component={Topics}/>
           <Stack.Screen name="MultiMedia" component={MultiMedia}/>
           <Stack.Screen name="Lectures" component={Lectures}/>
           <Stack.Screen name="Lecture_JVP" component={Lecture_JVP}/>
