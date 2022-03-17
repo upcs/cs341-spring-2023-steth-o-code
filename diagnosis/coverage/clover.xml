@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1647483967257" clover="3.2.0">
-  <project timestamp="1647483967257" name="All files">
-    <metrics statements="310" coveredstatements="134" conditionals="44" coveredconditionals="36" methods="124" coveredmethods="20" elements="478" coveredelements="190" complexity="0" loc="310" ncloc="310" packages="6" files="45" classes="45"/>
+<coverage generated="1647486029429" clover="3.2.0">
+  <project timestamp="1647486029429" name="All files">
+    <metrics statements="313" coveredstatements="133" conditionals="44" coveredconditionals="36" methods="129" coveredmethods="21" elements="486" coveredelements="190" complexity="0" loc="313" ncloc="313" packages="6" files="44" classes="44"/>
     <package name="diagnosis">
       <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="App.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/App.js">
@@ -129,13 +129,13 @@
       </file>
       <file name="StackNavigator.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/navigators/StackNavigator.js">
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="35" count="2" type="stmt"/>
-        <line num="37" count="2" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
       </file>
     </package>
     <package name="diagnosis.screens">
-      <metrics statements="190" coveredstatements="63" conditionals="40" coveredconditionals="32" methods="74" coveredmethods="17"/>
+      <metrics statements="193" coveredstatements="62" conditionals="40" coveredconditionals="32" methods="79" coveredmethods="18"/>
       <file name="AboutUs.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/AboutUs.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="8" count="3" type="stmt"/>
@@ -149,10 +149,16 @@
         <line num="10" count="2" type="stmt"/>
       </file>
       <file name="Books.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/Books.js">
-        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
+        <metrics statements="9" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="1"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="84" count="0" type="stmt"/>
+        <line num="98" count="3" type="stmt"/>
       </file>
       <file name="Community.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/Community.js">
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -287,12 +293,6 @@
         <line num="37" count="1" type="stmt"/>
         <line num="52" count="0" type="stmt"/>
         <line num="72" count="3" type="stmt"/>
-      </file>
-      <file name="TopicOfTheDay.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/TopicOfTheDay.js">
-        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
       </file>
       <file name="Topics.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/Topics.js">
         <metrics statements="80" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="27" coveredmethods="0"/>
