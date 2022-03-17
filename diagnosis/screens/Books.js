@@ -15,24 +15,24 @@ import Constants from 'expo-constants';
 
 const Books = () => {
   return (
-    <ScrollView
-      style={{ flex: 1 }}
+    <ScrollView testID = 'scroll'
+      style={{ flex: 1}}
       contentContainerStyle={styles.mainContainer}
       showsVerticalScrollIndicator={false}>
       <Text style={styles.title}>Important Books</Text>
       <View>
-        <TouchableOpacity
+        <TouchableOpacity 
           onPress={() =>
             Linking.openURL('https://www.amazon.com/Frameworks-Internal-Medicine-Andre-Mansoor/dp/1496359305')
           }>
-          <Image
+          <Image testID='book1'
             style={styles.imageStyle}
             source={{
               uri: 'https://i0.wp.com/physicaldiagnosispdx.com/wp-content/uploads/749044f2-0ebd-4044-ae3f-062951ad7b74_1.b01575a88f35295db30bdad8533b6180.jpeg?resize=768%2C997&ssl=1',
             }}
           />
         </TouchableOpacity>
-        <TouchableOpacity
+        <TouchableOpacity 
           onPress={() =>
             Linking.openURL('https://www.amazon.com/Sapiras-Art-Science-Bedside-Diagnosis/dp/1605474118')
           }>
@@ -43,7 +43,7 @@ const Books = () => {
             }}
           />
         </TouchableOpacity>
-        <TouchableOpacity
+        <TouchableOpacity 
           onPress={() =>
             Linking.openURL('https://www.amazon.com/Physical-Examination-Circulation-Joseph-Perloff/dp/1607950235')
           }>
@@ -55,7 +55,7 @@ const Books = () => {
           />
         </TouchableOpacity>
 
-        <TouchableOpacity
+        <TouchableOpacity 
           onPress={() =>
             Linking.openURL('https://www.amazon.com/Bedside-Cardiac-Diagnosis-Henry-Marriott/dp/0397510853')
           }>
@@ -67,7 +67,7 @@ const Books = () => {
           />
         </TouchableOpacity>
 
-        <TouchableOpacity
+        <TouchableOpacity 
           onPress={() =>
             Linking.openURL('https://www.amazon.com/Physical-Diagnosis-Secrets-Student-Consult/dp/0323034675')
           }>
@@ -79,7 +79,7 @@ const Books = () => {
           />
         </TouchableOpacity>
 
-        <TouchableOpacity
+        <TouchableOpacity 
           onPress={() =>
             Linking.openURL('https://www.amazon.com/Pericardium-Comprehensive-Textbook-Fundamental-Cardiology/dp/0824793161')
           }>
