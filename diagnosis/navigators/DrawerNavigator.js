@@ -28,11 +28,11 @@ import { NavigationContainer } from '@react-navigation/native';
 
 const Drawer = createDrawerNavigator();
 
-const DrawerNavigator = ({ navigation }) => {
+const DrawerNavigator = () => {
   return (
     <NavigationContainer>
       <Drawer.Navigator drawerContent={props => <CustomDrawer {...props} />}>
-        <Drawer.Screen name='Login' component={Login}
+        <Drawer.Screen name='Login' component={Login} // keep at top to start at this screen 
           options={{
             headerShown: false,
             swipeEnabled: false,
@@ -42,11 +42,11 @@ const DrawerNavigator = ({ navigation }) => {
           options={{
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
-            headerLeft: () => (
-              <TouchableOpacity >
-                <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
-              </TouchableOpacity>
-            ),
+            // headerLeft: () => (
+            //   <TouchableOpacity >
+            //     <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
+            //   </TouchableOpacity>
+            // ),
             headerRight: () => (
               <TouchableOpacity>
                 <Ionicons style={styles.AccIcon} name="person-circle-outline" size={40} color="white" />
@@ -64,11 +64,13 @@ const DrawerNavigator = ({ navigation }) => {
           options={{
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
-            headerLeft: () => (
-              <TouchableOpacity >
-                <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
-              </TouchableOpacity>
-            ),
+            // headerLeft: () => (
+            //   <TouchableOpacity >
+            //     <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" onPress={()=>{
+            //       alert(navigation)
+            //     }}/>
+            //   </TouchableOpacity>
+            // ),
             headerRight: () => (
               <TouchableOpacity>
                 <Ionicons style={styles.AccIcon} name="person-circle-outline" size={40} color="white" />
@@ -87,11 +89,11 @@ const DrawerNavigator = ({ navigation }) => {
           options={{
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
-            headerLeft: () => (
-              <TouchableOpacity >
-                <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
-              </TouchableOpacity>
-            ),
+            // headerLeft: () => (
+            //   <TouchableOpacity >
+            //     <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
+            //   </TouchableOpacity>
+            // ),
             headerRight: () => (
               <TouchableOpacity >
                 <Ionicons style={styles.AccIcon} name="person-circle-outline" size={40} color="white" />
@@ -109,11 +111,11 @@ const DrawerNavigator = ({ navigation }) => {
           options={{
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
-            headerLeft: () => (
-              <TouchableOpacity>
-                <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
-              </TouchableOpacity>
-            ),
+            // headerLeft: () => (
+            //   <TouchableOpacity>
+            //     <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
+            //   </TouchableOpacity>
+            // ),
             headerRight: () => (
               <TouchableOpacity>
                 <Ionicons style={styles.AccIcon} name="person-circle-outline" size={40} color="white" />
@@ -131,11 +133,11 @@ const DrawerNavigator = ({ navigation }) => {
           options={{
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
-            headerLeft: () => (
-              <TouchableOpacity >
-                <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
-              </TouchableOpacity>
-            ),
+            // headerLeft: () => (
+            //   <TouchableOpacity >
+            //     <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
+            //   </TouchableOpacity>
+            // ),
             headerRight: () => (
               <TouchableOpacity >
                 <Ionicons style={styles.AccIcon} name="person-circle-outline" size={40} color="white" />
@@ -153,11 +155,11 @@ const DrawerNavigator = ({ navigation }) => {
           options={{
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
-            headerLeft: () => (
-              <TouchableOpacity >
-                <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
-              </TouchableOpacity>
-            ),
+            // headerLeft: () => (
+            //   <TouchableOpacity >
+            //     <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
+            //   </TouchableOpacity>
+            // ),
             headerRight: () => (
               <TouchableOpacity >
                 <Ionicons style={styles.AccIcon} name="person-circle-outline" size={40} color="white" />
@@ -175,11 +177,11 @@ const DrawerNavigator = ({ navigation }) => {
         options={{
           headerShown: true,
           headerTitle: (props) => <LogoTitle {...props} />,
-          headerLeft: () => (
-            <TouchableOpacity >
-              <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
-            </TouchableOpacity>
-          ),
+          // headerLeft: () => (
+          //   <TouchableOpacity >
+          //     <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
+          //   </TouchableOpacity>
+          // ),
           headerRight: () => (
             <TouchableOpacity>
               <Ionicons style={styles.AccIcon} name="person-circle-outline" size={40} color="white" />
@@ -197,11 +199,11 @@ const DrawerNavigator = ({ navigation }) => {
           options={{
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
-            headerLeft: () => (
-              <TouchableOpacity >
-                <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
-              </TouchableOpacity>
-            ),
+            // headerLeft: () => (
+            //   <TouchableOpacity >
+            //     <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
+            //   </TouchableOpacity>
+            // ),
             headerRight: () => (
               <TouchableOpacity >
                 <Ionicons style={styles.AccIcon} name="person-circle-outline" size={40} color="white" />
@@ -215,7 +217,7 @@ const DrawerNavigator = ({ navigation }) => {
               <AntDesign name="question" size={24} color="black" />
             )
           }} />
-        <Drawer.Screen name="SignUp" component={Signup}
+        <Drawer.Screen name="SignUp" component={Signup} //needs to be last always
           options={{
             headerShown: false,
             swipeEnabled: false,
