@@ -14,7 +14,6 @@ describe('<TeamInfo />', function() {
         expect(tree).toMatchSnapshot();
     });
     test('social icon works', function() {
-        //const press = jest.fn();
         const {getByTestId} = render(<TeamInfo />);
         const twitter = getByTestId('twitter');
         expect(twitter).toBeTruthy();

@@ -8,7 +8,7 @@
  import Topics from '../screens/Topics';
 
  describe('<Topics />', () => {
-     test("renders correctly", async() => {
+     test("renders correctly", () => {
          renderer.create(<Topics />);
      });
 

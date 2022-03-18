@@ -21,11 +21,12 @@ const Books = () => {
       showsVerticalScrollIndicator={false}>
       <Text style={styles.title}>Important Books</Text>
       <View>
-        <TouchableOpacity 
+        <TouchableOpacity
+          testID='book1' 
           onPress={() =>
             Linking.openURL('https://www.amazon.com/Frameworks-Internal-Medicine-Andre-Mansoor/dp/1496359305')
           }>
-          <Image testID='book1'
+          <Image
             style={styles.imageStyle}
             source={{
               uri: 'https://i0.wp.com/physicaldiagnosispdx.com/wp-content/uploads/749044f2-0ebd-4044-ae3f-062951ad7b74_1.b01575a88f35295db30bdad8533b6180.jpeg?resize=768%2C997&ssl=1',
