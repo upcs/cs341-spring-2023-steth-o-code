@@ -553,7 +553,6 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         fontSize: 25,
-        fontFamily: "Gill Sans",
         fontWeight: "bold",
         color: "white"
     },
