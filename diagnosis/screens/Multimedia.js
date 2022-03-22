@@ -66,7 +66,7 @@ const Multimedia = () => {
                 {/*Video itself, should change depending on selected radio button*/}
 
                 {/*Video type selection*/}
-                <ButtonGroup
+                <ButtonGroup testID = 'vidButton'
                     buttons={['Normal', 'Annotated', 'Narrated']}
                     selectedIndex={selectedIndex}
                     onPress={(value) => {
