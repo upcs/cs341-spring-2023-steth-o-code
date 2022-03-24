@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image, TouchableOpacity, Dimensions, useWindowDimensions} from 'react-native';
+import { Text, View, StyleSheet, Image, TouchableOpacity, Dimensions} from 'react-native';
 import { ExtraText } from '../components/SignUpLoginStyles';
 import {Ionicons} from '@expo/vector-icons';
 import { IconButton, Colors } from 'react-native-paper';
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
         resizeMode: "stretch",
         position: "absolute",
         width: '100%',
-        height: '40%',
+        height: '45%',
         aspectRatio: 1,
         top: -60
     },
@@ -101,8 +101,8 @@ const styles = StyleSheet.create({
     welcomeText: {
         position: "absolute",
         color: "white",
-        fontSize: 60,
-        top: "3%",
+        fontSize: 50,
+        top: "5%",
         fontWeight: 'bold',
         textAlign: 'center',
         textShadowColor:'#585858',
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         position: "relative",
         marginTop: "50%",
-        height:"45%",
+        height: Dimensions.get('window').height*(15/32),
         marginBottom: 0,
         width: '96%',
         borderRadius: 60,
@@ -158,12 +158,12 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         position: 'absolute',
         left: "5%",
-        top: "37%"
+        top: Dimensions.get('window').height*(5/16)
     },
 
     PDXCenterText: {
         alignContent: "center",
-        top: "25%",
+        top: Dimensions.get('window').height*(9/32),
         fontSize: 50,
         color: 'white',
         textShadowColor:'#585858',
@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         position: 'absolute',
         right: "5%",
-        top: "37%"
+        top: Dimensions.get('window').height*(5/16)
     },
 
     buttonText: {

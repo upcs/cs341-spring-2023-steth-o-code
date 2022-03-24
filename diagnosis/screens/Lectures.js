@@ -4,8 +4,8 @@ import { Text, View, StyleSheet, Button, Dimensions, TouchableOpacity, ScrollVie
 const Lectures = ({navigation}) => (
       
         <View style={styles.mainContainer}>
-            <Text style={styles.headerTxt}>Avilable Lectures:</Text>
-            <ScrollView style={styles.innerContainer} contentContainerStyle={{justifyContent: 'center', left: '13%'}}>
+            <Text style={styles.headerTxt}>Available Lectures:</Text>
+            <ScrollView style={styles.innerContainer} contentContainerStyle={{left: '13%', flex: 1}}>
                 <View style={styles.quickLinksView}>
                     <TouchableOpacity style={styles.JVPButton1} onPress={() => navigation.navigate("Lecture_JVP")}> 
                         <Text style={styles.buttonText}>The Art and Science of the Jugular Venous Pulse</Text>    
@@ -36,11 +36,11 @@ const styles = StyleSheet.create({
     innerContainer: {
         backgroundColor: 'white',
         borderRadius: 80,
-        top: '8%',
+        top: '9%',
         width: '95%',
         left: 10,
-        marginBottom: 100
-        
+        marginBottom: 100,
+        flex: 1
     },
     headerTxt :{
         fontSize: 25,
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         backgroundColor: 'red',
         borderRadius: 30,
-        top: '20%', 
+        top: '20%'
     },
 
     JVPButton2: {
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         backgroundColor: 'red',
         borderRadius: 30,
-        top: '25%',
+        top: '25%'
     },
 
     JVPButton3: {
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         backgroundColor: 'red',
         borderRadius: 30,
-        top: '30%',
+        top: '30%'
     },
 
     buttonText: {

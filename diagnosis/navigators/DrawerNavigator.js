@@ -3,7 +3,7 @@ import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { AntDesign } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
-import { StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Image, TouchableOpacity, Dimensions } from 'react-native';
 
 import KnowledgeTest from '../screens/KnowledgeTest';
 import TeamInfo from '../screens/TeamInfo';
@@ -24,7 +24,9 @@ import { DrawerActions } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { color } from 'react-native-reanimated';
 import { NavigationContainer } from '@react-navigation/native';
+import Constants from 'expo-constants';
 
+const StatusBarHeight = Constants.statusBarHeight;
 
 const Drawer = createDrawerNavigator();
 
@@ -232,7 +234,7 @@ const DrawerNavigator = () => {
 function LogoTitle() {
   return (
     <Image
-      style={{ width: 200, height: 60, top: 0 }}
+      style={{ width: 200, height: 60, top: 0, left: Dimensions.get('window').height/30}}
       source={require('diagnosis/assets/simplePDXLogo.png')}
     />
   );
