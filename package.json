@@ -1,8 +1,15 @@
 {
   "dependencies": {
-    "react-native-select-dropdown": "^1.7.0"
+    "babel": "^6.23.0",
+    "expo": "^44.0.6",
+    "jest-cli": "^27.5.1",
+    "metro": "^0.69.1",
+    "react-native": "^0.67.4",
+    "react-native-select-dropdown": "^1.7.0",
+    "react-test-renderer": "^17.0.2"
   },
   "devDependencies": {
+    "babel-install": "^2.1.0",
     "jest": "^27.5.1"
   }
 }

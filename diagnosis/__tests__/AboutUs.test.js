@@ -11,10 +11,10 @@ describe('<AboutUs />', () => {
         const tree = renderer.create(<AboutUs />).toJSON();
         expect(tree).toMatchSnapshot();
     });
-    // test("user can scroll through text", async () => {
-    //     const { getByTestId } = render(<AboutUs />);
-    //     fireEvent.scroll(getByTestId('text-scroll'), { target: { scrollY: 300 }});
-    // });
+    test("user can scroll through text", async () => {
+        const { getByTestId } = render(<AboutUs />);
+        fireEvent.scroll(getByTestId('text-scroll'), { target: { scrollY: 300 }});
+    });
     // test("carousel should work", async () => {
     //     const { getByTestId } = render(<AboutUs />);
     //     const carousel = getByTestId('carousel');
