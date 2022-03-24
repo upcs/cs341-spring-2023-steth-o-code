@@ -194,55 +194,31 @@ exports[`<Login /> renders correctly 1`] = `
               </View>
             </View>
             <View
-              accessible={true}
-              collapsable={false}
-              focusable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              style={
-                Object {
-                  "opacity": 1,
-                }
-              }
+              className="sc-crHmcD lcNXni"
             >
-              <Text
-                className="sc-egiyK eqlRhB"
-              >
-                For Demo Purposes:
-              </Text>
-              <Text
-                className="sc-ksdxgE fErdV"
-              >
-                Go to Main Menu
-              </Text>
-            </View>
-            <View
-              accessible={true}
-              collapsable={false}
-              focusable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              style={
-                Object {
-                  "opacity": 1,
+              <View
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
                 }
-              }
-            >
-              <Text
-                className="sc-ksdxgE fErdV"
               >
-                Go to MultiMedia
-              </Text>
+                <Text
+                  className="sc-ksdxgE fErdV"
+                >
+                  WHILE LOGIN IS FIXED
+                </Text>
+              </View>
             </View>
           </View>
         </View>

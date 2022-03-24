@@ -1,22 +1,87 @@
 import React from 'react';
-import { Text, View, StyleSheet} from 'react-native';
-import { WebView } from 'react-native-webview';
+import { Text, View, StyleSheet, Button, Dimensions, TouchableOpacity, ScrollView} from 'react-native';
 
-const Lectures = () => (
-        <WebView 
-        javaScriptEnabled={true} source={{uri: 'https://player.vimeo.com/video/482925513?loop=1'}} 
-        />
+const Lectures = ({navigation}) => (
+      
+        <View style={styles.mainContainer}>
+            <Text style={styles.headerTxt}>Avilable Lectures:</Text>
+            <ScrollView style={styles.innerContainer} contentContainerStyle={{justifyContent: 'center', left: '13%'}}>
+                <View style={styles.quickLinksView}>
+                    <TouchableOpacity style={styles.JVPButton1} onPress={() => navigation.navigate("Lecture_JVP")}> 
+                        <Text style={styles.buttonText}>The Art and Science of the Jugular Venous Pulse</Text>    
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={styles.JVPButton2} onPress={() => navigation.navigate("Lecture_VHD")}> 
+                        <Text style={styles.buttonText}>Valvular Heart Disease Lecture</Text>    
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={styles.JVPButton3} onPress={() => navigation.navigate("Lecture_DR")}> 
+                        <Text style={styles.buttonText}>Diagnostic Reasoning Lecture</Text>    
+                    </TouchableOpacity>
+                </View>
+            </ScrollView>
+                
+           
+            
+        </View>
 );
 
 const styles = StyleSheet.create({
     mainContainer: {
-        backgroundColor: '#BFAA8C',
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
         backgroundColor: "#BFAA8C",
+        height: Dimensions.get('window').height,
+        width: Dimensions.get('window').width,
+    }, 
+    innerContainer: {
+        backgroundColor: 'white',
+        borderRadius: 80,
+        top: '8%',
+        width: '95%',
+        left: 10,
+        marginBottom: 100
+        
+    },
+    headerTxt :{
+        fontSize: 25,
+        fontWeight: "bold",
+        color: "black",
+        top: '5%',
+        left: '25%',
+    },
+    JVPButton1: {
+        alignItems: 'center',
+        width: '75%',
+        paddingVertical: 10,
+        backgroundColor: 'red',
+        borderRadius: 30,
+        top: '20%', 
     },
 
+    JVPButton2: {
+        alignItems: 'center',
+        width: '75%',
+        paddingVertical: 10,
+        backgroundColor: 'red',
+        borderRadius: 30,
+        top: '25%',
+    },
+
+    JVPButton3: {
+        alignItems: 'center',
+        width: '75%',
+        paddingVertical: 10,
+        backgroundColor: 'red',
+        borderRadius: 30,
+        top: '30%',
+    },
+
+    buttonText: {
+        padding: 10,
+        fontSize: 22,
+        fontWeight: "bold",
+        color: "white",
+    },
 });
 
 export default Lectures;

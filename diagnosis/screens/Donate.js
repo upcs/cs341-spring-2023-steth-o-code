@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet} from 'react-native';
 
 const Donate = () => (
     <View style={styles.mainContainer}>

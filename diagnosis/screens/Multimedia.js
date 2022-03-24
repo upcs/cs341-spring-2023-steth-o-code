@@ -1,21 +1,17 @@
 import React, {useState}  from 'react';
 import { View, Text, Switch, Stylesheet } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { ButtonGroup } from 'react-native-elements'
-
+import { ButtonGroup } from 'react-native-elements';
+import { WebView } from 'react-native-webview';
 import { StyledContainer, 
     InnerContainer,
     Colors, 
     RadioGroup,
     Radio,
     PageTitle,
-    PageLogo,
-    Vimeo
+    PageLogo
 } from "./../components/SignUpLoginStyles";
-
-import {Octicons, Ionicons, Fontisto } from '@expo/vector-icons';
 const {company, placeholder, textInputBackground} = Colors;
-//const styes = StyleSheet.create();
 
 const Multimedia = () => {
     let [selected, setSelected] = React.useState('');
@@ -64,14 +60,17 @@ const Multimedia = () => {
                 {/*Block text for patient 1*/}
                 <Text style={{alignItems: 'flex-start'}}>{block1}</Text>
                 {/*Video itself, should change depending on selected radio button*/}
-
+                <View style={{flex: 1, justifyContent: 'flex-start', alignItems: 'center'}}>
+                    <WebView
+                        source={{uri: "https://player.vimeo.com/video/" + ids1[selectedIndex].toString() + "?loop=1"}}
+                        style={{flex: 1, width: 200, height: 40}}
+                    />
+                </View>
                 {/*Video type selection*/}
                 <ButtonGroup testID = 'vidButton'
                     buttons={['Normal', 'Annotated', 'Narrated']}
                     selectedIndex={selectedIndex}
-                    onPress={(value) => {
-                    setSelectedIndex(value);
-                    }}
+                    onPress={(value) => setSelectedIndex(value)}
                     containerStyle={{ marginBottom: 20 }}
                 />
             </InnerContainer>
