@@ -35,93 +35,88 @@ const { company, placeholder, textInputBackground } = Colors;
 import KeyboardAvoidWrap from "../components/KeyboardAvoidWrap";
 
 const Login = ({ navigation }) => {
-  const [hidePassword, setHidePassword] = useState(true);
-  const [message, setMessage] = useState("");
-  const [messageType, setMessageType] = useState("");
+    const [hidePassword, setHidePassword] = useState(true);
+    const [message, setMessage] = useState("");
+    const [messageType, setMessageType] = useState("");
 
-  const handleMessage = (message, type) => {
-    setMessage(message);
-    setMessageType(type);
-  };
-  return (
-    <KeyboardAvoidWrap>
-      <StyledContainer>
-        <StatusBar style="dark" />
-        <InnerContainer>
-          <PageLogo
-            resizeMode="contain"
-            source={require("./../assets/cropped-logo_new-1.png")}
-          />
-          <PageTitle>Account Login</PageTitle>
-          <Formik
-            initialValues={{ username: "", password: "" }}
-            onSubmit={(values, { setSubmitting }) => {
-              if (values.username == "" || values.password == "") {
-                handleMessage("Please fill out all the fields above.");
-                setSubmitting(false);
-              } else {
-                axios
-                  .post(
-                    "https://up.physicaldiagnosispdx.com/up/app-content/authentication.php",
-                    {
-                      headers: {
-                        Accept: "application/json",
-                        "Content-Type": "application/json",
-                      },
-                      body: JSON.stringify({
-                        username: values.username,
-                        password: values.password,
-                      }),
-                    }
-                  )
-                  .then((response) => {
-                    if (response.data === "Authenticated") {
-                      setSubmitting(false);
-                      navigation.navigate("Main Menu");
-                    } else {
-                      handleMessage(response.data);
-                    }
-                  })
-                  .catch(() => {
-                    console.error(error);
-                    handleMessage(
-                      "An error occurred. Check your network and try again."
-                    );
-                  });
-              }
-            }}
-          >{({handleChange, handleBlur,handleSubmit,values,isSubmitting}) => (
-              <StyledForm>
-                <TextInput
-                  label="Username"
-                  icon="person"
-                  placeholder="username"
-                  placeholderTextColor={placeholder}
-                  onChangeText={handleChange("username")}
-                  onBlur={handleBlur("username")}
-                  value={values.username}
-                  testID="username-input"
-                />
-                <TextInput
-                  label="Password"
-                  icon="lock"
-                  placeholder="********"
-                  placeholderTextColor={placeholder}
-                  onChangeText={handleChange("password")}
-                  onBlur={handleBlur("password")}
-                  value={values.password}
-                  secureTextEntry={hidePassword}
-                  isPassword={true}
-                  hidePassword={hidePassword}
-                  setHidePassword={setHidePassword}
-                  testID="password-input"
-                />
-                <MessageBox testID="msgbox" type={messageType}>{message}</MessageBox>
-                {!isSubmitting && (
-                  <StyledButton testID="loginbutton" onPress={handleSubmit}>
-                    <ButtonText>Login</ButtonText>
-                  </StyledButton>
-                )}
+    const handleMessage = (message, type) => {
+        setMessage(message);
+        setMessageType(type);
+    };
+    return (
+        <KeyboardAvoidWrap>
+            <StyledContainer>
+                <StatusBar style="dark" />
+                <InnerContainer>
+                    <PageLogo
+                        resizeMode="contain"
+                        source={require("./../assets/cropped-logo_new-1.png")}
+                    />
+                    <PageTitle>Account Login</PageTitle>
+                    <Formik
+                        initialValues={{ username: "", password: "" }}
+                        onSubmit={(values, { setSubmitting }) => {
+                            handleMessage(null);
+                            if (values.username == "" || values.password == "") {
+                                handleMessage("Please fill out all the fields above.");
+                                setSubmitting(false);
+                            } else {
+                                axios
+                                .post("https://up.physicaldiagnosispdx.com/up/app-content/authentication.php", { username: values.username, password: values.password })
+                                .then((response) => {
+                                    console.log(values.username);
+                                    console.log(response.data);
+                                    if (response.data === "Authenticated") {
+                                        setSubmitting(false);
+                                        navigation.navigate("Main Menu");
+                                    } else {
+                                        setSubmitting(false);
+                                        handleMessage(response.data);
+                                    }
+                                }).catch(() => {
+                                    console.error(error);
+                                    handleMessage("An error occurred. Check your network and try again.");
+                                });
+                            }
+                        }}
+                    >{({handleChange, handleBlur,handleSubmit,values,isSubmitting}) => (
+                        <StyledForm>
+                            <TextInput
+                                label="Username"
+                                icon="person"
+                                placeholder="username"
+                                placeholderTextColor={placeholder}
+                                onChangeText={handleChange("username")}
+                                onBlur={handleBlur("username")}
+                                value={values.username}
+                                testID="username-input"
+                            />
+                            <TextInput
+                                label="Password"
+                                icon="lock"
+                                placeholder="********"
+                                placeholderTextColor={placeholder}
+                                onChangeText={handleChange("password")}
+                                onBlur={handleBlur("password")}
+                                value={values.password}
+                                secureTextEntry={hidePassword}
+                                isPassword={true}
+                                hidePassword={hidePassword}
+                                setHidePassword={setHidePassword}
+                                testID="password-input"
+                            />
+                            <MessageBox testID="msgbox" type={messageType}>{message}</MessageBox>
+                            {!isSubmitting && (
+                                <StyledButton testID="loginbutton" onPress={handleSubmit}>
+                                    <ButtonText>Login</ButtonText>
+                                </StyledButton>
+                            )}
+
+                            {isSubmitting && (
+                                <StyledButton testID="activitybutton" disabled={true}>
+                                    <ActivityIndicator size="large" color="#ffffff"/>
+                                </StyledButton>
+                            )}
 
                             <Line />
                             <StyledButton testID='wordpress-button' wordpress={true} onPress={handleSubmit}>
@@ -140,7 +135,7 @@ const Login = ({ navigation }) => {
                                     <TextLinkContent>WHILE LOGIN IS FIXED</TextLinkContent>
                                 </TextLink>
                             </ExtraView>
-                            
+                                    
                         </StyledForm>)}
                     </Formik>
                 </InnerContainer>
