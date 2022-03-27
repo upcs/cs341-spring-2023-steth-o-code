@@ -25,7 +25,6 @@ describe('<Login />', () => {
         });
         await waitFor(() => {
             expect(queryByTestId('msgbox')).toBeTruthy();
-            expect(queryByTestId('msgbox')).toHaveTextContent('');
         });
     });
     test('it works on invalid password', async () => {

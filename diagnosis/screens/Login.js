@@ -61,19 +61,25 @@ const Login = ({ navigation }) => {
                                 handleMessage("Please fill out all the fields above.");
                                 setSubmitting(false);
                             } else {
-                                axios
-                                .post("https://up.physicaldiagnosispdx.com/up/app-content/authentication.php", { username: values.username, password: values.password })
-                                .then((response) => {
-                                    console.log(values.username);
-                                    console.log(response.data);
-                                    if (response.data === "Authenticated") {
+                                fetch("https://up.physicaldiagnosispdx.com/up/app-content/authentication.php", {
+                                    method: 'POST', 
+                                    headers: {
+                                        'Accept': 'application/json, text/plain, */*',
+                                        'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify({username: values.username, password: values.password}) 
+                                }).then(
+                                    response => response.text()
+                                ).then(function(data) {
+                                    if(data === "Authenticated"){
                                         setSubmitting(false);
                                         navigation.navigate("Main Menu");
-                                    } else {
-                                        setSubmitting(false);
-                                        handleMessage(response.data);
                                     }
-                                }).catch(() => {
+                                    else{
+                                        setSubmitting(false);
+                                        handleMessage(data);
+                                    }
+                                }).catch(function(error) {  
                                     console.error(error);
                                     handleMessage("An error occurred. Check your network and try again.");
                                 });
