@@ -51,34 +51,34 @@ const Login = ({ navigation }) => {
                     <PageTitle>Account Login</PageTitle>
                     <Formik
                         initialValues={{ username: "", password: "" }}
-                        onSubmit={async (values, { setSubmitting }) => {
+                        onSubmit={(values, { setSubmitting }) => {
                             if(values.username === "" || values.password === ""){
                                 setSubmitting(false);
                                 setMessage("Please fill out all the fields above.");
                             } else {
                                 setMessage(null);
-                                try {
-                                    const data = await axios.post(
-                                        "https://up.physicaldiagnosispdx.com/up/app-content/authentication.php", { 
-                                            username: values.username, 
-                                            password: values.password 
-                                        }
-                                    );
-                                    console.log(data.data);
-                                    if (data.data === "Authenticated") {
+                                axios
+                                .post("https://up.physicaldiagnosispdx.com/up/app-content/authentication.php", {
+                                    username: values.username,
+                                    password: values.password
+                                })
+                                .then(function(data){
+                                    console.log(data);
+                                    if (data === "Authenticated") {
                                         setSubmitting(false);
                                         navigation.navigate("Main Menu");
                                     }
                                     else {
                                         setSubmitting(false);
-                                        setMessage(data.data);
+                                        setMessage(data);
                                         setMessageType("Fail");
                                     }
-                                } catch (error) {
-                                    console.error(error);
+                                })
+                                .catch(function(err) {
+                                    console.log(err);
                                     setMessage("An error occurred. Check your network and try again.");
                                     setMessageType("NetworkError");
-                                }
+                                });
                             } 
                         }}
                     >{({handleChange, handleBlur,handleSubmit,values,isSubmitting}) => (
