@@ -2,8 +2,12 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import {act, fireEvent, render, waitFor} from '@testing-library/react-native';
 import Login from '../screens/Login';
+import axios from 'axios';
 
-jest.mock('axios');
+jest.mock('axios', () => ({
+    ...jest.requireActual('axios'),
+    post: jest.fn()
+}));
 
 const navigation = {
     navigate: jest.fn().mockImplementation(() => Promise.resolve()),
@@ -15,7 +19,7 @@ describe('<Login />', () => {
         expect(tree).toMatchSnapshot();
     }); 
     test('authenticates on valid inputs', async () => {
-        const {queryByTestId, getByTestId} = render(<Login {...navigation}/>);
+        const {queryByTestId, getByTestId} = render(<Login navigation = {navigation}/>);
         const username = queryByTestId('username-input');
         const password = queryByTestId('password-input');
         act(() =>{
@@ -25,6 +29,12 @@ describe('<Login />', () => {
         });
         await waitFor(() => {
             expect(queryByTestId('msgbox')).toBeTruthy();
+            expect(axios.post).toHaveBeenCalledWith("https://up.physicaldiagnosispdx.com/up/app-content/authentication.php", 
+                expect.objectContaining({
+                    username: username,
+                    password: password
+                })
+            );
         });
     });
     test('it works on invalid password', async () => {
@@ -66,4 +76,12 @@ describe('<Login />', () => {
             expect(queryByTestId('msgbox')).toHaveTextContent('Please fill out all the fields above.');
         });
     });
+    test('signup link takes user to signup', () => {
+        const {queryByTestId} = render(<Login navigation={navigation}/>);
+        const signUpLink = queryByTestId('signup-link');
+        act(() =>{
+            fireEvent.press(signUpLink);
+        })
+        expect(navigation.navigate).toHaveBeenCalledWith("SignUp");
+    })
 });

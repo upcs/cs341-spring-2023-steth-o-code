@@ -39,10 +39,6 @@ const Login = ({ navigation }) => {
     const [message, setMessage] = useState("");
     const [messageType, setMessageType] = useState("");
 
-    const handleMessage = (message, type) => {
-        setMessage(message);
-        setMessageType(type);
-    };
     return (
         <KeyboardAvoidWrap>
             <StyledContainer>
@@ -55,35 +51,35 @@ const Login = ({ navigation }) => {
                     <PageTitle>Account Login</PageTitle>
                     <Formik
                         initialValues={{ username: "", password: "" }}
-                        onSubmit={(values, { setSubmitting }) => {
-                            handleMessage(null);
-                            if (values.username == "" || values.password == "") {
-                                handleMessage("Please fill out all the fields above.");
+                        onSubmit={async (values, { setSubmitting }) => {
+                            if(values.username === "" || values.password === ""){
                                 setSubmitting(false);
+                                setMessage("Please fill out all the fields above.");
                             } else {
-                                fetch("https://up.physicaldiagnosispdx.com/up/app-content/authentication.php", {
-                                    method: 'POST', 
-                                    headers: {
-                                        'Accept': 'application/json, text/plain, */*',
-                                        'Content-Type': 'application/json'
-                                    },
-                                    body: JSON.stringify({username: values.username, password: values.password}) 
-                                }).then(
-                                    response => response.text()
-                                ).then(function(data) {
-                                    if(data === "Authenticated"){
+                                setMessage(null);
+                                try {
+                                    const data = await axios.post(
+                                        "https://up.physicaldiagnosispdx.com/up/app-content/authentication.php", { 
+                                            username: values.username, 
+                                            password: values.password 
+                                        }
+                                    );
+                                    console.log(data.data);
+                                    if (data.data === "Authenticated") {
                                         setSubmitting(false);
                                         navigation.navigate("Main Menu");
                                     }
-                                    else{
+                                    else {
                                         setSubmitting(false);
-                                        handleMessage(data);
+                                        setMessage(data.data);
+                                        setMessageType("Fail");
                                     }
-                                }).catch(function(error) {  
+                                } catch (error) {
                                     console.error(error);
-                                    handleMessage("An error occurred. Check your network and try again.");
-                                });
-                            }
+                                    setMessage("An error occurred. Check your network and try again.");
+                                    setMessageType("NetworkError");
+                                }
+                            } 
                         }}
                     >{({handleChange, handleBlur,handleSubmit,values,isSubmitting}) => (
                         <StyledForm>
@@ -131,7 +127,7 @@ const Login = ({ navigation }) => {
                             </StyledButton>
                             <ExtraView>
                                 <ExtraText>Don't have an account? </ExtraText>
-                                <TextLink onPress={() => navigation.navigate("SignUp")}>
+                                <TextLink testID="signup-link" onPress={() => navigation.navigate("SignUp")}>
                                     <TextLinkContent>Signup</TextLinkContent>
                                 </TextLink>
                             </ExtraView>

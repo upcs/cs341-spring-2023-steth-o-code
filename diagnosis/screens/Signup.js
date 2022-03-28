@@ -51,7 +51,7 @@ const Signup = ({navigation}) => {
                     <Formik
                         initialValues={{fullName: '', email: '', username: '', password: '', confirmPassword: ''}}
                         validationSchema={ValidationInputSchema}
-                        onSubmit={() => {setTimeout(() => {navigation.navigate('MainMenu')}, 500)}}
+                        onSubmit={() => {setTimeout(() => {navigation.navigate('Main Menu')}, 500)}}
                     >{({handleChange, handleBlur, handleSubmit, values, touched, errors, isValid, isSubmitting}) => (
                         <StyledForm>
                             <TextInput 

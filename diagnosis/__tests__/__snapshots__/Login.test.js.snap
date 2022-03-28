@@ -185,6 +185,7 @@ exports[`<Login /> renders correctly 1`] = `
                     "opacity": 1,
                   }
                 }
+                testID="signup-link"
               >
                 <Text
                   className="sc-ksdxgE fErdV"
