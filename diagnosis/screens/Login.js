@@ -125,10 +125,7 @@ const Login = ({ navigation }) => {
                             )}
 
                             <Line />
-                            <StyledButton testID='wordpress-button' wordpress={true} onPress={handleSubmit}>
-                                <Fontisto name="wordpress" color={textInputBackground} size={25} />
-                                <ButtonText wordpress={true}>Sign in with Wordpress</ButtonText>
-                            </StyledButton>
+                            
                             <ExtraView>
                                 <ExtraText>Don't have an account? </ExtraText>
                                 <TextLink testID="signup-link" onPress={() => navigation.navigate("SignUp")}>

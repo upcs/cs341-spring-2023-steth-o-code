@@ -66,10 +66,8 @@ describe('<Login />', () => {
     test('it has working buttons w/empty inputs', async () => {
         const {queryByTestId} = render(<Login />);
         const loginbutton = queryByTestId('loginbutton');
-        const wordPressButton = queryByTestId('wordpress-button');
         act(() => {
             fireEvent.press(loginbutton);
-            fireEvent.press(wordPressButton);
         });
         await waitFor(() => {
             expect(queryByTestId('msgbox')).toBeTruthy();
