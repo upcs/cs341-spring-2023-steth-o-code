@@ -16,13 +16,15 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+$_POST = json_decode(array_keys($_POST)[0], true);
+
 //create data parameters for SQL query
 $user_email = $_REQUEST['user_email'];
 $user_login = $_REQUEST['username'];
 $user_password = $_REQUEST['password'];
 
 // create and get SQL query
-$sql = "SELECT * FROM `_SXA_users` WHERE `user_email` LIKE '" . $user_email . "'" . " OR `user_login` LIKE '" . $user_login . "'";
+$sql = "SELECT * FROM `_SXA_users` WHERE `user_email` LIKE '{$user_email}' OR `user_login` LIKE '{$user_login}'";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // if email or username already exists, then sign up is invalid

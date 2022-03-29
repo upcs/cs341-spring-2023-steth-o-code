@@ -240,8 +240,9 @@
 <a name='L175'></a><a href='#L175'>175</a>
 <a name='L176'></a><a href='#L176'>176</a>
 <a name='L177'></a><a href='#L177'>177</a>
-<a name='L178'></a><a href='#L178'>178</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -308,7 +309,9 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -317,6 +320,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -418,9 +422,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState } from "react";
-import { View, Text, ActivityIndicator } from "react-native";
+import { View, ActivityIndicator } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import { StackActions } from "@react-navigation/native";
 //formik
 import { Formik } from "formik";
 &nbsp;
@@ -477,24 +480,27 @@ const Login = ({ navigation }) =&gt; {
                             } else {
                                 setMessage(null);
                                 axios
-                                .post("https://up.physicaldiagnosispdx.com/up/app-content/authentication.php", {
-                                    username: values.username,
-                                    password: values.password
-                                })
+                                .post("https://up.physicaldiagnosispdx.com/up/app-content/authentication.php", JSON.stringify({
+                                    'user': values.username,
+                                    'pass': values.password
+                                }))
                                 .then(<span class="fstat-no" title="function not covered" >fu</span>nction(data){
-<span class="cstat-no" title="statement not covered" >                                    console.log(data);</span>
-<span class="cstat-no" title="statement not covered" >                                    if (data === "Authenticated") {</span>
+<span class="cstat-no" title="statement not covered" >                                    if ((data.data).search("Authenticated") != -1) {</span>
 <span class="cstat-no" title="statement not covered" >                                        setSubmitting(false);</span>
-<span class="cstat-no" title="statement not covered" >                                        navigation.navigate("Main Menu");</span>
+<span class="cstat-no" title="statement not covered" >                                        navigation.navigate("Main Menu", { </span>
+                                            screen: "MainMenu", 
+                                            params: { user: values.username }
+                                        });
                                     }
                                     else {
 <span class="cstat-no" title="statement not covered" >                                        setSubmitting(false);</span>
-<span class="cstat-no" title="statement not covered" >                                        setMessage(data);</span>
+<span class="cstat-no" title="statement not covered" >                                        setMessage(data.data);</span>
 <span class="cstat-no" title="statement not covered" >                                        setMessageType("Fail");</span>
                                     }
                                 })
                                 .catch(<span class="fstat-no" title="function not covered" >fu</span>nction(err) {
 <span class="cstat-no" title="statement not covered" >                                    console.log(err);</span>
+<span class="cstat-no" title="statement not covered" >                                    setSubmitting(false);</span>
 <span class="cstat-no" title="statement not covered" >                                    setMessage("An error occurred. Check your network and try again.");</span>
 <span class="cstat-no" title="statement not covered" >                                    setMessageType("NetworkError");</span>
                                 });
@@ -601,7 +607,7 @@ export default Login;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Sun Mar 27 2022 21:07:10 GMT-0700 (Pacific Daylight Time)
+                at Tue Mar 29 2022 00:14:53 GMT-0700 (Pacific Daylight Time)
             </div>
         <script src="../prettify.js"></script>
         <script>

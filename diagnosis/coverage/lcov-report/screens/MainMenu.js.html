@@ -260,17 +260,16 @@
 <a name='L195'></a><a href='#L195'>195</a>
 <a name='L196'></a><a href='#L196'>196</a>
 <a name='L197'></a><a href='#L197'>197</a>
-<a name='L198'></a><a href='#L198'>198</a>
-<a name='L199'></a><a href='#L199'>199</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L198'></a><a href='#L198'>198</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -282,9 +281,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -302,16 +298,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -460,7 +458,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
-import { Text, View, StyleSheet, Image, TouchableOpacity, Dimensions, useWindowDimensions} from 'react-native';
+import { Text, View, StyleSheet, Image, TouchableOpacity, Dimensions} from 'react-native';
 import { ExtraText } from '../components/SignUpLoginStyles';
 import {Ionicons} from '@expo/vector-icons';
 import { IconButton, Colors } from 'react-native-paper';
@@ -468,11 +466,12 @@ import Constants from 'expo-constants';
 &nbsp;
 const StatusBarHeight = Constants.statusBarHeight;
 &nbsp;
-const MainMenu = ({navigation}) =&gt; (
+const MainMenu = ({ route, navigation }) =&gt; {
+    return(
         &lt;View style={styles.mainContainer}&gt; 
             &lt;Image style={styles.stethoscopeImage} source={require('diagnosis/assets/stethoscope.jpeg')} blurRadius={1}&gt;&lt;/Image&gt;
             &lt;Text style={styles.welcomeText}&gt;Good Morning, {"\n"}
-                User
+                { route.params.user }
             &lt;/Text&gt;
 &nbsp;
             &lt;View style={styles.middleLineLeft}&gt;&lt;/View&gt;
@@ -488,8 +487,8 @@ const MainMenu = ({navigation}) =&gt; (
                     &lt;Text style={styles.buttonText}&gt;Lectures&lt;/Text&gt;
                 &lt;/TouchableOpacity&gt;
 &nbsp;
-                &lt;TouchableOpacity testID='buttonThree' style={styles.quickLinkButtons} onPress={() =&gt; navigation.navigate("Community")}&gt; 
-                    &lt;Text style={styles.buttonText}&gt;Community&lt;/Text&gt;
+                &lt;TouchableOpacity testID='buttonThree' style={styles.quickLinkButtons} onPress={() =&gt; navigation.navigate("Topics")}&gt; 
+                    &lt;Text style={styles.buttonText}&gt;Topics&lt;/Text&gt;
                 &lt;/TouchableOpacity&gt;
 &nbsp;
                 &lt;TouchableOpacity testID='buttonFour' style={styles.quickLinkButtons} onPress={() =&gt; navigation.navigate("TeamInfo")}&gt; 
@@ -503,7 +502,8 @@ const MainMenu = ({navigation}) =&gt; (
             &lt;/View&gt;
         
         &lt;/View&gt;
-);
+    );
+};
 &nbsp;
 // style sheet to keep the enhancements clean and readable
 const styles = StyleSheet.create({
@@ -554,7 +554,7 @@ const styles = StyleSheet.create({
         resizeMode: "stretch",
         position: "absolute",
         width: '100%',
-        height: Dimensions.get('window').height/3,
+        height: '45%',
         aspectRatio: 1,
         top: -60
     },
@@ -562,15 +562,13 @@ const styles = StyleSheet.create({
     welcomeText: {
         position: "absolute",
         color: "white",
-        fontSize: 60,
-        top: 20,
+        fontSize: 50,
+        top: "5%",
         fontWeight: 'bold',
         textAlign: 'center',
-        fontFamily: "Roboto",
         textShadowColor:'#585858',
         textShadowOffset:{width: 5, height: 5},
         textShadowRadius:10,
-        left:10
     },
     
     quickLinksView: {
@@ -578,14 +576,14 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         justifyContent: 'center',
         position: "relative",
-        marginTop: Dimensions.get('window').height*(3/5.5),
-        height: Dimensions.get('window').height*(7/17),
+        marginTop: "50%",
+        height: Dimensions.get('window').height*(15/32),
         marginBottom: 0,
         width: '96%',
         borderRadius: 60,
         borderColor: 'red',
         padding: 10,
-        top: 0,
+        top: '5%',
         alignItems: 'center',
         marginBottom: 40
     },
@@ -620,13 +618,13 @@ const styles = StyleSheet.create({
         borderBottomWidth: 6,
         borderRadius: 12,
         position: 'absolute',
-        left: 20,
-        top: 330
+        left: "5%",
+        top: Dimensions.get('window').height*(5/16)
     },
 &nbsp;
     PDXCenterText: {
         alignContent: "center",
-        top: 260,
+        top: Dimensions.get('window').height*(9/32),
         fontSize: 50,
         color: 'white',
         textShadowColor:'#585858',
@@ -641,13 +639,12 @@ const styles = StyleSheet.create({
         borderBottomWidth: 6,
         borderRadius: 12,
         position: 'absolute',
-        right: 20,
-        top: 330
+        right: "5%",
+        top: Dimensions.get('window').height*(5/16)
     },
 &nbsp;
     buttonText: {
         fontSize: 25,
-        fontFamily: "Roboto",
         fontWeight: "bold",
         color: "white"
     }
@@ -664,7 +661,7 @@ export default MainMenu; // send it off
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed Mar 16 2022 14:51:43 GMT-0700 (Pacific Daylight Time)
+                at Tue Mar 29 2022 00:22:11 GMT-0700 (Pacific Daylight Time)
             </div>
         <script src="../prettify.js"></script>
         <script>
