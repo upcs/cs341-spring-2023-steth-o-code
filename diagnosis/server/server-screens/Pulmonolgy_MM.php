@@ -1,3 +1,4 @@
+
 <?php
 
 $servername = "localhost";
@@ -15,7 +16,7 @@ if ($conn->connect_error) {
 //echo "Connected successfully";
 
 // create and get SQL query
-$sql = "SELECT * FROM `_SXA_posts` WHERE `ID` = 1047";
+$sql = "SELECT * FROM `_SXA_posts` WHERE `ID` = 1805";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
