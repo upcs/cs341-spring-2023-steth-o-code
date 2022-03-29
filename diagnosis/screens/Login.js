@@ -63,10 +63,12 @@ const Login = ({ navigation }) => {
                                 }))
                                 .then(function(data){
                                     if ((data.data).search("Authenticated") != -1) {
+                                        var success = data.data.split(" ");
+                                        let name = success[1];
                                         setSubmitting(false);
                                         navigation.navigate("Main Menu", { 
                                             screen: "MainMenu", 
-                                            params: { user: values.username }
+                                            params: { user: name }
                                         });
                                     }
                                     else {

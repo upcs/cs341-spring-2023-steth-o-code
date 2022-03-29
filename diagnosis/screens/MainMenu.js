@@ -8,11 +8,11 @@ import Constants from 'expo-constants';
 const StatusBarHeight = Constants.statusBarHeight;
 
 const MainMenu = ({ route, navigation }) => {
+    const { user } = route.params;
     return(
         <View style={styles.mainContainer}> 
             <Image style={styles.stethoscopeImage} source={require('diagnosis/assets/stethoscope.jpeg')} blurRadius={1}></Image>
-            <Text style={styles.welcomeText}>Good Morning, {"\n"}
-                { route.params.user }
+            <Text style={styles.welcomeText}>Good Morning, {"\n" + user}
             </Text>
 
             <View style={styles.middleLineLeft}></View>
