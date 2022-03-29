@@ -11,7 +11,8 @@ describe('<MultiMedia/>', () => {
     });
 
     test('button response', async () => {
-        const vidButton = queryByTestId('vidButton');
+        const {getByTestId} = render(<MultiMedia />);
+        const vidButton = getByTestId('vidButton');
         fireEvent.press(vidButton);
         expect(vidButton).toBeTruthy();
     });
