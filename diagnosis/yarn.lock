@@ -9480,6 +9480,11 @@
     "querystringify" "^2.1.1"
     "requires-port" "^1.0.0"
 
+"url-search-params-polyfill@^8.1.1":
+  "integrity" "sha512-KmkCs6SjE6t4ihrfW9JelAPQIIIFbJweaaSLTh/4AO+c58JlDcb+GbdPt8yr5lRcFg4rPswRFRRhBGpWwh0K/Q=="
+  "resolved" "https://registry.npmjs.org/url-search-params-polyfill/-/url-search-params-polyfill-8.1.1.tgz"
+  "version" "8.1.1"
+
 "use-subscription@^1.0.0":
   "integrity" "sha512-Xv2a1P/yReAjAbhylMfFplFKj9GssgTwN7RlcTxBujFQcloStWNDQdc4g4NRWH9xS4i/FDk04vQBptAXoF3VcA=="
   "resolved" "https://registry.npmjs.org/use-subscription/-/use-subscription-1.5.1.tgz"

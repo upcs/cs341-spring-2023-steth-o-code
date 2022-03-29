@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { View, Text, ActivityIndicator } from "react-native";
+import { View, ActivityIndicator } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import { StackActions } from "@react-navigation/native";
 //formik
 import { Formik } from "formik";
 
@@ -58,24 +57,27 @@ const Login = ({ navigation }) => {
                             } else {
                                 setMessage(null);
                                 axios
-                                .post("https://up.physicaldiagnosispdx.com/up/app-content/authentication.php", {
-                                    username: values.username,
-                                    password: values.password
-                                })
+                                .post("https://up.physicaldiagnosispdx.com/up/app-content/authentication.php", JSON.stringify({
+                                    'user': values.username,
+                                    'pass': values.password
+                                }))
                                 .then(function(data){
-                                    console.log(data);
-                                    if (data === "Authenticated") {
+                                    if ((data.data).search("Authenticated") != -1) {
                                         setSubmitting(false);
-                                        navigation.navigate("Main Menu");
+                                        navigation.navigate("Main Menu", { 
+                                            screen: "MainMenu", 
+                                            params: { user: values.username }
+                                        });
                                     }
                                     else {
                                         setSubmitting(false);
-                                        setMessage(data);
+                                        setMessage(data.data);
                                         setMessageType("Fail");
                                     }
                                 })
                                 .catch(function(err) {
                                     console.log(err);
+                                    setSubmitting(false);
                                     setMessage("An error occurred. Check your network and try again.");
                                     setMessageType("NetworkError");
                                 });

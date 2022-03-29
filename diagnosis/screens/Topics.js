@@ -535,7 +535,7 @@ const styles = StyleSheet.create({
     modal: {
         alignItems: 'center',
         left: Dimensions.get('window').width*(3/32),
-        top: Dimensions.get('window').height/8
+        top: Dimensions.get('window').height/4
     },
     popTopicStyle: {
         color: 'black',
