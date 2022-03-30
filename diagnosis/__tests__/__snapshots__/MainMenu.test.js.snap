@@ -77,7 +77,11 @@ exports[`<MainMenu /> renders correctly 1`] = `
           "width": 1,
         },
         "textShadowRadius": 10,
+<<<<<<< HEAD
         "top": 375.1875,
+=======
+        "top": "28%",
+>>>>>>> 7397794eab0869fa1fba59500b1b79803726dd09
       }
     }
   >
@@ -102,15 +106,20 @@ exports[`<MainMenu /> renders correctly 1`] = `
         "alignItems": "center",
         "backgroundColor": "white",
         "borderColor": "red",
+<<<<<<< HEAD
         "borderRadius": 60,
         "height": 625.3125,
+=======
+        "borderRadius": 30,
+        "height": "50%",
+>>>>>>> 7397794eab0869fa1fba59500b1b79803726dd09
         "justifyContent": "center",
-        "marginBottom": 40,
+        "marginBottom": "10%",
         "marginTop": "50%",
         "padding": 10,
         "position": "relative",
         "top": "5%",
-        "width": "96%",
+        "width": "90%",
       }
     }
   >
@@ -147,7 +156,7 @@ exports[`<MainMenu /> renders correctly 1`] = `
           }
         }
       >
-        Knowledge Test
+        Topics
       </Text>
     </View>
     <View
@@ -219,7 +228,7 @@ exports[`<MainMenu /> renders correctly 1`] = `
           }
         }
       >
-        Topics
+        Knowledge Test
       </Text>
     </View>
     <View

@@ -149,7 +149,37 @@
 <a name='L84'></a><a href='#L84'>84</a>
 <a name='L85'></a><a href='#L85'>85</a>
 <a name='L86'></a><a href='#L86'>86</a>
-<a name='L87'></a><a href='#L87'>87</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -235,6 +265,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
 //react navigation
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -245,27 +285,37 @@ import KnowledgeTest from './../screens/KnowledgeTest';
 import AboutUs from './../screens/AboutUs';
 import Community from '../screens/Community';
 import TeamInfo from './../screens/TeamInfo';
+import HO_MM from '../screens/topics-screens/HO_MM';
+import HC_MM from '../screens/topics-screens/HC_MM';
 import MultiMedia from './../screens/Multimedia';
 import Lectures from './../screens/Lectures';
 import Topics from './../screens/Topics';
+import Pulmonolgy_MM from '../screens/topics-screens/Pulmonology_MM';
 import Lecture_JVP from './../screens/Lecture_JVP';
 import Lecture_DR from './../screens/Lecture_DR';
+import Rheumatology_MM from '../screens/topics-screens/Rheumatology_MM';
+import Nails_MM from '../screens/topics-screens/Nails_MM';
 import Lecture_VHD from './../screens/Lecture_VHD';
 import Cardiology_Tutorial from './../screens/topics-screens/Cardiology_Tutorial';
 import Cardiology_MM from './../screens/topics-screens/Cardiology_MM';
 import Endocrinology_Tutorial from './../screens/topics-screens/Endocrinology_Tutorial';
 import Endocrinology_MM from './../screens/topics-screens/Endocrinology_MM';
+import Nephrology_MM from './../screens/topics-screens/Nephrology_MM';
 import ID_Tutorial from '../screens/topics-screens/ID_Tutorial';
 import Neurology_Tutorial from '../screens/topics-screens/Neurology_Tutorial';
 import Gastro_Tutorial from './../screens/topics-screens/Gastro_Tutorial';
 import Nephrology_Tutorial from '../screens/topics-screens/Nephrology_Tutorial';
 import Nails_Tutorial from '../screens/topics-screens/Nails_Tutorial';
 import Rheumatology_Tutorial from '../screens/topics-screens/Rheumatology_Tutorial';
+import Gastro_MM from './../screens/topics-screens/Gastro_MM';
 import HC_Tutorial from '../screens/topics-screens/HC_Tutorial';
+import Misc_MM from '../screens/topics-screens/Misc_MM';
 import HO_Tutorial from '../screens/topics-screens/HO_Tutorial';
 import Pulmonolgy_Tutorial from '../screens/topics-screens/Pulmonolgy';
 import Misc_Tutorial from '../screens/topics-screens/Misc_Tutorial';
 import Books from './../screens/Lectures';
+import ID_MM from './../screens/topics-screens/ID_MM';
+import Neurology_MM from './../screens/topics-screens/Neurology_MM';
 &nbsp;
 import { ScreenStackHeaderLeftView } from 'react-native-screens';
 import { Swipeable } from 'react-native-gesture-handler';
@@ -303,13 +353,23 @@ const StackNavigator = <span class="fstat-no" title="function not covered" >()</
           &lt;Stack.Screen name="Endocrinology_Tutorial" component={Endocrinology_Tutorial}/&gt;
           &lt;Stack.Screen name="Endocrinology_MM" component={Endocrinology_MM}/&gt;
           &lt;Stack.Screen name="Gastro_Tutorial" component={Gastro_Tutorial}/&gt;
+          &lt;Stack.Screen name="Gastro_MM" component={Gastro_MM}/&gt;
           &lt;Stack.Screen name="Neurology_Tutorial" component={Neurology_Tutorial}/&gt;
+          &lt;Stack.Screen name="Neurology_MM" component={Neurology_MM}/&gt;
           &lt;Stack.Screen name="Nails_Tutorial" component={Nails_Tutorial}/&gt;
+          &lt;Stack.Screen name="Nails_MM" component={Nails_MM}/&gt;
           &lt;Stack.Screen name="Nephrology_Tutorial" component={Nephrology_Tutorial}/&gt;
+          &lt;Stack.Screen name="Nephrology_MM" component={Nephrology_MM}/&gt;
           &lt;Stack.Screen name="HO_Tutorial" component={HO_Tutorial}/&gt;
+          &lt;Stack.Screen name="HO_MM" component={HO_MM}/&gt;
           &lt;Stack.Screen name="HC_Tutorial" component={HC_Tutorial}/&gt;
+          &lt;Stack.Screen name="HC_MM" component={HC_MM}/&gt;
           &lt;Stack.Screen name="ID_Tutorial" component={ID_Tutorial}/&gt;
+          &lt;Stack.Screen name="Pulmonolgy_MM" component={Pulmonolgy_MM}/&gt;
+          &lt;Stack.Screen name="ID_MM" component={ID_MM}/&gt;
           &lt;Stack.Screen name="Rheumatology_Tutorial" component={Rheumatology_Tutorial}/&gt;
+          &lt;Stack.Screen name="Rheumatology_MM" component={Rheumatology_MM}/&gt;
+          &lt;Stack.Screen name="Misc_MM" component={Misc_MM}/&gt;
           &lt;Stack.Screen name="Topics" component={Topics}/&gt;
           &lt;Stack.Screen name="Misc_Tutorial" component={Misc_Tutorial}/&gt;
           &lt;Stack.Screen name="Pulmonolgy_Tutorial" component={Pulmonolgy_Tutorial}/&gt;
@@ -328,7 +388,11 @@ export default StackNavigator;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+<<<<<<< HEAD
                 at Sat Mar 26 2022 11:44:54 GMT-0700 (Pacific Daylight Time)
+=======
+                at Tue Mar 29 2022 18:05:12 GMT-0700 (Pacific Daylight Time)
+>>>>>>> 7397794eab0869fa1fba59500b1b79803726dd09
             </div>
         <script src="../../prettify.js"></script>
         <script>

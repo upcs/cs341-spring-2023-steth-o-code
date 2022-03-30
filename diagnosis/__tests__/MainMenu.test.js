@@ -22,7 +22,7 @@ describe('<MainMenu />', () => {
         const buttonOne = queryByTestId('buttonOne');
         expect(buttonOne).toBeTruthy();
         fireEvent.press(buttonOne);
-        expect(navigate).toHaveBeenCalledWith('KnowledgeTest');        
+        expect(navigate).toHaveBeenCalledWith('Topics');        
     });
 
     test('test button 2', function() { // test button two links correctly
@@ -40,7 +40,7 @@ describe('<MainMenu />', () => {
         const buttonThree = queryByTestId('buttonThree');
         expect(buttonThree).toBeTruthy();
         fireEvent.press(buttonThree);
-        expect(navigate).toHaveBeenCalledWith('Topics');        
+        expect(navigate).toHaveBeenCalledWith('KnowledgeTest');        
     });
 
     test('test button 4', function() { // test button four links correctly
