@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         top: '8%',
         width: '95%',
         left: 10,
-        marginBottom: 100
+        marginBottom: "80%"
         
     },
     headerTxt :{
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         backgroundColor: 'red',
         borderRadius: 30,
-        top: '20%', 
+        top: '10%', 
     },
 
     JVPButton2: {
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         backgroundColor: 'red',
         borderRadius: 30,
-        top: '25%',
+        top: '15%',
     },
 
     JVPButton3: {
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         backgroundColor: 'red',
         borderRadius: 30,
-        top: '30%',
+        top: '20%',
     },
 
     buttonText: {
