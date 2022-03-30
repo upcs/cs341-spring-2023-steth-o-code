@@ -39,13 +39,8 @@ const styles = StyleSheet.create({
         top: '9%',
         width: '95%',
         left: 10,
-<<<<<<< HEAD
         marginBottom: 100,
         flex: 1
-=======
-        marginBottom: "80%"
-        
->>>>>>> 7397794eab0869fa1fba59500b1b79803726dd09
     },
     headerTxt :{
         fontSize: 25,
@@ -60,11 +55,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         backgroundColor: 'red',
         borderRadius: 30,
-<<<<<<< HEAD
-        top: '20%'
-=======
         top: '10%', 
->>>>>>> 7397794eab0869fa1fba59500b1b79803726dd09
     },
 
     JVPButton2: {
@@ -73,11 +64,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         backgroundColor: 'red',
         borderRadius: 30,
-<<<<<<< HEAD
-        top: '25%'
-=======
         top: '15%',
->>>>>>> 7397794eab0869fa1fba59500b1b79803726dd09
     },
 
     JVPButton3: {
@@ -86,11 +73,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         backgroundColor: 'red',
         borderRadius: 30,
-<<<<<<< HEAD
-        top: '30%'
-=======
         top: '20%',
->>>>>>> 7397794eab0869fa1fba59500b1b79803726dd09
     },
 
     buttonText: {
