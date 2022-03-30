@@ -67,6 +67,7 @@ const Login = ({ navigation }) => {
                                     }
                                 })
                                 .then(function(data){
+                                    console.log(data);
                                     if ((data.data).search("Authenticated") != -1) {
                                         var success = data.data.split(" ");
                                         let name = success[1];
