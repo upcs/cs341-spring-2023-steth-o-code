@@ -6,7 +6,7 @@ import WebView from 'react-native-webview';
 const KnowledgeTest = () => (
     <WebView 
     javaScriptEnabled={true}
-    source={{uri: 'https://up.physicaldiagnosispdx.com/up/app-content/database_connect.php'}}
+    source={{uri: 'https://up.physicaldiagnosispdx.com/up/app-content/KnowledgeTest.php'}}
     />
 );
 
