@@ -6,13 +6,13 @@ import { IconButton, Colors } from 'react-native-paper';
 import Constants from 'expo-constants';
 
 const StatusBarHeight = Constants.statusBarHeight;
-
-const MainMenu = ({ route, navigation }) => {
+const MainMenu = ({ route, navigation }) => { 
+    var now = new Date();
     const { user } = route.params;
     return(
         <View style={styles.mainContainer}> 
             <Image style={styles.stethoscopeImage} source={require('diagnosis/assets/stethoscope.jpeg')} blurRadius={1}></Image>
-            <Text style={styles.welcomeText}>Good Morning, {"\n" + user}
+            <Text style={styles.welcomeText}>{now.getHours() < 12 ? "Good morning" : (now.getHours() < 18) ? "Good afternoon" : "Good evening"}, {"\n" + user}
             </Text>
 
             <View style={styles.middleLineLeft}></View>

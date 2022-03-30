@@ -55,12 +55,17 @@ const Login = ({ navigation }) => {
                                 setSubmitting(false);
                                 setMessage("Please fill out all the fields above.");
                             } else {
-                                setMessage(null);
+                                setMessage("Processing login.");
                                 axios
                                 .post("https://up.physicaldiagnosispdx.com/up/app-content/authentication.php", JSON.stringify({
                                     'user': values.username,
                                     'pass': values.password
-                                }))
+                                }), { 
+                                    headers: {
+                                        'Accept': 'application/json',
+                                        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                                    }
+                                })
                                 .then(function(data){
                                     if ((data.data).search("Authenticated") != -1) {
                                         var success = data.data.split(" ");
