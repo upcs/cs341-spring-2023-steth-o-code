@@ -40,9 +40,6 @@ import Books from './../screens/Lectures';
 import ID_MM from './../screens/topics-screens/ID_MM';
 import Neurology_MM from './../screens/topics-screens/Neurology_MM';
 
-import { ScreenStackHeaderLeftView } from 'react-native-screens';
-import { Swipeable } from 'react-native-gesture-handler';
-
 const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
@@ -52,7 +49,7 @@ const StackNavigator = () => {
                 headerStyled: {
                     backgroundColor: 'transparent'
                 },
-                headerTintColor: "#FFFFFF", 
+                headerTintColor: "#000000", 
                 headerTransparent: true,
                 headerTitle: '',
                 headerLeftContainerStyle: {
@@ -97,7 +94,6 @@ const StackNavigator = () => {
           <Stack.Screen name="Misc_Tutorial" component={Misc_Tutorial}/>
           <Stack.Screen name="Pulmonolgy_Tutorial" component={Pulmonolgy_Tutorial}/>
           <Stack.Screen name="Books" component={Books}/>
-
           
         </Stack.Navigator>
       
