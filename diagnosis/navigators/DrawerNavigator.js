@@ -264,7 +264,7 @@ const DrawerNavigator = () => {
 function LogoTitle() {
   return (
     <Image
-      style={{ width: 200, height: 60, top: 0, left: Dimensions.get('window').width/20}}
+      style={{ width: 200, height: 60, top: 0, left: 0}}
       source={require('diagnosis/assets/simplePDXLogo.png')}
     />
   );
