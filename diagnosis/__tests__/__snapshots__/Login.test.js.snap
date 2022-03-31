@@ -127,7 +127,7 @@ exports[`<Login /> renders correctly 1`] = `
               testID="loginbutton"
             >
               <Text
-                className="sc-jrQzAO dafyie"
+                className="sc-jrQzAO clQugR"
               >
                 Login
               </Text>
@@ -135,32 +135,6 @@ exports[`<Login /> renders correctly 1`] = `
             <View
               className="sc-iqseJM eaIHBU"
             />
-            <View
-              accessible={true}
-              collapsable={false}
-              focusable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              style={
-                Object {
-                  "opacity": 1,
-                }
-              }
-              testID="wordpress-button"
-            >
-              <Text />
-              <Text
-                className="sc-jrQzAO gGIeVH"
-                wordpress={true}
-              >
-                Sign in with Wordpress
-              </Text>
-            </View>
             <View
               className="sc-crHmcD lcNXni"
             >
