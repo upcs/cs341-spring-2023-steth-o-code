@@ -1176,7 +1176,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1263,9 +1262,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Button, Text, View, StyleSheet, TouchableOpacity, ScrollView} from 'react-native';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState } from "react";
+import { Text, View, StyleSheet, TouchableOpacity, ScrollView, Dimensions } from 'react-native';
 import Modal from "react-native-modal";
-import React, { useState } from "react";
 &nbsp;
 export default function Topics({navigation}){
 &nbsp;
@@ -1332,13 +1332,13 @@ export default function Topics({navigation}){
 &nbsp;
     /* nagivation helper functions */
     const navigateCardioT = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >        setCardio(!isModalCardio);</span>
 <span class="cstat-no" title="statement not covered" >        navigation.navigate("Cardiology_Tutorial");</span>
+<span class="cstat-no" title="statement not covered" >        setCardio(!isModalCardio);</span>
     }   
 &nbsp;
     const navigateCardioMM = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >        setCardio(!isModalCardio);</span>
 <span class="cstat-no" title="statement not covered" >        navigation.navigate("Cardiology_MM");</span>
+<span class="cstat-no" title="statement not covered" >        setCardio(!isModalCardio);</span>
     } 
 &nbsp;
     const navigateEndoT = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
@@ -1465,14 +1465,13 @@ export default function Topics({navigation}){
                         &lt;Text style={styles.buttonText}&gt;Cardiology&lt;/Text&gt;
                     &lt;/TouchableOpacity&gt;
     
-                    &lt;Modal isVisible={isModalCardio} animationIn={'slideInUp'} style={styles.modal}&gt;
+                    &lt;Modal isVisible={isModalCardio} animationIn={'slideInUp'} style={styles.modal} coverScreen={false}&gt;
                         &lt;View style={styles.popView}&gt;
                             &lt;Text style={styles.popTopicStyle}&gt; Cardiology: &lt;/Text&gt;
-&nbsp;
                             &lt;TouchableOpacity style={styles.popButton} onPress={navigateCardioT}&gt;
                                 &lt;Text style={styles.buttonText}&gt;Tutorial&lt;/Text&gt;
                             &lt;/TouchableOpacity&gt;
-&nbsp;
+                            
                             &lt;TouchableOpacity style={styles.popButton} onPress={navigateCardioMM}&gt;
                                 &lt;Text style={styles.buttonText}&gt;Multimedia&lt;/Text&gt;
                             &lt;/TouchableOpacity&gt;
@@ -1488,7 +1487,7 @@ export default function Topics({navigation}){
                         &lt;Text style={styles.buttonText}&gt;Endocrinology&lt;/Text&gt;
                     &lt;/TouchableOpacity&gt;
 &nbsp;
-                    &lt;Modal isVisible={isModalEndo} animationIn={'slideInUp'} style={styles.modal}&gt;
+                    &lt;Modal isVisible={isModalEndo} animationIn={'slideInUp'} style={styles.modal} coverScreen={false}&gt;
                         &lt;View style={styles.popView}&gt;
                             &lt;Text style={styles.popTopicStyle}&gt; Endocrinology: &lt;/Text&gt;
 &nbsp;
@@ -1513,7 +1512,7 @@ export default function Topics({navigation}){
                         &lt;Text style={styles.buttonText}&gt;Gastroenterology&lt;/Text&gt;
                     &lt;/TouchableOpacity&gt;
 &nbsp;
-                    &lt;Modal isVisible={isModalGastro} animationIn={'slideInUp'} style={styles.modal}&gt;
+                    &lt;Modal isVisible={isModalGastro} animationIn={'slideInUp'} style={styles.modal} coverScreen={false}&gt;
                         &lt;View style={styles.popView}&gt;
                             &lt;Text style={styles.popTopicStyle}&gt; Gastroenterology: &lt;/Text&gt;
 &nbsp;
@@ -1539,7 +1538,7 @@ export default function Topics({navigation}){
                         &lt;Text style={styles.buttonText}&gt;Infectious Disease&lt;/Text&gt;
                     &lt;/TouchableOpacity&gt;
 &nbsp;
-                    &lt;Modal isVisible={isModalID} animationIn={'slideInUp'} style={styles.modal}&gt;
+                    &lt;Modal isVisible={isModalID} animationIn={'slideInUp'} style={styles.modal} coverScreen={false}&gt;
                         &lt;View style={styles.popView}&gt;
                             &lt;Text style={styles.popTopicStyle}&gt; Infectious Disease: &lt;/Text&gt;
 &nbsp;
@@ -1565,7 +1564,7 @@ export default function Topics({navigation}){
                         &lt;Text style={styles.buttonText}&gt;Neurology&lt;/Text&gt;
                     &lt;/TouchableOpacity&gt;
 &nbsp;
-                    &lt;Modal isVisible={isModalNeuro} animationIn={'slideInUp'} style={styles.modal}&gt;
+                    &lt;Modal isVisible={isModalNeuro} animationIn={'slideInUp'} style={styles.modal} coverScreen={false}&gt;
                         &lt;View style={styles.popView}&gt;
                             &lt;Text style={styles.popTopicStyle}&gt; Neurology: &lt;/Text&gt;
 &nbsp;
@@ -1592,7 +1591,7 @@ export default function Topics({navigation}){
                         &lt;Text style={styles.buttonText}&gt;Nephrology&lt;/Text&gt;
                     &lt;/TouchableOpacity&gt;
 &nbsp;
-                    &lt;Modal isVisible={isModalNephro} animationIn={'slideInUp'} style={styles.modal}&gt;
+                    &lt;Modal isVisible={isModalNephro} animationIn={'slideInUp'} style={styles.modal} coverScreen={false}&gt;
                         &lt;View style={styles.popView}&gt;
                             &lt;Text style={styles.popTopicStyle}&gt; Nephrology: &lt;/Text&gt;
 &nbsp;
@@ -1618,7 +1617,7 @@ export default function Topics({navigation}){
                         &lt;Text style={styles.buttonText}&gt;Nails&lt;/Text&gt;
                     &lt;/TouchableOpacity&gt;
 &nbsp;
-                    &lt;Modal isVisible={isModalNails} animationIn={'slideInUp'} style={styles.modal}&gt;
+                    &lt;Modal isVisible={isModalNails} animationIn={'slideInUp'} style={styles.modal} coverScreen={false}&gt;
                         &lt;View style={styles.popView}&gt;
                             &lt;Text style={styles.popTopicStyle}&gt; Nails: &lt;/Text&gt;
 &nbsp;
@@ -1643,7 +1642,7 @@ export default function Topics({navigation}){
                         &lt;Text style={styles.buttonText}&gt;Rheumatology&lt;/Text&gt;
                     &lt;/TouchableOpacity&gt;
 &nbsp;
-                    &lt;Modal isVisible={isModalRheu} animationIn={'slideInUp'} style={styles.modal}&gt;
+                    &lt;Modal isVisible={isModalRheu} animationIn={'slideInUp'} style={styles.modal} coverScreen={false}&gt;
                         &lt;View style={styles.popView}&gt;
                             &lt;Text style={styles.popTopicStyle}&gt; Rheumatology: &lt;/Text&gt;
 &nbsp;
@@ -1669,7 +1668,7 @@ export default function Topics({navigation}){
                         &lt;Text style={styles.buttonText}&gt;Hematolgy-Oncology&lt;/Text&gt;
                     &lt;/TouchableOpacity&gt;
 &nbsp;
-                    &lt;Modal isVisible={isModalHO} animationIn={'slideInUp'} style={styles.modal}&gt;
+                    &lt;Modal isVisible={isModalHO} animationIn={'slideInUp'} style={styles.modal} coverScreen={false}&gt;
                         &lt;View style={styles.popView}&gt;
                             &lt;Text style={styles.popTopicBig}&gt; Hematolgy-Oncology: &lt;/Text&gt;
 &nbsp;
@@ -1693,12 +1692,12 @@ export default function Topics({navigation}){
 &nbsp;
     
                     &lt;TouchableOpacity style={styles.button} onPress={toggleModalHC}&gt;
-                        &lt;Text style={styles.buttonText}&gt;Heridatary Conditions&lt;/Text&gt;
+                        &lt;Text style={styles.buttonText}&gt;Hereditary Conditions&lt;/Text&gt;
                     &lt;/TouchableOpacity&gt;
 &nbsp;
-                    &lt;Modal isVisible={isModalHC} animationIn={'slideInUp'} style={styles.modal}&gt;
+                    &lt;Modal isVisible={isModalHC} animationIn={'slideInUp'} style={styles.modal} coverScreen={false}&gt;
                         &lt;View style={styles.popView}&gt;
-                            &lt;Text style={styles.popTopicBig}&gt; Heridatary Conditions: &lt;/Text&gt;
+                            &lt;Text style={styles.popTopicBig}&gt; Hereditary Conditions: &lt;/Text&gt;
 &nbsp;
                             &lt;TouchableOpacity style={styles.popButton} onPress={navigateHCT}&gt;
                                 &lt;Text style={styles.buttonText}&gt;Tutorial&lt;/Text&gt;
@@ -1721,7 +1720,7 @@ export default function Topics({navigation}){
                         &lt;Text style={styles.buttonText}&gt;Pulmonolgy&lt;/Text&gt;
                     &lt;/TouchableOpacity&gt;
 &nbsp;
-                    &lt;Modal isVisible={isModalPulm} animationIn={'slideInUp'} style={styles.modal}&gt;
+                    &lt;Modal isVisible={isModalPulm} animationIn={'slideInUp'} style={styles.modal} coverScreen={false}&gt;
                         &lt;View style={styles.popView}&gt;
                             &lt;Text style={styles.popTopicStyle}&gt; Pulmonolgy: &lt;/Text&gt;
 &nbsp;
@@ -1743,12 +1742,12 @@ export default function Topics({navigation}){
 &nbsp;
     
                     &lt;TouchableOpacity style={styles.button} onPress={toggleModalMisc}&gt;
-                        &lt;Text style={styles.buttonText}&gt;Miscllaneous&lt;/Text&gt;
+                        &lt;Text style={styles.buttonText}&gt;Miscellaneous&lt;/Text&gt;
                     &lt;/TouchableOpacity&gt;
 &nbsp;
-                    &lt;Modal isVisible={isModalMisc} animationIn={'slideInUp'} style={styles.modal}&gt;
+                    &lt;Modal isVisible={isModalMisc} animationIn={'slideInUp'} style={styles.modal} coverScreen={false}&gt;
                         &lt;View style={styles.popView}&gt;
-                            &lt;Text style={styles.popTopicStyle}&gt; Miscllaneous: &lt;/Text&gt;
+                            &lt;Text style={styles.popTopicStyle}&gt; Miscellaneous: &lt;/Text&gt;
 &nbsp;
                             &lt;TouchableOpacity style={styles.popButton} onPress={navigateMiscT}&gt;
                                 &lt;Text style={styles.buttonText}&gt;Tutorial&lt;/Text&gt;
@@ -1799,8 +1798,9 @@ const styles = StyleSheet.create({
         color: 'white'
     },
     modal: {
-        alignItems: 'center', 
-        top: 400
+        alignItems: 'center',
+        left: Dimensions.get('window').width*(3/32),
+        top: Dimensions.get('window').height/4
     },
     popTopicStyle: {
         color: 'black',
@@ -1870,7 +1870,7 @@ const styles = StyleSheet.create({
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed Mar 30 2022 18:04:34 GMT-0700 (Pacific Daylight Time)
+                at Wed Mar 30 2022 20:44:03 GMT-0700 (Pacific Daylight Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>

@@ -51,6 +51,7 @@ exports[`<Books /> renders correctly 1`] = `
             "opacity": 1,
           }
         }
+        testID="book1"
       >
         <Image
           source={
@@ -66,7 +67,6 @@ exports[`<Books /> renders correctly 1`] = `
               "width": 228,
             }
           }
-          testID="book1"
         />
       </View>
       <View

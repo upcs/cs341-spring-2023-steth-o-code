@@ -3,7 +3,7 @@ import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { AntDesign } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
-import { StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Image, TouchableOpacity, Dimensions } from 'react-native';
 
 import KnowledgeTest from '../screens/KnowledgeTest';
 import TeamInfo from '../screens/TeamInfo';
@@ -264,7 +264,7 @@ const DrawerNavigator = () => {
 function LogoTitle() {
   return (
     <Image
-      style={{ width: 200, height: 60, top: 0 }}
+      style={{ width: 200, height: 60, top: 0, left: 0}}
       source={require('diagnosis/assets/simplePDXLogo.png')}
     />
   );

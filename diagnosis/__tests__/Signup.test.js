@@ -28,7 +28,7 @@ describe('<Signup />', () => {
             expect(queryByTestId('match-password-error')).toBeNull();
         });
     });
-    test('it sumbits w/input validation', async () => {
+    test('it submits w/input validation', async () => {
         const {queryByTestId} = render(<Signup />);
         const signUpButton = queryByTestId('signup-button');
         act(() => {

@@ -1,6 +1,6 @@
-import { Button, Text, View, StyleSheet, TouchableOpacity, ScrollView} from 'react-native';
-import Modal from "react-native-modal";
 import React, { useState } from "react";
+import { Text, View, StyleSheet, TouchableOpacity, ScrollView, Dimensions } from 'react-native';
+import Modal from "react-native-modal";
 
 export default function Topics({navigation}){
 
@@ -67,13 +67,13 @@ export default function Topics({navigation}){
 
     /* nagivation helper functions */
     const navigateCardioT = () => {
-        setCardio(!isModalCardio);
         navigation.navigate("Cardiology_Tutorial");
+        setCardio(!isModalCardio);
     }   
 
     const navigateCardioMM = () => {
-        setCardio(!isModalCardio);
         navigation.navigate("Cardiology_MM");
+        setCardio(!isModalCardio);
     } 
 
     const navigateEndoT = () => {
@@ -203,11 +203,10 @@ export default function Topics({navigation}){
                     <Modal isVisible={isModalCardio} animationIn={'slideInUp'} style={styles.modal}>
                         <View style={styles.popView}>
                             <Text style={styles.popTopicStyle}> Cardiology: </Text>
-
                             <TouchableOpacity style={styles.popButton} onPress={navigateCardioT}>
                                 <Text style={styles.buttonText}>Tutorial</Text>
                             </TouchableOpacity>
-
+                            
                             <TouchableOpacity style={styles.popButton} onPress={navigateCardioMM}>
                                 <Text style={styles.buttonText}>Multimedia</Text>
                             </TouchableOpacity>
@@ -428,12 +427,12 @@ export default function Topics({navigation}){
 
     
                     <TouchableOpacity style={styles.button} onPress={toggleModalHC}>
-                        <Text style={styles.buttonText}>Heridatary Conditions</Text>
+                        <Text style={styles.buttonText}>Hereditary Conditions</Text>
                     </TouchableOpacity>
 
                     <Modal isVisible={isModalHC} animationIn={'slideInUp'} style={styles.modal}>
                         <View style={styles.popView}>
-                            <Text style={styles.popTopicBig}> Heridatary Conditions: </Text>
+                            <Text style={styles.popTopicBig}> Hereditary Conditions: </Text>
 
                             <TouchableOpacity style={styles.popButton} onPress={navigateHCT}>
                                 <Text style={styles.buttonText}>Tutorial</Text>
@@ -478,12 +477,12 @@ export default function Topics({navigation}){
 
     
                     <TouchableOpacity style={styles.button} onPress={toggleModalMisc}>
-                        <Text style={styles.buttonText}>Miscllaneous</Text>
+                        <Text style={styles.buttonText}>Miscellaneous</Text>
                     </TouchableOpacity>
 
                     <Modal isVisible={isModalMisc} animationIn={'slideInUp'} style={styles.modal}>
                         <View style={styles.popView}>
-                            <Text style={styles.popTopicStyle}> Miscllaneous: </Text>
+                            <Text style={styles.popTopicStyle}> Miscellaneous: </Text>
 
                             <TouchableOpacity style={styles.popButton} onPress={navigateMiscT}>
                                 <Text style={styles.buttonText}>Tutorial</Text>

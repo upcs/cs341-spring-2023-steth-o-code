@@ -8,7 +8,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "test": "jest -u && codecov"
+    "test": "jest -u"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
@@ -54,6 +54,7 @@
     "react-native-webview": "11.15.0",
     "react-test-renderer": "^17.0.2",
     "styled-components": "^5.3.3",
+    "url-search-params-polyfill": "^8.1.1",
     "yup": "^0.32.11"
   },
   "devDependencies": {

@@ -2,26 +2,15 @@
  * Test for Topics
  */
 
- import React from 'react';
- import {act, fireEvent, render, waitFor} from '@testing-library/react-native';
- import renderer from 'react-test-renderer';
- import Topics from '../screens/Topics';
+import React from 'react';
+import renderer from 'react-test-renderer';
+import Topics from '../screens/Topics';
 import { Linking } from 'react-native';
-import MainMenu from '../screens/MainMenu';
-import KnowledgeTest from './../screens/KnowledgeTest';
-import AboutUs from './../screens/AboutUs';
-import Community from '../screens/Community';
-import TeamInfo from './../screens/TeamInfo';
 import HO_MM from '../screens/topics-screens/HO_MM';
 import HC_MM from '../screens/topics-screens/HC_MM';
-import MultiMedia from './../screens/Multimedia';
-import Lectures from './../screens/Lectures';
 import Pulmonolgy_MM from '../screens/topics-screens/Pulmonology_MM';
-import Lecture_JVP from './../screens/Lecture_JVP';
-import Lecture_DR from './../screens/Lecture_DR';
 import Rheumatology_MM from '../screens/topics-screens/Rheumatology_MM';
 import Nails_MM from '../screens/topics-screens/Nails_MM';
-import Lecture_VHD from './../screens/Lecture_VHD';
 import Cardiology_Tutorial from './../screens/topics-screens/Cardiology_Tutorial';
 import Cardiology_MM from './../screens/topics-screens/Cardiology_MM';
 import Endocrinology_Tutorial from './../screens/topics-screens/Endocrinology_Tutorial';
@@ -33,13 +22,11 @@ import Gastro_Tutorial from './../screens/topics-screens/Gastro_Tutorial';
 import Nephrology_Tutorial from '../screens/topics-screens/Nephrology_Tutorial';
 import Nails_Tutorial from '../screens/topics-screens/Nails_Tutorial';
 import Rheumatology_Tutorial from '../screens/topics-screens/Rheumatology_Tutorial';
-import Gastro_MM from './../screens/topics-screens/Gastro_MM';
 import HC_Tutorial from '../screens/topics-screens/HC_Tutorial';
 import Misc_MM from '../screens/topics-screens/Misc_MM';
 import HO_Tutorial from '../screens/topics-screens/HO_Tutorial';
 import Pulmonolgy_Tutorial from '../screens/topics-screens/Pulmonolgy';
 import Misc_Tutorial from '../screens/topics-screens/Misc_Tutorial';
-import Books from './../screens/Lectures';
 import ID_MM from './../screens/topics-screens/ID_MM';
 import Neurology_MM from './../screens/topics-screens/Neurology_MM';
 

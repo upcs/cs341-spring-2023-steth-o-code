@@ -45,10 +45,10 @@ exports[`<MainMenu /> renders correctly 1`] = `
       }
     }
   >
-    Good Morning, 
+    Good evening
+    , 
     
-
-    User
+up_admin
   </Text>
   <View
     style={
@@ -58,7 +58,7 @@ exports[`<MainMenu /> renders correctly 1`] = `
         "borderRadius": 12,
         "left": "5%",
         "position": "absolute",
-        "top": "37%",
+        "top": 433.55,
         "width": 100,
       }
     }
@@ -91,7 +91,7 @@ exports[`<MainMenu /> renders correctly 1`] = `
         "borderRadius": 12,
         "position": "absolute",
         "right": "5%",
-        "top": "37%",
+        "top": 433.55,
         "width": 100,
       }
     }

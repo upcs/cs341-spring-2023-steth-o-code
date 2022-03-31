@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { View, Text, ActivityIndicator } from "react-native";
+import { View, ActivityIndicator } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import { StackActions } from "@react-navigation/native";
 //formik
 import { Formik } from "formik";
 
@@ -35,102 +34,107 @@ const { company, placeholder, textInputBackground } = Colors;
 import KeyboardAvoidWrap from "../components/KeyboardAvoidWrap";
 
 const Login = ({ navigation }) => {
-  const [hidePassword, setHidePassword] = useState(true);
-  const [message, setMessage] = useState("");
-  const [messageType, setMessageType] = useState("");
+    const [hidePassword, setHidePassword] = useState(true);
+    const [message, setMessage] = useState("");
+    const [messageType, setMessageType] = useState("");
 
-  const handleMessage = (message, type) => {
-    setMessage(message);
-    setMessageType(type);
-  };
-  return (
-    <KeyboardAvoidWrap>
-      <StyledContainer>
-        <StatusBar style="dark" />
-        <InnerContainer>
-          <PageLogo
-            resizeMode="contain"
-            source={require("./../assets/cropped-logo_new-1.png")}
-          />
-          <PageTitle>Account Login</PageTitle>
-          <Formik
-            initialValues={{ username: "", password: "" }}
-            onSubmit={(values, { setSubmitting }) => {
-              if (values.username == "" || values.password == "") {
-                handleMessage("Please fill out all the fields above.");
-                setSubmitting(false);
-              } else {
-                axios
-                  .post(
-                    "https://up.physicaldiagnosispdx.com/up/app-content/authentication.php",
-                    {
-                      headers: {
-                        Accept: "application/json",
-                        "Content-Type": "application/json",
-                      },
-                      body: JSON.stringify({
-                        username: values.username,
-                        password: values.password,
-                      }),
-                    }
-                  )
-                  .then((response) => {
-                    if (response.data === "Authenticated") {
-                      setSubmitting(false);
-                      navigation.navigate("Main Menu");
-                    } else {
-                      handleMessage(response.data);
-                    }
-                  })
-                  .catch(() => {
-                    console.error(error);
-                    handleMessage(
-                      "An error occurred. Check your network and try again."
-                    );
-                  });
-              }
-            }}
-          >{({handleChange, handleBlur,handleSubmit,values,isSubmitting}) => (
-              <StyledForm>
-                <TextInput
-                  label="Username"
-                  icon="person"
-                  placeholder="username"
-                  placeholderTextColor={placeholder}
-                  onChangeText={handleChange("username")}
-                  onBlur={handleBlur("username")}
-                  value={values.username}
-                  testID="username-input"
-                />
-                <TextInput
-                  label="Password"
-                  icon="lock"
-                  placeholder="********"
-                  placeholderTextColor={placeholder}
-                  onChangeText={handleChange("password")}
-                  onBlur={handleBlur("password")}
-                  value={values.password}
-                  secureTextEntry={hidePassword}
-                  isPassword={true}
-                  hidePassword={hidePassword}
-                  setHidePassword={setHidePassword}
-                  testID="password-input"
-                />
-                <MessageBox testID="msgbox" type={messageType}>{message}</MessageBox>
-                {!isSubmitting && (
-                  <StyledButton testID="loginbutton" onPress={handleSubmit}>
-                    <ButtonText>Login</ButtonText>
-                  </StyledButton>
-                )}
+    return (
+        <KeyboardAvoidWrap>
+            <StyledContainer>
+                <StatusBar style="dark" />
+                <InnerContainer>
+                    <PageLogo
+                        resizeMode="contain"
+                        source={require("./../assets/cropped-logo_new-1.png")}
+                    />
+                    <PageTitle>Account Login</PageTitle>
+                    <Formik
+                        initialValues={{ username: "", password: "" }}
+                        onSubmit={(values, { setSubmitting }) => {
+                            if(values.username === "" || values.password === ""){
+                                setSubmitting(false);
+                                setMessage("Please fill out all the fields above.");
+                            } else {
+                                setMessage("Processing login.");
+                                axios
+                                .post("https://up.physicaldiagnosispdx.com/up/app-content/authentication.php", JSON.stringify({
+                                    'user': values.username,
+                                    'pass': values.password
+                                }), { 
+                                    headers: {
+                                        'Accept': 'application/json',
+                                        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                                    }
+                                })
+                                .then(function(data){
+                                    console.log(data);
+                                    if ((data.data).search("Authenticated") != -1) {
+                                        var success = data.data.split(" ");
+                                        let name = success[1];
+                                        setSubmitting(false);
+                                        navigation.navigate("Main Menu", { 
+                                            screen: "MainMenu", 
+                                            params: { user: name }
+                                        });
+                                    }
+                                    else {
+                                        setSubmitting(false);
+                                        setMessage(data.data);
+                                        setMessageType("Fail");
+                                    }
+                                })
+                                .catch(function(err) {
+                                    console.log(err);
+                                    setSubmitting(false);
+                                    setMessage("An error occurred. Check your network and try again.");
+                                    setMessageType("NetworkError");
+                                });
+                            } 
+                        }}
+                    >{({handleChange, handleBlur,handleSubmit,values,isSubmitting}) => (
+                        <StyledForm>
+                            <TextInput
+                                label="Username"
+                                icon="person"
+                                placeholder="username"
+                                placeholderTextColor={placeholder}
+                                onChangeText={handleChange("username")}
+                                onBlur={handleBlur("username")}
+                                value={values.username}
+                                testID="username-input"
+                            />
+                            <TextInput
+                                label="Password"
+                                icon="lock"
+                                placeholder="********"
+                                placeholderTextColor={placeholder}
+                                onChangeText={handleChange("password")}
+                                onBlur={handleBlur("password")}
+                                value={values.password}
+                                secureTextEntry={hidePassword}
+                                isPassword={true}
+                                hidePassword={hidePassword}
+                                setHidePassword={setHidePassword}
+                                testID="password-input"
+                            />
+                            <MessageBox testID="msgbox" type={messageType}>{message}</MessageBox>
+                            {!isSubmitting && (
+                                <StyledButton testID="loginbutton" onPress={handleSubmit}>
+                                    <ButtonText>Login</ButtonText>
+                                </StyledButton>
+                            )}
+
+                            {isSubmitting && (
+                                <StyledButton testID="activitybutton" disabled={true}>
+                                    <ActivityIndicator size="large" color="#ffffff"/>
+                                </StyledButton>
+                            )}
 
                             <Line />
-                            <StyledButton testID='wordpress-button' wordpress={true} onPress={handleSubmit}>
-                                <Fontisto name="wordpress" color={textInputBackground} size={25} />
-                                <ButtonText wordpress={true}>Sign in with Wordpress</ButtonText>
-                            </StyledButton>
+                            
                             <ExtraView>
                                 <ExtraText>Don't have an account? </ExtraText>
-                                <TextLink onPress={() => navigation.navigate("SignUp")}>
+                                <TextLink testID="signup-link" onPress={() => navigation.navigate("SignUp")}>
                                     <TextLinkContent>Signup</TextLinkContent>
                                 </TextLink>
                             </ExtraView>
@@ -140,7 +144,7 @@ const Login = ({ navigation }) => {
                                     <TextLinkContent>WHILE LOGIN IS FIXED</TextLinkContent>
                                 </TextLink>
                             </ExtraView>
-                            
+                                    
                         </StyledForm>)}
                     </Formik>
                 </InnerContainer>
