@@ -19,7 +19,7 @@ exports[`<MainMenu /> renders correctly 1`] = `
     style={
       Object {
         "aspectRatio": 1,
-        "height": "45%",
+        "height": "40%",
         "position": "absolute",
         "resizeMode": "stretch",
         "top": -60,
@@ -58,7 +58,7 @@ up_admin
         "borderRadius": 12,
         "left": "5%",
         "position": "absolute",
-        "top": 416.875,
+        "top": 433.55,
         "width": 100,
       }
     }
@@ -91,7 +91,7 @@ up_admin
         "borderRadius": 12,
         "position": "absolute",
         "right": "5%",
-        "top": 416.875,
+        "top": 433.55,
         "width": 100,
       }
     }

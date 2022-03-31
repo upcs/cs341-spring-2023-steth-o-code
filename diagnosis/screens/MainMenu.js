@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
         //backgroundColor: 'red',
         width: 200,
         top: StatusBarHeight-100,
-        left: Dimensions.get('window').width / 4,
+        left: Dimensions.get('window').width/4,
         flex: 1,
     },
 
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
         resizeMode: "stretch",
         position: "absolute",
         width: '100%',
-        height: '45%',
+        height: '40%',
         aspectRatio: 1,
         top: -60
     },
@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         position: 'absolute',
         left: "5%",
-        top: Dimensions.get('window').height*(5/16)
+        top: Dimensions.get('window').height*(5.2/16)
     },
 
     PDXCenterText: {
@@ -180,7 +180,7 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         position: 'absolute',
         right: "5%",
-        top: Dimensions.get('window').height*(5/16)
+        top: Dimensions.get('window').height*(5.2/16)
     },
 
     buttonText: {
