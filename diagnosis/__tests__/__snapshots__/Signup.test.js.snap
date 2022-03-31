@@ -199,7 +199,7 @@ exports[`<Signup /> has 1 child 1`] = `
               testID="signup-button"
             >
               <Text
-                className="sc-jrQzAO dafyie"
+                className="sc-jrQzAO clQugR"
               >
                 Sign Up
               </Text>

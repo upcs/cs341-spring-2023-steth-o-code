@@ -2116,7 +2116,7 @@ exports[`<Topics /> renders correctly 1`] = `
             }
           }
         >
-          Heridatary Conditions
+          Hereditary Conditions
         </Text>
       </View>
       <Modal
@@ -2240,7 +2240,7 @@ exports[`<Topics /> renders correctly 1`] = `
             }
           }
         >
-          Miscllaneous
+          Miscellaneous
         </Text>
       </View>
       <Modal

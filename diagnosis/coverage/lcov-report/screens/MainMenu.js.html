@@ -257,11 +257,28 @@
 <a name='L192'></a><a href='#L192'>192</a>
 <a name='L193'></a><a href='#L193'>193</a>
 <a name='L194'></a><a href='#L194'>194</a>
+<<<<<<< HEAD
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+=======
 <a name='L195'></a><a href='#L195'>195</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+>>>>>>> 7397794eab0869fa1fba59500b1b79803726dd09
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<<<<<<< HEAD
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+=======
+>>>>>>> 7397794eab0869fa1fba59500b1b79803726dd09
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -274,6 +291,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<<<<<<< HEAD
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+=======
+>>>>>>> 7397794eab0869fa1fba59500b1b79803726dd09
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -300,9 +322,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<<<<<<< HEAD
+=======
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+>>>>>>> 7397794eab0869fa1fba59500b1b79803726dd09
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -452,7 +478,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
-import { Text, View, StyleSheet, Image, TouchableOpacity, Dimensions, useWindowDimensions} from 'react-native';
+import { Text, View, StyleSheet, Image, TouchableOpacity, Dimensions} from 'react-native';
 import { ExtraText } from '../components/SignUpLoginStyles';
 import {Ionicons} from '@expo/vector-icons';
 import { IconButton, Colors } from 'react-native-paper';
@@ -460,11 +486,17 @@ import Constants from 'expo-constants';
 &nbsp;
 const StatusBarHeight = Constants.statusBarHeight;
 &nbsp;
+<<<<<<< HEAD
+const MainMenu = ({ route, navigation }) =&gt; {
+    return(
+        &lt;View style={styles.mainContainer}&gt; 
+=======
 const MainMenu = <span class="fstat-no" title="function not covered" >({</span>navigation}) =&gt; (
 <span class="cstat-no" title="statement not covered" >        &lt;View style={styles.mainContainer}&gt; </span>
+>>>>>>> 7397794eab0869fa1fba59500b1b79803726dd09
             &lt;Image style={styles.stethoscopeImage} source={require('diagnosis/assets/stethoscope.jpeg')} blurRadius={1}&gt;&lt;/Image&gt;
             &lt;Text style={styles.welcomeText}&gt;Good Morning, {"\n"}
-                User
+                { route.params.user }
             &lt;/Text&gt;
 &nbsp;
             &lt;View style={styles.middleLineLeft}&gt;&lt;/View&gt;
@@ -480,8 +512,13 @@ const MainMenu = <span class="fstat-no" title="function not covered" >({</span>n
                     &lt;Text style={styles.buttonText}&gt;Lectures&lt;/Text&gt;
                 &lt;/TouchableOpacity&gt;
 &nbsp;
+<<<<<<< HEAD
+                &lt;TouchableOpacity testID='buttonThree' style={styles.quickLinkButtons} onPress={() =&gt; navigation.navigate("Topics")}&gt; 
+                    &lt;Text style={styles.buttonText}&gt;Topics&lt;/Text&gt;
+=======
                 &lt;TouchableOpacity testID='buttonThree' style={styles.quickLinkButtons} onPress={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >navigation.navigate("KnowledgeTest")}</span>&gt; 
                     &lt;Text style={styles.buttonText}&gt;Knowledge Test&lt;/Text&gt;
+>>>>>>> 7397794eab0869fa1fba59500b1b79803726dd09
                 &lt;/TouchableOpacity&gt;
 &nbsp;
                 &lt;TouchableOpacity testID='buttonFour' style={styles.quickLinkButtons} onPress={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >navigation.navigate("TeamInfo")}</span>&gt; 
@@ -495,7 +532,8 @@ const MainMenu = <span class="fstat-no" title="function not covered" >({</span>n
             &lt;/View&gt;
         
         &lt;/View&gt;
-);
+    );
+};
 &nbsp;
 // style sheet to keep the enhancements clean and readable
 const styles = StyleSheet.create({
@@ -546,7 +584,11 @@ const styles = StyleSheet.create({
         resizeMode: "stretch",
         position: "absolute",
         width: '100%',
+<<<<<<< HEAD
+        height: '45%',
+=======
         height: '40%',
+>>>>>>> 7397794eab0869fa1fba59500b1b79803726dd09
         aspectRatio: 1,
         top: -60
     },
@@ -569,9 +611,16 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         position: "relative",
         marginTop: "50%",
+<<<<<<< HEAD
+        height: Dimensions.get('window').height*(15/32),
+        marginBottom: 0,
+        width: '96%',
+        borderRadius: 60,
+=======
         height:"50%",
         width: '90%',
         borderRadius: 30,
+>>>>>>> 7397794eab0869fa1fba59500b1b79803726dd09
         borderColor: 'red',
         padding: 10,
         top: '5%',
@@ -610,12 +659,20 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         position: 'absolute',
         left: "5%",
+<<<<<<< HEAD
+        top: Dimensions.get('window').height*(5/16)
+=======
         top: "37%"
+>>>>>>> 7397794eab0869fa1fba59500b1b79803726dd09
     },
 &nbsp;
     PDXCenterText: {
         alignContent: "center",
+<<<<<<< HEAD
+        top: Dimensions.get('window').height*(9/32),
+=======
         top: "28%",
+>>>>>>> 7397794eab0869fa1fba59500b1b79803726dd09
         fontSize: 50,
         color: 'white',
         textShadowColor:'#585858',
@@ -631,7 +688,11 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         position: 'absolute',
         right: "5%",
+<<<<<<< HEAD
+        top: Dimensions.get('window').height*(5/16)
+=======
         top: "37%"
+>>>>>>> 7397794eab0869fa1fba59500b1b79803726dd09
     },
 &nbsp;
     buttonText: {
@@ -652,7 +713,11 @@ export default MainMenu; // send it off
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+<<<<<<< HEAD
+                at Tue Mar 29 2022 00:22:11 GMT-0700 (Pacific Daylight Time)
+=======
                 at Tue Mar 29 2022 18:01:33 GMT-0700 (Pacific Daylight Time)
+>>>>>>> 7397794eab0869fa1fba59500b1b79803726dd09
             </div>
         <script src="../prettify.js"></script>
         <script>
