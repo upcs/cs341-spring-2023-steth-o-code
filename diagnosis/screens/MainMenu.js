@@ -19,16 +19,16 @@ const MainMenu = ({navigation}) => (
             <View style={styles.middleLineRight}></View>
             
             <View style={styles.quickLinksView}>
-                <TouchableOpacity testID='buttonOne' style={styles.quickLinkButtons} onPress={() => navigation.navigate("KnowledgeTest")}> 
-                    <Text style={styles.buttonText}>Knowledge Test</Text>    
+                <TouchableOpacity testID='buttonOne' style={styles.quickLinkButtons} onPress={() => navigation.navigate("Topics")}> 
+                    <Text style={styles.buttonText}>Topics</Text>    
                 </TouchableOpacity>
 
                 <TouchableOpacity testID='buttonTwo' style={styles.quickLinkButtons} onPress={() => navigation.navigate("Lectures")}> 
                     <Text style={styles.buttonText}>Lectures</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity testID='buttonThree' style={styles.quickLinkButtons} onPress={() => navigation.navigate("Topics")}> 
-                    <Text style={styles.buttonText}>Topics</Text>
+                <TouchableOpacity testID='buttonThree' style={styles.quickLinkButtons} onPress={() => navigation.navigate("KnowledgeTest")}> 
+                    <Text style={styles.buttonText}>Knowledge Test</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity testID='buttonFour' style={styles.quickLinkButtons} onPress={() => navigation.navigate("TeamInfo")}> 
@@ -101,8 +101,8 @@ const styles = StyleSheet.create({
     welcomeText: {
         position: "absolute",
         color: "white",
-        fontSize: 60,
-        top: "3%",
+        fontSize: 50,
+        top: "5%",
         fontWeight: 'bold',
         textAlign: 'center',
         textShadowColor:'#585858',
@@ -116,15 +116,14 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         position: "relative",
         marginTop: "50%",
-        height:"45%",
-        marginBottom: 0,
-        width: '96%',
-        borderRadius: 60,
+        height:"50%",
+        width: '90%',
+        borderRadius: 30,
         borderColor: 'red',
         padding: 10,
         top: '5%',
         alignItems: 'center',
-        marginBottom: 40
+        marginBottom: "10%"
     },
 
     magGlassImg: {
@@ -163,7 +162,7 @@ const styles = StyleSheet.create({
 
     PDXCenterText: {
         alignContent: "center",
-        top: "25%",
+        top: "28%",
         fontSize: 50,
         color: 'white',
         textShadowColor:'#585858',
