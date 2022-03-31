@@ -13,8 +13,8 @@ import Activities from '../screens/Activities';
 import Lectures from '../screens/Lectures';
 import Login from '../screens/Login';
 import Signup from '../screens/Signup';
-import Multimedia from '../screens/Multimedia';
 import Books from '../screens/Books'
+import Settings from '../screens/Settings';
 
 
 import StackNavigator from './StackNavigator';
@@ -240,12 +240,22 @@ const DrawerNavigator = () => {
               <Ionicons name='chatbox' size={22} color={color} />
             )
           }} />
-        <Drawer.Screen name="SignUp" component={Signup} //needs to be last always
+        <Drawer.Screen name="SignUp" component={Signup} //needs to be last 2 always
           options={{
             headerShown: false,
             swipeEnabled: false,
             drawerItemStyle: { height: 0 }
           }} />
+        <Drawer.Screen name="Settings" component={Settings} //needs to be last 2 always
+          options={{
+            headerShown: true,
+            headerTitle: (props) => <LogoTitle {...props} />,
+            headerStyle: {
+              backgroundColor: "#BFAA8C",
+              height: 100,
+            },
+            drawerItemStyle: { height: 0 }
+        }} />
       </Drawer.Navigator>
     </NavigationContainer>
   );

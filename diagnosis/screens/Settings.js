@@ -1,12 +1,10 @@
 import React from 'react';
 import { Text, View, StyleSheet} from 'react-native';
-import { WebView } from 'react-native-webview';
 
-const Donate = () => (
-        <WebView 
-        javaScriptEnabled={true}
-        source={{uri: 'https://buy.stripe.com/test_aEU00C2d7bZj7hC000'}}
-        />
+const Settings = () => (
+    <View style={styles.mainContainer}>
+        <Text style={styles.text}> PAGE FOR Settings</Text>
+    </View>
 );
 
 const styles = StyleSheet.create({
@@ -20,4 +18,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default Donate;
+export default Settings;
