@@ -34,7 +34,6 @@ const styles = StyleSheet.create({
         width: Dimensions.get('window').width,
     }, 
     innerContainer: {
-        backgroundColor: 'white',
         borderRadius: 80,
         top: '9%',
         width: '95%',
@@ -45,7 +44,7 @@ const styles = StyleSheet.create({
     headerTxt :{
         fontSize: 25,
         fontWeight: "bold",
-        color: "black",
+        color: "white",
         top: '5%',
         left: '25%',
     },
