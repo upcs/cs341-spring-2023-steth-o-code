@@ -13,4 +13,11 @@ App Authors:
 - Axl Martinez 
 - Tamsen Dean
 
-Updated: 3/31/22
+Our Top 5 System Quality Attributes Are:
+1) Usability
+2) Localizability 
+3) Accessibility
+4) Modifiability
+5) Simplicity
+
+Updated: 4/5/22
