@@ -6,7 +6,7 @@ export default function Topics({navigation}){
     //Cardiology, Endocrinology, Gastroenterology, Infectious Disease, Neurology, Nephrology, 
     //Nails, Rheumatology, Hematolgy-Oncology, Hereditary Conditions, Pulmonolgy, Misc.
 
-    let topic = [
+    let topics = [
         "Cardiology", 
         "Endocrinology",
         "Gastroenterology", 
@@ -47,56 +47,34 @@ export default function Topics({navigation}){
                     Topics
                 </Text>
 
-                {/* need to figure out how to change tagMock */}
-                {tagMock.map((topic) => (
-                    <><TouchableOpacity style={styles.button} onPress={visible = !visible}>
-                        <Text style={styles.buttonText}>{topic}</Text>
-                    </TouchableOpacity><Modal isVisible={visible} animationIn={'slideInUp'} style={styles.modal}>{/* need to replace isModalCardio */}
-                            <View style={styles.popView}>
-                                <Text style={styles.popTopicStyle}> {topic}: </Text>
-                                <TouchableOpacity style={styles.popButton} onPress={navigation.navigate({ topic } + "_Tutorial")}>
-                                    <Text style={styles.buttonText}>Tutorial</Text>
-                                </TouchableOpacity>
-
-                                <TouchableOpacity style={styles.popButton} onPress={navigation.navigate({ topic } + "_MM")}>
-                                    <Text style={styles.buttonText}>Multimedia</Text>
-                                </TouchableOpacity>
-
-                                <TouchableOpacity styles={styles.popButton} onPress={visible = !visible}>{/* need to replace toggleModalCardio */}
-                                    <Text style={styles.backStyle}>Go Back</Text>
-                                </TouchableOpacity>
-
-                            </View>
-                        </Modal></>
-                ))}
-
                 <View style={styles.buttonContainer}>
-                    <TouchableOpacity style={styles.button} onPress={toggleModalCardio}>
-                        <Text style={styles.buttonText}>Cardiology</Text>
-                    </TouchableOpacity>
-    
-                    <Modal isVisible={isModalCardio} animationIn={'slideInUp'} style={styles.modal}>
-                        <View style={styles.popView}>
-                            <Text style={styles.popTopicStyle}> Cardiology: </Text>
-                            <TouchableOpacity style={styles.popButton} onPress={navigateCardioT}>
-                                <Text style={styles.buttonText}>Tutorial</Text>
-                            </TouchableOpacity>
-                            
-                            <TouchableOpacity style={styles.popButton} onPress={navigateCardioMM}>
-                                <Text style={styles.buttonText}>Multimedia</Text>
-                            </TouchableOpacity>
+                    {/* need to figure out how to change tagMock */}
+                    {topics.map((key, topic) => (
+                        <><TouchableOpacity style={styles.button} onPress={visible = !visible}>
+                            <Text style={styles.buttonText}>{topic}</Text>
+                        </TouchableOpacity><Modal isVisible={visible} animationIn={'slideInUp'} style={styles.modal}>{/* need to replace isModalCardio */}
+                                <View style={styles.popView}>
+                                    <Text style={styles.popTopicStyle}> {topic}: </Text>
+                                    <TouchableOpacity style={styles.popButton} onPress={navigation.navigate({ topic } + "_Tutorial")}>
+                                        <Text style={styles.buttonText}>Tutorial</Text>
+                                    </TouchableOpacity>
 
-                            <TouchableOpacity styles={styles.popButton} onPress={toggleModalCardio}>
-                                <Text style={styles.backStyle}>Go Back</Text>
-                            </TouchableOpacity>
-                            
-                        </View>
-                    </Modal>
-    
-                    <Text style={styles.filler}>
-                        Trans Rights!
-                    </Text>
+                                    <TouchableOpacity style={styles.popButton} onPress={navigation.navigate({ topic } + "_MM")}>
+                                        <Text style={styles.buttonText}>Multimedia</Text>
+                                    </TouchableOpacity>
+
+                                    <TouchableOpacity styles={styles.popButton} onPress={visible = !visible}>{/* need to replace toggleModalCardio */}
+                                        <Text style={styles.backStyle}>Go Back</Text>
+                                    </TouchableOpacity>
+
+                                </View>
+                            </Modal></>
+                    ))}
                 </View>
+
+                <Text style={styles.filler}>
+                    Trans Rights!
+                </Text>
         </ScrollView>
     );
 }

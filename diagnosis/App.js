@@ -11,10 +11,10 @@ LogBox.ignoreLogs([
 ]);
 
 //screens import
-import DrawerNavigator from './navigators/DrawerNavigator';
+import Topics from './screens/Topics';
 
 export default function App() {
   return(
-      <DrawerNavigator/>
+      <Topics/>
   );
 }
