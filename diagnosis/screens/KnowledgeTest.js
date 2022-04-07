@@ -1,6 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image, TouchableOpacity, Linking } from 'react-native';
-import { FlatList } from 'react-native-gesture-handler';
+import {StyleSheet} from 'react-native';
 import WebView from 'react-native-webview';
 
 const KnowledgeTest = () => (

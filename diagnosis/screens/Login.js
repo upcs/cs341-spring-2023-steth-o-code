@@ -25,10 +25,10 @@ import {
   StyleInputLabel,
 } from "../components/SignUpLoginStyles";
 
-import { Octicons, Ionicons, Fontisto } from "@expo/vector-icons";
+import { Octicons, Ionicons } from "@expo/vector-icons";
 import axios from "axios";
 //colors
-const { company, placeholder, textInputBackground } = Colors;
+const { company, placeholder} = Colors;
 
 //keyboard avoiding wrapper
 import KeyboardAvoidWrap from "../components/KeyboardAvoidWrap";

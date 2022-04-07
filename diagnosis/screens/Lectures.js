@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, Button, Dimensions, TouchableOpacity, ScrollView} from 'react-native';
+import { Text, View, StyleSheet,Dimensions, TouchableOpacity, ScrollView} from 'react-native';
 
 const Lectures = ({navigation}) => (
       
