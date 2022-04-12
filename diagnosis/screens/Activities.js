@@ -1,10 +1,12 @@
 import React from 'react';
-import { Text, View, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
+import WebView from 'react-native-webview';
 
 const Activities = () => (
-    <View style={styles.mainContainer}>
-        <Text style={styles.text}> PAGE FOR Feedback</Text>
-    </View>
+    <WebView 
+    javaScriptEnabled={true}
+    source={{uri: 'https://physicaldiagnosispdx.com/message-board-2/'}}
+    />
 );
 
 const styles = StyleSheet.create({
