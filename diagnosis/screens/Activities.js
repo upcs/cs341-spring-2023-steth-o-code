@@ -3,7 +3,7 @@ import { Text, View, StyleSheet} from 'react-native';
 
 const Activities = () => (
     <View style={styles.mainContainer}>
-        <Text style={styles.text}> PAGE FOR Activities</Text>
+        <Text style={styles.text}> PAGE FOR Feedback</Text>
     </View>
 );
 

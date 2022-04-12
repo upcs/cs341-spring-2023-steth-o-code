@@ -1,0 +1,425 @@
+/*
+Theme Name: Physical Diagnosis PDX
+Theme URI: https://www.pdxpdx.com/
+Author: jgnugent
+Author URI: https://www.pdxpdx.com/
+Template: opus-blog
+Description: Opus Blog is a post format ready WordPress theme. It is Gutenberg Compatible free WordPress theme. Moreover, Opus Blog is simple, clean and elegant theme for blog, news and magazine related website. This theme comes with slider, one column layout, masonry layout, header options, footer optionsm typography option, color options and much more. Besides that it has copyright option, go to the top option, social icons and many more. In addition, it has custom widgets for recent post, featured posts, social icons and author description. Likewise, you will get content display option for excerpt or content, excerpt length, pagination types, post format icon show hide, full and grid layout, sidebar options and more. Opus Blog has post templates, you can easily make single post based on the required sidebar. Try this awesome free theme today. Demo: http://demo.akithemes.com/opus-blog-demo/
+Version: 1.0.9
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: opus-blog
+Tags: blog, news, custom-background, custom-header, one-column, two-columns, three-columns, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, post-formats
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Opus Blog is free WordPress theme by, Aki Themes.
+Opus Blog is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+
+*/
+
+body {
+	font-family: 'Source Sans Pro' !important;
+}
+
+.main-header {
+    background-color: #000 !important;
+}
+
+.main-header .logo img {
+	max-height: 127px !important;
+	max-width: 291px !important;
+}
+
+.caption .s-cat{
+	font-size: 24px !important;
+    background: #D90011 !important;
+}
+
+.slide-wrap .caption .s-cat{
+	font-size: 24px !important;
+	background: #D90011 !important;
+}
+	
+a:hover {
+    color: #D90011 !important;
+}
+
+a.s-cat:hover {
+	color: #000 !important;
+}
+
+.top-menu > ul > li > a:hover{
+    color: #D90011 !important;
+}
+
+.social-links ul li:hover a:before {
+    color: #D90011 !important;
+}
+
+.main-menu ul li:hover > a {
+    color: #D90011 !important;
+}
+
+.main-menu.submenu-top-border li > ul {
+	border-top: 3px solid #D90011 !important;
+}
+
+.bottom-caption .slick-current .slider-items span{
+    background: #D90011 !important;
+    border: 2px solid #D90011 !important;
+}
+
+article.format-quote .post-content .post-format::after {
+    background: #D90011 !important;
+}
+
+.post-date a:hover {
+    color: #D90011 !important;
+}
+
+.content a:focus {
+    color: #D90011 !important;
+}
+
+.post-footer > span a:focus{
+    color: #D90011 !important;
+}
+
+a.link-format {
+    background: #D90011 !important;
+}
+
+.format-quote .post-wrap{
+    background: #D90011 !important;
+}
+
+.pagination .page-numbers.current {
+    color: #D90011 !important;
+}
+
+.pagination a.page-numbers:hover {
+    color: #D90011 !important;
+}
+
+.posts-navigation .nav-links a:focus {
+    color: #D90011 !important; /* .post-title-nav color */
+}
+
+.show-more {
+    background: #D90011 !important;
+}
+
+.post-navigation .nav-links a:focus {
+    color: #D90011 !important; /* .post-title-nav color */
+}
+
+input[type="radio"]:hover {
+    border-color: #D90011 !important;
+}
+
+input[type="radio"]:checked {
+    background: #D90011 !important;
+    border-color: #D90011 !important;
+}
+
+.about-author-name a:focus {
+    color: #D90011 !important;
+}
+
+.about-author-posts-link:focus {
+    color: #D90011 !important;
+}
+
+#comment:hover {
+    border-color: #D90011 !important;
+}
+
+#comment:focus {
+    border-color: #D90011 !important;
+}
+
+.comment-form #submit:hover {
+    background-color: #D90011 !important;
+}
+
+.comment-respond .must-log-in a:focus {
+    color: #D90011 !important;
+}
+
+.comment-form .logged-in-as a:last-child:focus {
+    color: #D90011 !important;
+}
+
+.comment-reply-title #cancel-comment-reply-link:hover {
+    color: #D90011 !important;
+}
+
+.comment-list .pingback .comment-body > a:focus {
+    color: #D90011 !important;
+}
+
+.comment-list .pingback .comment-body .edit-link .comment-edit-link:focus {
+    color: #D90011 !important;
+}
+
+.comment-meta .comment-author .fn .url:focus {
+    color: #D90011 !important;
+}
+
+.comment-meta .comment-metadata a:focus {
+    color: #D90011 !important;
+}
+
+.comment-content a:focus {
+    color: #D90011 !important;
+}
+
+.comment-body .reply .comment-reply-link:hover {
+    color: #D90011 !important;
+}
+
+.comment-navigation .nav-links a:focus {
+    color: #D90011 !important;
+}
+
+.page-404-content a:focus {
+    color: #D90011 !important;
+}
+
+.widget a:focus {
+    color: #D90011 !important;
+}
+
+.widget .widget-title a:focus {
+    color: #D90011 !important;
+}
+
+.widget_mc4wp_form_widget input[type="submit"] {
+    background: #D90011 !important;
+    border-color: #D90011 !important;
+}
+
+.textwidget input[type="submit"]:hover {
+    background: #D90011 !important;
+}
+
+.textwidget select:hover {
+    border-bottom-color: #D90011 !important;
+}
+
+.textwidget select:focus {
+    border-bottom-color: #D90011 !important;
+}
+
+.textwidget input[type="file"]:hover {
+    border-color: #D90011 !important;
+}
+
+.textwidget input[type="file"]:focus {
+    border-color: #D90011 !important;
+}
+
+.widget_search #searchform .search-submit:hover {
+    color: #D90011 !important;
+}
+
+.post-slider-section .s-cat{
+    background: #D90011 !important;
+}
+
+.site-footer a:focus {
+    color: #D90011 !important;
+}
+
+.footer-social-links a:focus {
+    color: #D90011 !important;
+}
+
+.footer-menu li a:focus {
+    color: #D90011 !important;
+}
+
+#toTop:hover {
+    background-color: #D90011 !important;
+}
+
+ul.trail-items li a:hover span{
+    color: #D90011 !important;
+}
+
+.post-excerpt .wp-block-file a:not(.wp-block-file__button) {
+    color: #D90011 !important;
+}
+
+.post-excerpt .wp-block-file a:not(.wp-block-file__button):hover {
+    color: #D90011 !important;
+}
+
+.post-excerpt .wp-block-file .wp-block-file__button:visited {
+    background: #D90011 !important;
+}
+
+.post-excerpt .wp-block-calendar #wp-calendar tfoot td a:focus {
+    color: #D90011 !important;
+}
+
+.cart-inner {
+    background: #D90011 !important;
+}
+
+.woocommerce-page a.added_to_cart {
+    color: #D90011 !important;
+}
+
+.woocommerce ul.products li.product .star-rating span {
+    color: #D90011 !important;
+}
+
+.woocommerce .product .onsale {
+    background: none #D90011 !important;
+}
+
+.woocommerce-page nav.woocommerce-pagination ul li span {
+    background: #D90011 !important;
+}
+
+.main-menu {
+	max-width: 775px !important;
+	float: left;
+}
+
+.main-menu ul li a {
+	line-height: 75px !important;
+}
+
+.right-side .search-wrapper {
+	padding-top: 2.5px !important;
+}
+
+
+.right-side .search-wrapper input {
+	height: 35px !important;
+}
+
+.right-side .search-wrapper input {
+	height: 35px !important;
+}
+
+.header-image:after {
+    background: rgba(0, 0, 0, 0.7) !important;
+
+}
+
+.overley:after {
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0)) !important;
+}
+
+/* 767px */
+@media (max-width: 767px) {
+    .bar-menu {
+        right: 100px !important;
+        top: 0px !important;
+    }
+
+}
+
+.wp-video {
+    margin:0 auto !important;
+}
+
+.video-player {
+	text-align: center !important;
+}
+
+
+/* Fix for quiz display issues */
+.mlw_qmn_quiz label {
+	display: inline !important;
+}
+
+.qmn_quiz_radio { 
+	width: initial !important; 
+	display: inline !important; 
+}
+
+/* QUESTION NUMBER AND QUESTION ON SEPARATE LINES
+.mlw_qmn_question_number, .mlw_qmn_question {
+	display: inline !important;
+}*/
+
+.main-menu li > ul {
+	z-index: 5 !important;
+}
+
+.main-menu ul ul li > a:before {
+	background: none !important;
+}
+
+.main-menu ul ul li:hover > a {
+	padding-right: 0 !important;	
+}
+
+iframe > span[class*='_title'] {
+    display: none !important;
+}
+
+.__vd_j7w64_title {
+	display: none !important;
+}
+
+
+.main-menu ul ul li > a[href="#"]{
+	/*color: blue;*/
+}
+
+.main-menu ul ul li > a[href="#"]:hover{
+	color: #818181 !important;
+	padding-left: 35px !important;
+	font-style: italic;
+}
+
+.bbpress div#primary, .bbpress div.col-md-8 {
+	width: 100% !important;
+}
+
+div#wpadminbar {
+	z-index: 100000 !important;
+}
+
+@media (min-width: 992px){
+	.main-menu {
+		max-width: 68% !important;
+	}
+	
+	#secondary-menu {
+		text-align: right !important;
+		margin-right: 35px !important;
+	}
+	
+	#secondary-menu li {
+		text-align: left !important;
+	}
+}
+
+@media (max-width: 767px){
+
+	.bar-menu {
+		right: 25px !important;
+	}
+
+	.search-wrapper {
+		position: relative !important;
+		top: 0;
+		right: 15px !important;
+	}
+
+}
+
+#toTop:hover .fa-angle-double-up {
+	color: #FFFFFF !important;
+}

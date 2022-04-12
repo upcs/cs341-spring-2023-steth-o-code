@@ -1,10 +1,12 @@
 import React from 'react';
 import { Text, View, StyleSheet} from 'react-native';
+import { WebView } from 'react-native-webview';
 
 const Donate = () => (
-    <View style={styles.mainContainer}>
-        <Text style={styles.text}> PAGE FOR Donations</Text>
-    </View>
+        <WebView 
+        javaScriptEnabled={true}
+        source={{uri: 'https://buy.stripe.com/test_aEU00C2d7bZj7hC000'}}
+        />
 );
 
 const styles = StyleSheet.create({

@@ -85,20 +85,10 @@ export const StyledButton = styled(TouchableOpacity)`
     border-radius: 5px;
     margin-vertical: 5px;
     height: 56px;
-
-    ${(props) => props.wordpress == true && `
-        background-color: #437CFF;
-        flex-direction: row;
-        justify-content: center;
-    `}
 `;
 export const ButtonText = styled(Text)`
     color: ${textInputBackground};
     font-size: 16px;
-
-    ${(props) => props.wordpress == true && `
-        padding-left: 25px;
-    `}
 `;
 
 export const MessageBox = styled(Text)`

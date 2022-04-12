@@ -1,192 +1,577 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1648145057835" clover="3.2.0">
-  <project timestamp="1648145057836" name="All files">
-    <metrics statements="127" coveredstatements="100" conditionals="44" coveredconditionals="38" methods="47" coveredmethods="23" elements="218" coveredelements="161" complexity="0" loc="127" ncloc="127" packages="3" files="17" classes="17"/>
-    <package name="assets">
+<coverage generated="1648698243890" clover="3.2.0">
+  <project timestamp="1648698243890" name="All files">
+    <metrics statements="389" coveredstatements="228" conditionals="46" coveredconditionals="36" methods="152" coveredmethods="44" elements="587" coveredelements="308" complexity="0" loc="389" ncloc="389" packages="6" files="55" classes="55"/>
+    <package name="diagnosis">
+      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="App.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/App.js">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="diagnosis.assets">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="Andre-314x314.png" path="/Users/tamsendean/Desktop/GitHub/cs341-spring-2022-diagnosis-master-4/cs341-spring-2022-diagnosis/diagnosis/assets/Andre-314x314.png">
+      <file name="Andre-314x314.png" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/assets/Andre-314x314.png">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="Sullivan.jpeg" path="/Users/tamsendean/Desktop/GitHub/cs341-spring-2022-diagnosis-master-4/cs341-spring-2022-diagnosis/diagnosis/assets/Sullivan.jpeg">
+      <file name="Sullivan.jpeg" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/assets/Sullivan.jpeg">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="cropped-logo_new-1.png" path="/Users/tamsendean/Desktop/GitHub/cs341-spring-2022-diagnosis-master-4/cs341-spring-2022-diagnosis/diagnosis/assets/cropped-logo_new-1.png">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-      </file>
-      <file name="ishita-sharma.jpeg" path="/Users/tamsendean/Desktop/GitHub/cs341-spring-2022-diagnosis-master-4/cs341-spring-2022-diagnosis/diagnosis/assets/ishita-sharma.jpeg">
+      <file name="cropped-logo_new-1.png" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/assets/cropped-logo_new-1.png">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="jgn.jpg" path="/Users/tamsendean/Desktop/GitHub/cs341-spring-2022-diagnosis-master-4/cs341-spring-2022-diagnosis/diagnosis/assets/jgn.jpg">
+      <file name="ishita-sharma.jpeg" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/assets/ishita-sharma.jpeg">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="stethoscope.jpeg" path="/Users/tamsendean/Desktop/GitHub/cs341-spring-2022-diagnosis-master-4/cs341-spring-2022-diagnosis/diagnosis/assets/stethoscope.jpeg">
+      <file name="jgn.jpg" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/assets/jgn.jpg">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="stethoscope.jpeg" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/assets/stethoscope.jpeg">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="components">
-      <metrics statements="35" coveredstatements="30" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="3"/>
-      <file name="CarouselCardItem.js" path="/Users/tamsendean/Desktop/GitHub/cs341-spring-2022-diagnosis-master-4/cs341-spring-2022-diagnosis/diagnosis/components/CarouselCardItem.js">
+    <package name="diagnosis.components">
+      <metrics statements="37" coveredstatements="30" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="1"/>
+      <file name="CarouselCardItem.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/components/CarouselCardItem.js">
         <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
       </file>
-      <file name="CarouselCards.js" path="/Users/tamsendean/Desktop/GitHub/cs341-spring-2022-diagnosis-master-4/cs341-spring-2022-diagnosis/diagnosis/components/CarouselCards.js">
+      <file name="CarouselCards.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/components/CarouselCards.js">
         <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
         <line num="29" count="0" type="stmt"/>
       </file>
-      <file name="KeyboardAvoidWrap.js" path="/Users/tamsendean/Desktop/GitHub/cs341-spring-2022-diagnosis-master-4/cs341-spring-2022-diagnosis/diagnosis/components/KeyboardAvoidWrap.js">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="7" count="8" type="stmt"/>
+      <file name="CustomDrawer.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/components/CustomDrawer.js">
+        <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
       </file>
-      <file name="SignUpLoginStyles.js" path="/Users/tamsendean/Desktop/GitHub/cs341-spring-2022-diagnosis-master-4/cs341-spring-2022-diagnosis/diagnosis/components/SignUpLoginStyles.js">
-        <metrics statements="22" coveredstatements="22" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
-        <line num="5" count="4" type="stmt"/>
-        <line num="7" count="4" type="stmt"/>
-        <line num="17" count="4" type="stmt"/>
-        <line num="19" count="4" type="stmt"/>
-        <line num="28" count="4" type="stmt"/>
-        <line num="34" count="4" type="stmt"/>
-        <line num="39" count="4" type="stmt"/>
-        <line num="46" count="4" type="stmt"/>
-        <line num="50" count="4" type="stmt"/>
-        <line num="63" count="4" type="stmt"/>
-        <line num="67" count="4" type="stmt"/>
-        <line num="73" count="4" type="stmt"/>
-        <line num="80" count="4" type="stmt"/>
-        <line num="89" count="38" type="cond" truecount="2" falsecount="0"/>
-        <line num="95" count="4" type="stmt"/>
-        <line num="99" count="24" type="cond" truecount="2" falsecount="0"/>
-        <line num="104" count="4" type="stmt"/>
-        <line num="110" count="4" type="stmt"/>
-        <line num="117" count="4" type="stmt"/>
-        <line num="124" count="4" type="stmt"/>
-        <line num="131" count="4" type="stmt"/>
-        <line num="136" count="4" type="stmt"/>
+      <file name="KeyboardAvoidWrap.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/components/KeyboardAvoidWrap.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="13" type="stmt"/>
+      </file>
+      <file name="SignUpLoginStyles.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/components/SignUpLoginStyles.js">
+        <metrics statements="20" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="28" count="5" type="stmt"/>
+        <line num="34" count="5" type="stmt"/>
+        <line num="39" count="5" type="stmt"/>
+        <line num="46" count="5" type="stmt"/>
+        <line num="50" count="5" type="stmt"/>
+        <line num="63" count="5" type="stmt"/>
+        <line num="67" count="5" type="stmt"/>
+        <line num="73" count="5" type="stmt"/>
+        <line num="80" count="5" type="stmt"/>
+        <line num="89" count="5" type="stmt"/>
+        <line num="94" count="5" type="stmt"/>
+        <line num="100" count="5" type="stmt"/>
+        <line num="107" count="5" type="stmt"/>
+        <line num="114" count="5" type="stmt"/>
+        <line num="121" count="5" type="stmt"/>
+        <line num="126" count="5" type="stmt"/>
       </file>
     </package>
-    <package name="screens">
-      <metrics statements="86" coveredstatements="64" conditionals="40" coveredconditionals="34" methods="41" coveredmethods="20"/>
-      <file name="AboutUs.js" path="/Users/tamsendean/Desktop/GitHub/cs341-spring-2022-diagnosis-master-4/cs341-spring-2022-diagnosis/diagnosis/screens/AboutUs.js">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="43" count="1" type="stmt"/>
-      </file>
-      <file name="Books.js" path="/Users/tamsendean/Desktop/GitHub/cs341-spring-2022-diagnosis-master-4/cs341-spring-2022-diagnosis/diagnosis/screens/Books.js">
-        <metrics statements="9" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="1"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
-        <line num="60" count="0" type="stmt"/>
-        <line num="72" count="0" type="stmt"/>
-        <line num="84" count="0" type="stmt"/>
-        <line num="98" count="1" type="stmt"/>
-      </file>
-      <file name="Login.js" path="/Users/tamsendean/Desktop/GitHub/cs341-spring-2022-diagnosis-master-4/cs341-spring-2022-diagnosis/diagnosis/screens/Login.js">
-        <metrics statements="25" coveredstatements="16" conditionals="12" coveredconditionals="9" methods="10" coveredmethods="5"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
-        <line num="38" count="5" type="stmt"/>
-        <line num="39" count="5" type="stmt"/>
-        <line num="40" count="5" type="stmt"/>
-        <line num="42" count="5" type="stmt"/>
-        <line num="43" count="2" type="stmt"/>
-        <line num="44" count="2" type="stmt"/>
-        <line num="46" count="5" type="stmt"/>
-        <line num="59" count="3" type="cond" truecount="4" falsecount="0"/>
-        <line num="60" count="2" type="stmt"/>
-        <line num="61" count="2" type="stmt"/>
-        <line num="63" count="1" type="stmt"/>
-        <line num="78" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="79" count="0" type="stmt"/>
-        <line num="80" count="0" type="stmt"/>
-        <line num="82" count="0" type="stmt"/>
+    <package name="diagnosis.navigators">
+      <metrics statements="37" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="32" coveredmethods="0"/>
+      <file name="DrawerNavigator.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/navigators/DrawerNavigator.js">
+        <metrics statements="34" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="31" coveredmethods="0"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
         <line num="86" count="0" type="stmt"/>
-        <line num="87" count="0" type="stmt"/>
-        <line num="94" count="19" type="stmt"/>
-        <line num="133" count="0" type="stmt"/>
-        <line num="139" count="0" type="stmt"/>
-        <line num="152" count="1" type="stmt"/>
-        <line num="160" count="28" type="stmt"/>
-        <line num="168" count="0" type="stmt"/>
+        <line num="92" count="0" type="stmt"/>
+        <line num="99" count="0" type="stmt"/>
+        <line num="108" count="0" type="stmt"/>
+        <line num="114" count="0" type="stmt"/>
+        <line num="121" count="0" type="stmt"/>
+        <line num="130" count="0" type="stmt"/>
+        <line num="136" count="0" type="stmt"/>
+        <line num="143" count="0" type="stmt"/>
+        <line num="152" count="0" type="stmt"/>
+        <line num="158" count="0" type="stmt"/>
+        <line num="165" count="0" type="stmt"/>
+        <line num="174" count="0" type="stmt"/>
+        <line num="180" count="0" type="stmt"/>
+        <line num="187" count="0" type="stmt"/>
+        <line num="196" count="0" type="stmt"/>
+        <line num="202" count="0" type="stmt"/>
+        <line num="209" count="0" type="stmt"/>
+        <line num="218" count="0" type="stmt"/>
+        <line num="224" count="0" type="stmt"/>
+        <line num="231" count="0" type="stmt"/>
+        <line num="240" count="0" type="stmt"/>
+        <line num="252" count="0" type="stmt"/>
+        <line num="265" count="0" type="stmt"/>
+        <line num="273" count="2" type="stmt"/>
       </file>
-      <file name="MainMenu.js" path="/Users/tamsendean/Desktop/GitHub/cs341-spring-2022-diagnosis-master-4/cs341-spring-2022-diagnosis/diagnosis/screens/MainMenu.js">
-        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="6" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
-        <line num="48" count="1" type="stmt"/>
+      <file name="StackNavigator.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/navigators/StackNavigator.js">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="45" count="2" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
       </file>
-      <file name="Multimedia.js" path="/Users/tamsendean/Desktop/GitHub/cs341-spring-2022-diagnosis-master-4/cs341-spring-2022-diagnosis/diagnosis/screens/Multimedia.js">
-        <metrics statements="21" coveredstatements="21" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="2"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="4" type="stmt"/>
-        <line num="18" count="3" type="stmt"/>
-        <line num="19" count="3" type="stmt"/>
-        <line num="20" count="3" type="stmt"/>
-        <line num="22" count="3" type="stmt"/>
-        <line num="23" count="3" type="stmt"/>
-        <line num="24" count="3" type="stmt"/>
-        <line num="25" count="3" type="stmt"/>
-        <line num="26" count="3" type="stmt"/>
-        <line num="27" count="3" type="stmt"/>
-        <line num="28" count="3" type="stmt"/>
-        <line num="29" count="3" type="stmt"/>
-        <line num="30" count="3" type="stmt"/>
+    </package>
+    <package name="diagnosis.screens">
+      <metrics statements="235" coveredstatements="115" conditionals="46" coveredconditionals="36" methods="89" coveredmethods="20"/>
+      <file name="AboutUs.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/AboutUs.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="43" count="3" type="stmt"/>
+      </file>
+      <file name="Activities.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/Activities.js">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+      </file>
+      <file name="Books.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/Books.js">
+        <metrics statements="9" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="2"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="99" count="3" type="stmt"/>
+      </file>
+      <file name="Community.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/Community.js">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+      </file>
+      <file name="Donate.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/Donate.js">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+      </file>
+      <file name="KnowledgeTest.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/KnowledgeTest.js">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+      </file>
+      <file name="Lecture_DR.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/Lecture_DR.js">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+      </file>
+      <file name="Lecture_JVP.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/Lecture_JVP.js">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+      </file>
+      <file name="Lecture_VHD.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/Lecture_VHD.js">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+      </file>
+      <file name="Lectures.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/Lectures.js">
+        <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+      </file>
+      <file name="Login.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/Login.js">
+        <metrics statements="30" coveredstatements="15" conditionals="14" coveredconditionals="11" methods="9" coveredmethods="5"/>
         <line num="31" count="3" type="stmt"/>
-        <line num="32" count="3" type="stmt"/>
-        <line num="33" count="3" type="stmt"/>
-        <line num="34" count="3" type="stmt"/>
         <line num="36" count="3" type="stmt"/>
-        <line num="73" count="1" type="stmt"/>
+        <line num="37" count="10" type="stmt"/>
+        <line num="38" count="10" type="stmt"/>
+        <line num="39" count="10" type="stmt"/>
+        <line num="41" count="10" type="stmt"/>
+        <line num="54" count="4" type="cond" truecount="4" falsecount="0"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="58" count="3" type="stmt"/>
+        <line num="59" count="3" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="71" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="81" count="0" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="83" count="0" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="88" count="0" type="stmt"/>
+        <line num="89" count="0" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="95" count="35" type="stmt"/>
+        <line num="137" count="1" type="stmt"/>
+        <line num="143" count="0" type="stmt"/>
+        <line num="156" count="3" type="stmt"/>
+        <line num="164" count="50" type="stmt"/>
+        <line num="172" count="0" type="stmt"/>
       </file>
-      <file name="Signup.js" path="/Users/tamsendean/Desktop/GitHub/cs341-spring-2022-diagnosis-master-4/cs341-spring-2022-diagnosis/diagnosis/screens/Signup.js">
-        <metrics statements="11" coveredstatements="8" conditionals="24" coveredconditionals="23" methods="7" coveredmethods="3"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
+      <file name="MainMenu.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/MainMenu.js">
+        <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="2" methods="6" coveredmethods="6"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="50" count="3" type="stmt"/>
+      </file>
+      <file name="Multimedia.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/Multimedia.js">
+        <metrics statements="21" coveredstatements="2" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+      </file>
+      <file name="Settings.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/Settings.js">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+      </file>
+      <file name="Signup.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/Signup.js">
+        <metrics statements="13" coveredstatements="8" conditionals="24" coveredconditionals="23" methods="7" coveredmethods="3"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
+        <line num="42" count="3" type="stmt"/>
         <line num="43" count="3" type="stmt"/>
         <line num="45" count="3" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
-        <line num="56" count="19" type="stmt"/>
-        <line num="130" count="0" type="stmt"/>
-        <line num="142" count="1" type="stmt"/>
-        <line num="143" count="95" type="stmt"/>
-        <line num="151" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="61" count="19" type="stmt"/>
+        <line num="135" count="0" type="stmt"/>
+        <line num="147" count="3" type="stmt"/>
+        <line num="148" count="95" type="stmt"/>
+        <line num="156" count="0" type="stmt"/>
       </file>
-      <file name="TeamInfo.js" path="/Users/tamsendean/Desktop/GitHub/cs341-spring-2022-diagnosis-master-4/cs341-spring-2022-diagnosis/diagnosis/screens/TeamInfo.js">
+      <file name="TeamInfo.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/TeamInfo.js">
         <metrics statements="8" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="2"/>
-        <line num="6" count="1" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
         <line num="7" count="2" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
         <line num="37" count="1" type="stmt"/>
         <line num="52" count="0" type="stmt"/>
-        <line num="72" count="1" type="stmt"/>
+        <line num="72" count="3" type="stmt"/>
+      </file>
+      <file name="Topics.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/Topics.js">
+        <metrics statements="110" coveredstatements="50" conditionals="0" coveredconditionals="0" methods="37" coveredmethods="1"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="58" count="1" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="74" count="1" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="81" count="0" type="stmt"/>
+        <line num="84" count="1" type="stmt"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="89" count="1" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="91" count="0" type="stmt"/>
+        <line num="94" count="1" type="stmt"/>
+        <line num="95" count="0" type="stmt"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="99" count="1" type="stmt"/>
+        <line num="100" count="0" type="stmt"/>
+        <line num="101" count="0" type="stmt"/>
+        <line num="104" count="1" type="stmt"/>
+        <line num="105" count="0" type="stmt"/>
+        <line num="106" count="0" type="stmt"/>
+        <line num="109" count="1" type="stmt"/>
+        <line num="110" count="0" type="stmt"/>
+        <line num="111" count="0" type="stmt"/>
+        <line num="114" count="1" type="stmt"/>
+        <line num="115" count="0" type="stmt"/>
+        <line num="116" count="0" type="stmt"/>
+        <line num="119" count="1" type="stmt"/>
+        <line num="120" count="0" type="stmt"/>
+        <line num="121" count="0" type="stmt"/>
+        <line num="124" count="1" type="stmt"/>
+        <line num="125" count="0" type="stmt"/>
+        <line num="126" count="0" type="stmt"/>
+        <line num="129" count="1" type="stmt"/>
+        <line num="130" count="0" type="stmt"/>
+        <line num="131" count="0" type="stmt"/>
+        <line num="134" count="1" type="stmt"/>
+        <line num="135" count="0" type="stmt"/>
+        <line num="136" count="0" type="stmt"/>
+        <line num="139" count="1" type="stmt"/>
+        <line num="140" count="0" type="stmt"/>
+        <line num="141" count="0" type="stmt"/>
+        <line num="144" count="1" type="stmt"/>
+        <line num="145" count="0" type="stmt"/>
+        <line num="146" count="0" type="stmt"/>
+        <line num="150" count="1" type="stmt"/>
+        <line num="151" count="0" type="stmt"/>
+        <line num="152" count="0" type="stmt"/>
+        <line num="155" count="1" type="stmt"/>
+        <line num="156" count="0" type="stmt"/>
+        <line num="157" count="0" type="stmt"/>
+        <line num="160" count="1" type="stmt"/>
+        <line num="161" count="0" type="stmt"/>
+        <line num="162" count="0" type="stmt"/>
+        <line num="165" count="1" type="stmt"/>
+        <line num="166" count="0" type="stmt"/>
+        <line num="167" count="0" type="stmt"/>
+        <line num="170" count="1" type="stmt"/>
+        <line num="171" count="0" type="stmt"/>
+        <line num="172" count="0" type="stmt"/>
+        <line num="175" count="1" type="stmt"/>
+        <line num="176" count="0" type="stmt"/>
+        <line num="177" count="0" type="stmt"/>
+        <line num="180" count="1" type="stmt"/>
+        <line num="181" count="0" type="stmt"/>
+        <line num="182" count="0" type="stmt"/>
+        <line num="185" count="1" type="stmt"/>
+        <line num="186" count="0" type="stmt"/>
+        <line num="187" count="0" type="stmt"/>
+        <line num="192" count="1" type="stmt"/>
+        <line num="514" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="diagnosis.screens.topics-screens">
+      <metrics statements="72" coveredstatements="71" conditionals="0" coveredconditionals="0" methods="24" coveredmethods="23"/>
+      <file name="Cardiology_MM.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/Cardiology_MM.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+      <file name="Cardiology_Tutorial.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/Cardiology_Tutorial.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+      </file>
+      <file name="Endocrinology_MM.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/Endocrinology_MM.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+      <file name="Endocrinology_Tutorial.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/Endocrinology_Tutorial.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+      <file name="Gastro_MM.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/Gastro_MM.js">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+      </file>
+      <file name="Gastro_Tutorial.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/Gastro_Tutorial.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+      <file name="HC_MM.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/HC_MM.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+      <file name="HC_Tutorial.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/HC_Tutorial.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+      <file name="HO_MM.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/HO_MM.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+      <file name="HO_Tutorial.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/HO_Tutorial.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+      <file name="ID_MM.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/ID_MM.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+      <file name="ID_Tutorial.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/ID_Tutorial.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+      <file name="Misc_MM.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/Misc_MM.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+      <file name="Misc_Tutorial.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/Misc_Tutorial.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+      <file name="Nails_MM.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/Nails_MM.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+      <file name="Nails_Tutorial.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/Nails_Tutorial.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+      <file name="Nephrology_MM.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/Nephrology_MM.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+      <file name="Nephrology_Tutorial.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/Nephrology_Tutorial.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+      <file name="Neurology_MM.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/Neurology_MM.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+      <file name="Neurology_Tutorial.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/Neurology_Tutorial.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+      <file name="Pulmonolgy.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/Pulmonolgy.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+      <file name="Pulmonology_MM.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/Pulmonology_MM.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+      <file name="Rheumatology_MM.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/Rheumatology_MM.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+      <file name="Rheumatology_Tutorial.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/Rheumatology_Tutorial.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
       </file>
     </package>
   </project>

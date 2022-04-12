@@ -17,17 +17,26 @@
       "**/*"
     ],
     "ios": {
-      "bundleIdentifier": "com.cs341.diagnosis",
-      "buildNumber": "1.0.0",
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true,
+          "NSExceptionDomains": {
+            "https://up.physicaldiagnosispdx.com/up/": {
+              "NSExceptionAllowsInsecureHTTPLoads": true
+            },
+            "localhost": {
+              "NSExceptionAllowsInsecureHTTPLoads": true
+            }
+          }
+        }
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      },
-      "package": "com.cs341.diagnosis",
-      "versionCode": 1
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"

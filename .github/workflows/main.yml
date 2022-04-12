@@ -41,9 +41,6 @@ jobs:
       # First install npm
       - name: install npm
         run: npm install
-
-      - name: install codecov
-        run: npm install -g codecov
         
       # Then run jest command to run all the tests
       - name: run jest
