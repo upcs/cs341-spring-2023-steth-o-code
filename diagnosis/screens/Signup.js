@@ -1,5 +1,5 @@
 import React, {useState}  from 'react';
-import { View, Text, ActivityIndicator } from 'react-native';
+import { View, Text, ActivityIndicator, Alert } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import * as Yup from 'yup'
 
@@ -52,10 +52,36 @@ const Signup = ({navigation}) => {
                         initialValues={{fullName: '', email: '', username: '', password: '', confirmPassword: ''}}
                         validationSchema={ValidationInputSchema}
                         onSubmit={(values, { setSubmitting }) => {
-                            setTimeout(() => {
+                            // setTimeout(() => {
+                            //     setSubmitting(false);
+                            //     navigation.navigate('Main Menu', { screen: "MainMenu", params: {user: values.fullName}}), 
+                            // 500});
+                            console.log("Processing registration");
+                            axios.post("https://up.physicaldiagnosispdx.com/up/app-content/register.php", JSON.stringify({
+                                'user_email': values.email,
+                                'username': values.username,
+                                'password': values.password
+                            }), { 
+                                headers: {
+                                    'Accept': 'application/json',
+                                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                                }
+                            }).then(function (response) {
+                                console.log(data);
                                 setSubmitting(false);
-                                navigation.navigate('Main Menu', { screen: "MainMenu", params: {user: values.fullName}}), 
-                            500});
+                                if((data.data).search("Sign up successful") != 1){
+                                    navigation.navigate("Main Menu", {
+                                        screen: "MainMenu",
+                                        user: values.username
+                                    })
+                                }
+                            }).catch(function (err){
+                                console.log(err);
+                                Alert.alert(
+                                    "Network Error", 
+                                    "An error occured. Please check your network and try again."
+                                )
+                            })
                         }}
                     >{({handleChange, handleBlur, handleSubmit, values, touched, errors, isSubmitting}) => (
                         <StyledForm>

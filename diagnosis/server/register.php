@@ -19,9 +19,9 @@ if ($conn->connect_error) {
 $_POST = json_decode(array_keys($_POST)[0], true);
 
 //create data parameters for SQL query
-$user_email = $_REQUEST['user_email'];
-$user_login = $_REQUEST['username'];
-$user_password = $_REQUEST['password'];
+$user_email = $_POST['user_email'];
+$user_login = $_POST['username'];
+$user_password = $_POST['password'];
 
 // create and get SQL query
 $sql = "SELECT * FROM `_SXA_users` WHERE `user_email` LIKE '{$user_email}' OR `user_login` LIKE '{$user_login}'";
@@ -35,9 +35,9 @@ if ($result->num_rows > 0) {
     // create user
     $mysqltime = date('Y-m-d H:i:s');
     $wp_hasher = new PasswordHash(8, true);
-    $user_pass = wp_hash_password($user_password);
-    $user_id = wp_create_user($user_login, $user_pass, $user_email);
-    $insertSQL = "INSERT INTO `_SXA_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_registered`) VALUES (" . $user_id . "'" . $user_login . "', '" . $user_pass . "', '" . $user_nicename . "', '" . $user_email . "', " . $mysqltime . ")";
+    $wp_password = $wp_hasher->HashPassword( trim($user_password) );
+    $user_id = wp_create_user($user_login, $wp_password, $user_email);
+    $insertSQL = "INSERT INTO `_SXA_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_registered`) VALUES (" . $user_id . "'" . $user_login . "', '" . $wp_hash . "', '" . $user_nicename . "', '" . $user_email . "', " . $mysqltime . ")";
     if($conn->query($insertSQL)){
         echo "Sign up successful";
     }
