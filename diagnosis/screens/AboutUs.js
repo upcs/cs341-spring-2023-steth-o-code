@@ -6,7 +6,6 @@ import WebView from 'react-native-webview';
 
 const AboutUs = () => {
     return (
-        
         <View style={{flex: 1}}>
             <WebView 
             javaScriptEnabled={true}

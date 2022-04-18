@@ -3,7 +3,7 @@ import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { AntDesign } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
-import { StyleSheet, Image } from 'react-native';
+import { StyleSheet, Image, TouchableOpacity} from 'react-native';
 
 import KnowledgeTest from '../screens/KnowledgeTest';
 import TeamInfo from '../screens/TeamInfo';
@@ -40,6 +40,7 @@ const DrawerNavigator = () => {
           }} />
         <Drawer.Screen name="Main Menu" component={StackNavigator}
           options={{
+            headerTitleAlign: 'center',
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
             headerStyle: {
@@ -52,6 +53,7 @@ const DrawerNavigator = () => {
           }} />
         <Drawer.Screen name="Topics" component={Topics}
           options={{
+            headerTitleAlign: 'center',
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
             headerStyle: {
@@ -65,6 +67,7 @@ const DrawerNavigator = () => {
           }} />
         <Drawer.Screen name="Lectures" component={Lectures}
           options={{
+            headerTitleAlign: 'center',
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
             headerStyle: {
@@ -77,6 +80,7 @@ const DrawerNavigator = () => {
           }} />
         <Drawer.Screen name="Books" component={Books} 
         options={{
+          headerTitleAlign: 'center',
           headerShown: true,
           headerTitle: (props) => <LogoTitle {...props} />,
           headerStyle: {
@@ -89,6 +93,7 @@ const DrawerNavigator = () => {
         }}  />
         <Drawer.Screen name="Quiz Yourself" component={KnowledgeTest}
           options={{
+            headerTitleAlign: 'center',
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
             headerStyle: {
@@ -101,6 +106,7 @@ const DrawerNavigator = () => {
           }} />
         <Drawer.Screen name="Meet The Team" component={TeamInfo}
           options={{
+            headerTitleAlign: 'center',
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
             headerStyle: {
@@ -113,6 +119,7 @@ const DrawerNavigator = () => {
           }} />
         <Drawer.Screen name="About Us" component={AboutUs}
           options={{
+            headerTitleAlign: 'center',
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
             headerStyle: {
@@ -125,6 +132,7 @@ const DrawerNavigator = () => {
           }} />
         <Drawer.Screen name="Donate" component={Donate}
           options={{
+            headerTitleAlign: 'center',
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
             headerStyle: {
@@ -137,6 +145,7 @@ const DrawerNavigator = () => {
           }} />
         <Drawer.Screen name="FeedBack" component={Activities}
           options={{
+            headerTitleAlign: 'center',
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
             headerStyle: {
@@ -155,6 +164,7 @@ const DrawerNavigator = () => {
           }} />
         <Drawer.Screen name="Settings" component={Settings} //needs to be last 2 always
           options={{
+            headerTitleAlign: 'center',
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
             headerStyle: {
@@ -170,10 +180,15 @@ const DrawerNavigator = () => {
 
 function LogoTitle() {
   return (
-    <Image
-      style={{ width: 200, height: 60, top: 0, left: 0}}
+    <TouchableOpacity onPress={()=> navigation.navigate("Main Menu")}>
+      <Image
+      style={{ 
+        width: 190, 
+        height: 55,
+      }}
       source={require('diagnosis/assets/simplePDXLogo.png')}
-    />
+      />
+    </TouchableOpacity>
   );
 }
 
