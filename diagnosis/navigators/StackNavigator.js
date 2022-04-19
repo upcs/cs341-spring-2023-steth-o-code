@@ -58,7 +58,7 @@ const StackNavigator = () => {
                 gestureEnabled: false
             }}
         >
-          <Stack.Screen name="MainMenu" component={MainMenu} initialParams={{ user: "User" }}/>
+          <Stack.Screen name="MainMenu" component={MainMenu} initialParams={{ name: "User" }}/>
           <Stack.Screen name="KnowledgeTest" component={KnowledgeTest}/>
           <Stack.Screen name="AboutUs" component={AboutUs}/>
           <Stack.Screen name="Community" component={Community}/>

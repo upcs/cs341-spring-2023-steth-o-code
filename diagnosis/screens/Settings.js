@@ -15,7 +15,10 @@ const Settings = ({navigation}) =>
         <TextInput style={styles.name} onChangeText={(val)=>{setName(val)}}>{name}</TextInput>
 
         <TouchableOpacity style={styles.save} onPress={()=>{
-            alert(name + " SAVED")
+            navigation.navigate("Main Menu", { 
+                screen: "MainMenu", 
+                params: { Name: name }
+            });
         }}>
             <Text style={styles.word}>Save</Text>
         </TouchableOpacity>
