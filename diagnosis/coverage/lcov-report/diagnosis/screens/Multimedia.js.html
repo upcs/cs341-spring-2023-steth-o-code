@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">8.69% </span>
+                <span class="strong">91.3% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/23</span>
+                <span class='fraction'>21/23</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>2/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>2/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">9.52% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/21</span>
+                <span class='fraction'>21/21</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -156,31 +156,29 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -215,7 +213,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -238,27 +238,27 @@ import { StyledContainer,
 } from "./../components/SignUpLoginStyles";
 const {company, placeholder, textInputBackground} = Colors;
 &nbsp;
-const Multimedia = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-    let [selected, setSelected] = <span class="cstat-no" title="statement not covered" >React.useState('');</span>
-    const [isEnabled, setIsEnabled] = <span class="cstat-no" title="statement not covered" >useState(false);</span>
-    const toggleSwitch = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >setIsEnabled(<span class="fstat-no" title="function not covered" >pr</span>eviousState =&gt; <span class="cstat-no" title="statement not covered" >!previousState)</span>;</span></span>
-    const [selectedIndex, setSelectedIndex] = <span class="cstat-no" title="statement not covered" >useState(0);</span>
+const Multimedia = () =&gt; {
+    let [selected, setSelected] = React.useState('');
+    const [isEnabled, setIsEnabled] = useState(false);
+    const toggleSwitch = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >setIsEnabled(<span class="fstat-no" title="function not covered" >pr</span>eviousState =&gt; <span class="cstat-no" title="statement not covered" >!previousState)</span>;</span>
+    const [selectedIndex, setSelectedIndex] = useState(0);
 &nbsp;
-    let num_patients = <span class="cstat-no" title="statement not covered" >1;</span>
-    let prognosis = <span class="cstat-no" title="statement not covered" >"PLACEHOLDER"</span>
-    let description = <span class="cstat-no" title="statement not covered" >"PLACEHOLDER"</span>
-    let block1 = <span class="cstat-no" title="statement not covered" >"PLACEHOLDER";</span>
-    let ids1 = <span class="cstat-no" title="statement not covered" >[472325227, 472325047, 505014368];</span>//Normal, Annotated, Narrated
-    let block2 = <span class="cstat-no" title="statement not covered" >"PLACEHOLDER";</span>
-    let ids2 = <span class="cstat-no" title="statement not covered" >[0, 0, 0];</span>//Normal, Annotated, Narrated
-    let block3 = <span class="cstat-no" title="statement not covered" >"PLACEHOLDER";</span>
-    let ids3 = <span class="cstat-no" title="statement not covered" >[0, 0, 0];</span>//Normal, Annotated, Narrated
-    let block4 = <span class="cstat-no" title="statement not covered" >"PLACEHOLDER";</span>
-    let ids4 = <span class="cstat-no" title="statement not covered" >[0, 0, 0];</span>//Normal, Annotated, Narrated
-    let block5 = <span class="cstat-no" title="statement not covered" >"PLACEHOLDER";</span>
-    let ids5 = <span class="cstat-no" title="statement not covered" >[0, 0, 0];</span>//Normal, Annotated, Narrated
+    let num_patients = 1;
+    let prognosis = "PLACEHOLDER"
+    let description = "PLACEHOLDER"
+    let block1 = "PLACEHOLDER";
+    let ids1 = [472325227, 472325047, 505014368];//Normal, Annotated, Narrated
+    let block2 = "PLACEHOLDER";
+    let ids2 = [0, 0, 0];//Normal, Annotated, Narrated
+    let block3 = "PLACEHOLDER";
+    let ids3 = [0, 0, 0];//Normal, Annotated, Narrated
+    let block4 = "PLACEHOLDER";
+    let ids4 = [0, 0, 0];//Normal, Annotated, Narrated
+    let block5 = "PLACEHOLDER";
+    let ids5 = [0, 0, 0];//Normal, Annotated, Narrated
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return (</span>
+    return (
         &lt;StyledContainer&gt;
             &lt;StatusBar style="dark" /&gt;
             &lt;InnerContainer&gt;
@@ -269,10 +269,10 @@ const Multimedia = <span class="fstat-no" title="function not covered" >()</span
                 &lt;Text style={{alignItems: 'flex-start'}}&gt;{description}&lt;/Text&gt;
                 {/*Available offline switch*/}
                 &lt;View style={{alignItems: 'flex-start'}}&gt;{/* Switch needs to be centered */}
-                    &lt;Text&gt;{isEnabled ? "Available offline" : "Make page available offline"}&lt;/Text&gt;
+                    &lt;Text&gt;{isEnabled ? <span class="branch-0 cbranch-no" title="branch not covered" >"Available offline" </span>: "Make page available offline"}&lt;/Text&gt;
                     &lt;Switch
                         trackColor={{ false: "#767577", true: "#81b0ff" }}
-                        thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
+                        thumbColor={isEnabled ? <span class="branch-0 cbranch-no" title="branch not covered" >"#f5dd4b" </span>: "#f4f3f4"}
                         ios_backgroundColor="#3e3e3e"
                         onValueChange={toggleSwitch}
                         value={isEnabled}
@@ -292,10 +292,10 @@ const Multimedia = <span class="fstat-no" title="function not covered" >()</span
                     /&gt;
                 &lt;/View&gt;
                 {/*Video type selection*/}
-                &lt;ButtonGroup
+                &lt;ButtonGroup testID = 'vidButton'
                     buttons={['Normal', 'Annotated', 'Narrated']}
                     selectedIndex={selectedIndex}
-                    onPress={<span class="fstat-no" title="function not covered" >(v</span>alue) =&gt; <span class="cstat-no" title="statement not covered" >setSelectedIndex(value)}</span>
+                    onPress={(value) =&gt; setSelectedIndex(value)}
                     containerStyle={{ marginBottom: 20 }}
                 /&gt;
             &lt;/InnerContainer&gt;
@@ -310,7 +310,7 @@ export default Multimedia;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed Mar 30 2022 20:44:03 GMT-0700 (Pacific Daylight Time)
+                at Tue Apr 19 2022 10:07:07 GMT-0700 (Pacific Daylight Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>
