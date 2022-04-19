@@ -36,7 +36,7 @@ import Misc_MM from '../screens/topics-screens/Misc_MM';
 import HO_Tutorial from '../screens/topics-screens/HO_Tutorial';
 import Pulmonolgy_Tutorial from '../screens/topics-screens/Pulmonolgy';
 import Misc_Tutorial from '../screens/topics-screens/Misc_Tutorial';
-import Books from './../screens/Lectures';
+import Books from './../screens/Books';
 import ID_MM from './../screens/topics-screens/ID_MM';
 import Neurology_MM from './../screens/topics-screens/Neurology_MM';
 
@@ -58,7 +58,7 @@ const StackNavigator = () => {
                 gestureEnabled: false
             }}
         >
-          <Stack.Screen name="MainMenu" component={MainMenu} initialParams={{ user: "User" }}/>
+          <Stack.Screen name="MainMenu" component={MainMenu} initialParams={{ name: "User" }}/>
           <Stack.Screen name="KnowledgeTest" component={KnowledgeTest}/>
           <Stack.Screen name="AboutUs" component={AboutUs}/>
           <Stack.Screen name="Community" component={Community}/>
