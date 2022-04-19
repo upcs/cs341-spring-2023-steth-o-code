@@ -1,8 +1,6 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity, Dimensions} from 'react-native';
 import { ExtraText } from '../components/SignUpLoginStyles';
-import {Ionicons} from '@expo/vector-icons';
-import { IconButton, Colors } from 'react-native-paper';
 import Constants from 'expo-constants';
 
 const StatusBarHeight = Constants.statusBarHeight;

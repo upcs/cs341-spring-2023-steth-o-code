@@ -1,0 +1,329 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MultiMedia/> renders correctly 1`] = `
+<View
+  className="sc-bdvvtL doFzNs"
+>
+  <View
+    className="sc-gsDKAQ rZFaE"
+  >
+    <Image
+      className="sc-dkPtRN fQWDve"
+      resizeMode="contain"
+      source={1}
+    />
+    <Text
+      className="sc-hKwDye fAcRlN"
+    >
+      PLACEHOLDER
+    </Text>
+    <Text
+      style={
+        Object {
+          "alignItems": "flex-start",
+        }
+      }
+    >
+      PLACEHOLDER
+    </Text>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-start",
+        }
+      }
+    >
+      <Text>
+        Make page available offline
+      </Text>
+      <RCTSwitch
+        accessibilityRole="switch"
+        onChange={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        onTintColor="#81b0ff"
+        style={
+          Array [
+            Object {
+              "height": 31,
+              "width": 51,
+            },
+            Object {
+              "backgroundColor": "#3e3e3e",
+              "borderRadius": 16,
+            },
+          ]
+        }
+        thumbTintColor="#f4f3f4"
+        tintColor="#767577"
+        value={false}
+      />
+    </View>
+    <Text
+      style={
+        Object {
+          "alignItems": "flex-start",
+        }
+      }
+    >
+      Patient 1
+    </Text>
+    <Text
+      style={
+        Object {
+          "alignItems": "flex-start",
+        }
+      }
+    >
+      PLACEHOLDER
+    </Text>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flex": 1,
+              "overflow": "hidden",
+            },
+            undefined,
+          ]
+        }
+      >
+        <RNCWebView
+          cacheEnabled={true}
+          injectedJavaScriptBeforeContentLoadedForMainFrameOnly={true}
+          injectedJavaScriptForMainFrameOnly={true}
+          javaScriptEnabled={true}
+          messagingEnabled={false}
+          onContentProcessDidTerminate={[Function]}
+          onHttpError={[Function]}
+          onLoadingError={[Function]}
+          onLoadingFinish={[Function]}
+          onLoadingProgress={[Function]}
+          onLoadingStart={[Function]}
+          onMessage={[Function]}
+          onShouldStartLoadWithRequest={[Function]}
+          source={
+            Object {
+              "uri": "https://player.vimeo.com/video/472325227?loop=1",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "flex": 1,
+                "overflow": "hidden",
+              },
+              Object {
+                "backgroundColor": "#ffffff",
+              },
+              Object {
+                "flex": 1,
+                "height": 40,
+                "width": 200,
+              },
+            ]
+          }
+          useSharedProcessPool={true}
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "borderColor": "#e3e3e3",
+          "borderRadius": 3,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "height": 40,
+          "marginBottom": 20,
+          "marginHorizontal": 10,
+          "marginVertical": 5,
+          "overflow": "hidden",
+        }
+      }
+      testID="vidButton"
+    >
+      <View
+        style={
+          Object {
+            "borderRightColor": "#bdc6cf",
+            "borderRightWidth": 1,
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          accessibilityState={
+            Object {
+              "disabled": false,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "flex": 1,
+              "opacity": 1,
+            }
+          }
+          testID="buttonGroupItem"
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#2089dc",
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#fff",
+                  "fontSize": 16.714285714285715,
+                  "fontWeight": "500",
+                }
+              }
+              testID="buttonGroupItemText"
+            >
+              Normal
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "borderRightColor": "#bdc6cf",
+            "borderRightWidth": 1,
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          accessibilityState={
+            Object {
+              "disabled": false,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "flex": 1,
+              "opacity": 1,
+            }
+          }
+          testID="buttonGroupItem"
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#5e6977",
+                  "fontSize": 16.714285714285715,
+                  "fontWeight": "500",
+                }
+              }
+              testID="buttonGroupItemText"
+            >
+              Annotated
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          accessibilityState={
+            Object {
+              "disabled": false,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "flex": 1,
+              "opacity": 1,
+            }
+          }
+          testID="buttonGroupItem"
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#5e6977",
+                  "fontSize": 16.714285714285715,
+                  "fontWeight": "500",
+                }
+              }
+              testID="buttonGroupItemText"
+            >
+              Narrated
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;

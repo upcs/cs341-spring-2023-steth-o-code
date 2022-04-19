@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Text, View, StyleSheet, TouchableOpacity, ScrollView, Dimensions } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity, ScrollView} from 'react-native';
 import Modal from "react-native-modal";
 
 export default function Topics({navigation}){
