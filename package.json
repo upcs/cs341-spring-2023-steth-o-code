@@ -4,5 +4,8 @@
   },
   "devDependencies": {
     "jest": "^27.5.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode development"
   }
 }

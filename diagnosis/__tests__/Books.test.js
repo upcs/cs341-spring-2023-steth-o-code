@@ -13,10 +13,4 @@ describe('<Books />', () => {
         const tree = renderer.create(<Books />).toJSON();
         expect(tree).toMatchSnapshot();
     });
-    test("linking works", () => {
-        const { queryByTestId } = render(<Books />);
-        const book = queryByTestId('book1');
-        fireEvent.press(book);
-        expect(Linking.openURL).toHaveBeenCalledTimes(1);
-    });
 });
