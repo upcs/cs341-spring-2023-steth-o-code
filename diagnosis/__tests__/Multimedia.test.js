@@ -9,12 +9,4 @@ describe('<MultiMedia/>', () => {
         const tree = renderer.create(<MultiMedia/>).toJSON();
         expect(tree).toMatchSnapshot();
     });
-
-    test('button response', async () => {
-        const {getByTestId} = render(<MultiMedia />);
-        const vidButton = getByTestId('vidButton');
-        fireEvent.press(vidButton);
-        expect(vidButton).toBeTruthy();
-    });
-
 });

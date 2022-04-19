@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1650388028539" clover="3.2.0">
-  <project timestamp="1650388028539" name="All files">
-    <metrics statements="389" coveredstatements="247" conditionals="46" coveredconditionals="37" methods="152" coveredmethods="46" elements="587" coveredelements="330" complexity="0" loc="389" ncloc="389" packages="6" files="55" classes="55"/>
+<coverage generated="1650388237037" clover="3.2.0">
+  <project timestamp="1650388237038" name="All files">
+    <metrics statements="389" coveredstatements="245" conditionals="46" coveredconditionals="37" methods="152" coveredmethods="44" elements="587" coveredelements="326" complexity="0" loc="389" ncloc="389" packages="6" files="55" classes="55"/>
     <package name="diagnosis">
       <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="App.js" path="/Users/tamsendean/Desktop/GitHub/cs341-spring-2022-diagnosis-master-4/cs341-spring-2022-diagnosis/diagnosis/App.js">
@@ -139,7 +139,7 @@
       </file>
     </package>
     <package name="diagnosis.screens">
-      <metrics statements="235" coveredstatements="134" conditionals="46" coveredconditionals="37" methods="89" coveredmethods="22"/>
+      <metrics statements="235" coveredstatements="132" conditionals="46" coveredconditionals="37" methods="89" coveredmethods="20"/>
       <file name="AboutUs.js" path="/Users/tamsendean/Desktop/GitHub/cs341-spring-2022-diagnosis-master-4/cs341-spring-2022-diagnosis/diagnosis/screens/AboutUs.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="8" count="3" type="stmt"/>
@@ -153,10 +153,10 @@
         <line num="12" count="2" type="stmt"/>
       </file>
       <file name="Books.js" path="/Users/tamsendean/Desktop/GitHub/cs341-spring-2022-diagnosis-master-4/cs341-spring-2022-diagnosis/diagnosis/screens/Books.js">
-        <metrics statements="9" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="2"/>
+        <metrics statements="9" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="1"/>
         <line num="16" count="3" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
         <line num="49" count="0" type="stmt"/>
         <line num="61" count="0" type="stmt"/>
@@ -257,28 +257,28 @@
         <line num="50" count="3" type="stmt"/>
       </file>
       <file name="Multimedia.js" path="/Users/tamsendean/Desktop/GitHub/cs341-spring-2022-diagnosis-master-4/cs341-spring-2022-diagnosis/diagnosis/screens/Multimedia.js">
-        <metrics statements="21" coveredstatements="21" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="2"/>
+        <metrics statements="21" coveredstatements="20" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="1"/>
         <line num="14" count="3" type="stmt"/>
         <line num="16" count="3" type="stmt"/>
-        <line num="17" count="4" type="stmt"/>
-        <line num="18" count="3" type="stmt"/>
-        <line num="19" count="3" type="stmt"/>
-        <line num="20" count="3" type="stmt"/>
-        <line num="22" count="3" type="stmt"/>
-        <line num="23" count="3" type="stmt"/>
-        <line num="24" count="3" type="stmt"/>
-        <line num="25" count="3" type="stmt"/>
-        <line num="26" count="3" type="stmt"/>
-        <line num="27" count="3" type="stmt"/>
-        <line num="28" count="3" type="stmt"/>
-        <line num="29" count="3" type="stmt"/>
-        <line num="30" count="3" type="stmt"/>
-        <line num="31" count="3" type="stmt"/>
-        <line num="32" count="3" type="stmt"/>
-        <line num="33" count="3" type="stmt"/>
-        <line num="34" count="3" type="stmt"/>
-        <line num="36" count="3" type="stmt"/>
-        <line num="73" count="1" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
       </file>
       <file name="Settings.js" path="/Users/tamsendean/Desktop/GitHub/cs341-spring-2022-diagnosis-master-4/cs341-spring-2022-diagnosis/diagnosis/screens/Settings.js">
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
