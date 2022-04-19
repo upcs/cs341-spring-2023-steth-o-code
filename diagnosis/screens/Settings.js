@@ -11,7 +11,7 @@ const Settings = ({navigation}) =>
         <TouchableOpacity style={styles.picContainer} onPress={()=>{}}>
             <Image source={require('../assets/profilePic.jpeg')} style={styles.profPic}/>
         </TouchableOpacity>
-        <Text style={styles.nameL}>Change Name:</Text>
+        <Text style={styles.nameL}>Change Name</Text>
         <TextInput style={styles.name} onChangeText={(val)=>{setName(val)}}>{name}</TextInput>
 
         <TouchableOpacity style={styles.save} onPress={()=>{
@@ -39,8 +39,8 @@ const styles = StyleSheet.create({
     },nameL:{
         color:"white",
         bottom: "26.5%",
-        right:"11%",
-        fontSize:18
+        fontSize:18,
+        textAlign:"center"
     },
     button:{
         backgroundColor: "red",
