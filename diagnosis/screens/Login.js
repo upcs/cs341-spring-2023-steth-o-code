@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, ActivityIndicator } from "react-native";
+import { View, ActivityIndicator, TouchableOpacity, StyleSheet, Text } from "react-native";
 import { StatusBar } from "expo-status-bar";
 //formik
 import { Formik } from "formik";
@@ -140,9 +140,9 @@ const Login = ({ navigation }) => {
                             </ExtraView>
 
                             <ExtraView>
-                                <TextLink onPress={() => navigation.navigate("Main Menu")}>
-                                    <TextLinkContent>WHILE LOGIN IS FIXED</TextLinkContent>
-                                </TextLink>
+                                <TouchableOpacity style={styles.guest}onPress={() => navigation.navigate("Main Menu")}>
+                                    <Text style={styles.cont}>Continue as Guest</Text>
+                                </TouchableOpacity>
                             </ExtraView>
                                     
                         </StyledForm>)}
@@ -180,5 +180,57 @@ const TextInput = ({
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+    mainContainer: {
+        backgroundColor: 'white',
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#BFAA8C",
+    },
+    button:{
+        backgroundColor: "red",
+        borderRadius: 30,
+        width: '75%',
+        top: '26%'
+    },
+    word:{
+        color:"white",
+        textAlign:"center",
+        fontSize: 30, 
+        fontWeight: "bold"
+    },
+    profPic:{
+        height: 200, 
+        width: 200, 
+        borderRadius:100,
+    },
+    picContainer:{
+        bottom:"28%"
+    },
+    name:{
+        color:"white",
+        fontSize: 30,
+        bottom:"26%"
+    }, 
+    save:{
+        backgroundColor: "darkblue",
+        borderRadius: 30,
+        width: '75%',
+        top: '-25%'
+    },
+    guest:{
+        backgroundColor: "gray",
+        width: "105%",
+        borderRadius: 5,
+        padding: "3%"
+    },
+    cont:{
+        color: "white",
+        textAlign: "center",
+        fontSize: 25,
+    }
+});
 
 export default Login;
