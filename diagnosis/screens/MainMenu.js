@@ -26,8 +26,8 @@ const MainMenu = ({ route, navigation }) => {
                     <Text style={styles.buttonText}>Lectures</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity testID='buttonThree' style={styles.quickLinkButtons} onPress={() => navigation.navigate("KnowledgeTest")}> 
-                    <Text style={styles.buttonText}>Knowledge Test</Text>
+                <TouchableOpacity testID='buttonThree' style={styles.quickLinkButtons} onPress={() => navigation.navigate("Books")}> 
+                    <Text style={styles.buttonText}>Books</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity testID='buttonFour' style={styles.quickLinkButtons} onPress={() => navigation.navigate("TeamInfo")}> 
