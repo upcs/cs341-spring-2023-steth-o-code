@@ -2,7 +2,6 @@ import React from 'react';
 
 //import all the components we are going to use
 import {
-  SafeAreaView,
   StyleSheet,
   View,
   Text,
