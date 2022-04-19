@@ -180,7 +180,7 @@ const DrawerNavigator = () => {
 
 function LogoTitle() {
   return (
-    <TouchableOpacity onPress={()=> navigation.navigate("Main Menu")}>
+    <TouchableOpacity>
       <Image
       style={{ 
         width: 190, 
