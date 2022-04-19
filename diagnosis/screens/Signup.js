@@ -1,8 +1,8 @@
 import React, {useState}  from 'react';
 import { View, Text, ActivityIndicator, Alert } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import * as Yup from 'yup'
-
+import * as Yup from 'yup';
+import axios from 'axios';
 //formik
 import { Formik } from 'formik';
 
@@ -52,10 +52,6 @@ const Signup = ({navigation}) => {
                         initialValues={{fullName: '', email: '', username: '', password: '', confirmPassword: ''}}
                         validationSchema={ValidationInputSchema}
                         onSubmit={(values, { setSubmitting }) => {
-                            // setTimeout(() => {
-                            //     setSubmitting(false);
-                            //     navigation.navigate('Main Menu', { screen: "MainMenu", params: {user: values.fullName}}), 
-                            // 500});
                             console.log("Processing registration");
                             axios.post("https://up.physicaldiagnosispdx.com/up/app-content/register.php", JSON.stringify({
                                 'user_email': values.email,
@@ -66,7 +62,7 @@ const Signup = ({navigation}) => {
                                     'Accept': 'application/json',
                                     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
                                 }
-                            }).then(function (response) {
+                            }).then(function (data) {
                                 console.log(data);
                                 setSubmitting(false);
                                 if((data.data).search("Sign up successful") != 1){
@@ -74,6 +70,12 @@ const Signup = ({navigation}) => {
                                         screen: "MainMenu",
                                         user: values.username
                                     })
+                                }
+                                else{
+                                    Alert.alert(
+                                        "Sign Up Error",
+                                        data.data
+                                    )
                                 }
                             }).catch(function (err){
                                 console.log(err);
