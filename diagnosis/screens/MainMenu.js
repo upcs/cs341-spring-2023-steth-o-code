@@ -6,11 +6,11 @@ import Constants from 'expo-constants';
 const StatusBarHeight = Constants.statusBarHeight;
 const MainMenu = ({ route, navigation }) => { 
     var now = new Date();
-    const { user } = route.params;
+    const { name } = route.params;
     return(
         <View style={styles.mainContainer}> 
             <Image style={styles.stethoscopeImage} source={require('diagnosis/assets/stethoscope.jpeg')} blurRadius={1}></Image>
-            <Text style={styles.welcomeText}>{now.getHours() < 12 ? "Good morning" : (now.getHours() < 18) ? "Good afternoon" : "Good evening"}, {"\n" + user}
+            <Text style={styles.welcomeText}>{now.getHours() < 12 ? "Good morning" : (now.getHours() < 18) ? "Good afternoon" : "Good evening"}, {"\n" + name}
             </Text>
 
             <View style={styles.middleLineLeft}></View>
@@ -26,8 +26,8 @@ const MainMenu = ({ route, navigation }) => {
                     <Text style={styles.buttonText}>Lectures</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity testID='buttonThree' style={styles.quickLinkButtons} onPress={() => navigation.navigate("KnowledgeTest")}> 
-                    <Text style={styles.buttonText}>Knowledge Test</Text>
+                <TouchableOpacity testID='buttonThree' style={styles.quickLinkButtons} onPress={() => navigation.navigate("Books")}> 
+                    <Text style={styles.buttonText}>Books</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity testID='buttonFour' style={styles.quickLinkButtons} onPress={() => navigation.navigate("TeamInfo")}> 

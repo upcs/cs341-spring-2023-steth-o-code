@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, Image, TouchableOpacity, TextInput} from 'react
 
 
 
-const Settings = () => 
+const Settings = ({navigation}) => 
 {
     const [name,setName] = useState('USER');
     return(
@@ -11,16 +11,21 @@ const Settings = () =>
         <TouchableOpacity style={styles.picContainer} onPress={()=>{}}>
             <Image source={require('../assets/profilePic.jpeg')} style={styles.profPic}/>
         </TouchableOpacity>
-
+        <Text style={styles.nameL}>Change Name</Text>
         <TextInput style={styles.name} onChangeText={(val)=>{setName(val)}}>{name}</TextInput>
 
         <TouchableOpacity style={styles.save} onPress={()=>{
-            alert(name + " SAVED")
+            navigation.navigate("Main Menu", { 
+                screen: "MainMenu", 
+                params: { Name: name }
+            });
         }}>
             <Text style={styles.word}>Save</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button} >
+        <TouchableOpacity style={styles.button} onPress={()=>{
+            navigation.navigate("Login")
+        }} >
             <Text style={styles.word}>Log Out</Text>
         </TouchableOpacity>
     </View>
@@ -34,6 +39,11 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "#BFAA8C",
+    },nameL:{
+        color:"white",
+        bottom: "26.5%",
+        fontSize:18,
+        textAlign:"center"
     },
     button:{
         backgroundColor: "red",
@@ -56,15 +66,18 @@ const styles = StyleSheet.create({
         bottom:"28%"
     },
     name:{
-        color:"white",
+        color: "black",
         fontSize: 30,
-        bottom:"26%"
+        textAlign:"center",
+        bottom:"26%",
+        backgroundColor:"white", 
+        width:"50%"
     }, 
     save:{
         backgroundColor: "darkblue",
         borderRadius: 30,
         width: '75%',
-        top: '-25%'
+        top: '-23%'
     }
 });
 
