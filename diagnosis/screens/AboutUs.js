@@ -2,7 +2,7 @@ import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import Constants from 'expo-constants';
 import WebView from 'react-native-webview';
-
+import style from './style.css';
 
 const AboutUs = () => {
     return (
@@ -17,6 +17,7 @@ const AboutUs = () => {
 
 const styles = StyleSheet.create({
     mainScroller: {
+        style.
         flex: 1,
         alignItems: "center",
         padding: 25,
