@@ -17,7 +17,6 @@ const AboutUs = () => {
 
 const styles = StyleSheet.create({
     mainScroller: {
-        style.
         flex: 1,
         alignItems: "center",
         padding: 25,
