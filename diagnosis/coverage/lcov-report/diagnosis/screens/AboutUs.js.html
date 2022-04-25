@@ -112,33 +112,7 @@
 <a name='L47'></a><a href='#L47'>47</a>
 <a name='L48'></a><a href='#L48'>48</a>
 <a name='L49'></a><a href='#L49'>49</a>
-<a name='L50'></a><a href='#L50'>50</a>
-<a name='L51'></a><a href='#L51'>51</a>
-<a name='L52'></a><a href='#L52'>52</a>
-<a name='L53'></a><a href='#L53'>53</a>
-<a name='L54'></a><a href='#L54'>54</a>
-<a name='L55'></a><a href='#L55'>55</a>
-<a name='L56'></a><a href='#L56'>56</a>
-<a name='L57'></a><a href='#L57'>57</a>
-<a name='L58'></a><a href='#L58'>58</a>
-<a name='L59'></a><a href='#L59'>59</a>
-<a name='L60'></a><a href='#L60'>60</a>
-<a name='L61'></a><a href='#L61'>61</a>
-<a name='L62'></a><a href='#L62'>62</a>
-<a name='L63'></a><a href='#L63'>63</a>
-<a name='L64'></a><a href='#L64'>64</a>
-<a name='L65'></a><a href='#L65'>65</a>
-<a name='L66'></a><a href='#L66'>66</a>
-<a name='L67'></a><a href='#L67'>67</a>
-<a name='L68'></a><a href='#L68'>68</a>
-<a name='L69'></a><a href='#L69'>69</a>
-<a name='L70'></a><a href='#L70'>70</a>
-<a name='L71'></a><a href='#L71'>71</a>
-<a name='L72'></a><a href='#L72'>72</a>
-<a name='L73'></a><a href='#L73'>73</a>
-<a name='L74'></a><a href='#L74'>74</a>
-<a name='L75'></a><a href='#L75'>75</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L50'></a><a href='#L50'>50</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -146,30 +120,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -212,44 +162,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
-import { Text, View, StyleSheet, TouchableOpacity, ScrollView, Dimensions, SafeAreaView } from 'react-native';
-import CarouselCards from '../components/CarouselCards';
+import {View, StyleSheet} from 'react-native';
 import Constants from 'expo-constants';
 import WebView from 'react-native-webview';
 &nbsp;
 &nbsp;
 const AboutUs = () =&gt; {
     return (
-        
         &lt;View style={{flex: 1}}&gt;
             &lt;WebView 
             javaScriptEnabled={true}
             source={{uri: 'https://up.physicaldiagnosispdx.com/up/app-content/server-screens/AboutUs.php'}}
             /&gt;
         &lt;/View&gt;
-        
-&nbsp;
-        // &lt;ScrollView style={{ maxHeight: Dimensions.get('window').height }} nestedScrollEnabled={true} onStartShouldSetResponder={true} contentContainerStyle={styles.mainScroller} showsVerticalScrollIndicator={true}&gt;
-        //     &lt;Text style={styles.title}&gt;About PDX PDX&lt;/Text&gt;
-        //     &lt;ScrollView style={{ maxHeight: 300 }} showsVerticalScrollIndicator={true} nestedScrollEnabled={true} testID='text-scroll'&gt;
-        //         &lt;View style={styles.textContainer}&gt;
-        //             &lt;Text style={{flex: 1, flexWrap: 'wrap'}}&gt;Physical diagnosis can be defined as the use of physical examination to aid in the identification and characterization of medical conditions. It is a critical area of clinical medicine that requires conceptual understanding, visualization, mentorship, practice, and experience. Practice and experience are not effective without conceptual understanding, visualization, and mentorship.{"\n"}&lt;/Text&gt;
-        //             &lt;Text style={{flex: 1, flexWrap: 'wrap'}}&gt;Medical textbooks and print journals provide written descriptions of physical examination findings and the methods used to elicit them; in some cases, clinical images are used to provide visualization to learners, a critical component of the learning process.{"\n"}&lt;/Text&gt;
-        //             &lt;Text style={{flex: 1, flexWrap: 'wrap'}}&gt;Images of static physical findings, such as arachnodactyly of Marfan's syndrome, can be delivered to learners via medical textbooks and print journals, and are instrumental in the process of learning physical diagnosis.{"\n"}&lt;/Text&gt;
-        //             &lt;Text style={{flex: 1, flexWrap: 'wrap'}}&gt;However, there are numerous dynamic physical findings that can only be visualized by learners via audio or video recordings. Such findings cannot be delivered to learners via medical textbooks or print journals. Computer-based media, including the internet, has introduced a means to provide learners with visualization of dynamic physical findings. Currently, learners can find examples of most physical findings scattered around the internet. For example, they may seek and find an audio recording of the murmur of mitral stenosis in one place, and a video recording of Kussmaul's sign in another. To our knowledge, there is no centralized repository for physical findings, where learners can visit one website to find examples of virtually any physical finding of interest.{"\n"}&lt;/Text&gt;    
-        //             &lt;View&gt;
-        //                 &lt;Text&gt;“Medicine is learned by the bedside and not in the classroom. Let not your conceptions of disease come from the words heard in the lecture room or read from the book. See and then reason and compare and control. But see first.”{"\n"}&lt;/Text&gt;
-        //                 &lt;Text&gt;What is the most important part of a stethoscope ?   The part between the earpieces.&lt;/Text&gt;
-        //             &lt;/View&gt;
-        //         &lt;/View&gt;
-            
-        //     &lt;/ScrollView&gt;
-            
-        //     &lt;View style={styles.carousel} testID='carousel'&gt;
-        //         &lt;CarouselCards /&gt;
-        //     &lt;/View&gt;
-            
-        // &lt;/ScrollView&gt;
     );
 };
 &nbsp;
@@ -292,7 +217,7 @@ export default AboutUs;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Tue Apr 19 2022 10:10:36 GMT-0700 (Pacific Daylight Time)
+                at Sun Apr 24 2022 21:58:29 GMT-0700 (Pacific Daylight Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>
