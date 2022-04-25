@@ -2,10 +2,11 @@ import React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity, Dimensions } from 'react-native';
 import { WebView } from 'react-native-webview';
 
+
 const Cardiology_MM = () => (
     <View style={styles.mainContainer}>
-        <WebView 
-            javaScriptEnabled={true} source={{uri: 'https://up.physicaldiagnosispdx.com/up/app-content/server-screens/Cardiology_MM.php'}} 
+        <WebView
+            javaScriptEnabled={true} source={{uri: 'https://up.physicaldiagnosispdx.com/up/app-content/server-screens/Cardiology_MM.php'}}
             style={styles.view}
         />
     </View>
@@ -21,7 +22,7 @@ const styles = StyleSheet.create({
     
     view: {
         resizeMode: 'stretch',
-        top: 40
+        top: 40,
     }
 });
 
