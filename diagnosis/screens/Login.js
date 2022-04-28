@@ -25,13 +25,13 @@ import {
   StyleInputLabel,
 } from "../components/SignUpLoginStyles";
 
-import { Octicons, Ionicons, Fontisto } from "@expo/vector-icons";
-import axios from "axios";
+import { Octicons, Ionicons } from "@expo/vector-icons";
 //colors
-const { company, placeholder, textInputBackground } = Colors;
+const { company, placeholder } = Colors;
 
 //keyboard avoiding wrapper
 import KeyboardAvoidWrap from "../components/KeyboardAvoidWrap";
+import axios from 'axios';
 
 const Login = ({ navigation }) => {
     const [hidePassword, setHidePassword] = useState(true);

@@ -2,7 +2,6 @@ import React, {useState}  from 'react';
 import { View, Text, ActivityIndicator, Alert } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import * as Yup from 'yup';
-import axios from 'axios';
 //formik
 import { Formik } from 'formik';
 
@@ -30,6 +29,7 @@ const {company, placeholder} = Colors;
 
 //keyboard avoiding wrapper
 import KeyboardAvoidWrap from '../components/KeyboardAvoidWrap';
+import axios from 'axios';
 
 const ValidationInputSchema = Yup.object().shape({
     username: Yup.string().min(2, 'Too short').max(50, 'Too Long').required('Username is required'),
@@ -49,40 +49,35 @@ const Signup = ({navigation}) => {
                 <InnerContainer>
                     <PageTitle>Sign Up to PDX PDX</PageTitle>
                     <Formik
-                        initialValues={{fullName: '', email: '', username: '', password: '', confirmPassword: ''}}
+                        initialValues={{ fullName: '', email: '', username: '', password: '', confirmPassword: '' }}
                         validationSchema={ValidationInputSchema}
                         onSubmit={(values, { setSubmitting }) => {
                             console.log("Processing registration");
-                            axios.post("https://up.physicaldiagnosispdx.com/up/app-content/register.php", JSON.stringify({
-                                'user_email': values.email,
-                                'username': values.username,
-                                'password': values.password
-                            }), { 
-                                headers: {
-                                    'Accept': 'application/json',
-                                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-                                }
-                            }).then(function (data) {
-                                console.log(data);
+                            axios.post("https://up.physicaldiagnosispdx.com/up/app-content/register.php", 
+                                JSON.stringify({ 'email': values.email, 'user': values.username, 'pass': values.password }), 
+                                { headers: { 'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' } }
+                            ).then(function (data) {
+                                //console.log(data);
                                 setSubmitting(false);
-                                if((data.data).search("Sign up successful") != 1){
+                                if((data.data).search("Sign up successful") != -1){
                                     navigation.navigate("Main Menu", {
                                         screen: "MainMenu",
                                         user: values.username
-                                    })
+                                    });
                                 }
                                 else{
                                     Alert.alert(
                                         "Sign Up Error",
                                         data.data
-                                    )
+                                    );
                                 }
                             }).catch(function (err){
                                 console.log(err);
+                                setSubmitting(false);
                                 Alert.alert(
                                     "Network Error", 
                                     "An error occured. Please check your network and try again."
-                                )
+                                );
                             })
                         }}
                     >{({handleChange, handleBlur, handleSubmit, values, touched, errors, isSubmitting}) => (

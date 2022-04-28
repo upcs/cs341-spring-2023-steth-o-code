@@ -200,7 +200,7 @@ export default function Topics({navigation}){
                         <Text style={styles.buttonText}>Cardiology</Text>
                     </TouchableOpacity>
     
-                    <Modal isVisible={isModalCardio} animationIn={'slideInUp'} style={styles.modal} coverScreen={false}>
+                    <Modal isVisible={isModalCardio} animationIn={'slideInUp'} style={styles.modal} coverScreen={true}>
                         <View style={styles.popView}>
                             <Text style={styles.popTopicStyle}> Cardiology: </Text>
                             <TouchableOpacity style={styles.popButton} onPress={navigateCardioT}>
@@ -222,7 +222,7 @@ export default function Topics({navigation}){
                         <Text style={styles.buttonText}>Endocrinology</Text>
                     </TouchableOpacity>
 
-                    <Modal isVisible={isModalEndo} animationIn={'slideInUp'} style={styles.modal} coverScreen={false}>
+                    <Modal isVisible={isModalEndo} animationIn={'slideInUp'} style={styles.modal} coverScreen={true}>
                         <View style={styles.popView}>
                             <Text style={styles.popTopicStyle}> Endocrinology: </Text>
 
@@ -247,7 +247,7 @@ export default function Topics({navigation}){
                         <Text style={styles.buttonText}>Gastroenterology</Text>
                     </TouchableOpacity>
 
-                    <Modal isVisible={isModalGastro} animationIn={'slideInUp'} style={styles.modal} coverScreen={false}>
+                    <Modal isVisible={isModalGastro} animationIn={'slideInUp'} style={styles.modal} coverScreen={true}>
                         <View style={styles.popView}>
                             <Text style={styles.popTopicStyle}> Gastroenterology: </Text>
 
@@ -273,7 +273,7 @@ export default function Topics({navigation}){
                         <Text style={styles.buttonText}>Infectious Disease</Text>
                     </TouchableOpacity>
 
-                    <Modal isVisible={isModalID} animationIn={'slideInUp'} style={styles.modal} coverScreen={false}>
+                    <Modal isVisible={isModalID} animationIn={'slideInUp'} style={styles.modal} coverScreen={true}>
                         <View style={styles.popView}>
                             <Text style={styles.popTopicStyle}> Infectious Disease: </Text>
 
@@ -299,7 +299,7 @@ export default function Topics({navigation}){
                         <Text style={styles.buttonText}>Neurology</Text>
                     </TouchableOpacity>
 
-                    <Modal isVisible={isModalNeuro} animationIn={'slideInUp'} style={styles.modal} coverScreen={false}>
+                    <Modal isVisible={isModalNeuro} animationIn={'slideInUp'} style={styles.modal} coverScreen={true}>
                         <View style={styles.popView}>
                             <Text style={styles.popTopicStyle}> Neurology: </Text>
 
@@ -326,7 +326,7 @@ export default function Topics({navigation}){
                         <Text style={styles.buttonText}>Nephrology</Text>
                     </TouchableOpacity>
 
-                    <Modal isVisible={isModalNephro} animationIn={'slideInUp'} style={styles.modal} coverScreen={false}>
+                    <Modal isVisible={isModalNephro} animationIn={'slideInUp'} style={styles.modal} coverScreen={true}>
                         <View style={styles.popView}>
                             <Text style={styles.popTopicStyle}> Nephrology: </Text>
 
@@ -352,7 +352,7 @@ export default function Topics({navigation}){
                         <Text style={styles.buttonText}>Nails</Text>
                     </TouchableOpacity>
 
-                    <Modal isVisible={isModalNails} animationIn={'slideInUp'} style={styles.modal} coverScreen={false}>
+                    <Modal isVisible={isModalNails} animationIn={'slideInUp'} style={styles.modal} coverScreen={true}>
                         <View style={styles.popView}>
                             <Text style={styles.popTopicStyle}> Nails: </Text>
 
@@ -377,7 +377,7 @@ export default function Topics({navigation}){
                         <Text style={styles.buttonText}>Rheumatology</Text>
                     </TouchableOpacity>
 
-                    <Modal isVisible={isModalRheu} animationIn={'slideInUp'} style={styles.modal} coverScreen={false}>
+                    <Modal isVisible={isModalRheu} animationIn={'slideInUp'} style={styles.modal} coverScreen={true}>
                         <View style={styles.popView}>
                             <Text style={styles.popTopicStyle}> Rheumatology: </Text>
 
@@ -403,7 +403,7 @@ export default function Topics({navigation}){
                         <Text style={styles.buttonText}>Hematolgy-Oncology</Text>
                     </TouchableOpacity>
 
-                    <Modal isVisible={isModalHO} animationIn={'slideInUp'} style={styles.modal} coverScreen={false}>
+                    <Modal isVisible={isModalHO} animationIn={'slideInUp'} style={styles.modal} coverScreen={true}>
                         <View style={styles.popView}>
                             <Text style={styles.popTopicBig}> Hematolgy-Oncology: </Text>
 
@@ -430,7 +430,7 @@ export default function Topics({navigation}){
                         <Text style={styles.buttonText}>Hereditary Conditions</Text>
                     </TouchableOpacity>
 
-                    <Modal isVisible={isModalHC} animationIn={'slideInUp'} style={styles.modal} coverScreen={false}>
+                    <Modal isVisible={isModalHC} animationIn={'slideInUp'} style={styles.modal} coverScreen={true}>
                         <View style={styles.popView}>
                             <Text style={styles.popTopicBig}> Hereditary Conditions: </Text>
 
@@ -455,7 +455,7 @@ export default function Topics({navigation}){
                         <Text style={styles.buttonText}>Pulmonolgy</Text>
                     </TouchableOpacity>
 
-                    <Modal isVisible={isModalPulm} animationIn={'slideInUp'} style={styles.modal} coverScreen={false}>
+                    <Modal isVisible={isModalPulm} animationIn={'slideInUp'} style={styles.modal} coverScreen={true}>
                         <View style={styles.popView}>
                             <Text style={styles.popTopicStyle}> Pulmonolgy: </Text>
 
@@ -480,7 +480,7 @@ export default function Topics({navigation}){
                         <Text style={styles.buttonText}>Miscellaneous</Text>
                     </TouchableOpacity>
 
-                    <Modal isVisible={isModalMisc} animationIn={'slideInUp'} style={styles.modal} coverScreen={false}>
+                    <Modal isVisible={isModalMisc} animationIn={'slideInUp'} style={styles.modal} coverScreen={true}>
                         <View style={styles.popView}>
                             <Text style={styles.popTopicStyle}> Miscellaneous: </Text>
 
@@ -534,8 +534,8 @@ const styles = StyleSheet.create({
     },
     modal: {
         alignItems: 'center',
-        left: Dimensions.get('window').width*(3/32),
-        top: Dimensions.get('window').height/4
+        // left: Dimensions.get('window').width*(3/32),
+        top: Dimensions.get('window').height/2
     },
     popTopicStyle: {
         color: 'black',
