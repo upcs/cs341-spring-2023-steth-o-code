@@ -26,7 +26,6 @@ import {
 } from "../components/SignUpLoginStyles";
 
 import { Octicons, Ionicons } from "@expo/vector-icons";
-import axios from "axios";
 //colors
 const { company, placeholder} = Colors;
 
