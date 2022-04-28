@@ -45,10 +45,10 @@ exports[`<MainMenu /> renders correctly 1`] = `
       }
     }
   >
-    Good morning
+    Good afternoon
     , 
     
-up_admin
+undefined
   </Text>
   <View
     style={
@@ -219,7 +219,7 @@ up_admin
           }
         }
       >
-        Knowledge Test
+        Books
       </Text>
     </View>
     <View

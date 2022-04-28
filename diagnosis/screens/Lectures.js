@@ -45,8 +45,8 @@ const styles = StyleSheet.create({
         fontSize: 25,
         fontWeight: "bold",
         color: "white",
-        top: '5%',
-        left: '25%',
+        top: '12%',
+        left: '20%',
     },
     JVPButton1: {
         alignItems: 'center',
