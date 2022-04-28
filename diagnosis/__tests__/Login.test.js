@@ -2,7 +2,6 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import {act, fireEvent, render, waitFor} from '@testing-library/react-native';
 import Login from '../screens/Login';
-import axios from 'axios';
 
 jest.mock('axios', () => ({
     ...jest.requireActual('axios'),
