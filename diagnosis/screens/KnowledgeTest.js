@@ -6,6 +6,7 @@ const KnowledgeTest = () => (
     <WebView 
     javaScriptEnabled={true}
     source={{uri: 'https://physicaldiagnosispdx.com/test-knowledge/'}}
+    style={styles.view}
     />
 );
 
