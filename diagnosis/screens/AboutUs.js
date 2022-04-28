@@ -3,7 +3,6 @@ import {View, StyleSheet} from 'react-native';
 import Constants from 'expo-constants';
 import WebView from 'react-native-webview';
 
-
 const AboutUs = () => {
     return (
         <View style={{flex: 1}}>

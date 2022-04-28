@@ -22,14 +22,7 @@ const styles = StyleSheet.create({
         height: Dimensions.get('window').height,
         width: Dimensions.get('window').width
     },
-    
-    view: {
-        top: '8%',
-        width: '80%',
-        marginBottom: '40%',
-        left: '10%',
-        paddingTop: 200
-    }
+
 });
 
 export default Lecture_DR;

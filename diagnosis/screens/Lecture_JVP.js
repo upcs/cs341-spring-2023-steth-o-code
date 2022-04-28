@@ -19,11 +19,7 @@ const styles = StyleSheet.create({
                 width: Dimensions.get('window').width
             },
             
-            view: {
-                resizeMode: 'stretch',
-                flex: 0.5,
-                top: 120
-            }
+            
     
 });
 
