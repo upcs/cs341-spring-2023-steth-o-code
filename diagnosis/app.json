@@ -4,7 +4,7 @@
     "slug": "diagnosis",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/appLogoIMG/ios/AppIcon.appiconset/Icon-App-40x40@3x.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -30,13 +30,15 @@
             }
           }
         }
-      }
+      },
+      "bundleIdentifier": "com.upcs.diagnosis"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.upcs.diagnosis"
     },
     "web": {
       "favicon": "./assets/favicon.png"
