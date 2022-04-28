@@ -1,7 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, Dimensions} from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
-import { Button } from 'react-native-paper';
+import { View, StyleSheet, Dimensions} from 'react-native';
 import { WebView } from 'react-native-webview';
 
 const Lecture_VHD = () => (
@@ -22,11 +20,7 @@ const styles = StyleSheet.create({
         width: Dimensions.get('window').width
     },
     
-    view: {
-        resizeMode: 'stretch',
-        flex: 0.5,
-        top: 40
-    }
+ 
 });
 
 export default Lecture_VHD;

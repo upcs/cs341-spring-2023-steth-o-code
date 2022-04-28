@@ -1,7 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, Dimensions} from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
-import { Button } from 'react-native-paper';
+import { View, StyleSheet, Dimensions} from 'react-native';
 import { WebView } from 'react-native-webview';
 
 const Lecture_DR = () => (
@@ -24,14 +22,7 @@ const styles = StyleSheet.create({
         height: Dimensions.get('window').height,
         width: Dimensions.get('window').width
     },
-    
-    view: {
-        top: '8%',
-        width: '80%',
-        marginBottom: '40%',
-        left: '10%',
-        paddingTop: 200
-    }
+
 });
 
 export default Lecture_DR;

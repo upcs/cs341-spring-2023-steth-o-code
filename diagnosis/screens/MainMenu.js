@@ -1,18 +1,16 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity, Dimensions} from 'react-native';
 import { ExtraText } from '../components/SignUpLoginStyles';
-import {Ionicons} from '@expo/vector-icons';
-import { IconButton, Colors } from 'react-native-paper';
 import Constants from 'expo-constants';
 
 const StatusBarHeight = Constants.statusBarHeight;
 const MainMenu = ({ route, navigation }) => { 
     var now = new Date();
-    const { user } = route.params;
+    const { name } = route.params;
     return(
         <View style={styles.mainContainer}> 
             <Image style={styles.stethoscopeImage} source={require('diagnosis/assets/stethoscope.jpeg')} blurRadius={1}></Image>
-            <Text style={styles.welcomeText}>{now.getHours() < 12 ? "Good morning" : (now.getHours() < 18) ? "Good afternoon" : "Good evening"}, {"\n" + user}
+            <Text style={styles.welcomeText}>{now.getHours() < 12 ? "Good morning" : (now.getHours() < 18) ? "Good afternoon" : "Good evening"}, {"\n" + name}
             </Text>
 
             <View style={styles.middleLineLeft}></View>
@@ -28,8 +26,8 @@ const MainMenu = ({ route, navigation }) => {
                     <Text style={styles.buttonText}>Lectures</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity testID='buttonThree' style={styles.quickLinkButtons} onPress={() => navigation.navigate("KnowledgeTest")}> 
-                    <Text style={styles.buttonText}>Knowledge Test</Text>
+                <TouchableOpacity testID='buttonThree' style={styles.quickLinkButtons} onPress={() => navigation.navigate("Books")}> 
+                    <Text style={styles.buttonText}>Books</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity testID='buttonFour' style={styles.quickLinkButtons} onPress={() => navigation.navigate("TeamInfo")}> 
@@ -77,7 +75,7 @@ const styles = StyleSheet.create({
         //backgroundColor: 'red',
         width: 200,
         top: StatusBarHeight-100,
-        left: Dimensions.get('window').width / 4,
+        left: Dimensions.get('window').width/4,
         flex: 1,
     },
 
@@ -95,7 +93,7 @@ const styles = StyleSheet.create({
         resizeMode: "stretch",
         position: "absolute",
         width: '100%',
-        height: '45%',
+        height: '40%',
         aspectRatio: 1,
         top: -60
     },
@@ -159,7 +157,7 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         position: 'absolute',
         left: "5%",
-        top: Dimensions.get('window').height*(5/16)
+        top: Dimensions.get('window').height*(5.2/16)
     },
 
     PDXCenterText: {
@@ -180,7 +178,7 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         position: 'absolute',
         right: "5%",
-        top: Dimensions.get('window').height*(5/16)
+        top: Dimensions.get('window').height*(5.2/16)
     },
 
     buttonText: {

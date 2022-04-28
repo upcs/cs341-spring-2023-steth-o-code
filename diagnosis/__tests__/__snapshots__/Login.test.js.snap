@@ -184,14 +184,24 @@ exports[`<Login /> renders correctly 1`] = `
                 onStartShouldSetResponder={[Function]}
                 style={
                   Object {
+                    "backgroundColor": "gray",
+                    "borderRadius": 5,
                     "opacity": 1,
+                    "padding": "3%",
+                    "width": "105%",
                   }
                 }
               >
                 <Text
-                  className="sc-ksdxgE fErdV"
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontSize": 25,
+                      "textAlign": "center",
+                    }
+                  }
                 >
-                  WHILE LOGIN IS FIXED
+                  Continue as Guest
                 </Text>
               </View>
             </View>

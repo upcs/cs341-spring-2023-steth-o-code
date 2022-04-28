@@ -67,7 +67,7 @@ const Multimedia = () => {
                     />
                 </View>
                 {/*Video type selection*/}
-                <ButtonGroup
+                <ButtonGroup testID = 'vidButton'
                     buttons={['Normal', 'Annotated', 'Narrated']}
                     selectedIndex={selectedIndex}
                     onPress={(value) => setSelectedIndex(value)}

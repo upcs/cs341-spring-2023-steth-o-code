@@ -3,7 +3,7 @@ import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { AntDesign } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
-import { StyleSheet, Image, TouchableOpacity, Dimensions } from 'react-native';
+import { StyleSheet, Image, TouchableOpacity} from 'react-native';
 
 import KnowledgeTest from '../screens/KnowledgeTest';
 import TeamInfo from '../screens/TeamInfo';
@@ -20,7 +20,6 @@ import Settings from '../screens/Settings';
 import StackNavigator from './StackNavigator';
 
 import CustomDrawer from '../components/CustomDrawer';
-import { DrawerActions } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { color } from 'react-native-reanimated';
 import { NavigationContainer } from '@react-navigation/native';
@@ -41,18 +40,9 @@ const DrawerNavigator = () => {
           }} />
         <Drawer.Screen name="Main Menu" component={StackNavigator}
           options={{
+            headerTitleAlign: 'center',
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
-            // headerLeft: () => (
-            //   <TouchableOpacity >
-            //     <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
-            //   </TouchableOpacity>
-            // ),
-            headerRight: () => (
-              <TouchableOpacity>
-                <Ionicons style={styles.AccIcon} name="person-circle-outline" size={40} color="white" />
-              </TouchableOpacity>
-            ),
             headerStyle: {
               backgroundColor: "#BFAA8C",
               height: 100,
@@ -63,20 +53,9 @@ const DrawerNavigator = () => {
           }} />
         <Drawer.Screen name="Topics" component={Topics}
           options={{
+            headerTitleAlign: 'center',
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
-            // headerLeft: () => (
-            //   <TouchableOpacity >
-            //     <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" onPress={()=>{
-            //       alert(navigation)
-            //     }}/>
-            //   </TouchableOpacity>
-            // ),
-            headerRight: () => (
-              <TouchableOpacity>
-                <Ionicons style={styles.AccIcon} name="person-circle-outline" size={40} color="white" />
-              </TouchableOpacity>
-            ),
             headerStyle: {
               backgroundColor: "#BFAA8C",
               height: 100,
@@ -88,18 +67,9 @@ const DrawerNavigator = () => {
           }} />
         <Drawer.Screen name="Lectures" component={Lectures}
           options={{
+            headerTitleAlign: 'center',
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
-            // headerLeft: () => (
-            //   <TouchableOpacity >
-            //     <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
-            //   </TouchableOpacity>
-            // ),
-            headerRight: () => (
-              <TouchableOpacity >
-                <Ionicons style={styles.AccIcon} name="person-circle-outline" size={40} color="white" />
-              </TouchableOpacity>
-            ),
             headerStyle: {
               backgroundColor: "#BFAA8C",
               height: 100,
@@ -110,18 +80,9 @@ const DrawerNavigator = () => {
           }} />
         <Drawer.Screen name="Books" component={Books} 
         options={{
+          headerTitleAlign: 'center',
           headerShown: true,
           headerTitle: (props) => <LogoTitle {...props} />,
-          // headerLeft: () => (
-          //   <TouchableOpacity >
-          //     <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
-          //   </TouchableOpacity>
-          // ),
-          headerRight: () => (
-            <TouchableOpacity>
-              <Ionicons style={styles.AccIcon} name="person-circle-outline" size={40} color="white" />
-            </TouchableOpacity>
-          ),
           headerStyle: {
             backgroundColor: "#BFAA8C",
             height: 100,
@@ -132,18 +93,9 @@ const DrawerNavigator = () => {
         }}  />
         <Drawer.Screen name="Quiz Yourself" component={KnowledgeTest}
           options={{
+            headerTitleAlign: 'center',
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
-            // headerLeft: () => (
-            //   <TouchableOpacity >
-            //     <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
-            //   </TouchableOpacity>
-            // ),
-            headerRight: () => (
-              <TouchableOpacity >
-                <Ionicons style={styles.AccIcon} name="person-circle-outline" size={40} color="white" />
-              </TouchableOpacity>
-            ),
             headerStyle: {
               backgroundColor: "#BFAA8C",
               height: 100,
@@ -154,18 +106,9 @@ const DrawerNavigator = () => {
           }} />
         <Drawer.Screen name="Meet The Team" component={TeamInfo}
           options={{
+            headerTitleAlign: 'center',
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
-            // headerLeft: () => (
-            //   <TouchableOpacity >
-            //     <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
-            //   </TouchableOpacity>
-            // ),
-            headerRight: () => (
-              <TouchableOpacity >
-                <Ionicons style={styles.AccIcon} name="person-circle-outline" size={40} color="white" />
-              </TouchableOpacity>
-            ),
             headerStyle: {
               backgroundColor: "#BFAA8C",
               height: 100,
@@ -176,18 +119,9 @@ const DrawerNavigator = () => {
           }} />
         <Drawer.Screen name="About Us" component={AboutUs}
           options={{
+            headerTitleAlign: 'center',
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
-            // headerLeft: () => (
-            //   <TouchableOpacity >
-            //     <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
-            //   </TouchableOpacity>
-            // ),
-            headerRight: () => (
-              <TouchableOpacity >
-                <Ionicons style={styles.AccIcon} name="person-circle-outline" size={40} color="white" />
-              </TouchableOpacity>
-            ),
             headerStyle: {
               backgroundColor: "#BFAA8C",
               height: 100,
@@ -198,18 +132,9 @@ const DrawerNavigator = () => {
           }} />
         <Drawer.Screen name="Donate" component={Donate}
           options={{
+            headerTitleAlign: 'center',
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
-            // headerLeft: () => (
-            //   <TouchableOpacity >
-            //     <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
-            //   </TouchableOpacity>
-            // ),
-            headerRight: () => (
-              <TouchableOpacity >
-                <Ionicons style={styles.AccIcon} name="person-circle-outline" size={40} color="white" />
-              </TouchableOpacity>
-            ),
             headerStyle: {
               backgroundColor: "#BFAA8C",
               height: 100,
@@ -220,18 +145,9 @@ const DrawerNavigator = () => {
           }} />
         <Drawer.Screen name="FeedBack" component={Activities}
           options={{
+            headerTitleAlign: 'center',
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
-            // headerLeft: () => (
-            //   <TouchableOpacity>
-            //     <Ionicons style={styles.menuIcon} name="menu" size={40} color="white" />
-            //   </TouchableOpacity>
-            // ),
-            headerRight: () => (
-              <TouchableOpacity>
-                <Ionicons style={styles.AccIcon} name="person-circle-outline" size={40} color="white" />
-              </TouchableOpacity>
-            ),
             headerStyle: {
               backgroundColor: "#BFAA8C",
               height: 100,
@@ -248,6 +164,7 @@ const DrawerNavigator = () => {
           }} />
         <Drawer.Screen name="Settings" component={Settings} //needs to be last 2 always
           options={{
+            headerTitleAlign: 'center',
             headerShown: true,
             headerTitle: (props) => <LogoTitle {...props} />,
             headerStyle: {
@@ -263,10 +180,15 @@ const DrawerNavigator = () => {
 
 function LogoTitle() {
   return (
-    <Image
-      style={{ width: 200, height: 60, top: 0, left: Dimensions.get('window').width/20}}
+    <TouchableOpacity>
+      <Image
+      style={{ 
+        width: 190, 
+        height: 55,
+      }}
       source={require('diagnosis/assets/simplePDXLogo.png')}
-    />
+      />
+    </TouchableOpacity>
   );
 }
 
