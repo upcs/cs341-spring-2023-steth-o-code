@@ -1,23 +1,31 @@
 import React from 'react';
-import {StyleSheet} from 'react-native';
+import {StyleSheet, View, Dimensions} from 'react-native';
 import WebView from 'react-native-webview';
 
 const Activities = () => (
-    <WebView 
-    javaScriptEnabled={true}
-    source={{uri: 'https://physicaldiagnosispdx.com/message-board-2/'}}
-    />
+    <View style={styles.mainContainer}>
+        <WebView 
+            javaScriptEnabled={true}
+            source={{uri: 'https://physicaldiagnosispdx.com/message-board-2/'}}
+            style={styles.view}
+        />
+    </View>
 );
 
 const styles = StyleSheet.create({
     mainContainer: {
-        backgroundColor: 'white',
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
         backgroundColor: "#BFAA8C",
+        height: Dimensions.get('window').height,
+        width: Dimensions.get('window').width
     },
 
+    view: {
+        resizeMode: 'stretch',
+        top: 40,
+        marginTop: -370,
+        marginBottom: -400
+    }
 });
 
 export default Activities;

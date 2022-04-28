@@ -418,9 +418,9 @@
       <metrics statements="72" coveredstatements="71" conditionals="0" coveredconditionals="0" methods="24" coveredmethods="23"/>
       <file name="Cardiology_MM.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/Cardiology_MM.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="14" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
       </file>
       <file name="Cardiology_Tutorial.js" path="/Users/devam/Desktop/GitHub/cs341-spring-2022-diagnosis/diagnosis/screens/topics-screens/Cardiology_Tutorial.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>

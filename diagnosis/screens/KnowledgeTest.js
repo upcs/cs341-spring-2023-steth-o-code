@@ -5,7 +5,8 @@ import WebView from 'react-native-webview';
 const KnowledgeTest = () => (
     <WebView 
     javaScriptEnabled={true}
-    source={{uri: 'https://up.physicaldiagnosispdx.com/up/app-content/KnowledgeTest.php'}}
+    source={{uri: 'https://physicaldiagnosispdx.com/test-knowledge/'}}
+    style={styles.view}
     />
 );
 
@@ -17,7 +18,12 @@ const styles = StyleSheet.create({
         alignItems: "center",
         backgroundColor: "#BFAA8C",
     },
-
+    view: {
+        resizeMode: 'stretch',
+        top: 40,
+        marginTop: -370,
+        marginBottom: -400
+    }
 });
 
 export default KnowledgeTest;
