@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "expo": "^1.0.0",
+    "react-native": "^0.71.3",
     "react-native-select-dropdown": "^1.7.0"
   },
   "devDependencies": {
