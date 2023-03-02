@@ -15,7 +15,6 @@ const styles = StyleSheet.create({
         alignItems: "center",
         backgroundColor: "#BFAA8C",
     },
-
 });
 
 export default Community;

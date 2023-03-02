@@ -36,12 +36,12 @@ body {
 }
 
 .caption .s-cat{
-	font-size: 24px !important;
+	font-size: 24vw !important;
     background: #D90011 !important;
 }
 
 .slide-wrap .caption .s-cat{
-	font-size: 24px !important;
+	font-size: 24vw !important;
 	background: #D90011 !important;
 }
 	
@@ -289,7 +289,7 @@ ul.trail-items li a:hover span{
 }
 
 .main-menu {
-	max-width: 775px !important;
+	max-width: 775vw !important;
 	float: left;
 }
 
@@ -374,7 +374,7 @@ iframe > span[class*='_title'] {
 
 
 .main-menu ul ul li > a[href="#"]{
-	/*color: blue;*/
+	color: blue;
 }
 
 .main-menu ul ul li > a[href="#"]:hover{

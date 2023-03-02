@@ -51,4 +51,4 @@ const styles = StyleSheet.create({
         marginTop: 22
     }
 });
-export default CustomDrawer
+export default CustomDrawer;

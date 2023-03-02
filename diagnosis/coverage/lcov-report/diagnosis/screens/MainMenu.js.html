@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">27.27% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>11/11</span>
+                <span class='fraction'>3/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/4</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/6</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">27.27% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>11/11</span>
+                <span class='fraction'>3/11</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -264,9 +264,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -277,23 +277,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -457,13 +457,13 @@ import { ExtraText } from '../components/SignUpLoginStyles';
 import Constants from 'expo-constants';
 &nbsp;
 const StatusBarHeight = Constants.statusBarHeight;
-const MainMenu = ({ route, navigation }) =&gt; { 
-    var now = new Date();
-    const { name } = route.params;
-    return(
+const MainMenu = <span class="fstat-no" title="function not covered" >({</span> route, navigation }) =&gt; { 
+    var now = <span class="cstat-no" title="statement not covered" >new Date();</span>
+    const { name } = <span class="cstat-no" title="statement not covered" >route.params;</span>
+<span class="cstat-no" title="statement not covered" >    return(</span>
         &lt;View style={styles.mainContainer}&gt; 
             &lt;Image style={styles.stethoscopeImage} source={require('diagnosis/assets/stethoscope.jpeg')} blurRadius={1}&gt;&lt;/Image&gt;
-            &lt;Text style={styles.welcomeText}&gt;{now.getHours() &lt; 12 ? <span class="branch-0 cbranch-no" title="branch not covered" >"Good morning" </span>: (now.getHours() &lt; 18) ? "Good afternoon" : <span class="branch-1 cbranch-no" title="branch not covered" >"Good evening"}</span>, {"\n" + name}
+            &lt;Text style={styles.welcomeText}&gt;{now.getHours() &lt; 12 ? "Good morning" : (now.getHours() &lt; 18) ? "Good afternoon" : "Good evening"}, {"\n" + name}
             &lt;/Text&gt;
 &nbsp;
             &lt;View style={styles.middleLineLeft}&gt;&lt;/View&gt;
@@ -471,23 +471,23 @@ const MainMenu = ({ route, navigation }) =&gt; {
             &lt;View style={styles.middleLineRight}&gt;&lt;/View&gt;
             
             &lt;View style={styles.quickLinksView}&gt;
-                &lt;TouchableOpacity testID='buttonOne' style={styles.quickLinkButtons} onPress={() =&gt; navigation.navigate("Topics")}&gt; 
+                &lt;TouchableOpacity testID='buttonOne' style={styles.quickLinkButtons} onPress={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >navigation.navigate("Topics")}</span>&gt; 
                     &lt;Text style={styles.buttonText}&gt;Topics&lt;/Text&gt;    
                 &lt;/TouchableOpacity&gt;
 &nbsp;
-                &lt;TouchableOpacity testID='buttonTwo' style={styles.quickLinkButtons} onPress={() =&gt; navigation.navigate("Lectures")}&gt; 
+                &lt;TouchableOpacity testID='buttonTwo' style={styles.quickLinkButtons} onPress={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >navigation.navigate("Lectures")}</span>&gt; 
                     &lt;Text style={styles.buttonText}&gt;Lectures&lt;/Text&gt;
                 &lt;/TouchableOpacity&gt;
 &nbsp;
-                &lt;TouchableOpacity testID='buttonThree' style={styles.quickLinkButtons} onPress={() =&gt; navigation.navigate("Books")}&gt; 
+                &lt;TouchableOpacity testID='buttonThree' style={styles.quickLinkButtons} onPress={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >navigation.navigate("Books")}</span>&gt; 
                     &lt;Text style={styles.buttonText}&gt;Books&lt;/Text&gt;
                 &lt;/TouchableOpacity&gt;
 &nbsp;
-                &lt;TouchableOpacity testID='buttonFour' style={styles.quickLinkButtons} onPress={() =&gt; navigation.navigate("TeamInfo")}&gt; 
+                &lt;TouchableOpacity testID='buttonFour' style={styles.quickLinkButtons} onPress={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >navigation.navigate("TeamInfo")}</span>&gt; 
                     &lt;Text style={styles.buttonText}&gt;Our Team&lt;/Text&gt;
                 &lt;/TouchableOpacity&gt;
 &nbsp;
-                &lt;TouchableOpacity testID='buttonFive' style={styles.quickLinkButtons} onPress={() =&gt; navigation.navigate("AboutUs")}&gt; 
+                &lt;TouchableOpacity testID='buttonFive' style={styles.quickLinkButtons} onPress={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >navigation.navigate("AboutUs")}</span>&gt; 
                     &lt;Text style={styles.buttonText}&gt;About Us&lt;/Text&gt;
                     
                 &lt;/TouchableOpacity&gt;
@@ -652,7 +652,7 @@ export default MainMenu; // send it off
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Sat Apr 23 2022 14:56:53 GMT-0700 (Pacific Daylight Time)
+                at Wed Mar 01 2023 22:52:35 GMT-0800 (Pacific Standard Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>
