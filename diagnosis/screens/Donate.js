@@ -5,10 +5,6 @@ import { WebView } from 'react-native-webview';
 const Donate = () => (
         <WebView 
         javaScriptEnabled={true}
-<<<<<<< Updated upstream
-        //source={{uri: 'https://buy.stripe.com/test_aEU00C2d7bZj7hC000'}}
-=======
->>>>>>> Stashed changes
         source={{uri: 'https://www.paypal.com/donate/?hosted_button_id=UDD4AT74W4SJU'}}
         />
 );
