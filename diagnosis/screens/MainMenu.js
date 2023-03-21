@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
         resizeMode: "stretch",
         position: "absolute",
         width: '100%',
-        height: '40%',
+        height: '45%',
         aspectRatio: 1,
         top: -60
     },
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     welcomeText: {
         position: "absolute",
         color: "white",
-        fontSize: 50,
+        fontSize: 40,
         top: "5%",
         fontWeight: 'bold',
         textAlign: 'center',
@@ -114,13 +114,13 @@ const styles = StyleSheet.create({
         top: 0,
         backgroundColor: "white",
         justifyContent: 'center',
-        position: "relative",
-        marginTop: "50%",
+        position: "absolute",
+        marginTop: "55%",
         height:"50%",
         width: '90%',
         borderRadius: 30,
         borderColor: 'red',
-        padding: 10,
+        padding: 5,
         top: '5%',
         alignItems: 'center',
         marginBottom: "10%"
@@ -133,10 +133,10 @@ const styles = StyleSheet.create({
     },
 
     quickLinkButtons: {
-        marginTop: Dimensions.get('window').height/64,
+        marginTop: Dimensions.get('window').height/84,
         alignItems: 'center',
         width: '75%',
-        paddingVertical: 10,
+        paddingVertical: 8,
         backgroundColor: 'red',
         borderRadius: 30,
     },
@@ -161,6 +161,7 @@ const styles = StyleSheet.create({
     },
 
     PDXCenterText: {
+        /*
         alignContent: "center",
         top: "28%",
         fontSize: 50,
@@ -168,7 +169,16 @@ const styles = StyleSheet.create({
         textShadowColor:'#585858',
         textShadowOffset:{width: 1, height: 9},
         textShadowRadius:10,
-        fontWeight: 'bold'
+        fontWeight: 'bold'*/
+        position: "absolute",
+        color: "white",
+        fontSize: 55,
+        top: "22%",
+        fontWeight: 'bold',
+        textAlign: 'center',
+        textShadowColor:'#585858',
+        textShadowOffset:{width: 5, height: 5},
+        textShadowRadius:10
     },
 
     middleLineRight: {
