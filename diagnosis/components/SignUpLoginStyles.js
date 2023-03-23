@@ -18,8 +18,8 @@ const {background, textInputBackground, company, placeholder, button, linkColor,
 
 export const StyledContainer = styled(View)`
     flex: 1;
-    padding: 5%;
-    padding-top: ${StatusBarHeight * .2}%;
+    padding: 25px;
+    padding-top: ${StatusBarHeight + 20}px;
     background-color: ${background};
     height: ${Dimensions.get('window').height}px;
     width: ${Dimensions.get('window').width}px;
@@ -32,15 +32,16 @@ export const InnerContainer = styled(View)`
 `;
 
 export const PageLogo = styled(Image)`
-    width: 80%;
-    height: 30%;
+    width: 300px;
+    height: 200px;
 `;
 
 export const PageTitle = styled(Text)`
-    font-size: 25vw;
+    font-size: 28px;
     text-align: center;
     font-weight: bold;
-    padding-bottom: 2%;
+    margin-top:-10px;
+    padding-bottom: 5px;
 `;
 
 export const StyledForm = styled(View)`
@@ -49,47 +50,46 @@ export const StyledForm = styled(View)`
 
 export const StyleTextInput = styled(TextInput)`
     background-color: ${textInputBackground};
-    padding: 5%;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding: 15px;
+    padding-left: 55px;
+    padding-right: 55px;
     border-radius: 5px;
-    font-size: 18vw;
+    font-size: 15px;
     height: 60px;
-    margin-vertical: 1%;
-    margin-bottom: 2%;
+    margin-vertical: 3px;
+    margin-bottom: 10px;
     color: ${placeholder};
 `;
 
 export const StyleInputLabel = styled(Text)`
-    font-size: 20vw;
-    padding:2%;
+    font-size: 20px;
 `;
 
 export const LabelIcon = styled(View)`
-    left: 5%;
-    top: 50%;
+    left: 15px;
+    top: 40px;
     position: absolute;
     z-index: 1;
 `;
 export const EyeIcon = styled(TouchableOpacity)`
     right: 15px;
-    top: 50%;
+    top: 40px;
     position: absolute;
     z-index: 1;
 `;
 
 export const StyledButton = styled(TouchableOpacity)`
-    padding: 5%;
+    padding: 10px;
     background-color: ${button};
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    margin-vertical: 5px;
+    margin-vertical: 3px;
     height: 56px;
 `;
 export const ButtonText = styled(Text)`
     color: ${textInputBackground};
-    font-size: 25vw;
+    font-size: 25px;
 `;
 
 export const MessageBox = styled(Text)`
@@ -126,5 +126,5 @@ export const TextLink = styled(TouchableOpacity)`
 
 export const TextLinkContent = styled(Text)`
     color: ${linkColor};
-    font-size: 15vw;
+    font-size: 15px;
 `;

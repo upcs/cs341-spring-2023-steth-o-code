@@ -42,6 +42,7 @@ const DrawerNavigator = () => {
           options={{
             headerTitleAlign: 'center',
             headerShown: true,
+            swipeEnabled: true,// SCWN -- Ke
             headerTitle: (props) => <LogoTitle {...props} />,
             headerStyle: {
               backgroundColor: "#BFAA8C",
@@ -69,6 +70,7 @@ const DrawerNavigator = () => {
           options={{
             headerTitleAlign: 'center',
             headerShown: true,
+            swipeEnabled: true,// SCWN -- Ke
             headerTitle: (props) => <LogoTitle {...props} />,
             headerStyle: {
               backgroundColor: "#BFAA8C",
@@ -134,6 +136,7 @@ const DrawerNavigator = () => {
           options={{
             headerTitleAlign: 'center',
             headerShown: true,
+            swipeEnabled: true, // SCWN -- Ke
             headerTitle: (props) => <LogoTitle {...props} />,
             headerStyle: {
               backgroundColor: "#BFAA8C",
