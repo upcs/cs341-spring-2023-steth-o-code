@@ -530,7 +530,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'black',
         borderRadius: 100,
         margin: 10,
-        fontSize: '18vw',
+        fontSize: 18,
         paddingVertical: 15,
         paddingHorizontal: 30,
         top: 30,
