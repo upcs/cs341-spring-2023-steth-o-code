@@ -663,7 +663,11 @@
 <a name='L598'></a><a href='#L598'>598</a>
 <a name='L599'></a><a href='#L599'>599</a>
 <a name='L600'></a><a href='#L600'>600</a>
-<a name='L601'></a><a href='#L601'>601</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L601'></a><a href='#L601'>601</a>
+<a name='L602'></a><a href='#L602'>602</a>
+<a name='L603'></a><a href='#L603'>603</a>
+<a name='L604'></a><a href='#L604'>604</a>
+<a name='L605'></a><a href='#L605'>605</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1177,6 +1181,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1263,9 +1269,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Button, Text, View, StyleSheet, TouchableOpacity, ScrollView} from 'react-native';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState } from "react";
+import { Text, View, StyleSheet, TouchableOpacity, ScrollView} from 'react-native';
 import Modal from "react-native-modal";
-import React, { useState } from "react";
 &nbsp;
 export default function Topics({navigation}){
 &nbsp;
@@ -1332,13 +1340,13 @@ export default function Topics({navigation}){
 &nbsp;
     /* nagivation helper functions */
     const navigateCardioT = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >        setCardio(!isModalCardio);</span>
 <span class="cstat-no" title="statement not covered" >        navigation.navigate("Cardiology_Tutorial");</span>
+<span class="cstat-no" title="statement not covered" >        setCardio(!isModalCardio);</span>
     }   
 &nbsp;
     const navigateCardioMM = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >        setCardio(!isModalCardio);</span>
 <span class="cstat-no" title="statement not covered" >        navigation.navigate("Cardiology_MM");</span>
+<span class="cstat-no" title="statement not covered" >        setCardio(!isModalCardio);</span>
     } 
 &nbsp;
     const navigateEndoT = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
@@ -1455,11 +1463,12 @@ export default function Topics({navigation}){
 &nbsp;
 &nbsp;
     return (
+        &lt;View&gt;
+        &lt;View style={{height: 600}}&gt;
+            &lt;Text style={styles.title}&gt;
+                Topics
+            &lt;/Text&gt;
         &lt;ScrollView style={styles.container} showsVerticalScrollIndicator={false}&gt;
-                &lt;Text style={styles.title}&gt;
-                    Topics
-                &lt;/Text&gt;
-    
                 &lt;View style={styles.buttonContainer}&gt;
                     &lt;TouchableOpacity style={styles.button} onPress={toggleModalCardio}&gt;
                         &lt;Text style={styles.buttonText}&gt;Cardiology&lt;/Text&gt;
@@ -1468,11 +1477,10 @@ export default function Topics({navigation}){
                     &lt;Modal isVisible={isModalCardio} animationIn={'slideInUp'} style={styles.modal}&gt;
                         &lt;View style={styles.popView}&gt;
                             &lt;Text style={styles.popTopicStyle}&gt; Cardiology: &lt;/Text&gt;
-&nbsp;
                             &lt;TouchableOpacity style={styles.popButton} onPress={navigateCardioT}&gt;
                                 &lt;Text style={styles.buttonText}&gt;Tutorial&lt;/Text&gt;
                             &lt;/TouchableOpacity&gt;
-&nbsp;
+                            
                             &lt;TouchableOpacity style={styles.popButton} onPress={navigateCardioMM}&gt;
                                 &lt;Text style={styles.buttonText}&gt;Multimedia&lt;/Text&gt;
                             &lt;/TouchableOpacity&gt;
@@ -1693,12 +1701,12 @@ export default function Topics({navigation}){
 &nbsp;
     
                     &lt;TouchableOpacity style={styles.button} onPress={toggleModalHC}&gt;
-                        &lt;Text style={styles.buttonText}&gt;Heridatary Conditions&lt;/Text&gt;
+                        &lt;Text style={styles.buttonText}&gt;Hereditary Conditions&lt;/Text&gt;
                     &lt;/TouchableOpacity&gt;
 &nbsp;
                     &lt;Modal isVisible={isModalHC} animationIn={'slideInUp'} style={styles.modal}&gt;
                         &lt;View style={styles.popView}&gt;
-                            &lt;Text style={styles.popTopicBig}&gt; Heridatary Conditions: &lt;/Text&gt;
+                            &lt;Text style={styles.popTopicBig}&gt; Hereditary Conditions: &lt;/Text&gt;
 &nbsp;
                             &lt;TouchableOpacity style={styles.popButton} onPress={navigateHCT}&gt;
                                 &lt;Text style={styles.buttonText}&gt;Tutorial&lt;/Text&gt;
@@ -1743,12 +1751,12 @@ export default function Topics({navigation}){
 &nbsp;
     
                     &lt;TouchableOpacity style={styles.button} onPress={toggleModalMisc}&gt;
-                        &lt;Text style={styles.buttonText}&gt;Miscllaneous&lt;/Text&gt;
+                        &lt;Text style={styles.buttonText}&gt;Miscellaneous&lt;/Text&gt;
                     &lt;/TouchableOpacity&gt;
 &nbsp;
                     &lt;Modal isVisible={isModalMisc} animationIn={'slideInUp'} style={styles.modal}&gt;
                         &lt;View style={styles.popView}&gt;
-                            &lt;Text style={styles.popTopicStyle}&gt; Miscllaneous: &lt;/Text&gt;
+                            &lt;Text style={styles.popTopicStyle}&gt; Miscellaneous: &lt;/Text&gt;
 &nbsp;
                             &lt;TouchableOpacity style={styles.popButton} onPress={navigateMiscT}&gt;
                                 &lt;Text style={styles.buttonText}&gt;Tutorial&lt;/Text&gt;
@@ -1771,6 +1779,8 @@ export default function Topics({navigation}){
                     &lt;/Text&gt;
                 &lt;/View&gt;
         &lt;/ScrollView&gt;
+        &lt;/View&gt;
+        &lt;/View&gt;
     );
 }
 &nbsp;
@@ -1793,6 +1803,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'black',
         borderRadius: 100,
         margin: 10,
+        fontSize: 18,
         paddingVertical: 15,
         paddingHorizontal: 30,
         top: 30,
@@ -1841,8 +1852,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: 'red',
         borderRadius: 40,
-        paddingVertical: 13,
-        marginTop: 20,
+        paddingVertical: 10,
+        marginTop: 10,
         left: "14%"
 &nbsp;
     },
@@ -1852,6 +1863,7 @@ const styles = StyleSheet.create({
         color: "red",
         fontWeight: 'bold',
         backgroundColor: "white",
+        padding:20,
         textShadowColor:'grey',
         textShadowOffset:{width: 1, height: 9},
         textShadowRadius: 15,
@@ -1870,7 +1882,7 @@ const styles = StyleSheet.create({
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Tue Mar 29 2022 18:01:33 GMT-0700 (Pacific Daylight Time)
+                at 2023-03-28T19:04:23.694Z
             </div>
         <script src="../prettify.js"></script>
         <script>

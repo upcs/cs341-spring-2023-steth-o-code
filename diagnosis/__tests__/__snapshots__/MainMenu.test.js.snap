@@ -3,7 +3,7 @@
 exports[`<MainMenu /> renders correctly 1`] = `
 <View
   style={
-    Object {
+    {
       "alignItems": "center",
       "backgroundColor": "#BFAA8C",
       "flex": 1,
@@ -17,9 +17,9 @@ exports[`<MainMenu /> renders correctly 1`] = `
     blurRadius={1}
     source={1}
     style={
-      Object {
+      {
         "aspectRatio": 1,
-        "height": "40%",
+        "height": "45%",
         "position": "absolute",
         "resizeMode": "stretch",
         "top": -60,
@@ -29,14 +29,14 @@ exports[`<MainMenu /> renders correctly 1`] = `
   />
   <Text
     style={
-      Object {
+      {
         "color": "white",
-        "fontSize": 50,
+        "fontSize": 40,
         "fontWeight": "bold",
         "position": "absolute",
         "textAlign": "center",
         "textShadowColor": "#585858",
-        "textShadowOffset": Object {
+        "textShadowOffset": {
           "height": 5,
           "width": 5,
         },
@@ -52,7 +52,7 @@ undefined
   </Text>
   <View
     style={
-      Object {
+      {
         "borderBottomColor": "grey",
         "borderBottomWidth": 6,
         "borderRadius": 12,
@@ -66,18 +66,19 @@ undefined
   <Text
     className="sc-egiyK eqlRhB"
     style={
-      Object {
-        "alignContent": "center",
+      {
         "color": "white",
-        "fontSize": 50,
+        "fontSize": 55,
         "fontWeight": "bold",
+        "position": "absolute",
+        "textAlign": "center",
         "textShadowColor": "#585858",
-        "textShadowOffset": Object {
-          "height": 9,
-          "width": 1,
+        "textShadowOffset": {
+          "height": 5,
+          "width": 5,
         },
         "textShadowRadius": 10,
-        "top": "28%",
+        "top": "22%",
       }
     }
   >
@@ -85,7 +86,7 @@ undefined
   </Text>
   <View
     style={
-      Object {
+      {
         "borderBottomColor": "grey",
         "borderBottomWidth": 6,
         "borderRadius": 12,
@@ -98,7 +99,7 @@ undefined
   />
   <View
     style={
-      Object {
+      {
         "alignItems": "center",
         "backgroundColor": "white",
         "borderColor": "red",
@@ -106,15 +107,32 @@ undefined
         "height": "50%",
         "justifyContent": "center",
         "marginBottom": "10%",
-        "marginTop": "50%",
-        "padding": 10,
-        "position": "relative",
+        "marginTop": "55%",
+        "padding": 5,
+        "position": "absolute",
         "top": "5%",
         "width": "90%",
       }
     }
   >
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -126,13 +144,13 @@ undefined
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "alignItems": "center",
           "backgroundColor": "red",
           "borderRadius": 30,
-          "marginTop": 20.84375,
+          "marginTop": 15.880952380952381,
           "opacity": 1,
-          "paddingVertical": 10,
+          "paddingVertical": 8,
           "width": "75%",
         }
       }
@@ -140,7 +158,7 @@ undefined
     >
       <Text
         style={
-          Object {
+          {
             "color": "white",
             "fontSize": 25,
             "fontWeight": "bold",
@@ -151,6 +169,23 @@ undefined
       </Text>
     </View>
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -162,13 +197,13 @@ undefined
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "alignItems": "center",
           "backgroundColor": "red",
           "borderRadius": 30,
-          "marginTop": 20.84375,
+          "marginTop": 15.880952380952381,
           "opacity": 1,
-          "paddingVertical": 10,
+          "paddingVertical": 8,
           "width": "75%",
         }
       }
@@ -176,7 +211,7 @@ undefined
     >
       <Text
         style={
-          Object {
+          {
             "color": "white",
             "fontSize": 25,
             "fontWeight": "bold",
@@ -187,6 +222,23 @@ undefined
       </Text>
     </View>
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -198,13 +250,13 @@ undefined
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "alignItems": "center",
           "backgroundColor": "red",
           "borderRadius": 30,
-          "marginTop": 20.84375,
+          "marginTop": 15.880952380952381,
           "opacity": 1,
-          "paddingVertical": 10,
+          "paddingVertical": 8,
           "width": "75%",
         }
       }
@@ -212,7 +264,7 @@ undefined
     >
       <Text
         style={
-          Object {
+          {
             "color": "white",
             "fontSize": 25,
             "fontWeight": "bold",
@@ -223,6 +275,23 @@ undefined
       </Text>
     </View>
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -234,13 +303,13 @@ undefined
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "alignItems": "center",
           "backgroundColor": "red",
           "borderRadius": 30,
-          "marginTop": 20.84375,
+          "marginTop": 15.880952380952381,
           "opacity": 1,
-          "paddingVertical": 10,
+          "paddingVertical": 8,
           "width": "75%",
         }
       }
@@ -248,7 +317,7 @@ undefined
     >
       <Text
         style={
-          Object {
+          {
             "color": "white",
             "fontSize": 25,
             "fontWeight": "bold",
@@ -259,6 +328,23 @@ undefined
       </Text>
     </View>
     <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -270,13 +356,13 @@ undefined
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "alignItems": "center",
           "backgroundColor": "red",
           "borderRadius": 30,
-          "marginTop": 20.84375,
+          "marginTop": 15.880952380952381,
           "opacity": 1,
-          "paddingVertical": 10,
+          "paddingVertical": 8,
           "width": "75%",
         }
       }
@@ -284,7 +370,7 @@ undefined
     >
       <Text
         style={
-          Object {
+          {
             "color": "white",
             "fontSize": 25,
             "fontWeight": "bold",
