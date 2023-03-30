@@ -506,7 +506,7 @@ export default function Topics({navigation}){
                     </Text>
                 </View>
         </ScrollView>
-        </View>
+        </View> 
         </View>
     );
 }

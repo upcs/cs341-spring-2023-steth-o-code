@@ -54,6 +54,7 @@
     "react-native-web": "~0.18.11",
     "react-native-webview": "11.26.0",
     "react-test-renderer": "^18.2.0",
+    "setimmediate": "^1.0.5",
     "styled-components": "^5.3.3",
     "url-search-params-polyfill": "^8.1.1",
     "yup": "^0.32.11"

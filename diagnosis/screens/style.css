@@ -375,7 +375,7 @@ iframe > span[class*='_title'] {
 
 
 .main-menu ul ul li > a[href="#"]{
-	/*color: blue;*/
+	color: blue;
 }
 
 .main-menu ul ul li > a[href="#"]:hover{
