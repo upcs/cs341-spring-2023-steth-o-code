@@ -190,11 +190,12 @@ export default function Topics({navigation}){
 
 
     return (
+        <View>
+        <View style={{height: 600}}>
+            <Text style={styles.title}>
+                Topics
+            </Text>
         <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
-                <Text style={styles.title}>
-                    Topics
-                </Text>
-    
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity style={styles.button} onPress={toggleModalCardio}>
                         <Text style={styles.buttonText}>Cardiology</Text>
@@ -505,6 +506,8 @@ export default function Topics({navigation}){
                     </Text>
                 </View>
         </ScrollView>
+        </View> 
+        </View>
     );
 }
 
@@ -527,6 +530,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'black',
         borderRadius: 100,
         margin: 10,
+        fontSize: 18,
         paddingVertical: 15,
         paddingHorizontal: 30,
         top: 30,
@@ -575,8 +579,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: 'red',
         borderRadius: 40,
-        paddingVertical: 13,
-        marginTop: 20,
+        paddingVertical: 10,
+        marginTop: 10,
         left: "14%"
 
     },
@@ -586,6 +590,7 @@ const styles = StyleSheet.create({
         color: "red",
         fontWeight: 'bold',
         backgroundColor: "white",
+        padding:20,
         textShadowColor:'grey',
         textShadowOffset:{width: 1, height: 9},
         textShadowRadius: 15,

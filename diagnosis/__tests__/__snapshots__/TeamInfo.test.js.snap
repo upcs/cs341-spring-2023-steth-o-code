@@ -3,17 +3,17 @@
 exports[`<TeamInfo /> renders correctly 1`] = `
 <RCTScrollView
   contentContainerStyle={
-    Object {
+    {
       "alignItems": "center",
       "backgroundColor": "#BFAA8C",
       "flexGrow": 1,
       "padding": 25,
-      "paddingTop": 20,
+      "paddingTop": 54,
     }
   }
   showsVerticalScrollIndicator={false}
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
@@ -21,7 +21,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
   <View>
     <Text
       style={
-        Object {
+        {
           "color": "red",
           "fontSize": 30,
           "fontWeight": "bold",
@@ -34,7 +34,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
       <Image
         source={1}
         style={
-          Object {
+          {
             "alignSelf": "center",
             "height": 200,
             "width": 200,
@@ -43,7 +43,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
       />
       <Text
         style={
-          Object {
+          {
             "fontWeight": "bold",
             "textAlign": "center",
           }
@@ -55,19 +55,27 @@ exports[`<TeamInfo /> renders correctly 1`] = `
       </Text>
       <View
         style={
-          Object {
+          {
             "flexDirection": "row",
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "column",
             }
           }
         >
           <View
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
             accessible={true}
             focusable={true}
             onClick={[Function]}
@@ -78,7 +86,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "backgroundColor": "#4267B2",
                 "borderRadius": 30,
@@ -87,7 +95,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
                 "justifyContent": "center",
                 "margin": 7,
                 "shadowColor": "rgba(0,0,0, .4)",
-                "shadowOffset": Object {
+                "shadowOffset": {
                   "height": 1,
                   "width": 1,
                 },
@@ -99,7 +107,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
           >
             <View
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flexDirection": "row",
                   "justifyContent": "center",
@@ -108,7 +116,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
             >
               <View
                 style={
-                  Object {
+                  {
                     "overflow": "hidden",
                   }
                 }
@@ -116,7 +124,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
                 <View>
                   <View
                     style={
-                      Object {
+                      {
                         "alignItems": "center",
                         "backgroundColor": "transparent",
                         "justifyContent": "center",
@@ -132,12 +140,20 @@ exports[`<TeamInfo /> renders correctly 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "column",
             }
           }
         >
           <View
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
             accessible={true}
             focusable={true}
             onClick={[Function]}
@@ -148,7 +164,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "backgroundColor": "#517fa4",
                 "borderRadius": 30,
@@ -157,7 +173,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
                 "justifyContent": "center",
                 "margin": 7,
                 "shadowColor": "rgba(0,0,0, .4)",
-                "shadowOffset": Object {
+                "shadowOffset": {
                   "height": 1,
                   "width": 1,
                 },
@@ -169,7 +185,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
           >
             <View
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flexDirection": "row",
                   "justifyContent": "center",
@@ -178,7 +194,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
             >
               <View
                 style={
-                  Object {
+                  {
                     "overflow": "hidden",
                   }
                 }
@@ -186,7 +202,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
                 <View>
                   <View
                     style={
-                      Object {
+                      {
                         "alignItems": "center",
                         "backgroundColor": "transparent",
                         "justifyContent": "center",
@@ -202,12 +218,20 @@ exports[`<TeamInfo /> renders correctly 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "column",
             }
           }
         >
           <View
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
             accessible={true}
             focusable={true}
             onClick={[Function]}
@@ -218,7 +242,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "backgroundColor": "#bb0000",
                 "borderRadius": 30,
@@ -227,7 +251,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
                 "justifyContent": "center",
                 "margin": 7,
                 "shadowColor": "rgba(0,0,0, .4)",
-                "shadowOffset": Object {
+                "shadowOffset": {
                   "height": 1,
                   "width": 1,
                 },
@@ -239,7 +263,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
           >
             <View
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flexDirection": "row",
                   "justifyContent": "center",
@@ -248,7 +272,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
             >
               <View
                 style={
-                  Object {
+                  {
                     "overflow": "hidden",
                   }
                 }
@@ -256,7 +280,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
                 <View>
                   <View
                     style={
-                      Object {
+                      {
                         "alignItems": "center",
                         "backgroundColor": "transparent",
                         "justifyContent": "center",
@@ -272,12 +296,20 @@ exports[`<TeamInfo /> renders correctly 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "column",
             }
           }
         >
           <View
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
             accessible={true}
             focusable={true}
             onClick={[Function]}
@@ -288,7 +320,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "backgroundColor": "#00aced",
                 "borderRadius": 30,
@@ -297,7 +329,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
                 "justifyContent": "center",
                 "margin": 7,
                 "shadowColor": "rgba(0,0,0, .4)",
-                "shadowOffset": Object {
+                "shadowOffset": {
                   "height": 1,
                   "width": 1,
                 },
@@ -310,7 +342,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
           >
             <View
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "flexDirection": "row",
                   "justifyContent": "center",
@@ -319,7 +351,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
             >
               <View
                 style={
-                  Object {
+                  {
                     "overflow": "hidden",
                   }
                 }
@@ -327,7 +359,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
                 <View>
                   <View
                     style={
-                      Object {
+                      {
                         "alignItems": "center",
                         "backgroundColor": "transparent",
                         "justifyContent": "center",
@@ -347,7 +379,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
       <Image
         source={1}
         style={
-          Object {
+          {
             "alignSelf": "center",
             "height": 200,
             "width": 200,
@@ -356,7 +388,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
       />
       <Text
         style={
-          Object {
+          {
             "fontWeight": "bold",
             "textAlign": "center",
           }
@@ -367,6 +399,14 @@ exports[`<TeamInfo /> renders correctly 1`] = `
 
       </Text>
       <View
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
         accessible={true}
         focusable={true}
         onClick={[Function]}
@@ -377,7 +417,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
         style={
-          Object {
+          {
             "alignItems": "center",
             "alignSelf": "center",
             "backgroundColor": "#00aced",
@@ -387,7 +427,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
             "justifyContent": "center",
             "margin": 7,
             "shadowColor": "rgba(0,0,0, .4)",
-            "shadowOffset": Object {
+            "shadowOffset": {
               "height": 1,
               "width": 1,
             },
@@ -399,7 +439,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "flexDirection": "row",
               "justifyContent": "center",
@@ -408,7 +448,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
         >
           <View
             style={
-              Object {
+              {
                 "overflow": "hidden",
               }
             }
@@ -416,7 +456,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
             <View>
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "backgroundColor": "transparent",
                     "justifyContent": "center",
@@ -434,7 +474,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
       <Image
         source={1}
         style={
-          Object {
+          {
             "alignSelf": "center",
             "height": 200,
             "width": 200,
@@ -443,7 +483,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
       />
       <Text
         style={
-          Object {
+          {
             "fontWeight": "bold",
             "textAlign": "center",
           }
@@ -458,7 +498,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
       <Image
         source={1}
         style={
-          Object {
+          {
             "alignSelf": "center",
             "height": 200,
             "width": 200,
@@ -467,7 +507,7 @@ exports[`<TeamInfo /> renders correctly 1`] = `
       />
       <Text
         style={
-          Object {
+          {
             "fontWeight": "bold",
             "textAlign": "center",
           }

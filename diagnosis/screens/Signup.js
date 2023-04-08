@@ -47,7 +47,7 @@ const Signup = ({navigation}) => {
             <StyledContainer>
                 <StatusBar style="dark" />
                 <InnerContainer>
-                    <PageTitle>Sign Up to PDX PDX</PageTitle>
+                    <PageTitle>Sign Up to PDX</PageTitle>
                     <Formik
                         initialValues={{ fullName: '', email: '', username: '', password: '', confirmPassword: '' }}
                         validationSchema={ValidationInputSchema}

@@ -24,6 +24,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 body {
 	font-family: 'Source Sans Pro' !important;
+    /* background-color: #BFAA8C; /* ELK - Temp? */
 }
 
 .main-header {
@@ -374,7 +375,7 @@ iframe > span[class*='_title'] {
 
 
 .main-menu ul ul li > a[href="#"]{
-	/*color: blue;*/
+	color: blue;
 }
 
 .main-menu ul ul li > a[href="#"]:hover{

@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
         padding: 10,
         flexDirection: "column",
         justifyContent: "flex-start",
-        position: "relative"
+        position: "relative",
+        //transform: [{ scaleX: .8 }, { scaleY: .8 }] 
     },
     carousel: {
         flex: 1,

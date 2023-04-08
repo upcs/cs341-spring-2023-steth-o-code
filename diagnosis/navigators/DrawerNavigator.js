@@ -13,7 +13,7 @@ import Activities from '../screens/Activities';
 import Lectures from '../screens/Lectures';
 import Login from '../screens/Login';
 import Signup from '../screens/Signup';
-import Books from '../screens/Books'
+import Books from '../screens/Books';
 import Settings from '../screens/Settings';
 
 
@@ -42,6 +42,7 @@ const DrawerNavigator = () => {
           options={{
             headerTitleAlign: 'center',
             headerShown: true,
+            swipeEnabled: true,// SCWN -- Ke
             headerTitle: (props) => <LogoTitle {...props} />,
             headerStyle: {
               backgroundColor: "#BFAA8C",
@@ -69,6 +70,7 @@ const DrawerNavigator = () => {
           options={{
             headerTitleAlign: 'center',
             headerShown: true,
+            swipeEnabled: true,// SCWN -- Ke
             headerTitle: (props) => <LogoTitle {...props} />,
             headerStyle: {
               backgroundColor: "#BFAA8C",
@@ -134,6 +136,7 @@ const DrawerNavigator = () => {
           options={{
             headerTitleAlign: 'center',
             headerShown: true,
+            swipeEnabled: true, // SCWN -- Ke
             headerTitle: (props) => <LogoTitle {...props} />,
             headerStyle: {
               backgroundColor: "#BFAA8C",

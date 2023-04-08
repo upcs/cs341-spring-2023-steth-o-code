@@ -3,15 +3,15 @@
 exports[`<AboutUs /> it should render correctly 1`] = `
 <View
   style={
-    Object {
+    {
       "flex": 1,
     }
   }
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "flex": 1,
           "overflow": "hidden",
         },
@@ -24,7 +24,7 @@ exports[`<AboutUs /> it should render correctly 1`] = `
       injectedJavaScriptBeforeContentLoadedForMainFrameOnly={true}
       injectedJavaScriptForMainFrameOnly={true}
       javaScriptEnabled={true}
-      messagingEnabled={false}
+      messagingEnabled={true}
       onContentProcessDidTerminate={[Function]}
       onHttpError={[Function]}
       onLoadingError={[Function]}
@@ -34,22 +34,23 @@ exports[`<AboutUs /> it should render correctly 1`] = `
       onMessage={[Function]}
       onShouldStartLoadWithRequest={[Function]}
       source={
-        Object {
+        {
           "uri": "https://up.physicaldiagnosispdx.com/up/app-content/server-screens/AboutUs.php",
         }
       }
       style={
-        Array [
-          Object {
+        [
+          {
             "flex": 1,
             "overflow": "hidden",
           },
-          Object {
+          {
             "backgroundColor": "#ffffff",
           },
           undefined,
         ]
       }
+      textInteractionEnabled={true}
       useSharedProcessPool={true}
     />
   </View>

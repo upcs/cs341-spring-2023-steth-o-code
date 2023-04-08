@@ -40,7 +40,8 @@ export const PageTitle = styled(Text)`
     font-size: 28px;
     text-align: center;
     font-weight: bold;
-    padding-bottom: 25px;
+    margin-top:-10px;
+    padding-bottom: 5px;
 `;
 
 export const StyledForm = styled(View)`
@@ -61,34 +62,34 @@ export const StyleTextInput = styled(TextInput)`
 `;
 
 export const StyleInputLabel = styled(Text)`
-    font-size: 13px;
+    font-size: 20px;
 `;
 
 export const LabelIcon = styled(View)`
     left: 15px;
-    top: 35px;
+    top: 40px;
     position: absolute;
     z-index: 1;
 `;
 export const EyeIcon = styled(TouchableOpacity)`
     right: 15px;
-    top: 35px;
+    top: 40px;
     position: absolute;
     z-index: 1;
 `;
 
 export const StyledButton = styled(TouchableOpacity)`
-    padding: 15px;
+    padding: 10px;
     background-color: ${button};
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    margin-vertical: 5px;
+    margin-vertical: 3px;
     height: 56px;
 `;
 export const ButtonText = styled(Text)`
     color: ${textInputBackground};
-    font-size: 16px;
+    font-size: 25px;
 `;
 
 export const MessageBox = styled(Text)`
