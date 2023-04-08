@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1680205157146" clover="3.2.0">
-  <project timestamp="1680205157146" name="All files">
-    <metrics statements="317" coveredstatements="213" conditionals="48" coveredconditionals="24" methods="104" coveredmethods="43" elements="469" coveredelements="280" complexity="0" loc="317" ncloc="317" packages="4" files="41" classes="41"/>
+<coverage generated="1680975612720" clover="3.2.0">
+  <project timestamp="1680975612720" name="All files">
+    <metrics statements="317" coveredstatements="213" conditionals="48" coveredconditionals="23" methods="104" coveredmethods="43" elements="469" coveredelements="279" complexity="0" loc="317" ncloc="317" packages="4" files="41" classes="41"/>
     <package name="assets">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="Andre-314x314.png" path="/Users/elk/Documents/GitHub/cs341-spring-2023-steth-o-code/diagnosis/assets/Andre-314x314.png">
@@ -69,7 +69,7 @@
       </file>
     </package>
     <package name="screens">
-      <metrics statements="215" coveredstatements="112" conditionals="48" coveredconditionals="24" methods="79" coveredmethods="19"/>
+      <metrics statements="215" coveredstatements="112" conditionals="48" coveredconditionals="23" methods="79" coveredmethods="19"/>
       <file name="AboutUs.js" path="/Users/elk/Documents/GitHub/cs341-spring-2023-steth-o-code/diagnosis/screens/AboutUs.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="6" count="1" type="stmt"/>
@@ -129,7 +129,7 @@
         <line num="184" count="1" type="stmt"/>
       </file>
       <file name="MainMenu.js" path="/Users/elk/Documents/GitHub/cs341-spring-2023-steth-o-code/diagnosis/screens/MainMenu.js">
-        <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="2" methods="6" coveredmethods="6"/>
+        <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="1" methods="6" coveredmethods="6"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="6" type="stmt"/>

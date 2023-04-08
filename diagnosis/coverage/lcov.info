@@ -277,12 +277,12 @@ DA:37,1
 DA:48,1
 LF:11
 LH:11
-BRDA:13,0,0,0
-BRDA:13,0,1,6
-BRDA:13,1,0,6
+BRDA:13,0,0,6
+BRDA:13,0,1,0
+BRDA:13,1,0,0
 BRDA:13,1,1,0
 BRF:4
-BRH:2
+BRH:1
 end_of_record
 TN:
 SF:screens/Multimedia.js
