@@ -39,10 +39,8 @@ jobs:
           node-version: 16.x
 
       # First install npm
-      #- name: install npm
-      #  run: npm install
-      - name: run yarn
-      run: yarn install
+      - name: install npm
+        run: npm install
         
       # Then run jest command to run all the tests
       - name: run jest
