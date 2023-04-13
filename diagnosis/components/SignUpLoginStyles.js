@@ -5,12 +5,12 @@ import Constants from 'expo-constants';
 const StatusBarHeight = Constants.statusBarHeight;
 
 export const Colors = {
-    background: "#BFAA8C",
-    textInputBackground: "#ffffff",
+    background: "#1a1a1c",
+    textInputBackground: "#fff",
     company: "#ff2400",
-    placeholder: "#ff000067",
-    button: "#808080",
-    linkColor: "#0000FF",
+    placeholder: "#ff2400",
+    button: "#373635",
+    linkColor: "#888",
     failure: "#FF0000"
 };
 
@@ -50,6 +50,8 @@ export const StyledForm = styled(View)`
 
 export const StyleTextInput = styled(TextInput)`
     background-color: ${textInputBackground};
+    border:1px solid rgba(26,26,28,0.2);
+    box-shadow:1px 1px 10px rgba(255,255,255,0.3);
     padding: 15px;
     padding-left: 55px;
     padding-right: 55px;
@@ -96,6 +98,7 @@ export const MessageBox = styled(Text)`
     text-align: center;
     font-size: 13px;
     color: ${failure};
+    
 `;
 
 export const Line = styled(View)`
@@ -103,6 +106,7 @@ export const Line = styled(View)`
     width: 100%;
     background-color: ${company};
     margin-vertical: 10px;
+    
 `;
 
 export const ExtraView = styled(View)`
@@ -115,16 +119,20 @@ export const ExtraView = styled(View)`
 export const ExtraText = styled(Text)`
     justify-content: center;
     align-content: center;
-    color: #333;
+    color: #aaa;
+    box-shadow:1px 1px 5px rgba(255, 255, 255, 0.2)
     font-size: 15px;
+    
 `;
 
 export const TextLink = styled(TouchableOpacity)`
     justify-content: center;
     align-items: center;
+    
 `;
 
 export const TextLinkContent = styled(Text)`
     color: ${linkColor};
     font-size: 15px;
+    
 `;

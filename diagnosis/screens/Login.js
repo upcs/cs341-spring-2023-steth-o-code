@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { View, ActivityIndicator, TouchableOpacity, StyleSheet, Text } from "react-native";
+import { View, ActivityIndicator, TouchableOpacity, StyleSheet, Text, Dimensions } from "react-native";
+import { LinearGradient } from 'expo-linear-gradient';
 import { StatusBar } from "expo-status-bar";
 //formik
 import { Formik } from "formik";
@@ -40,14 +41,18 @@ const Login = ({ navigation }) => {
 
     return (
         <KeyboardAvoidWrap>
+            
             <StyledContainer>
+                
                 <StatusBar style="dark" />
                 <InnerContainer>
+                 
                     <PageLogo
                         resizeMode="contain"
                         source={require("./../assets/cropped-logo_new-1.png")}
                     />
-                    <PageTitle>Account Login</PageTitle>
+                   
+                    <PageTitle style={styles.bannerContainer}>Account Login</PageTitle>
                     <Formik
                         initialValues={{ username: "", password: "" }}
                         onSubmit={(values, { setSubmitting }) => {
@@ -94,9 +99,9 @@ const Login = ({ navigation }) => {
                     >{({handleChange, handleBlur,handleSubmit,values,isSubmitting}) => (
                         <StyledForm>
                             <TextInput
-                                label="Username"
+                                label="Username:"
                                 icon="person"
-                                placeholder="username"
+                                placeholder="Username"
                                 placeholderTextColor={placeholder}
                                 onChangeText={handleChange("username")}
                                 onBlur={handleBlur("username")}
@@ -104,7 +109,7 @@ const Login = ({ navigation }) => {
                                 testID="username-input"
                             />
                             <TextInput
-                                label="Password"
+                                label="Password:"
                                 icon="lock"
                                 placeholder="********"
                                 placeholderTextColor={placeholder}
@@ -148,7 +153,9 @@ const Login = ({ navigation }) => {
                         </StyledForm>)}
                     </Formik>
                 </InnerContainer>
+                
             </StyledContainer>
+        
         </KeyboardAvoidWrap>
     );
 }
@@ -182,21 +189,24 @@ const TextInput = ({
 };
 
 const styles = StyleSheet.create({
+    bannerContainer: {
+        color:"#fff"
+    },
     mainContainer: {
-        backgroundColor: 'white',
+        backgroundColor: '#1a1a1c',
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#BFAA8C",
+        backgroundColor: "linear-gradient(to bottom, #1A1A1C, #fff)",
     },
     button:{
-        backgroundColor: "red",
+        backgroundColor: "#00ff00",
         borderRadius: 30,
         width: '75%',
         top: '26%'
     },
     word:{
-        color:"white",
+        color:"#1a1a1c",
         textAlign:"center",
         fontSize: 30, 
         fontWeight: "bold"
@@ -210,24 +220,24 @@ const styles = StyleSheet.create({
         bottom:"28%"
     },
     name:{
-        color:"white",
+        color:"#00ff00",
         fontSize: 30,
         bottom:"26%"
     }, 
     save:{
-        backgroundColor: "darkblue",
+        backgroundColor: "#00ff00",
         borderRadius: 30,
         width: '75%',
         top: '-25%'
     },
     guest:{
-        backgroundColor: "gray",
+        backgroundColor: "#d80012",
         width: "105%",
         borderRadius: 5,
         padding: "3%"
     },
     cont:{
-        color: "white",
+        color: "#fff",
         textAlign: "center",
         fontSize: 25,
     }
