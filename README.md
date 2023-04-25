@@ -12,6 +12,11 @@ App Authors:
 - Aashish Anand
 - Axl Martinez 
 - Tamsen Dean
+2023:
+- Am Blank
+- Emma Kelley
+- Chiara Profenna
+- DJ Backus
 
 Our Top 5 System Quality Attributes Are:
 1) Usability
@@ -20,10 +25,10 @@ Our Top 5 System Quality Attributes Are:
 4) Modifiability
 5) Simplicity
 
-Updated: 2/21/2023
+Last updated: 4/25/2023
 
-
-1st Acceptance Test:
+Project Status as of 4/25/2023:
+Link to gdoc: https://docs.google.com/document/d/1vg45Gcg8EOS3KwMLb-Ztmyj5EPwfdYb5Ad2ufHSYS8c/edit?usp=sharing
 
 
 
