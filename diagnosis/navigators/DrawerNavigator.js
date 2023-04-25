@@ -32,12 +32,15 @@ const DrawerNavigator = () => {
   return (
     <NavigationContainer>
       <Drawer.Navigator drawerContent={props => <CustomDrawer {...props} />}>
-        <Drawer.Screen name='Login' component={Login} // keep at top to start at this screen 
+        {/* commented out in conjunction w/ Login.js's commenting-out
+            restore this and Login.js if you want to add Login page features back into the app
+            
+        <Drawer.Screen name='Login' component={Login}  //keep at top to start at this screen 
           options={{
             headerShown: false,
             swipeEnabled: false,
             drawerItemStyle: { height: 0 }
-          }} />
+          }} /> */}
         <Drawer.Screen name="Main Menu" component={StackNavigator}
           options={{
             headerTitleAlign: 'center',
